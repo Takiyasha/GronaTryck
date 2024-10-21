@@ -5,7 +5,7 @@ section{
     margin-inline: 16px;
     margin-block: 80px;
 
-    @media screen and (min-width: 2000px) {
+    @media screen and (min-width: 1280px) {
         margin-block: 160px;
         margin-inline: 80px;
     }
@@ -455,10 +455,13 @@ section h1 {
     font-size: 44px;
   }
 
-.heading-s {
+.heading-s-c {
     font-size: 18px;
     font-family: "Poppins";
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+
 }
 
 .heading-m {
@@ -470,23 +473,31 @@ section h1 {
 .body-text {
     font-family: "Nunito sans";
     font-size: 18px;
-    max-width: 60ch;
 }
 
-.body-text-s {
+.body-text-s-c {
     font-family: "Nunito sans";
     font-size: 15px;
+    text-align: center;
 }
 
-.alt-text {
+.alt-text-c {
     font-family: "Nunito sans";
     font-size: 18px;
     color: #747474;
+    text-align: center;
+}
+
+.img-c {
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
 }
 
 
+/* About */
 
-.bodyContainer {
+.aboutContainer {
     display: grid;
     grid-template-columns: auto;
 }
@@ -495,8 +506,17 @@ section h1 {
     width: 100%; /* Fullbredd på mobil */
 }
 
-@media screen and (min-width: 992px) {
-    .bodyContainer {
-        grid-template-columns: 60% 20% 20%;
+@media screen and (min-width: 1280px) {
+    .aboutContainer {
+        grid-template-columns: 50% 25% 25%;
     }
+    .body-text {
+        max-width: 75ch;
+    }
+    .hero, .hero img {
+        height: 60vh;
+      }
+      .hero h1 {
+        left: 80px;
+      }
 }

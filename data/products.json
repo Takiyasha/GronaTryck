@@ -7,20 +7,20 @@
   },
   {
     "id": 2,
-    "name": "Trucker 2.0",
+    "name": "Nice jacketd",
     "price": 37450,
-    "image": "/static/images/StSt AW24/Bomber 2.0_Black_Packshot_Back_Main_0"
+    "image": "/static/images/StSt AW24/Bomber 2.0_Black_Packshot_Back_Main_0.jpg"
   },
   {
     "id": 3,
     "name": "Bomber jacka",
     "price": 489,
-    "image": "/static/images/StSt AW24/product1.jpg"
+    "image": "/static/images/StSt AW24/Bomber 2.0_Black_Packshot_Front_Main_0.jpg"
   },
   {
     "id": 4,
     "name": "Trucker 2.0",
     "price": 37450,
-    "image": "/static/images/StSt AW24/trucker-2.0.jpg"
+    "image": "/static/images/StSt AW24/Bomber 2.0_French Navy_Packshot_Back_Main_0.jpg"
   }
 ]

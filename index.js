@@ -28,11 +28,6 @@ const productRoutes = require("./routes/productRoutes");
 app.use("/", productRoutes);
 app.use("/user", userRoutes);
 
-// Start the express server
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-});
-
 // Create the livereload server
 const liveReloadServer = livereload.createServer({
   exts: ["js", "css", "ejs"], // Watch specific file extensions
@@ -50,7 +45,11 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
-//To create link between pages must be added
+// Routes for other pages
+app.get("/index", (req, res) => {
+  res.redirect("/"); // Redirect to the root route
+});
+
 app.get("/butik", (req, res) => {
   res.render("butik");
 });
@@ -69,4 +68,9 @@ app.get("/about", (req, res) => {
 
 app.get("/kontakt", (req, res) => {
   res.render("kontakt");
+});
+
+// Start the express server
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
 });

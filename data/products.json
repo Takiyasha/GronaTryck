@@ -1,34 +1,26 @@
 [
   {
     "id": 1,
-    "name": "T-shirt",
-    "price": 20,
-    "description": "Comfortable cotton T-shirt",
-    "category": "clothing",
-    "image": "tshirt.jpg"
+    "name": "Bomber jacka",
+    "price": 489,
+    "image": "/static/images/StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg"
   },
   {
     "id": 2,
-    "name": "Jeans",
-    "price": 40,
-    "description": "Stylish blue jeans",
-    "category": "clothing",
-    "image": "jeans.jpg"
+    "name": "Trucker 2.0",
+    "price": 37450,
+    "image": "/static/images/StSt AW24/Bomber 2.0_Black_Packshot_Back_Main_0"
   },
   {
     "id": 3,
-    "name": "Jacket",
-    "category": "clothing",
-    "price": 60,
-    "image": "jacket.jpg",
-    "description": "Warm and comfortable Jacket"
+    "name": "Bomber jacka",
+    "price": 489,
+    "image": "/static/images/StSt AW24/product1.jpg"
   },
   {
     "id": 4,
-    "name": "Mössa",
-    "category": "accessories",
-    "price": 15,
-    "image": "mössa.jpg",
-    "description": "Stylish hat to complete your outfit"
+    "name": "Trucker 2.0",
+    "price": 37450,
+    "image": "/static/images/StSt AW24/trucker-2.0.jpg"
   }
 ]

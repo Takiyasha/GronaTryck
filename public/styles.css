@@ -1,0 +1,97 @@
+.navbar-brand {
+    transition: all 0.3s ease-in-out;
+}
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons .nav-link {
+    padding: 0.5rem;
+    color: #567C50; /* Matcha färgen med dina nav-items */
+}
+
+.navbar-icons svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.navbar-icons svg:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 991px) {
+    .navbar-icons {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.navbar {
+    position: relative;
+    background-color: #FFFFFF;
+    font-family: "Poppins";
+    font-size: 18px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.nav-item a{
+    color: #567C50;
+    font-family: "Poppins";
+    font-size: 18px;
+}
+
+.nav-item a:hover {
+    color: #052900;
+    text-decoration: underline;
+    text-decoration-color: #567C50;
+    transform: scale(1.03);
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar > .container {
+        justify-content: flex-start;
+    }
+    .navbar-collapse {
+        position: fixed;
+        top: 56px; /* Adjust this value based on your navbar height */
+        left: -75%; /* Start off-screen */
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: calc(100% - 56px); /* Subtract the navbar height */
+        background-color: #f8f9fa;
+        transition: left 150ms ease-out;
+        z-index: 1030; /* High z-index to ensure it's on top */
+        overflow-y: auto; /* Allow scrolling if content is too long */
+    }
+    .navbar-collapse.show {
+        left: 0;
+    }
+    .navbar-toggler {
+        order: -1;
+    }
+    .nav-link {
+        font-size: 28px;
+        padding-left: 36px;
+    }
+    .navbar-icons svg {
+        width: 30px;
+        height: 30px;
+    }
+}

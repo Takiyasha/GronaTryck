@@ -1,89 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/static/bootstrap.css">
-  <link rel="stylesheet" href="/static/styles.css">
-  <link rel="stylesheet" href="/static/swiper.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gröna Tryck</title>
+    <link rel="stylesheet" href="/static/bootstrap.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/swiper.css">
 </head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-          <!-- Hamburger-meny (vänster på mobil) -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!-- Logotyp (vänster på desktop, centrerad på mobil) -->
-          <a class="navbar-brand" href="#">Logotyp</a>
-  
-          <!-- Navbar-innehåll -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Butik</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Stanley Stella</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Hållbarhet</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Om oss</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Kontakt</a>
-                  </li>
-              </ul>
-          </div>
-  
-          <!-- Ikoner (alltid i högerkant) -->
-          <div class="navbar-icons">
-              <a href="#" class="nav-link">
-                  <svg width="32" height="32" viewBox="0 0 1380 1380" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M540,60c64.83,0,127.68,12.68,186.82,37.7,57.15,24.17,108.49,58.79,152.59,102.89,44.1,44.1,78.72,95.44,102.89,152.59,25.01,59.14,37.7,121.99,37.7,186.82s-12.68,127.68-37.7,186.82c-24.17,57.15-58.79,108.49-102.89,152.59-44.1,44.1-95.44,78.72-152.59,102.89-59.14,25.01-121.99,37.7-186.82,37.7s-127.68-12.68-186.82-37.7c-57.15-24.17-108.49-58.79-152.59-102.89-44.1-44.1-78.72-95.44-102.89-152.59-25.01-59.14-37.7-121.99-37.7-186.82s12.68-127.68,37.7-186.82c24.17-57.15,58.79-108.49,102.89-152.59,44.1-44.1,95.44-78.72,152.59-102.89,59.14-25.01,121.99-37.7,186.82-37.7M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0Z"/>
-                    <path d="M539.94,527.65c69.61,0,126.04-56.43,126.04-126.04s-56.43-126.04-126.04-126.04-126.04,56.43-126.04,126.04,56.43,126.04,126.04,126.04ZM540,582.85c-167.58,0-275,92.47-275,137.5v79.08c0,2.76,2.24,5,5,5h540c2.76,0,5-2.24,5-5v-79.07c0-54.45-101.7-137.5-275-137.5h0Z"/>
-                  </svg>
-              </a>
-              <a href="#" class="nav-link">
-                  <svg width="32" height="32" viewBox="0 0 1080 1080" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M700,733.3c-8.5,0-17.1-3.3-23.6-9.8l-179.4-179.6c-46.6,36.4-103.6,56.1-163.7,56.1s-138.2-27.7-188.6-78.1c-50.4-50.4-78.1-117.3-78.1-188.6s27.7-138.2,78.1-188.6c50.4-50.4,117.3-78.1,188.6-78.1s138.2,27.7,188.6,78.1c50.4,50.4,78.1,117.3,78.1,188.6s-19.6,116.9-55.9,163.4l179.5,179.7c13,13,13,34.1,0,47.1-6.5,6.5-15,9.7-23.6,9.7ZM333.3,133.3c-110.3,0-200,89.7-200,200s89.7,200,200,200,200-89.7,200-200-89.7-200-200-200Z"/>
-                  </svg>
-              </a>
-              <a href="#" class="nav-link">
-                  <svg width="32" height="32" viewBox="0 0 1080 1080" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M669.6 119h-61.8V86.1c0-10.5-8.5-19-19-19h-97.1C481.1 25.7 443.2-4 400-4s-81.1 29.7-91.8 71.2h-97.1c-10.5 0-19 8.5-19 19v32.9h-61.8c-10.5 0-19 8.5-19 19v647c0 10.5 8.5 19 19 19h539.3c10.5 0 19-8.5 19-19V138c0-10.5-8.5-19-19-19Zm-439.5 61.2v-75.1h94.2c10 0 18.3-7.8 18.9-17.8C345 57.4 369.9 34 399.9 34s54.9 23.4 56.7 53.3c.6 10 8.9 17.8 18.9 17.8h94.2v75.1H230.1Zm-18.9 37.9h377.7c10.5 0 19-8.5 19-19v-42.2h42.9V766H149.3V157h42.9v42.2c0 10.5 8.5 19 19 19Z"/>
-                    <path d="m188.5 359.1 35.6 35.6c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8ZM366.7 366.5h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19ZM224.1 552.8c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8l35.6 35.6ZM366.7 524.7h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19ZM291.4 616.8l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8l35.6 35.6c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0ZM366.7 682.9h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19Z"/>
-                  </svg>
-              </a>
-          </div>
-      </div>
-  </nav>
-  <div class="swiper heroSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="/static/images/stanleystella-sverige-aw24.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="Egna bilder/screentryck-utan-pvc-och-ftalater-grona-tryck.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="Egna bilder/miljovanliga-vinterjackor-med-eget-tryck.jpg" alt="">
-      </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <!-- Hamburger-meny (vänster på mobil) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logotyp (vänster på desktop, centrerad på mobil) -->
+        <a class="navbar-brand" href="#">Logotyp</a>
+
+        <!-- Navbar-innehåll -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Butik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Stanley Stella</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hållbarhet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Om oss</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Ikoner (alltid i högerkant) -->
+        <div class="navbar-icons">
+            <a href="#" class="nav-link">
+                <svg width="32" height="32" viewBox="0 0 1380 1380" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M540,60c64.83,0,127.68,12.68,186.82,37.7,57.15,24.17,108.49,58.79,152.59,102.89,44.1,44.1,78.72,95.44,102.89,152.59,25.01,59.14,37.7,121.99,37.7,186.82s-12.68,127.68-37.7,186.82c-24.17,57.15-58.79,108.49-102.89,152.59-44.1,44.1-95.44,78.72-152.59,102.89-59.14,25.01-121.99,37.7-186.82,37.7s-127.68-12.68-186.82-37.7c-57.15-24.17-108.49-58.79-152.59-102.89-44.1-44.1-78.72-95.44-102.89-152.59-25.01-59.14-37.7-121.99-37.7-186.82s12.68-127.68,37.7-186.82c24.17-57.15,58.79-108.49,102.89-152.59,44.1-44.1,95.44-78.72,152.59-102.89,59.14-25.01,121.99-37.7,186.82-37.7M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0Z"/>
+                  <path d="M539.94,527.65c69.61,0,126.04-56.43,126.04-126.04s-56.43-126.04-126.04-126.04-126.04,56.43-126.04,126.04,56.43,126.04,126.04,126.04ZM540,582.85c-167.58,0-275,92.47-275,137.5v79.08c0,2.76,2.24,5,5,5h540c2.76,0,5-2.24,5-5v-79.07c0-54.45-101.7-137.5-275-137.5h0Z"/>
+                </svg>
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="32" height="32" viewBox="0 0 1080 1080" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M700,733.3c-8.5,0-17.1-3.3-23.6-9.8l-179.4-179.6c-46.6,36.4-103.6,56.1-163.7,56.1s-138.2-27.7-188.6-78.1c-50.4-50.4-78.1-117.3-78.1-188.6s27.7-138.2,78.1-188.6c50.4-50.4,117.3-78.1,188.6-78.1s138.2,27.7,188.6,78.1c50.4,50.4,78.1,117.3,78.1,188.6s-19.6,116.9-55.9,163.4l179.5,179.7c13,13,13,34.1,0,47.1-6.5,6.5-15,9.7-23.6,9.7ZM333.3,133.3c-110.3,0-200,89.7-200,200s89.7,200,200,200,200-89.7,200-200-89.7-200-200-200Z"/>
+                </svg>
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="32" height="32" viewBox="0 0 1080 1080" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M669.6 119h-61.8V86.1c0-10.5-8.5-19-19-19h-97.1C481.1 25.7 443.2-4 400-4s-81.1 29.7-91.8 71.2h-97.1c-10.5 0-19 8.5-19 19v32.9h-61.8c-10.5 0-19 8.5-19 19v647c0 10.5 8.5 19 19 19h539.3c10.5 0 19-8.5 19-19V138c0-10.5-8.5-19-19-19Zm-439.5 61.2v-75.1h94.2c10 0 18.3-7.8 18.9-17.8C345 57.4 369.9 34 399.9 34s54.9 23.4 56.7 53.3c.6 10 8.9 17.8 18.9 17.8h94.2v75.1H230.1Zm-18.9 37.9h377.7c10.5 0 19-8.5 19-19v-42.2h42.9V766H149.3V157h42.9v42.2c0 10.5 8.5 19 19 19Z"/>
+                  <path d="m188.5 359.1 35.6 35.6c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8ZM366.7 366.5h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19ZM224.1 552.8c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8l35.6 35.6ZM366.7 524.7h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19ZM291.4 616.8l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8l35.6 35.6c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0ZM366.7 682.9h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19Z"/>
+                </svg>
+            </a>
+        </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-  </header>
+</nav>
+      <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="stanleystella-sverige-aw24.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="Egna bilder/screentryck-utan-pvc-och-ftalater-grona-tryck.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="Egna bilder/miljovanliga-vinterjackor-med-eget-tryck.jpg" alt="">
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+</header>
+<body>
+    <section class="recommendedProducts">
+      <h1>Rekommenderat för dig</h1>
+        <div class="swiper productSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg" alt="" class="product-img">
+                    </div>
+                    <p class="product-price">379-489 kr</p>
+                    <p class="product-info">Bomber jacka</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
 
-  
+    <section class="cards">
+      <div class="brands">
+        <img src="bildspråk .webp/gt_gallery_2.webp" alt="">
+        <h2>Varumärken</h2>
+        <div class="brands-info">
+          <p>Läs mer om de varumärken som vi samarbetar med här</p>
+          <button class="white-button">
+            Läs mer
+          </button>
+        </div>
+      </div>
 
-  <script src="/static/bootstrap.js"></script>
-  <script src="/static/swiper.js"></script>
-  <script src="/static/script.js"></script>
+      <div class="services">
+        <img src="bildspråk .webp/gt_gallery_5.webp" alt="">
+        <h2>Tjänster</h2>
+        <div class="services-info">
+          <p>Läs mer om de tjänster vi erbjuder här</p>
+          <button class="white-button">
+            Läs mer
+          </button>
+        </div>
+      </div>
+      <div class="cardsBackground"></div>
+    </section>
+
+    <section class="socialmedia">
+      <div class="socialmedia-title">
+        <h1>Följ oss på @gronatryck</h1>
+        <img src="pensel 2.png" alt="">
+      </div>
+      <div class="socialmedia-posts">
+        <blockquote class="instagram-media media-1" data-instgrm-permalink="https://www.instagram.com/p/DADTKzfOClM/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DADTKzfOClM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Visa detta inlägg på Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DADTKzfOClM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ett inlägg delat av Gröna Tryck (@gronatryck)</a></p></div></blockquote>
+        <blockquote class="instagram-media media-2" data-instgrm-permalink="https://www.instagram.com/p/Co-AiscNZzm/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/Co-AiscNZzm/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Visa detta inlägg på Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Co-AiscNZzm/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ett inlägg delat av Gröna Tryck (@gronatryck)</a></p></div></blockquote>
+        <blockquote class="instagram-media media-3" data-instgrm-permalink="https://www.instagram.com/p/C9UXMcvCW83/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/C9UXMcvCW83/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Visa detta inlägg på Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C9UXMcvCW83/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ett inlägg delat av Gröna Tryck (@gronatryck)</a></p></div></blockquote>
+      </div>
+    </section>
+
+    <section class="brandColaborations">
+      <div class="colab-title">
+        <h1>Vänner som hjälper oss förändra textilbranschen</h1>
+      </div>
+      <div class="swiper colabSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/bob-hund.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/fatta.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/frank-shop.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/free-dawit.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/gbg-stad.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/ifmetall.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/im.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/life.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/morakniv.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/nordisk-panorama.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/plan-sverige.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/POW.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/riksgransen.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/roda-korset-ungdom.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/sss.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/studieframjandet.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/svenska-kyrkan.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/urkult.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="infografik_ikoner_v2/vänner/wateraid.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-content">
+              <div class="footer-column">
+                <h2>Kundservice</h2>
+                <ul>
+                    <li><a href="#">Frågor & svar</a></li>
+                    <li><a href="#">Kontakta oss</a></li>
+                    <li><a href="#">Köpvilkor</a></li>
+                    <li><a href="#">Återförsäljare</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                  <h2>Läs mer</h2>
+                  <ul>
+                      <li><a href="#">Om oss</a></li>
+                      <li><a href="#">CSR</a></li>
+                      <li><a href="#">Hållbarhet</a></li>
+                      <li><a href="#">Stanley Stella</a></li>
+                      <li><a href="#">Nyheter</a></li>
+                      <li><a href="#">Jobba hos oss</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h2>Följ oss</h2>
+                  <div class="social-icons">
+                      <a href="#" aria-label="Facebook">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#0F0F0F"/>
+                        </svg>
+                      </a>
+                      <a href="#" aria-label="LinkedIn">
+                        <svg fill="#000000" width="800px" height="800px" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 8.219v15.563c0 1.469 1.156 2.625 2.625 2.625h15.563c0.719 0 1.406-0.344 1.844-0.781 0.469-0.469 0.781-1.063 0.781-1.844v-15.563c0-1.469-1.156-2.625-2.625-2.625h-15.563c-0.781 0-1.375 0.313-1.844 0.781-0.438 0.438-0.781 1.125-0.781 1.844zM2.813 10.281c0-1 0.813-1.875 1.813-1.875 1.031 0 1.875 0.875 1.875 1.875 0 1.031-0.844 1.844-1.875 1.844-1 0-1.813-0.813-1.813-1.844zM7.844 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.656c0.375 0 0.375 0.438 0.375 0.719 0.75-0.75 1.719-0.938 2.719-0.938 2.438 0 4 1.156 4 3.719v6.438c0 0.219-0.188 0.406-0.375 0.406h-2.75c-0.219 0-0.375-0.219-0.375-0.406v-5.813c0-0.969-0.281-1.5-1.375-1.5-1.375 0-1.719 0.906-1.719 2.125v5.188c0 0.219-0.219 0.406-0.438 0.406h-2.719c-0.156 0-0.375-0.219-0.375-0.406zM2.875 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.719c0.25 0 0.406 0.156 0.406 0.406v9.531c0 0.219-0.188 0.406-0.406 0.406h-2.719c-0.188 0-0.375-0.219-0.375-0.406z"></path>
+                        </svg>
+                      </a>
+                      <a href="#" aria-label="Instagram">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#0F0F0F"/>
+                          <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#0F0F0F"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#0F0F0F"/>
+                          </svg>
+                      </a>
+                      <a href="#" aria-label="Youtube">
+                        <svg width="800px" height="800px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#000000">
+                              <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289" id="youtube-[#168]"></path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; <script>document.write(new Date().getFullYear())</script> Gröna Tryck. Alla rättigheter förbehållna.</p>
+          </div>
+      </div>
+  </footer>
+<script async src="//www.instagram.com/embed.js"></script>
+<script src="/static/bootstrap.js"></script>
+<script src="/static/swiper.js"></script>
+<script src="/static/script.js"></script>
 </body>
 </html>

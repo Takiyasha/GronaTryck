@@ -124,7 +124,7 @@
       <h1>Rekommenderat för dig</h1>
       <div class="swiper productSwiper">
         <div class="swiper-wrapper">
-          <% products.forEach(function(product) { %>
+          <% products.slice(0, 5).forEach(function(product) { %> 
           <div class="swiper-slide">
             <div class="product">
               <div class="product-image">
@@ -144,7 +144,7 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-    </section>
+    </section>>
 
     <section class="cards">
       <div class="brands">

@@ -50,7 +50,7 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
-//To creaet link between pages must be added
+//To create link between pages must be added
 app.get("/butik", (req, res) => {
   res.render("butik");
 });
@@ -69,26 +69,4 @@ app.get("/about", (req, res) => {
 
 app.get("/kontakt", (req, res) => {
   res.render("kontakt");
-});
-
-//to add product
-app.get("/", (req, res) => {
-  // Example array of products
-  const products = [
-    {
-      id: 1,
-      name: "Bomber jacka",
-      price: 489,
-      image: "/static/images/StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg",
-    },
-    {
-      id: 2,
-      name: "Trucker 2.0",
-      price: 37450,
-      image: "/static/images/Egna bilder/trucker-2.0.jpg",
-    },
-    // more products here...
-  ];
-
-  res.render("index", { products });
 });

@@ -470,6 +470,7 @@ section h1 {
 .body-text {
     font-family: "Nunito sans";
     font-size: 18px;
+    max-width: 60ch;
 }
 
 .body-text-s {
@@ -486,14 +487,16 @@ section h1 {
 
 
 .bodyContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
 }
 
-@media screen and (min-width: 768px) {
+.element {
+    width: 100%; /* Fullbredd på mobil */
+}
+
+@media screen and (min-width: 992px) {
     .bodyContainer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        grid-template-columns: 60% 20% 20%;
     }
 }

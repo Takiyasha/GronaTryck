@@ -3,75 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= product.name %></title>
-    <meta name="description" content="<%= product.description %>" />
-    <link rel="stylesheet" href="/static/styles.css" />
+    <title>Document</title>
   </head>
-  <body>
-    <div class="container">
-      <!-- Product Section -->
-      <div class="product-detail">
-        <div class="product-image">
-          <img
-            src="/static/images/<%= product.image %>"
-            alt="<%= product.name %>"
-          />
-        </div>
-
-        <div class="product-info">
-          <h1><%= product.name %></h1>
-          <p class="description"><%= product.description %></p>
-
-          <!-- Price Calculation Table -->
-          <table class="price-table">
-            <thead>
-              <tr>
-                <th>Vad</th>
-                <th>Antal</th>
-                <th>Pris/st</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Art. <%= product.name %></td>
-                <td id="quantity-display">1</td>
-                <td><span id="base-price"><%= product.price %></span> kr</td>
-                <td><span id="total-price"><%= product.price %></span> kr</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="3"><strong>TOTAL</strong></td>
-                <td>
-                  <strong
-                    ><span id="total-price-final"><%= product.price %></span>
-                    kr</strong
-                  >
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <!-- Quantity Selector -->
-          <div class="price-calculation">
-            <div class="quantity-controls">
-              <button id="decrease-quantity" class="btn">-</button>
-              <input
-                type="number"
-                id="quantity"
-                value="1"
-                min="1"
-                class="quantity-input"
-              />
-              <button id="increase-quantity" class="btn">+</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Link to your JS file -->
-    <script defer src="/static/script.js"></script>
-  </body>
+  <body></body>
 </html>

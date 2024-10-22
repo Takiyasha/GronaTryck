@@ -588,6 +588,10 @@ section h1 {
       }
 }
 
+.owner img {
+  height: 15vh;
+}
+
 .reviews {
   display: flex;
   justify-content: space-between;
@@ -635,7 +639,7 @@ section h1 {
 
 /* Butik */
 
-.store-progress a {
+.store-progress a, span {
   color: #052900;
   font-size: 18px;
   font-family: "Nunito sans";

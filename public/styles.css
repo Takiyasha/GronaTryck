@@ -5,7 +5,7 @@ section{
     margin-inline: 16px;
     margin-block: 80px;
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
         margin-block: 160px;
         margin-inline: 80px;
     }
@@ -506,6 +506,20 @@ section h1 {
     width: 100%; /* Fullbredd på mobil */
 }
 
+.brandColaborations h2 {
+  margin-inline: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-inline: 80px;
+}
+}
+
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    left: 80px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
     .aboutContainer {
         grid-template-columns: 50% 25% 25%;
@@ -515,8 +529,5 @@ section h1 {
     }
     .hero, .hero img {
         height: 60vh;
-      }
-      .hero h1 {
-        left: 80px;
       }
 }

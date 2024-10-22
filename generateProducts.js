@@ -1,4 +1,4 @@
-// use the node generateProducts.js to write to the server files(json)
+//////////IMPORTANT/////////////// use the "node generateProducts.js" in Terminal to write to the server files(json)////////////IMPORTANT//////////
 const fs = require("fs");
 const path = require("path");
 

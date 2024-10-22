@@ -461,6 +461,7 @@ section h1 {
     font-weight: 700;
     text-align: center;
     margin-bottom: 16px;
+    color: #052900;
 
 }
 
@@ -468,17 +469,20 @@ section h1 {
     font-size: 28px;
     font-family: "Poppins";
     font-weight: 700;
+    color: #052900;
 }
 
 .body-text {
     font-family: "Nunito sans";
     font-size: 18px;
+    color: #052900;
 }
 
 .body-text-s-c {
     font-family: "Nunito sans";
     font-size: 15px;
     text-align: center;
+    color: #052900;
 }
 
 .alt-text-c {

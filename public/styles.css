@@ -792,11 +792,11 @@ section h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 25vh;
-  z-index: 2;
+  z-index: 1;
 }
 
 .heroBtn {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -827,7 +827,7 @@ section h1 {
 
 @media screen and (min-width: 1280px) {
   .videoWrapper {
-    max-width: 60%;
+    max-width: 70%;
   }
 }
 

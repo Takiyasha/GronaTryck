@@ -430,6 +430,26 @@ section h1 {
   /* MOBILE FIRST */
 
 
+  .primaryBtn {
+    border-radius: 100px;
+    border-width: 0;
+    height: 50px;
+    background-color: #567c50;
+    color: #F7F9F7;
+    font-family: "Nunito sans";
+    font-size: 18px;
+    font-weight: 700;
+    padding-inline: 44px;
+
+    @media screen and (min-width: 1280px) {
+      height: 55px;
+    }
+  }
+
+  .primaryBtn:hover {
+    background-color: #052900;
+  }
+
   .hero {
     position: relative;
     width: 100%;
@@ -482,12 +502,28 @@ section h1 {
     font-family: "Poppins";
     font-weight: 700;
     color: #052900;
+    margin-bottom: 16px;
+}
+
+.heading-m-c {
+  font-size: 28px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #052900;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .body-text {
     font-family: "Nunito sans";
     font-size: 18px;
     color: #052900;
+}
+
+.body-text-s {
+  font-family: "Nunito sans";
+  font-size: 15px;
+  color: #052900;
 }
 
 .body-text-s-c {
@@ -510,16 +546,20 @@ section h1 {
     margin-bottom: 16px;
 }
 
+.margin-block-mobile {
+  margin-block: 80px;
+
+  @media screen and (min-width: 1280px) {
+    margin-block: 0;
+  }
+}
+
 
 /* About */
 
 .aboutContainer {
     display: grid;
     grid-template-columns: auto;
-}
-
-.element {
-    width: 100%; /* Fullbredd på mobil */
 }
 
 .brandColaborations h2 {
@@ -546,4 +586,49 @@ section h1 {
     .hero, .hero img {
         height: 60vh;
       }
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.review-card {
+  background-color: #F7F9F7;
+  width: 100%;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.stars svg {
+  height: 24px;
+  margin-bottom: 16px;
+}
+
+.reco-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 80px;
+}
+
+.reco-link svg {
+  width: 104px; 
+  height: auto; 
+}
+
+@media (max-width: 1280px) {
+
+  .review-card:last-child {
+      display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .review-card:nth-child(2) {
+      display: none;
+  }
 }

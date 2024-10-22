@@ -1,26 +1,2456 @@
 [
   {
     "id": 1,
-    "name": "Bomber jacka",
-    "price": 489,
+    "name": "Bomber 2.0_Black_Duo_Front_Main_0",
+    "price": 740,
     "image": "/static/images/StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg"
   },
   {
     "id": 2,
-    "name": "Nice jacketd",
-    "price": 37450,
+    "name": "Bomber 2.0_Black_Packshot_Back_Main_0",
+    "price": 958,
     "image": "/static/images/StSt AW24/Bomber 2.0_Black_Packshot_Back_Main_0.jpg"
   },
   {
     "id": 3,
-    "name": "Bomber jacka",
-    "price": 489,
+    "name": "Bomber 2.0_Black_Packshot_Front_Main_0",
+    "price": 581,
     "image": "/static/images/StSt AW24/Bomber 2.0_Black_Packshot_Front_Main_0.jpg"
   },
   {
     "id": 4,
-    "name": "Trucker 2.0",
-    "price": 37450,
+    "name": "Bomber 2.0_French Navy_Packshot_Back_Main_0",
+    "price": 106,
     "image": "/static/images/StSt AW24/Bomber 2.0_French Navy_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Bomber 2.0_French Navy_Packshot_Front_Main_0",
+    "price": 977,
+    "image": "/static/images/StSt AW24/Bomber 2.0_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Bomber 2.0_Khaki_Studio_Front_Detail_3",
+    "price": 768,
+    "image": "/static/images/StSt AW24/Bomber 2.0_Khaki_Studio_Front_Detail_3.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Brooker_Black_Packshot_Front_Main_0",
+    "price": 403,
+    "image": "/static/images/StSt AW24/Brooker_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Brooker_Desert Dust_Packshot_Front_Main_0",
+    "price": 450,
+    "image": "/static/images/StSt AW24/Brooker_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Brooker_Khaki_Duo_Front_Main_0",
+    "price": 533,
+    "image": "/static/images/StSt AW24/Brooker_Khaki_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Brooker_Khaki_Packshot_Back_Main_0",
+    "price": 402,
+    "image": "/static/images/StSt AW24/Brooker_Khaki_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Brooker_Khaki_Packshot_Front_Main_0",
+    "price": 759,
+    "image": "/static/images/StSt AW24/Brooker_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Brooker_Khaki_Studio_Front_Detail_1",
+    "price": 499,
+    "image": "/static/images/StSt AW24/Brooker_Khaki_Studio_Front_Detail_1.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Changer 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 502,
+    "image": "/static/images/StSt AW24/Changer 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Changer 2.0_Heather Haze_Packshot_Front_Main_0",
+    "price": 834,
+    "image": "/static/images/StSt AW24/Changer 2.0_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Changer 2.0_Heritage Brown_Duo_Front_Main_0",
+    "price": 844,
+    "image": "/static/images/StSt AW24/Changer 2.0_Heritage Brown_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Changer 2.0_Heritage Brown_Packshot_Back_Main_0",
+    "price": 385,
+    "image": "/static/images/StSt AW24/Changer 2.0_Heritage Brown_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Changer 2.0_Heritage Brown_Packshot_Front_Main_0",
+    "price": 299,
+    "image": "/static/images/StSt AW24/Changer 2.0_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Changer 2.0_Mindful Blue_Packshot_Front_Main_0",
+    "price": 689,
+    "image": "/static/images/StSt AW24/Changer 2.0_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Changer 2.0_Misty Jade_Packshot_Front_Main_0",
+    "price": 414,
+    "image": "/static/images/StSt AW24/Changer 2.0_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Connector 2.0_Black_Packshot_Front_Main_0",
+    "price": 461,
+    "image": "/static/images/StSt AW24/Connector 2.0_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Connector 2.0_Bright Blue_Packshot_Front_Main_0",
+    "price": 355,
+    "image": "/static/images/StSt AW24/Connector 2.0_Bright Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Connector 2.0_Burgundy_Packshot_Front_Main_0",
+    "price": 108,
+    "image": "/static/images/StSt AW24/Connector 2.0_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Connector 2.0_French Navy_Duo_Front_Main_0",
+    "price": 117,
+    "image": "/static/images/StSt AW24/Connector 2.0_French Navy_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Connector 2.0_French Navy_Packshot_Back_Main_0",
+    "price": 919,
+    "image": "/static/images/StSt AW24/Connector 2.0_French Navy_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Connector 2.0_French Navy_Packshot_Front_Main_0",
+    "price": 1019,
+    "image": "/static/images/StSt AW24/Connector 2.0_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Connector 2.0_Heather Grey_Packshot_Front_Main_0",
+    "price": 879,
+    "image": "/static/images/StSt AW24/Connector 2.0_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Connector 2.0_Natural Raw_Packshot_Front_Main_0",
+    "price": 1031,
+    "image": "/static/images/StSt AW24/Connector 2.0_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Connector 2.0_White_Packshot_Front_Main_0",
+    "price": 577,
+    "image": "/static/images/StSt AW24/Connector 2.0_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Crafter_Blue Ice_Packshot_Front_Main_0",
+    "price": 962,
+    "image": "/static/images/StSt AW24/Crafter_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Crafter_Desert Dust_Packshot_Front_Main_0",
+    "price": 412,
+    "image": "/static/images/StSt AW24/Crafter_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Crafter_Heritage Brown_Packshot_Back_Main_0",
+    "price": 940,
+    "image": "/static/images/StSt AW24/Crafter_Heritage Brown_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Crafter_Heritage Brown_Packshot_Front_Main_0",
+    "price": 550,
+    "image": "/static/images/StSt AW24/Crafter_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Crafter_Heritage Brown_Studio_Front_Main_0",
+    "price": 1001,
+    "image": "/static/images/StSt AW24/Crafter_Heritage Brown_Studio_Front_Main_0.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Creator 2.0 Long Sleeve_Black_Packshot_Front_Main_0",
+    "price": 270,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Creator 2.0 Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 617,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Creator 2.0 Long Sleeve_French Navy_Packshot_Front_Main_0",
+    "price": 849,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Creator 2.0 Long Sleeve_Glazed Green_Packshot_Front_Main_0",
+    "price": 699,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Glazed Green_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Creator 2.0 Long Sleeve_Heather Grey_Packshot_Front_Main_0",
+    "price": 807,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Creator 2.0 Long Sleeve_Heritage Brown_Packshot_Front_Main_0",
+    "price": 667,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Creator 2.0 Long Sleeve_Khaki_Packshot_Front_Main_0",
+    "price": 611,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Creator 2.0 Long Sleeve_Natural Raw_Duo_Front_Main_0",
+    "price": 128,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Natural Raw_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Creator 2.0 Long Sleeve_Natural Raw_Packshot_Back_Main_0",
+    "price": 821,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Natural Raw_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Creator 2.0 Long Sleeve_Natural Raw_Packshot_Front_Main_0",
+    "price": 173,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Creator 2.0 Long Sleeve_Red Brown_Packshot_Front_Main_0",
+    "price": 849,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Red Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Creator 2.0 Long Sleeve_Red_Packshot_Front_Main_0",
+    "price": 535,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Red_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Creator 2.0 Long Sleeve_White_Packshot_Front_Main_0",
+    "price": 454,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Creator 2.0 Long Sleeve_Worker Blue_Packshot_Front_Main_0",
+    "price": 386,
+    "image": "/static/images/StSt AW24/Creator 2.0 Long Sleeve_Worker Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Creator 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 875,
+    "image": "/static/images/StSt AW24/Creator 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Creator 2.0_Heather Haze_Duo_Front_Main_0",
+    "price": 553,
+    "image": "/static/images/StSt AW24/Creator 2.0_Heather Haze_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Creator 2.0_Heather Haze_Packshot_Back_Main_0",
+    "price": 572,
+    "image": "/static/images/StSt AW24/Creator 2.0_Heather Haze_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Creator 2.0_Heather Haze_Packshot_Front_Main_0",
+    "price": 1006,
+    "image": "/static/images/StSt AW24/Creator 2.0_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Creator 2.0_Heritage Brown_Packshot_Front_Main_0",
+    "price": 482,
+    "image": "/static/images/StSt AW24/Creator 2.0_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Creator 2.0_Mindful Blue_Packshot_Front_Main_0",
+    "price": 414,
+    "image": "/static/images/StSt AW24/Creator 2.0_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Creator 2.0_Misty Jade_Packshot_Front_Main_0",
+    "price": 314,
+    "image": "/static/images/StSt AW24/Creator 2.0_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Cruiser 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 686,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Cruiser 2.0_Heather Haze_Duo_Front_Main_0",
+    "price": 518,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Heather Haze_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Cruiser 2.0_Heather Haze_Packshot_Back_Main_0",
+    "price": 764,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Heather Haze_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Cruiser 2.0_Heather Haze_Packshot_Front_Main_0",
+    "price": 741,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Cruiser 2.0_Heritage Brown_Packshot_Front_Main_0",
+    "price": 227,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Cruiser 2.0_Mindful Blue_Packshot_Front_Main_0",
+    "price": 794,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 61,
+    "name": "Cruiser 2.0_Misty Jade_Packshot_Front_Main_0",
+    "price": 329,
+    "image": "/static/images/StSt AW24/Cruiser 2.0_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Drummer 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 337,
+    "image": "/static/images/StSt AW24/Drummer 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 63,
+    "name": "Drummer 2.0_Desert Dust_Packshot_Front_Main_0",
+    "price": 843,
+    "image": "/static/images/StSt AW24/Drummer 2.0_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Drummer 2.0_Heritage Brown_Duo_Front_Main_0",
+    "price": 987,
+    "image": "/static/images/StSt AW24/Drummer 2.0_Heritage Brown_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Drummer 2.0_Heritage Brown_Packshot_Back_Main_0",
+    "price": 903,
+    "image": "/static/images/StSt AW24/Drummer 2.0_Heritage Brown_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Drummer 2.0_Heritage Brown_Packshot_Front_Main_0",
+    "price": 604,
+    "image": "/static/images/StSt AW24/Drummer 2.0_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Drummer 2.0_Natural Raw_Packshot_Front_Main_0",
+    "price": 732,
+    "image": "/static/images/StSt AW24/Drummer 2.0_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Freestyler Long Sleeve_Black_Packshot_Front_Main_0",
+    "price": 609,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 69,
+    "name": "Freestyler Long Sleeve_Cool Heather Grey_Duo_Front_Main_0",
+    "price": 960,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Cool Heather Grey_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 70,
+    "name": "Freestyler Long Sleeve_Cool Heather Grey_Packshot_Back_Main_0",
+    "price": 560,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Cool Heather Grey_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 71,
+    "name": "Freestyler Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 688,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 72,
+    "name": "Freestyler Long Sleeve_French Navy_Packshot_Front_Main_0",
+    "price": 815,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Freestyler Long Sleeve_Heather Grey_Packshot_Front_Main_0",
+    "price": 491,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Freestyler Long Sleeve_Heather Haze_Packshot_Front_Main_0",
+    "price": 690,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Freestyler Long Sleeve_Heritage Brown_Packshot_Front_Main_0",
+    "price": 633,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Freestyler Long Sleeve_Mindful Blue_Packshot_Front_Main_0",
+    "price": 708,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 77,
+    "name": "Freestyler Long Sleeve_Natural Raw_Packshot_Front_Main_0",
+    "price": 1043,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 78,
+    "name": "Freestyler Long Sleeve_Stargazer_Packshot_Front_Main_0",
+    "price": 427,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 79,
+    "name": "Freestyler Long Sleeve_White_Packshot_Front_Main_0",
+    "price": 935,
+    "image": "/static/images/StSt AW24/Freestyler Long Sleeve_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 80,
+    "name": "Freestyler Vintage_G. Dyed Black Rock_Packshot_Front_Main_0",
+    "price": 975,
+    "image": "/static/images/StSt AW24/Freestyler Vintage_G. Dyed Black Rock_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 81,
+    "name": "Freestyler Vintage_G. Dyed Blue Stone_Packshot_Front_Main_0",
+    "price": 371,
+    "image": "/static/images/StSt AW24/Freestyler Vintage_G. Dyed Blue Stone_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 82,
+    "name": "Freestyler Vintage_G. Dyed Latte_Duo_Front_Main_0",
+    "price": 141,
+    "image": "/static/images/StSt AW24/Freestyler Vintage_G. Dyed Latte_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 83,
+    "name": "Freestyler Vintage_G. Dyed Latte_Packshot_Back_Main_0",
+    "price": 294,
+    "image": "/static/images/StSt AW24/Freestyler Vintage_G. Dyed Latte_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 84,
+    "name": "Freestyler Vintage_G. Dyed Latte_Packshot_Front_Main_0",
+    "price": 568,
+    "image": "/static/images/StSt AW24/Freestyler Vintage_G. Dyed Latte_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 85,
+    "name": "Freestyler_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 831,
+    "image": "/static/images/StSt AW24/Freestyler_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 86,
+    "name": "Freestyler_Heather Haze_Packshot_Front_Main_0",
+    "price": 162,
+    "image": "/static/images/StSt AW24/Freestyler_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 87,
+    "name": "Freestyler_Heritage Brown_Packshot_Front_Main_0",
+    "price": 509,
+    "image": "/static/images/StSt AW24/Freestyler_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 88,
+    "name": "Freestyler_Mindful Blue_Packshot_Front_Main_0",
+    "price": 720,
+    "image": "/static/images/StSt AW24/Freestyler_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 89,
+    "name": "Freestyler_Misty Jade_Duo_Front_Main_0",
+    "price": 533,
+    "image": "/static/images/StSt AW24/Freestyler_Misty Jade_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 90,
+    "name": "Freestyler_Misty Jade_Packshot_Back_Main_0",
+    "price": 1080,
+    "image": "/static/images/StSt AW24/Freestyler_Misty Jade_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 91,
+    "name": "Freestyler_Misty Jade_Packshot_Front_Main_0",
+    "price": 633,
+    "image": "/static/images/StSt AW24/Freestyler_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 92,
+    "name": "Knoxer_Black_Packshot_Front_Main_0",
+    "price": 891,
+    "image": "/static/images/StSt AW24/Knoxer_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 93,
+    "name": "Knoxer_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 188,
+    "image": "/static/images/StSt AW24/Knoxer_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 94,
+    "name": "Knoxer_French Navy_Packshot_Front_Main_0",
+    "price": 431,
+    "image": "/static/images/StSt AW24/Knoxer_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 95,
+    "name": "Knoxer_Heather Haze_Packshot_Front_Main_0",
+    "price": 871,
+    "image": "/static/images/StSt AW24/Knoxer_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 96,
+    "name": "Knoxer_Heritage Brown_Packshot_Front_Main_0",
+    "price": 682,
+    "image": "/static/images/StSt AW24/Knoxer_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 97,
+    "name": "Knoxer_Natural Raw_Duo_Front_Main_0",
+    "price": 275,
+    "image": "/static/images/StSt AW24/Knoxer_Natural Raw_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 98,
+    "name": "Knoxer_Natural Raw_Packshot_Back_Main_0",
+    "price": 453,
+    "image": "/static/images/StSt AW24/Knoxer_Natural Raw_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 99,
+    "name": "Knoxer_Natural Raw_Packshot_Front_Main_0",
+    "price": 450,
+    "image": "/static/images/StSt AW24/Knoxer_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 100,
+    "name": "Liner_Black_Packshot_Front_Main_0",
+    "price": 916,
+    "image": "/static/images/StSt AW24/Liner_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 101,
+    "name": "Liner_Desert Dust_Duo_Front_Main_0",
+    "price": 653,
+    "image": "/static/images/StSt AW24/Liner_Desert Dust_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Liner_Desert Dust_Packshot_Back_Main_0",
+    "price": 960,
+    "image": "/static/images/StSt AW24/Liner_Desert Dust_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Liner_Desert Dust_Packshot_Front_Main_0",
+    "price": 528,
+    "image": "/static/images/StSt AW24/Liner_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Liner_Desert Dust_Studio_Front_Detail_0",
+    "price": 514,
+    "image": "/static/images/StSt AW24/Liner_Desert Dust_Studio_Front_Detail_0.jpg"
+  },
+  {
+    "id": 105,
+    "name": "Mixer_Anthracite_Packshot_Front_Main_0",
+    "price": 259,
+    "image": "/static/images/StSt AW24/Mixer_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 106,
+    "name": "Mixer_Black_Packshot_Front_Main_0",
+    "price": 504,
+    "image": "/static/images/StSt AW24/Mixer_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 107,
+    "name": "Mixer_Bottle Green_Packshot_Front_Main_0",
+    "price": 379,
+    "image": "/static/images/StSt AW24/Mixer_Bottle Green_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 108,
+    "name": "Mixer_Burgundy_Packshot_Front_Main_0",
+    "price": 1047,
+    "image": "/static/images/StSt AW24/Mixer_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 109,
+    "name": "Mixer_Cotton Pink_Packshot_Front_Main_0",
+    "price": 293,
+    "image": "/static/images/StSt AW24/Mixer_Cotton Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 110,
+    "name": "Mixer_French Navy_Packshot_Front_Main_0",
+    "price": 717,
+    "image": "/static/images/StSt AW24/Mixer_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 111,
+    "name": "Mixer_Heather Grey_Packshot_Front_Main_0",
+    "price": 824,
+    "image": "/static/images/StSt AW24/Mixer_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 112,
+    "name": "Mixer_Khaki_Duo_Front_Main_0",
+    "price": 425,
+    "image": "/static/images/StSt AW24/Mixer_Khaki_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 113,
+    "name": "Mixer_Khaki_Packshot_Back_Main_0",
+    "price": 730,
+    "image": "/static/images/StSt AW24/Mixer_Khaki_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 114,
+    "name": "Mixer_Khaki_Packshot_Front_Main_0",
+    "price": 224,
+    "image": "/static/images/StSt AW24/Mixer_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 115,
+    "name": "Mixer_Red_Packshot_Front_Main_0",
+    "price": 687,
+    "image": "/static/images/StSt AW24/Mixer_Red_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 116,
+    "name": "Mixer_Royal Blue_Packshot_Front_Main_0",
+    "price": 365,
+    "image": "/static/images/StSt AW24/Mixer_Royal Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 117,
+    "name": "Mixer_Sky blue_Packshot_Front_Main_0",
+    "price": 389,
+    "image": "/static/images/StSt AW24/Mixer_Sky blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 118,
+    "name": "Mixer_Vintage White_Packshot_Front_Main_0",
+    "price": 136,
+    "image": "/static/images/StSt AW24/Mixer_Vintage White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 119,
+    "name": "Mixer_White_Packshot_Front_Main_0",
+    "price": 193,
+    "image": "/static/images/StSt AW24/Mixer_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 120,
+    "name": "Prepster 2.0 Long Sleeve_Anthracite_Packshot_Front_Main_0",
+    "price": 815,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 121,
+    "name": "Prepster 2.0 Long Sleeve_Black_Packshot_Front_Main_0",
+    "price": 830,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 122,
+    "name": "Prepster 2.0 Long Sleeve_Burgundy_Packshot_Front_Main_0",
+    "price": 381,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 123,
+    "name": "Prepster 2.0 Long Sleeve_Dark Heather Grey_Packshot_Front_Main_0",
+    "price": 795,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Dark Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 124,
+    "name": "Prepster 2.0 Long Sleeve_French Navy_Packshot_Front_Main_0",
+    "price": 201,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 125,
+    "name": "Prepster 2.0 Long Sleeve_Glazed Green_Packshot_Front_Main_0",
+    "price": 127,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Glazed Green_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 126,
+    "name": "Prepster 2.0 Long Sleeve_Heather Grey_Packshot_Front_Main_0",
+    "price": 1036,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 127,
+    "name": "Prepster 2.0 Long Sleeve_Khaki_Duo_Front_Main_0",
+    "price": 700,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Khaki_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 128,
+    "name": "Prepster 2.0 Long Sleeve_Khaki_Packshot_Back_Main_0",
+    "price": 122,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Khaki_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 129,
+    "name": "Prepster 2.0 Long Sleeve_Khaki_Packshot_Front_Main_0",
+    "price": 779,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 130,
+    "name": "Prepster 2.0 Long Sleeve_Natural Raw_Packshot_Front_Main_0",
+    "price": 244,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 131,
+    "name": "Prepster 2.0 Long Sleeve_Stargazer_Packshot_Front_Main_0",
+    "price": 488,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 132,
+    "name": "Prepster 2.0 Long Sleeve_White_Packshot_Front_Main_0",
+    "price": 564,
+    "image": "/static/images/StSt AW24/Prepster 2.0 Long Sleeve_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 133,
+    "name": "Prepster 2.0_Aloe_Packshot_Front_Main_0",
+    "price": 853,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Aloe_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 134,
+    "name": "Prepster 2.0_Anthracite_Packshot_Front_Main_0",
+    "price": 538,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 135,
+    "name": "Prepster 2.0_Black_Packshot_Front_Main_0",
+    "price": 264,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 136,
+    "name": "Prepster 2.0_Blue Soul_Packshot_Front_Main_0",
+    "price": 362,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Blue Soul_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 137,
+    "name": "Prepster 2.0_Bubble Pink_Packshot_Front_Main_0",
+    "price": 416,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Bubble Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 138,
+    "name": "Prepster 2.0_Burgundy_Packshot_Front_Main_0",
+    "price": 576,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 139,
+    "name": "Prepster 2.0_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 276,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 140,
+    "name": "Prepster 2.0_Dark Heather Blue_Packshot_Front_Main_0",
+    "price": 741,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Dark Heather Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 141,
+    "name": "Prepster 2.0_Dark Heather Grey_Packshot_Front_Main_0",
+    "price": 585,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Dark Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 142,
+    "name": "Prepster 2.0_Eco-Heather_Duo_Front_Main_0",
+    "price": 979,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Eco-Heather_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 143,
+    "name": "Prepster 2.0_Eco-Heather_Packshot_Back_Main_0",
+    "price": 532,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Eco-Heather_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 144,
+    "name": "Prepster 2.0_Eco-Heather_Packshot_Front_Main_0",
+    "price": 571,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Eco-Heather_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 145,
+    "name": "Prepster 2.0_French Navy_Packshot_Front_Main_0",
+    "price": 678,
+    "image": "/static/images/StSt AW24/Prepster 2.0_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 146,
+    "name": "Prepster 2.0_Glazed Green_Packshot_Front_Main_0",
+    "price": 900,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Glazed Green_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 147,
+    "name": "Prepster 2.0_Heather Grey_Packshot_Front_Main_0",
+    "price": 356,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 148,
+    "name": "Prepster 2.0_Khaki_Packshot_Front_Main_0",
+    "price": 498,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 149,
+    "name": "Prepster 2.0_Latte_Packshot_Front_Main_0",
+    "price": 374,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Latte_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 150,
+    "name": "Prepster 2.0_Natural Raw_Packshot_Front_Main_0",
+    "price": 891,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 151,
+    "name": "Prepster 2.0_Nispero_Packshot_Front_Main_0",
+    "price": 771,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Nispero_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 152,
+    "name": "Prepster 2.0_Red Brown_Packshot_Front_Main_0",
+    "price": 978,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Red Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 153,
+    "name": "Prepster 2.0_Red_Packshot_Front_Main_0",
+    "price": 996,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Red_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 154,
+    "name": "Prepster 2.0_Stargazer_Packshot_Front_Main_0",
+    "price": 784,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 155,
+    "name": "Prepster 2.0_White_Packshot_Front_Main_0",
+    "price": 1047,
+    "image": "/static/images/StSt AW24/Prepster 2.0_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 156,
+    "name": "Prepster 2.0_Worker Blue_Packshot_Front_Main_0",
+    "price": 702,
+    "image": "/static/images/StSt AW24/Prepster 2.0_Worker Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 157,
+    "name": "Puffer Gilet_Black_Packshot_Front_Main_0",
+    "price": 646,
+    "image": "/static/images/StSt AW24/Puffer Gilet_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 158,
+    "name": "Puffer Gilet_Desert Dust_Packshot_Front_Main_0",
+    "price": 191,
+    "image": "/static/images/StSt AW24/Puffer Gilet_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 159,
+    "name": "Puffer Gilet_French Navy_Duo_Front_Main_0",
+    "price": 1059,
+    "image": "/static/images/StSt AW24/Puffer Gilet_French Navy_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 160,
+    "name": "Puffer Gilet_French Navy_Packshot_Back_Main_0",
+    "price": 197,
+    "image": "/static/images/StSt AW24/Puffer Gilet_French Navy_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 161,
+    "name": "Puffer Gilet_French Navy_Packshot_Front_Main_0",
+    "price": 214,
+    "image": "/static/images/StSt AW24/Puffer Gilet_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 162,
+    "name": "Radder 2.0 Vintage_G. Dyed Black Rock_Packshot_Front_Main_0",
+    "price": 279,
+    "image": "/static/images/StSt AW24/Radder 2.0 Vintage_G. Dyed Black Rock_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 163,
+    "name": "Radder 2.0 Vintage_G. Dyed Blue Stone_Duo_Front_Main_0",
+    "price": 634,
+    "image": "/static/images/StSt AW24/Radder 2.0 Vintage_G. Dyed Blue Stone_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 164,
+    "name": "Radder 2.0 Vintage_G. Dyed Blue Stone_Packshot_Back_Main_0",
+    "price": 708,
+    "image": "/static/images/StSt AW24/Radder 2.0 Vintage_G. Dyed Blue Stone_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 165,
+    "name": "Radder 2.0 Vintage_G. Dyed Blue Stone_Packshot_Front_Main_0",
+    "price": 431,
+    "image": "/static/images/StSt AW24/Radder 2.0 Vintage_G. Dyed Blue Stone_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 166,
+    "name": "Radder 2.0 Vintage_G. Dyed Latte_Packshot_Front_Main_0",
+    "price": 206,
+    "image": "/static/images/StSt AW24/Radder 2.0 Vintage_G. Dyed Latte_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 167,
+    "name": "Radder 2.0_Black_Packshot_Front_Main_0",
+    "price": 1080,
+    "image": "/static/images/StSt AW24/Radder 2.0_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 168,
+    "name": "Radder 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 917,
+    "image": "/static/images/StSt AW24/Radder 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 169,
+    "name": "Radder 2.0_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 354,
+    "image": "/static/images/StSt AW24/Radder 2.0_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 170,
+    "name": "Radder 2.0_French Navy_Packshot_Front_Main_0",
+    "price": 1034,
+    "image": "/static/images/StSt AW24/Radder 2.0_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 171,
+    "name": "Radder 2.0_Heather Grey_Packshot_Front_Main_0",
+    "price": 344,
+    "image": "/static/images/StSt AW24/Radder 2.0_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 172,
+    "name": "Radder 2.0_Khaki_Packshot_Front_Main_0",
+    "price": 552,
+    "image": "/static/images/StSt AW24/Radder 2.0_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 173,
+    "name": "Radder 2.0_Mindful Blue_Packshot_Front_Main_0",
+    "price": 932,
+    "image": "/static/images/StSt AW24/Radder 2.0_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 174,
+    "name": "Radder 2.0_Misty Jade_Packshot_Front_Main_0",
+    "price": 711,
+    "image": "/static/images/StSt AW24/Radder 2.0_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 175,
+    "name": "Radder 2.0_Natural Raw_Packshot_Front_Main_0",
+    "price": 1099,
+    "image": "/static/images/StSt AW24/Radder 2.0_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 176,
+    "name": "Radder 2.0_White_Packshot_Front_Main_0",
+    "price": 925,
+    "image": "/static/images/StSt AW24/Radder 2.0_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 177,
+    "name": "Roller_Blue Ice_Packshot_Front_Main_0",
+    "price": 792,
+    "image": "/static/images/StSt AW24/Roller_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 178,
+    "name": "Roller_Desert Dust_Packshot_Front_Main_0",
+    "price": 837,
+    "image": "/static/images/StSt AW24/Roller_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 179,
+    "name": "Roller_Heritage Brown_Packshot_Front_Main_0",
+    "price": 411,
+    "image": "/static/images/StSt AW24/Roller_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 180,
+    "name": "Roller_Natural Raw_Duo_Front_Main_0",
+    "price": 121,
+    "image": "/static/images/StSt AW24/Roller_Natural Raw_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 181,
+    "name": "Roller_Natural Raw_Packshot_Back_Main_0",
+    "price": 718,
+    "image": "/static/images/StSt AW24/Roller_Natural Raw_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 182,
+    "name": "Roller_Natural Raw_Packshot_Front_Main_0",
+    "price": 1055,
+    "image": "/static/images/StSt AW24/Roller_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 183,
+    "name": "Shopping Bag_White_Studio_Front_Main_6",
+    "price": 550,
+    "image": "/static/images/StSt AW24/Shopping Bag_White_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 184,
+    "name": "Slammer 2.0 vintage_G. Dyed Black Rock_Duo_Front_Main_0",
+    "price": 179,
+    "image": "/static/images/StSt AW24/Slammer 2.0 vintage_G. Dyed Black Rock_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 185,
+    "name": "Slammer 2.0 vintage_G. Dyed Black Rock_Packshot_Back_Main_0",
+    "price": 326,
+    "image": "/static/images/StSt AW24/Slammer 2.0 vintage_G. Dyed Black Rock_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 186,
+    "name": "Slammer 2.0 vintage_G. Dyed Black Rock_Packshot_Front_Main_0",
+    "price": 178,
+    "image": "/static/images/StSt AW24/Slammer 2.0 vintage_G. Dyed Black Rock_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 187,
+    "name": "Slammer 2.0 vintage_G. Dyed Blue Stone_Packshot_Front_Main_0",
+    "price": 213,
+    "image": "/static/images/StSt AW24/Slammer 2.0 vintage_G. Dyed Blue Stone_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 188,
+    "name": "Slammer 2.0 vintage_G. Dyed Latte_Packshot_Front_Main_0",
+    "price": 1040,
+    "image": "/static/images/StSt AW24/Slammer 2.0 vintage_G. Dyed Latte_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 189,
+    "name": "Slammer 2.0_Black_Packshot_Front_Main_0",
+    "price": 413,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 190,
+    "name": "Slammer 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 665,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 191,
+    "name": "Slammer 2.0_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 592,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 192,
+    "name": "Slammer 2.0_French Navy_Packshot_Front_Main_0",
+    "price": 630,
+    "image": "/static/images/StSt AW24/Slammer 2.0_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 193,
+    "name": "Slammer 2.0_Heather Grey_Packshot_Front_Main_0",
+    "price": 169,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 194,
+    "name": "Slammer 2.0_Khaki_Packshot_Front_Main_0",
+    "price": 511,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 195,
+    "name": "Slammer 2.0_Mindful Blue_Packshot_Front_Main_0",
+    "price": 103,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 196,
+    "name": "Slammer 2.0_Misty Jade_Packshot_Front_Main_0",
+    "price": 667,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 197,
+    "name": "Slammer 2.0_Natural Raw_Duo_Front_Main_0",
+    "price": 105,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Natural Raw_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 198,
+    "name": "Slammer 2.0_Natural Raw_Packshot_Back_Main_0",
+    "price": 853,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Natural Raw_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 199,
+    "name": "Slammer 2.0_Natural Raw_Packshot_Front_Main_0",
+    "price": 592,
+    "image": "/static/images/StSt AW24/Slammer 2.0_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 200,
+    "name": "Slammer 2.0_White_Packshot_Front_Main_0",
+    "price": 1013,
+    "image": "/static/images/StSt AW24/Slammer 2.0_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 201,
+    "name": "Sparker 2.0_Blue Ice_Packshot_Front_Main_0",
+    "price": 709,
+    "image": "/static/images/StSt AW24/Sparker 2.0_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 202,
+    "name": "Sparker 2.0_Heritage Brown_Duo_Front_Main_0",
+    "price": 983,
+    "image": "/static/images/StSt AW24/Sparker 2.0_Heritage Brown_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 203,
+    "name": "Sparker 2.0_Heritage Brown_Packshot_Back_Main_0",
+    "price": 884,
+    "image": "/static/images/StSt AW24/Sparker 2.0_Heritage Brown_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 204,
+    "name": "Sparker 2.0_Heritage Brown_Packshot_Front_Main_0",
+    "price": 581,
+    "image": "/static/images/StSt AW24/Sparker 2.0_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 205,
+    "name": "Stanley Climber_Anthracite_Packshot_Front_Main_0",
+    "price": 891,
+    "image": "/static/images/StSt AW24/Stanley Climber_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 206,
+    "name": "Stanley Climber_Desert Dust_Packshot_Back_Main_0",
+    "price": 936,
+    "image": "/static/images/StSt AW24/Stanley Climber_Desert Dust_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 207,
+    "name": "Stanley Climber_Desert Dust_Packshot_Front_Main_0",
+    "price": 381,
+    "image": "/static/images/StSt AW24/Stanley Climber_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 208,
+    "name": "Stanley Climber_Desert Dust_Studio_Front_Main_0",
+    "price": 309,
+    "image": "/static/images/StSt AW24/Stanley Climber_Desert Dust_Studio_Front_Main_0.jpg"
+  },
+  {
+    "id": 209,
+    "name": "Stanley Climber_Khaki_Packshot_Front_Main_0",
+    "price": 799,
+    "image": "/static/images/StSt AW24/Stanley Climber_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 210,
+    "name": "Stanley Climber_Mindful Blue_Packshot_Front_Main_0",
+    "price": 440,
+    "image": "/static/images/StSt AW24/Stanley Climber_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 211,
+    "name": "Stanley Climber_Stargazer_Packshot_Front_Main_0",
+    "price": 1072,
+    "image": "/static/images/StSt AW24/Stanley Climber_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 212,
+    "name": "Stanley Guider_Anthracite_Packshot_Front_Main_0",
+    "price": 772,
+    "image": "/static/images/StSt AW24/Stanley Guider_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 213,
+    "name": "Stanley Guider_Black_Packshot_Front_Main_0",
+    "price": 1027,
+    "image": "/static/images/StSt AW24/Stanley Guider_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 214,
+    "name": "Stanley Guider_Burgundy_Packshot_Front_Main_0",
+    "price": 687,
+    "image": "/static/images/StSt AW24/Stanley Guider_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 215,
+    "name": "Stanley Guider_Desert Dust_Packshot_Front_Main_0",
+    "price": 416,
+    "image": "/static/images/StSt AW24/Stanley Guider_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 216,
+    "name": "Stanley Guider_French Navy_Packshot_Front_Main_0",
+    "price": 264,
+    "image": "/static/images/StSt AW24/Stanley Guider_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 217,
+    "name": "Stanley Guider_Khaki_Packshot_Back_Main_0",
+    "price": 1009,
+    "image": "/static/images/StSt AW24/Stanley Guider_Khaki_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 218,
+    "name": "Stanley Guider_Khaki_Packshot_Front_Main_0",
+    "price": 1014,
+    "image": "/static/images/StSt AW24/Stanley Guider_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 219,
+    "name": "Stanley Guider_Khaki_Studio_Front_Main_1",
+    "price": 586,
+    "image": "/static/images/StSt AW24/Stanley Guider_Khaki_Studio_Front_Main_1.jpg"
+  },
+  {
+    "id": 220,
+    "name": "Stanley Guider_Mindful Blue_Packshot_Front_Main_0",
+    "price": 701,
+    "image": "/static/images/StSt AW24/Stanley Guider_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 221,
+    "name": "Stanley Guider_Stargazer_Packshot_Front_Main_0",
+    "price": 806,
+    "image": "/static/images/StSt AW24/Stanley Guider_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 222,
+    "name": "Stanley Quester_Anthracite_Packshot_Front_Main_0",
+    "price": 174,
+    "image": "/static/images/StSt AW24/Stanley Quester_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 223,
+    "name": "Stanley Quester_Black_Packshot_Front_Main_0",
+    "price": 326,
+    "image": "/static/images/StSt AW24/Stanley Quester_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 224,
+    "name": "Stanley Quester_Burgundy_Packshot_Back_Main_0",
+    "price": 806,
+    "image": "/static/images/StSt AW24/Stanley Quester_Burgundy_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 225,
+    "name": "Stanley Quester_Burgundy_Packshot_Front_Main_0",
+    "price": 663,
+    "image": "/static/images/StSt AW24/Stanley Quester_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 226,
+    "name": "Stanley Quester_Burgundy_Studio_Front_Main_0",
+    "price": 123,
+    "image": "/static/images/StSt AW24/Stanley Quester_Burgundy_Studio_Front_Main_0.jpg"
+  },
+  {
+    "id": 227,
+    "name": "Stanley Quester_Desert Dust_Packshot_Front_Main_0",
+    "price": 1093,
+    "image": "/static/images/StSt AW24/Stanley Quester_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 228,
+    "name": "Stanley Quester_French Navy_Packshot_Front_Main_0",
+    "price": 756,
+    "image": "/static/images/StSt AW24/Stanley Quester_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 229,
+    "name": "Stanley Quester_Khaki_Packshot_Front_Main_0",
+    "price": 476,
+    "image": "/static/images/StSt AW24/Stanley Quester_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 230,
+    "name": "Stanley Quester_Mindful Blue_Packshot_Front_Main_0",
+    "price": 117,
+    "image": "/static/images/StSt AW24/Stanley Quester_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 231,
+    "name": "Stanley Quester_Stargazer_Packshot_Front_Main_0",
+    "price": 860,
+    "image": "/static/images/StSt AW24/Stanley Quester_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 232,
+    "name": "Stanley Trail Blazer_Anthracite_Packshot_Front_Main_0",
+    "price": 590,
+    "image": "/static/images/StSt AW24/Stanley Trail Blazer_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 233,
+    "name": "Stanley Trail Blazer_Black_Packshot_Front_Main_0",
+    "price": 1054,
+    "image": "/static/images/StSt AW24/Stanley Trail Blazer_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 234,
+    "name": "Stanley Trail Blazer_French Navy_Packshot_Front_Main_0",
+    "price": 943,
+    "image": "/static/images/StSt AW24/Stanley Trail Blazer_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 235,
+    "name": "Stanley Trail Blazer_Stargazer_Packshot_Back_Main_0",
+    "price": 507,
+    "image": "/static/images/StSt AW24/Stanley Trail Blazer_Stargazer_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 236,
+    "name": "Stanley Trail Blazer_Stargazer_Packshot_Front_Main_0",
+    "price": 132,
+    "image": "/static/images/StSt AW24/Stanley Trail Blazer_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 237,
+    "name": "Stanley Trail Blazer_Stargazer_Studio_Front_Main_0",
+    "price": 683,
+    "image": "/static/images/StSt AW24/Stanley Trail Blazer_Stargazer_Studio_Front_Main_0.jpg"
+  },
+  {
+    "id": 238,
+    "name": "Stanley Voyager_Desert Dust_Packshot_Back_Main_0",
+    "price": 104,
+    "image": "/static/images/StSt AW24/Stanley Voyager_Desert Dust_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 239,
+    "name": "Stanley Voyager_Desert Dust_Packshot_Front_Main_0",
+    "price": 625,
+    "image": "/static/images/StSt AW24/Stanley Voyager_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 240,
+    "name": "Stanley Voyager_Desert Dust_Studio_Front_Main_0",
+    "price": 742,
+    "image": "/static/images/StSt AW24/Stanley Voyager_Desert Dust_Studio_Front_Main_0.jpg"
+  },
+  {
+    "id": 241,
+    "name": "Stanley Voyager_Khaki_Packshot_Front_Main_0",
+    "price": 542,
+    "image": "/static/images/StSt AW24/Stanley Voyager_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 242,
+    "name": "Stanley Voyager_Mindful Blue_Packshot_Front_Main_0",
+    "price": 653,
+    "image": "/static/images/StSt AW24/Stanley Voyager_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 243,
+    "name": "Stanley Voyager_Stargazer_Packshot_Front_Main_0",
+    "price": 898,
+    "image": "/static/images/StSt AW24/Stanley Voyager_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 244,
+    "name": "Stella Alma_Anthracite_Packshot_Front_Main_0",
+    "price": 588,
+    "image": "/static/images/StSt AW24/Stella Alma_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 245,
+    "name": "Stella Alma_Black_Packshot_Front_Main_0",
+    "price": 878,
+    "image": "/static/images/StSt AW24/Stella Alma_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 246,
+    "name": "Stella Alma_Blue Ice_Packshot_Front_Main_0",
+    "price": 920,
+    "image": "/static/images/StSt AW24/Stella Alma_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 247,
+    "name": "Stella Alma_Bubble Pink_Packshot_Front_Main_0",
+    "price": 961,
+    "image": "/static/images/StSt AW24/Stella Alma_Bubble Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 248,
+    "name": "Stella Alma_Burgundy_Packshot_Front_Main_0",
+    "price": 496,
+    "image": "/static/images/StSt AW24/Stella Alma_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 249,
+    "name": "Stella Alma_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 620,
+    "image": "/static/images/StSt AW24/Stella Alma_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 250,
+    "name": "Stella Alma_Eco-Heather_Packshot_Front_Main_0",
+    "price": 1053,
+    "image": "/static/images/StSt AW24/Stella Alma_Eco-Heather_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 251,
+    "name": "Stella Alma_Fraiche Peche_Packshot_Front_Main_0",
+    "price": 1003,
+    "image": "/static/images/StSt AW24/Stella Alma_Fraiche Peche_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 252,
+    "name": "Stella Alma_French Navy_Packshot_Front_Main_0",
+    "price": 194,
+    "image": "/static/images/StSt AW24/Stella Alma_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 253,
+    "name": "Stella Alma_Green Bay_Packshot_Front_Main_0",
+    "price": 1068,
+    "image": "/static/images/StSt AW24/Stella Alma_Green Bay_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 254,
+    "name": "Stella Alma_Heather Haze_Packshot_Front_Main_0",
+    "price": 723,
+    "image": "/static/images/StSt AW24/Stella Alma_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 255,
+    "name": "Stella Alma_Heritage Brown_Packshot_Back_Main_0",
+    "price": 881,
+    "image": "/static/images/StSt AW24/Stella Alma_Heritage Brown_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 256,
+    "name": "Stella Alma_Heritage Brown_Packshot_Front_Main_0",
+    "price": 365,
+    "image": "/static/images/StSt AW24/Stella Alma_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 257,
+    "name": "Stella Alma_Heritage Brown_Studio_Front_Main_5",
+    "price": 999,
+    "image": "/static/images/StSt AW24/Stella Alma_Heritage Brown_Studio_Front_Main_5.jpg"
+  },
+  {
+    "id": 258,
+    "name": "Stella Alma_Lavender_Packshot_Front_Main_0",
+    "price": 143,
+    "image": "/static/images/StSt AW24/Stella Alma_Lavender_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 259,
+    "name": "Stella Alma_Misty Jade_Packshot_Front_Main_0",
+    "price": 441,
+    "image": "/static/images/StSt AW24/Stella Alma_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 260,
+    "name": "Stella Alma_Natural Raw_Packshot_Front_Main_0",
+    "price": 1022,
+    "image": "/static/images/StSt AW24/Stella Alma_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 261,
+    "name": "Stella Alma_White_Packshot_Front_Main_0",
+    "price": 789,
+    "image": "/static/images/StSt AW24/Stella Alma_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 262,
+    "name": "Stella Alma_White_Studio_Front_Main_6",
+    "price": 910,
+    "image": "/static/images/StSt AW24/Stella Alma_White_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 263,
+    "name": "Stella Alma_Worker Blue_Packshot_Front_Main_0",
+    "price": 979,
+    "image": "/static/images/StSt AW24/Stella Alma_Worker Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 264,
+    "name": "Stella Clara_Anthracite_Packshot_Front_Main_0",
+    "price": 885,
+    "image": "/static/images/StSt AW24/Stella Clara_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 265,
+    "name": "Stella Clara_Black_Packshot_Front_Main_0",
+    "price": 427,
+    "image": "/static/images/StSt AW24/Stella Clara_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 266,
+    "name": "Stella Clara_Blue Soul_Packshot_Front_Main_0",
+    "price": 650,
+    "image": "/static/images/StSt AW24/Stella Clara_Blue Soul_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 267,
+    "name": "Stella Clara_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 1045,
+    "image": "/static/images/StSt AW24/Stella Clara_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 268,
+    "name": "Stella Clara_Cotton Pink_Packshot_Front_Main_0",
+    "price": 533,
+    "image": "/static/images/StSt AW24/Stella Clara_Cotton Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 269,
+    "name": "Stella Clara_Eco-Heather_Duo_Front_Main_0",
+    "price": 1005,
+    "image": "/static/images/StSt AW24/Stella Clara_Eco-Heather_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 270,
+    "name": "Stella Clara_Eco-Heather_Packshot_Back_Main_0",
+    "price": 665,
+    "image": "/static/images/StSt AW24/Stella Clara_Eco-Heather_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 271,
+    "name": "Stella Clara_Eco-Heather_Packshot_Front_Main_0",
+    "price": 789,
+    "image": "/static/images/StSt AW24/Stella Clara_Eco-Heather_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 272,
+    "name": "Stella Clara_French Navy_Packshot_Front_Main_0",
+    "price": 101,
+    "image": "/static/images/StSt AW24/Stella Clara_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 273,
+    "name": "Stella Clara_Heritage Brown_Packshot_Front_Main_0",
+    "price": 730,
+    "image": "/static/images/StSt AW24/Stella Clara_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 274,
+    "name": "Stella Clara_Lavender_Packshot_Front_Main_0",
+    "price": 296,
+    "image": "/static/images/StSt AW24/Stella Clara_Lavender_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 275,
+    "name": "Stella Clara_Natural Raw_Packshot_Front_Main_0",
+    "price": 610,
+    "image": "/static/images/StSt AW24/Stella Clara_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 276,
+    "name": "Stella Clara_Red_Packshot_Front_Main_0",
+    "price": 952,
+    "image": "/static/images/StSt AW24/Stella Clara_Red_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 277,
+    "name": "Stella Clara_Stargazer_Packshot_Front_Main_0",
+    "price": 451,
+    "image": "/static/images/StSt AW24/Stella Clara_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 278,
+    "name": "Stella Climber_Anthracite_Packshot_Front_Main_0",
+    "price": 263,
+    "image": "/static/images/StSt AW24/Stella Climber_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 279,
+    "name": "Stella Climber_Desert Dust_Packshot_Front_Main_0",
+    "price": 801,
+    "image": "/static/images/StSt AW24/Stella Climber_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 280,
+    "name": "Stella Climber_Khaki_Packshot_Front_Main_0",
+    "price": 791,
+    "image": "/static/images/StSt AW24/Stella Climber_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 281,
+    "name": "Stella Climber_Mindful Blue_Packshot_Front_Main_0",
+    "price": 669,
+    "image": "/static/images/StSt AW24/Stella Climber_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 282,
+    "name": "Stella Climber_Stargazer_Packshot_Back_Main_0",
+    "price": 1033,
+    "image": "/static/images/StSt AW24/Stella Climber_Stargazer_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 283,
+    "name": "Stella Climber_Stargazer_Packshot_Front_Main_0",
+    "price": 606,
+    "image": "/static/images/StSt AW24/Stella Climber_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 284,
+    "name": "Stella Climber_Stargazer_Studio_Front_Main_5",
+    "price": 353,
+    "image": "/static/images/StSt AW24/Stella Climber_Stargazer_Studio_Front_Main_5.jpg"
+  },
+  {
+    "id": 285,
+    "name": "Stella Guider_Anthracite_Packshot_Front_Main_0",
+    "price": 1083,
+    "image": "/static/images/StSt AW24/Stella Guider_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 286,
+    "name": "Stella Guider_Black_Packshot_Front_Main_0",
+    "price": 171,
+    "image": "/static/images/StSt AW24/Stella Guider_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 287,
+    "name": "Stella Guider_Burgundy_Packshot_Front_Main_0",
+    "price": 984,
+    "image": "/static/images/StSt AW24/Stella Guider_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 288,
+    "name": "Stella Guider_Desert Dust_Packshot_Back_Main_0",
+    "price": 709,
+    "image": "/static/images/StSt AW24/Stella Guider_Desert Dust_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 289,
+    "name": "Stella Guider_Desert Dust_Packshot_Front_Main_0",
+    "price": 275,
+    "image": "/static/images/StSt AW24/Stella Guider_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 290,
+    "name": "Stella Guider_Desert Dust_Studio_Front_Main_5",
+    "price": 176,
+    "image": "/static/images/StSt AW24/Stella Guider_Desert Dust_Studio_Front_Main_5.jpg"
+  },
+  {
+    "id": 291,
+    "name": "Stella Guider_French Navy_Packshot_Front_Main_0",
+    "price": 590,
+    "image": "/static/images/StSt AW24/Stella Guider_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 292,
+    "name": "Stella Guider_Khaki_Packshot_Front_Main_0",
+    "price": 888,
+    "image": "/static/images/StSt AW24/Stella Guider_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 293,
+    "name": "Stella Guider_Mindful Blue_Packshot_Front_Main_0",
+    "price": 714,
+    "image": "/static/images/StSt AW24/Stella Guider_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 294,
+    "name": "Stella Guider_Stargazer_Packshot_Front_Main_0",
+    "price": 305,
+    "image": "/static/images/StSt AW24/Stella Guider_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 295,
+    "name": "Stella Ida_Black_Packshot_Front_Main_0",
+    "price": 119,
+    "image": "/static/images/StSt AW24/Stella Ida_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 296,
+    "name": "Stella Ida_Black_Studio_Front_Main_6",
+    "price": 900,
+    "image": "/static/images/StSt AW24/Stella Ida_Black_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 297,
+    "name": "Stella Ida_Blue Ice_Packshot_Front_Main_0",
+    "price": 1036,
+    "image": "/static/images/StSt AW24/Stella Ida_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 298,
+    "name": "Stella Ida_Bubble Pink_Packshot_Front_Main_0",
+    "price": 487,
+    "image": "/static/images/StSt AW24/Stella Ida_Bubble Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 299,
+    "name": "Stella Ida_Cool Heather Grey_Duo_Front_Main_0",
+    "price": 726,
+    "image": "/static/images/StSt AW24/Stella Ida_Cool Heather Grey_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 300,
+    "name": "Stella Ida_Cool Heather Grey_Packshot_Back_Main_0",
+    "price": 449,
+    "image": "/static/images/StSt AW24/Stella Ida_Cool Heather Grey_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 301,
+    "name": "Stella Ida_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 124,
+    "image": "/static/images/StSt AW24/Stella Ida_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 302,
+    "name": "Stella Ida_French Navy_Packshot_Front_Main_0",
+    "price": 492,
+    "image": "/static/images/StSt AW24/Stella Ida_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 303,
+    "name": "Stella Ida_Natural Raw_Packshot_Front_Main_0",
+    "price": 768,
+    "image": "/static/images/StSt AW24/Stella Ida_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 304,
+    "name": "Stella Ida_White_Packshot_Front_Main_0",
+    "price": 253,
+    "image": "/static/images/StSt AW24/Stella Ida_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 305,
+    "name": "Stella Muser Long Sleeve_Black_Packshot_Front_Main_0",
+    "price": 742,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 306,
+    "name": "Stella Muser Long Sleeve_Blue Ice_Packshot_Front_Main_0",
+    "price": 143,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 307,
+    "name": "Stella Muser Long Sleeve_Bubble Pink_Packshot_Front_Main_0",
+    "price": 446,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Bubble Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 308,
+    "name": "Stella Muser Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 843,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 309,
+    "name": "Stella Muser Long Sleeve_Fraiche Peche_Packshot_Front_Main_0",
+    "price": 818,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Fraiche Peche_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 310,
+    "name": "Stella Muser Long Sleeve_French Navy_Packshot_Front_Main_0",
+    "price": 1039,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 311,
+    "name": "Stella Muser Long Sleeve_Green Bay_Packshot_Front_Main_0",
+    "price": 971,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Green Bay_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 312,
+    "name": "Stella Muser Long Sleeve_Green Bay_Studio_Front_Main_6",
+    "price": 1079,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Green Bay_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 313,
+    "name": "Stella Muser Long Sleeve_Heritage Brown_Packshot_Front_Main_0",
+    "price": 168,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 314,
+    "name": "Stella Muser Long Sleeve_Natural Raw_Duo_Front_Main_0",
+    "price": 477,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Natural Raw_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 315,
+    "name": "Stella Muser Long Sleeve_Natural Raw_Packshot_Back_Main_0",
+    "price": 842,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Natural Raw_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 316,
+    "name": "Stella Muser Long Sleeve_Natural Raw_Packshot_Front_Main_0",
+    "price": 654,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 317,
+    "name": "Stella Muser Long Sleeve_White_Packshot_Front_Main_0",
+    "price": 145,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 318,
+    "name": "Stella Muser Long Sleeve_White_Studio_Front_Main_6",
+    "price": 599,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_White_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 319,
+    "name": "Stella Muser Long Sleeve_Worker Blue_Packshot_Front_Main_0",
+    "price": 531,
+    "image": "/static/images/StSt AW24/Stella Muser Long Sleeve_Worker Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 320,
+    "name": "Stella Muser_Blue Ice_Packshot_Front_Main_0",
+    "price": 868,
+    "image": "/static/images/StSt AW24/Stella Muser_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 321,
+    "name": "Stella Muser_Heather Haze_Packshot_Front_Main_0",
+    "price": 797,
+    "image": "/static/images/StSt AW24/Stella Muser_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 322,
+    "name": "Stella Muser_Heritage Brown_Duo_Front_Main_0",
+    "price": 429,
+    "image": "/static/images/StSt AW24/Stella Muser_Heritage Brown_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 323,
+    "name": "Stella Muser_Heritage Brown_Packshot_Back_Main_0",
+    "price": 953,
+    "image": "/static/images/StSt AW24/Stella Muser_Heritage Brown_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 324,
+    "name": "Stella Muser_Heritage Brown_Packshot_Front_Main_0",
+    "price": 208,
+    "image": "/static/images/StSt AW24/Stella Muser_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 325,
+    "name": "Stella Muser_Misty Jade_Packshot_Front_Main_0",
+    "price": 572,
+    "image": "/static/images/StSt AW24/Stella Muser_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 326,
+    "name": "Stella Nora_Anthracite_Packshot_Front_Main_0",
+    "price": 139,
+    "image": "/static/images/StSt AW24/Stella Nora_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 327,
+    "name": "Stella Nora_Black_Packshot_Front_Main_0",
+    "price": 674,
+    "image": "/static/images/StSt AW24/Stella Nora_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 328,
+    "name": "Stella Nora_Blue Ice_Duo_Front_Main_0",
+    "price": 1091,
+    "image": "/static/images/StSt AW24/Stella Nora_Blue Ice_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 329,
+    "name": "Stella Nora_Blue Ice_Packshot_Back_Main_0",
+    "price": 308,
+    "image": "/static/images/StSt AW24/Stella Nora_Blue Ice_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 330,
+    "name": "Stella Nora_Blue Ice_Packshot_Front_Main_0",
+    "price": 883,
+    "image": "/static/images/StSt AW24/Stella Nora_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 331,
+    "name": "Stella Nora_Bubble Pink_Packshot_Front_Main_0",
+    "price": 175,
+    "image": "/static/images/StSt AW24/Stella Nora_Bubble Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 332,
+    "name": "Stella Nora_Burgundy_Packshot_Front_Main_0",
+    "price": 713,
+    "image": "/static/images/StSt AW24/Stella Nora_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 333,
+    "name": "Stella Nora_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 755,
+    "image": "/static/images/StSt AW24/Stella Nora_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 334,
+    "name": "Stella Nora_Eco-Heather_Packshot_Front_Main_0",
+    "price": 597,
+    "image": "/static/images/StSt AW24/Stella Nora_Eco-Heather_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 335,
+    "name": "Stella Nora_Fraiche Peche_Packshot_Front_Main_0",
+    "price": 184,
+    "image": "/static/images/StSt AW24/Stella Nora_Fraiche Peche_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 336,
+    "name": "Stella Nora_French Navy_Packshot_Front_Main_0",
+    "price": 242,
+    "image": "/static/images/StSt AW24/Stella Nora_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 337,
+    "name": "Stella Nora_Green Bay_Packshot_Front_Main_0",
+    "price": 1065,
+    "image": "/static/images/StSt AW24/Stella Nora_Green Bay_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 338,
+    "name": "Stella Nora_Heather Haze_Packshot_Front_Main_0",
+    "price": 1097,
+    "image": "/static/images/StSt AW24/Stella Nora_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 339,
+    "name": "Stella Nora_Heritage Brown_Packshot_Front_Main_0",
+    "price": 392,
+    "image": "/static/images/StSt AW24/Stella Nora_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 340,
+    "name": "Stella Nora_Lavender_Packshot_Front_Main_0",
+    "price": 390,
+    "image": "/static/images/StSt AW24/Stella Nora_Lavender_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 341,
+    "name": "Stella Nora_Misty Jade_Packshot_Front_Main_0",
+    "price": 151,
+    "image": "/static/images/StSt AW24/Stella Nora_Misty Jade_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 342,
+    "name": "Stella Nora_Natural Raw_Packshot_Front_Main_0",
+    "price": 816,
+    "image": "/static/images/StSt AW24/Stella Nora_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 343,
+    "name": "Stella Nora_White_Packshot_Front_Main_0",
+    "price": 274,
+    "image": "/static/images/StSt AW24/Stella Nora_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 344,
+    "name": "Stella Nora_Worker Blue_Packshot_Front_Main_0",
+    "price": 901,
+    "image": "/static/images/StSt AW24/Stella Nora_Worker Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 345,
+    "name": "Stella Paloma_Anthracite_Packshot_Front_Main_0",
+    "price": 557,
+    "image": "/static/images/StSt AW24/Stella Paloma_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 346,
+    "name": "Stella Paloma_Black_Packshot_Front_Main_0",
+    "price": 922,
+    "image": "/static/images/StSt AW24/Stella Paloma_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 347,
+    "name": "Stella Paloma_Blue Soul_Packshot_Front_Main_0",
+    "price": 1053,
+    "image": "/static/images/StSt AW24/Stella Paloma_Blue Soul_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 348,
+    "name": "Stella Paloma_Burgundy_Packshot_Front_Main_0",
+    "price": 301,
+    "image": "/static/images/StSt AW24/Stella Paloma_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 349,
+    "name": "Stella Paloma_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 554,
+    "image": "/static/images/StSt AW24/Stella Paloma_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 350,
+    "name": "Stella Paloma_Cotton Pink_Packshot_Front_Main_0",
+    "price": 781,
+    "image": "/static/images/StSt AW24/Stella Paloma_Cotton Pink_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 351,
+    "name": "Stella Paloma_French Navy_Packshot_Back_Main_0",
+    "price": 389,
+    "image": "/static/images/StSt AW24/Stella Paloma_French Navy_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 352,
+    "name": "Stella Paloma_Heritage Brown_Packshot_Front_Main_0",
+    "price": 204,
+    "image": "/static/images/StSt AW24/Stella Paloma_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 353,
+    "name": "Stella Paloma_Khaki_Packshot_Front_Main_0",
+    "price": 458,
+    "image": "/static/images/StSt AW24/Stella Paloma_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 354,
+    "name": "Stella Paloma_Off White_Duo_Front_Main_0",
+    "price": 865,
+    "image": "/static/images/StSt AW24/Stella Paloma_Off White_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 355,
+    "name": "Stella Paloma_Off White_Packshot_Back_Main_0",
+    "price": 991,
+    "image": "/static/images/StSt AW24/Stella Paloma_Off White_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 356,
+    "name": "Stella Paloma_Off White_Packshot_Front_Main_0",
+    "price": 563,
+    "image": "/static/images/StSt AW24/Stella Paloma_Off White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 357,
+    "name": "Stella Quester_Anthracite_Packshot_Front_Main_0",
+    "price": 859,
+    "image": "/static/images/StSt AW24/Stella Quester_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 358,
+    "name": "Stella Quester_Black_Packshot_Front_Main_0",
+    "price": 698,
+    "image": "/static/images/StSt AW24/Stella Quester_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 359,
+    "name": "Stella Quester_Burgundy_Packshot_Back_Main_0",
+    "price": 265,
+    "image": "/static/images/StSt AW24/Stella Quester_Burgundy_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 360,
+    "name": "Stella Quester_Burgundy_Packshot_Front_Main_0",
+    "price": 277,
+    "image": "/static/images/StSt AW24/Stella Quester_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 361,
+    "name": "Stella Quester_Burgundy_Studio_Front_Main_5",
+    "price": 979,
+    "image": "/static/images/StSt AW24/Stella Quester_Burgundy_Studio_Front_Main_5.jpg"
+  },
+  {
+    "id": 362,
+    "name": "Stella Quester_Desert Dust_Packshot_Front_Main_0",
+    "price": 774,
+    "image": "/static/images/StSt AW24/Stella Quester_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 363,
+    "name": "Stella Quester_French Navy_Packshot_Front_Main_0",
+    "price": 276,
+    "image": "/static/images/StSt AW24/Stella Quester_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 364,
+    "name": "Stella Quester_Khaki_Packshot_Front_Main_0",
+    "price": 902,
+    "image": "/static/images/StSt AW24/Stella Quester_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 365,
+    "name": "Stella Quester_Mindful Blue_Packshot_Front_Main_0",
+    "price": 768,
+    "image": "/static/images/StSt AW24/Stella Quester_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 366,
+    "name": "Stella Quester_Stargazer_Packshot_Front_Main_0",
+    "price": 979,
+    "image": "/static/images/StSt AW24/Stella Quester_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 367,
+    "name": "Stella Serena_Anthracite_Packshot_Front_Main_0",
+    "price": 118,
+    "image": "/static/images/StSt AW24/Stella Serena_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 368,
+    "name": "Stella Serena_Blue Ice_Packshot_Back_Main_0",
+    "price": 828,
+    "image": "/static/images/StSt AW24/Stella Serena_Blue Ice_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 369,
+    "name": "Stella Serena_Blue Ice_Packshot_Front_Main_0",
+    "price": 872,
+    "image": "/static/images/StSt AW24/Stella Serena_Blue Ice_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 370,
+    "name": "Stella Serena_Blue Ice_Studio_Front_Main_5",
+    "price": 308,
+    "image": "/static/images/StSt AW24/Stella Serena_Blue Ice_Studio_Front_Main_5.jpg"
+  },
+  {
+    "id": 371,
+    "name": "Stella Serena_Heritage Brown_Packshot_Front_Main_0",
+    "price": 605,
+    "image": "/static/images/StSt AW24/Stella Serena_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 372,
+    "name": "Stella Trail Blazer_Anthracite_Packshot_Front_Main_0",
+    "price": 268,
+    "image": "/static/images/StSt AW24/Stella Trail Blazer_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 373,
+    "name": "Stella Trail Blazer_Black_Packshot_Front_Main_0",
+    "price": 379,
+    "image": "/static/images/StSt AW24/Stella Trail Blazer_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 374,
+    "name": "Stella Trail Blazer_French Navy_Packshot_Front_Main_0",
+    "price": 715,
+    "image": "/static/images/StSt AW24/Stella Trail Blazer_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 375,
+    "name": "Stella Trail Blazer_Stargazer_Packshot_Back_Main_0",
+    "price": 409,
+    "image": "/static/images/StSt AW24/Stella Trail Blazer_Stargazer_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 376,
+    "name": "Stella Trail Blazer_Stargazer_Packshot_Front_Main_0",
+    "price": 447,
+    "image": "/static/images/StSt AW24/Stella Trail Blazer_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 377,
+    "name": "Stella Trail Blazer_Stargazer_Studio_Front_Main_6",
+    "price": 803,
+    "image": "/static/images/StSt AW24/Stella Trail Blazer_Stargazer_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 378,
+    "name": "Stella Voyager_Anthracite_Packshot_Front_Main_0",
+    "price": 976,
+    "image": "/static/images/StSt AW24/Stella Voyager_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 379,
+    "name": "Stella Voyager_Desert Dust_Packshot_Front_Main_0",
+    "price": 845,
+    "image": "/static/images/StSt AW24/Stella Voyager_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 380,
+    "name": "Stella Voyager_Khaki_Packshot_Front_Main_0",
+    "price": 899,
+    "image": "/static/images/StSt AW24/Stella Voyager_Khaki_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 381,
+    "name": "Stella Voyager_Mindful Blue_Packshot_Front_Main_0",
+    "price": 430,
+    "image": "/static/images/StSt AW24/Stella Voyager_Mindful Blue_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 382,
+    "name": "Stella Voyager_Stargazer_Packshot_Back_Main_0",
+    "price": 829,
+    "image": "/static/images/StSt AW24/Stella Voyager_Stargazer_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 383,
+    "name": "Stella Voyager_Stargazer_Packshot_Front_Main_0",
+    "price": 890,
+    "image": "/static/images/StSt AW24/Stella Voyager_Stargazer_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 384,
+    "name": "Stella Voyager_Stargazer_Studio_Front_Main_5",
+    "price": 873,
+    "image": "/static/images/StSt AW24/Stella Voyager_Stargazer_Studio_Front_Main_5.jpg"
+  },
+  {
+    "id": 385,
+    "name": "Striker_Black_Packshot_Front_Main_0",
+    "price": 357,
+    "image": "/static/images/StSt AW24/Striker_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 386,
+    "name": "Striker_Cool Heather Grey_Packshot_Front_Main_0",
+    "price": 1053,
+    "image": "/static/images/StSt AW24/Striker_Cool Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 387,
+    "name": "Striker_French Navy_Packshot_Front_Main_0",
+    "price": 283,
+    "image": "/static/images/StSt AW24/Striker_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 388,
+    "name": "Striker_Heather Haze_Duo_Front_Main_0",
+    "price": 920,
+    "image": "/static/images/StSt AW24/Striker_Heather Haze_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 389,
+    "name": "Striker_Heather Haze_Packshot_Back_Main_0",
+    "price": 293,
+    "image": "/static/images/StSt AW24/Striker_Heather Haze_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 390,
+    "name": "Striker_Heather Haze_Packshot_Front_Main_0",
+    "price": 995,
+    "image": "/static/images/StSt AW24/Striker_Heather Haze_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 391,
+    "name": "Striker_Heritage Brown_Packshot_Front_Main_0",
+    "price": 198,
+    "image": "/static/images/StSt AW24/Striker_Heritage Brown_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 392,
+    "name": "Striker_Natural Raw_Packshot_Front_Main_0",
+    "price": 339,
+    "image": "/static/images/StSt AW24/Striker_Natural Raw_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 393,
+    "name": "Tote Bag_White_Packshot_Front_Main_0",
+    "price": 614,
+    "image": "/static/images/StSt AW24/Tote Bag_White_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 394,
+    "name": "Tote Bag_White_Studio_Front_Main_6",
+    "price": 430,
+    "image": "/static/images/StSt AW24/Tote Bag_White_Studio_Front_Main_6.jpg"
+  },
+  {
+    "id": 395,
+    "name": "Trekker_Black_Packshot_Front_Main_0",
+    "price": 940,
+    "image": "/static/images/StSt AW24/Trekker_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 396,
+    "name": "Trekker_Desert Dust_Duo_Front_Main_0",
+    "price": 425,
+    "image": "/static/images/StSt AW24/Trekker_Desert Dust_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 397,
+    "name": "Trekker_Desert Dust_Packshot_Back_Main_0",
+    "price": 342,
+    "image": "/static/images/StSt AW24/Trekker_Desert Dust_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 398,
+    "name": "Trekker_Desert Dust_Packshot_Front_Main_0",
+    "price": 711,
+    "image": "/static/images/StSt AW24/Trekker_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 399,
+    "name": "Trekker_French Navy_Packshot_Front_Main_0",
+    "price": 289,
+    "image": "/static/images/StSt AW24/Trekker_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 400,
+    "name": "Trucker 2.0_Anthracite_Packshot_Front_Main_0",
+    "price": 898,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Anthracite_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 401,
+    "name": "Trucker 2.0_Black_Packshot_Front_Main_0",
+    "price": 329,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Black_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 402,
+    "name": "Trucker 2.0_Bottle Green_Packshot_Front_Main_0",
+    "price": 1093,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Bottle Green_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 403,
+    "name": "Trucker 2.0_Burgundy_Packshot_Front_Main_0",
+    "price": 981,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Burgundy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 404,
+    "name": "Trucker 2.0_Desert Dust_Duo_Front_Main_0",
+    "price": 317,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Desert Dust_Duo_Front_Main_0.jpg"
+  },
+  {
+    "id": 405,
+    "name": "Trucker 2.0_Desert Dust_Packshot_Back_Main_0",
+    "price": 883,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Desert Dust_Packshot_Back_Main_0.jpg"
+  },
+  {
+    "id": 406,
+    "name": "Trucker 2.0_Desert Dust_Packshot_Front_Main_0",
+    "price": 893,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Desert Dust_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 407,
+    "name": "Trucker 2.0_French Navy_Packshot_Front_Main_0",
+    "price": 184,
+    "image": "/static/images/StSt AW24/Trucker 2.0_French Navy_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 408,
+    "name": "Trucker 2.0_Heather Grey_Packshot_Front_Main_0",
+    "price": 212,
+    "image": "/static/images/StSt AW24/Trucker 2.0_Heather Grey_Packshot_Front_Main_0.jpg"
+  },
+  {
+    "id": 409,
+    "name": "Trucker 2.0_White_Packshot_Front_Main_0",
+    "price": 921,
+    "image": "/static/images/StSt AW24/Trucker 2.0_White_Packshot_Front_Main_0.jpg"
   }
 ]

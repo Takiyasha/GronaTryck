@@ -809,6 +809,7 @@ section h1 {
   font-family: "Nunito sans";
   font-size: 18px;
   padding-inline: 44px;
+  font-weight: 700;
   white-space: nowrap;
 
 
@@ -823,7 +824,6 @@ section h1 {
   background-color: #052900;
   color: #F7F9F7;
 }
-
 
 @media screen and (min-width: 1280px) {
   .videoWrapper {

@@ -8,100 +8,39 @@ const imagesFolderPath = path.join(__dirname, "public", "images", "StSt AW24");
 // Predefined data for attributes
 const predefinedAttributes = {
   "Bomber 2.0": {
-    colors: ["Black", "Blue", "Green"],
-    fit: ["Unisex"],
+    category: "Sweater",
+    price_tiers: [
+      { range: "10-49", price_per_unit: 360 },
+      { range: "50-99", price_per_unit: 324 },
+      { range: "100-249", price_per_unit: 306 },
+      { range: "250-499", price_per_unit: 297 },
+      { range: "500+", price_per_unit: 288 },
+    ],
+    material_info: [
+      "85% ekologisk rättvisemärkt, ringspunnen och kammad bomull",
+      "15% återvunnen PET",
+    ],
+    egenskaper_info: [
+      "Borstad fleece-insida",
+      "1×1 Ribbade muddar",
+      "Storlekar från XXS-5XL",
+    ],
+    fit: "Unisex",
+    minimum: 10,
   },
-  Brooker: {
-    colors: ["Green", "Black", "White"],
-    fit: ["Unisex"],
-  },
-  "Changer 2.0": {
-    colors: ["Blue", "White", "Red", "Green"],
-    fit: ["Unisex"],
-  },
-  "Connector 2.0": {
-    colors: ["Black", "Blue", "Red", "White"],
-    fit: ["Unisex"],
-  },
-  Crafter: {
-    colors: ["Blue", "Red", "Black", "White"],
-    fit: ["Herr"],
-  },
-  "Creator 2.0": {
-    colors: ["Blue", "Red", "White", "Green"],
-    fit: ["Unisex"],
-  },
-  "Cruiser 2.0": {
-    colors: ["Blue", "White", "Green", "Red"],
-    fit: ["Unisex"],
-  },
-  "Drummer 2.0": {
-    colors: ["Blue", "White", "Red"],
-    fit: ["Unisex"],
-  },
-  Freestyler: {
-    colors: ["Blue", "White", "Red", "Green", "Black", "Yellow"],
-    fit: ["Unisex"],
-  },
-  Knoxer: {
-    colors: ["Blue", "White", "Black", "Red"],
-    fit: ["Unisex"],
-  },
-  Liner: {
-    colors: ["Black", "White"],
-    fit: ["Unisex"],
-  },
-  Mixer: {
-    colors: ["Blue", "White", "Green", "Red", "Pink", "Black"],
-    fit: ["Unisex"],
-  },
-  "Prepster 2.0": {
-    colors: ["Blue", "White", "Red", "Green", "Yellow", "Pink", "Black"],
-    fit: ["Unisex"],
-  },
-  Puffer: {
-    colors: ["Blue", "Black"],
-    fit: ["Unisex"],
-  },
-  "Radder 2.0": {
-    colors: ["Blue", "White", "Black", "Green", "Red", "Yellow"],
-    fit: ["Unisex"],
-  },
-  Roller: {
-    colors: ["Blue", "Red", "Yellow"],
-    fit: ["Unisex"],
-  },
-  "Slammer 2.0": {
-    colors: ["Blue", "White", "Black", "Green", "Red", "Yellow"],
-    fit: ["Unisex"],
-  },
-  "Sparker 2.0": {
-    colors: ["Blue", "Red"],
-    fit: ["Unisex"],
-  },
-  Stanley: {
-    colors: ["Blue", "Black", "Red", "Yellow", "White", "Green"],
-    fit: ["Herr"],
-  },
-  Stella: {
-    colors: ["Blue", "White", "Black", "Green", "Red", "Yellow", "Pink"],
-    fit: ["Dam"],
-  },
-  Striker: {
-    colors: ["Blue", "White", "Black", "Red"],
-    fit: ["Unisex"],
-  },
-  Trekker: {
-    colors: ["Blue", "Yellow", "Black"],
-    fit: ["Unisex"],
-  },
-  "Trucker 2.0": {
-    colors: ["Blue", "Yellow", "Black", "White", "Red", "Green"],
-    fit: ["Unisex"],
-  },
-
   // Add more products as needed
 };
+
+function getRandomArtikelnummer() {
+  return Math.floor(1000 + Math.random() * 9000); // Generates a 4-digit random number
+}
+
+function normalizeProductName(name) {
+  // Remove unnecessary descriptors like "Long Sleeve"
+  return name
+    .replace(/long sleeve/gi, "") // Remove "Long Sleeve" (case insensitive)
+    .trim(); // Remove leading/trailing whitespace
+}
 
 fs.readdir(imagesFolderPath, (err, files) => {
   if (err) {
@@ -109,29 +48,69 @@ fs.readdir(imagesFolderPath, (err, files) => {
     return;
   }
 
+  // Group images by simplified product name
+  const groupedImages = files.reduce((acc, file) => {
+    // Extract the product name part and clean it up
+    const [productName] = file.split("_");
+    const cleanedProductName = normalizeProductName(productName);
+
+    if (!acc[cleanedProductName]) {
+      acc[cleanedProductName] = [];
+    }
+    acc[cleanedProductName].push(file);
+    return acc;
+  }, {});
+
   // Generate products data
-  const products = files.map((file, index) => {
-    const fullName = path.basename(file, path.extname(file));
-
-    // Try to match a base name with the predefined attributes
-    const baseName =
-      Object.keys(predefinedAttributes).find((name) =>
-        fullName.includes(name)
-      ) || fullName.split("_")[0];
-
-    // Get the attributes for the matched base name
-    const attributes = predefinedAttributes[baseName] || {
-      colors: [],
-      fit: [],
+  const products = Object.keys(groupedImages).map((productName, index) => {
+    const attributes = predefinedAttributes[productName] || {
+      category: "Default Category",
+      price_tiers: [
+        { range: "10-49", price_per_unit: 360 },
+        { range: "50-99", price_per_unit: 324 },
+        { range: "100-249", price_per_unit: 306 },
+        { range: "250-499", price_per_unit: 297 },
+        { range: "500+", price_per_unit: 288 },
+      ],
+      material_info: [
+        "85% ekologisk rättvisemärkt, ringspunnen och kammad bomull",
+        "15% återvunnen PET",
+      ],
+      egenskaper_info: [
+        "Borstad fleece-insida",
+        "1×1 Ribbade muddar",
+        "Storlekar från XXS-5XL",
+      ],
+      fit: "Unisex",
+      minimum: 10,
     };
+
+    const productImages = groupedImages[productName].map((file) => {
+      const colorName = file.split("_")[1] || "Unknown";
+      const simplifiedColor = colorName.replace(/[^a-zA-Z ]/g, ""); // Simplify color name
+
+      return {
+        image: `/static/images/StSt AW24/${file}`,
+        simplified_color: simplifiedColor,
+        color_name: colorName,
+      };
+    });
 
     return {
       id: index + 1,
-      name: baseName,
-      price: Math.floor(Math.random() * 1000) + 100, // Random price for example
-      image: `/static/images/StSt AW24/${file}`, // Adjusted to match the correct static path
-      colors: attributes.colors,
+      artikelnummer: getRandomArtikelnummer(),
+      name: productName,
+      category: attributes.category,
+      price_tiers: attributes.price_tiers,
+      model_image: {
+        image: `/static/images/StSt AW24/${groupedImages[productName][0]}`,
+        simplified_color: productImages[0]?.simplified_color || "Unknown",
+      },
+      products_images: productImages,
+      material_info: attributes.material_info,
+      egenskaper_info: attributes.egenskaper_info,
       fit: attributes.fit,
+      minimum: attributes.minimum,
     };
   });
 

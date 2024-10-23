@@ -10,84 +10,94 @@
   </head>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <!-- Hamburger-meny (vänster på mobil) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <!-- Logotyp (vänster på desktop, centrerad på mobil) -->
-            <a class="navbar-brand" href="/index">Logotyp</a>
-    
-            <!-- Navbar-innehåll -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/butik">Butik</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/stanleyStella">Stanley Stella</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hållbarhet</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">Om oss</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
-    
-            <!-- Ikoner (alltid i högerkant) -->
-            <div class="navbar-icons">
-                <a href="#" class="nav-link">
-                    <svg width="32" height="32" viewBox="0 0 1380 1380" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M540,60c64.83,0,127.68,12.68,186.82,37.7,57.15,24.17,108.49,58.79,152.59,102.89,44.1,44.1,78.72,95.44,102.89,152.59,25.01,59.14,37.7,121.99,37.7,186.82s-12.68,127.68-37.7,186.82c-24.17,57.15-58.79,108.49-102.89,152.59-44.1,44.1-95.44,78.72-152.59,102.89-59.14,25.01-121.99,37.7-186.82,37.7s-127.68-12.68-186.82-37.7c-57.15-24.17-108.49-58.79-152.59-102.89-44.1-44.1-78.72-95.44-102.89-152.59-25.01-59.14-37.7-121.99-37.7-186.82s12.68-127.68,37.7-186.82c24.17-57.15,58.79-108.49,102.89-152.59,44.1-44.1,95.44-78.72,152.59-102.89,59.14-25.01,121.99-37.7,186.82-37.7M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0Z"/>
-                      <path d="M539.94,527.65c69.61,0,126.04-56.43,126.04-126.04s-56.43-126.04-126.04-126.04-126.04,56.43-126.04,126.04,56.43,126.04,126.04,126.04ZM540,582.85c-167.58,0-275,92.47-275,137.5v79.08c0,2.76,2.24,5,5,5h540c2.76,0,5-2.24,5-5v-79.07c0-54.45-101.7-137.5-275-137.5h0Z"/>
-                    </svg>
-                </a>
-                <a href="#" class="nav-link">
-                    <svg width="32" height="32" viewBox="0 0 1080 1080" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M700,733.3c-8.5,0-17.1-3.3-23.6-9.8l-179.4-179.6c-46.6,36.4-103.6,56.1-163.7,56.1s-138.2-27.7-188.6-78.1c-50.4-50.4-78.1-117.3-78.1-188.6s27.7-138.2,78.1-188.6c50.4-50.4,117.3-78.1,188.6-78.1s138.2,27.7,188.6,78.1c50.4,50.4,78.1,117.3,78.1,188.6s-19.6,116.9-55.9,163.4l179.5,179.7c13,13,13,34.1,0,47.1-6.5,6.5-15,9.7-23.6,9.7ZM333.3,133.3c-110.3,0-200,89.7-200,200s89.7,200,200,200,200-89.7,200-200-89.7-200-200-200Z"/>
-                    </svg>
-                </a>
-                <a href="#" class="nav-link">
-                    <svg width="32" height="32" viewBox="0 0 1080 1080" fill="#567C50" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M669.6 119h-61.8V86.1c0-10.5-8.5-19-19-19h-97.1C481.1 25.7 443.2-4 400-4s-81.1 29.7-91.8 71.2h-97.1c-10.5 0-19 8.5-19 19v32.9h-61.8c-10.5 0-19 8.5-19 19v647c0 10.5 8.5 19 19 19h539.3c10.5 0 19-8.5 19-19V138c0-10.5-8.5-19-19-19Zm-439.5 61.2v-75.1h94.2c10 0 18.3-7.8 18.9-17.8C345 57.4 369.9 34 399.9 34s54.9 23.4 56.7 53.3c.6 10 8.9 17.8 18.9 17.8h94.2v75.1H230.1Zm-18.9 37.9h377.7c10.5 0 19-8.5 19-19v-42.2h42.9V766H149.3V157h42.9v42.2c0 10.5 8.5 19 19 19Z"/>
-                      <path d="m188.5 359.1 35.6 35.6c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8ZM366.7 366.5h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19ZM224.1 552.8c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8l35.6 35.6ZM366.7 524.7h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19ZM291.4 616.8l-53.9 53.9-22.2-22.2c-7.4-7.4-19.4-7.4-26.8 0-7.4 7.4-7.4 19.4 0 26.8l35.6 35.6c3.6 3.6 8.3 5.6 13.4 5.6s9.8-2 13.4-5.6l67.3-67.3c7.4-7.4 7.4-19.4 0-26.8-7.4-7.4-19.4-7.4-26.8 0ZM366.7 682.9h231.4c10.5 0 19-8.5 19-19s-8.5-19-19-19H366.7c-10.5 0-19 8.5-19 19s8.5 19 19 19Z"/>
-                    </svg>
-                </a>
-            </div>
+      <div class="container">
+        <!-- Hamburger-meny (vänster på mobil) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logotyp (vänster på desktop, centrerad på mobil) -->
+        <a class="navbar-brand" href="/index">Logotyp</a>
+
+        <!-- Navbar-innehåll -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/butik">Butik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/stanleyStella">Stanley Stella</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hållbarhet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">Om oss</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
         </div>
+
+        <!-- Ikoner (alltid i högerkant) -->
+        <div class="navbar-icons">
+          <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="32" height="32">
+              <path d="M597.55 427.07h-395.1c-96.64 0-174.99 78.34-174.99 174.98v169.01c0 16.1 13.06 29.16 29.17 29.16h686.74c16.11 0 29.17-13.06 29.17-29.16V602.05c0-96.64-78.35-174.98-174.99-174.98Zm99.99 298.15H102.46V602.05c0-55.13 44.86-99.98 99.99-99.98h395.1c55.13 0 99.99 44.85 99.99 99.98v123.17ZM400 74.78c31.53 0 61.18 12.28 83.47 34.58 22.3 22.3 34.58 51.94 34.58 83.48s-12.28 61.18-34.58 83.48c-22.3 22.3-51.94 34.58-83.47 34.58s-61.18-12.28-83.48-34.58c-22.3-22.3-34.58-51.94-34.58-83.48s12.28-61.18 34.58-83.48S368.46 74.78 400 74.78m0-75c-106.62 0-193.05 86.43-193.05 193.05S293.38 385.88 400 385.88s193.05-86.43 193.05-193.05S506.62-.22 400-.22Z" style="fill:#567c50"/>
+          </svg>
+          </a>
+          <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="32" height="32">
+              <path d="M786.08 734.89 565.9 514.71c43.62-55.3 67.29-123.17 67.29-194.69 0-84.17-32.78-163.31-92.3-222.83S402.24 4.9 318.07 4.9 154.76 37.68 95.24 97.2 2.94 235.85 2.94 320.02s32.78 163.31 92.3 222.83 138.66 92.3 222.83 92.3c71.57 0 139.49-23.71 194.81-67.39l220.17 220.17c7.32 7.32 16.92 10.98 26.52 10.98s19.19-3.66 26.52-10.98c14.64-14.64 14.64-38.39 0-53.03ZM77.94 320.02c0-132.41 107.72-240.13 240.13-240.13S558.2 187.61 558.2 320.02 450.48 560.15 318.07 560.15 77.94 452.43 77.94 320.02Z" style="fill:#567c50"/>
+          </svg>
+          </a>
+          <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="32" height="32">
+              <path d="m749.35 763.23-60-538C687.94 212.57 677.24 203 664.5 203H556.73c-5.23-35.7-12.17-65.73-22.09-91.87-12.54-33.03-29.21-57.35-50.96-74.33C460.06 18.36 430.39 9 395.51 9s-64.6 9.5-88.09 28.24c-21.56 17.2-37.94 41.78-50.07 75.13-9.49 26.08-15.95 57.07-20.55 90.62H134.02c-12.73 0-23.43 9.57-24.85 22.23l-60 538a24.998 24.998 0 0 0 6.21 19.44 25 25 0 0 0 18.63 8.33h650.5a25 25 0 0 0 18.63-8.33c4.74-5.3 7-12.37 6.21-19.44ZM304.32 129.47C322.29 80.08 349.55 59 395.5 59s73.8 20.9 92.39 69.87c7.94 20.92 13.76 46.25 18.18 74.13H287.24c4.06-27.59 9.51-52.7 17.08-73.53ZM101.94 741l54.42-488h74.93c-2.66 30.7-4.34 62.49-5.77 93.86-.63 13.79 10.04 25.49 23.83 26.12.39.02.78.03 1.16.03 13.28 0 24.34-10.45 24.95-23.86 1.48-32.3 3.21-65.01 6-96.14h230.98c3.12 30.6 5.23 62.73 7.1 94.47.81 13.78 12.63 24.31 26.42 23.49 13.78-.81 24.3-12.64 23.49-26.42-1.98-33.77-4.12-64.09-6.78-91.53h79.45l54.42 488h-594.6Z" style="fill:#567c50"/>
+          </svg>
+          </a>
+        </div>
+      </div>
     </nav>
       <div class="hero">
         <img src="/static/images/gt-bilder/DSC08603.jpg" alt="Om oss">
         <h1>Om oss</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40">
+          <path d="M1 26.89S196.38 2.09 336 1.58c146.52-.53 239.05 20.15 385 25.31C861.03 31.85 930.91 0 1071.5 0S1441 26.89 1441 26.89V140H1V26.89Z" style="fill:#fff"/>
+      </svg>
       </div>
   </header>
   <body>
-    
         <section>
             <div class="aboutContainer">
-                <div>
+                <div class="text-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 58">
+                    <path d="M12.26 40.8c.38.08.77.15 1.13.23-.71.17-1.78.18-3.02.17 13.63 1.56 32.33.51 44.51-2.29-6.12-3.33-17.62-3.89-26.82-5.29 1.37.24 2.8.49 4.16.73-2.05-.2-4.08-.42-6.37-.43.25.14.54.31.79.45-9.8-2.92-37.93 3.45-14.39 6.42Zm13.07 4.57c-4.41-.68-8.73-.83-12.94-1.78l.32 1.26c2.11-1.74 28.49-1.99 15.5-4.22-4.8-1.99-41.65 1.59-19.91 4.98 5.61.1 6.1-1.84 8.99-1.5l-1.47.33c1.98-1.07 7.64-1.5 10.69-1.63-1.02-1.12-2.5-2.45-4.13-1.68.02 1.19-24.79 2.4-13.42 4.36-.35-.07-.7-.14-1.04-.2 4.13-.58 17.6 2.14 17.41.09Zm200.48 10.64c15.43.77 31.2 1.71 46.35.53-14.07.53-35.36-.92-46.35-.53Zm114.45-22.86c-2.53.71-4.66 1.7-6.94 2.17-32.72 11.83-70.85 11.23-105.99 13.06 2.4 1.39-4.33 1.04-5.52 1.01 30.76 2.54 61.84-1.08 91.67-7.04-1.7 1.25-5.71 1.63-8.19 2.62-51.99 15.25-107.26 10.56-160.66 7.5-11.05-2.76-124.68-2.81-97.16-13.86-9.97-.4-25.01-3.84-30.23-9.53-7.92-1.52-5.24-3.43-.99-7.28-1.7-.91-2.54-1.89-1.25-2.99-1.95-.55.94-1.12 1.76-1.08-3.15-1.57-14.76.36-13.08-3.93-2.65-.06-4.86-.62-2.86-1.83 1.48-1.13 5.33.45 5 .37.38-.44.77-.28 1.14.07l-.35-.4 1.29.2-1.49-.3c2.85.02 5.05 0 6.72-.17 6.73.3 12.89-.58 21.06-.83-7.3-2.71-17.97-.95-25.98-2.34 20.12-4.95 42.91-1.1 63.56.79l-.57-.22c1.15.17 2.31.37 3.46.52C59.31 6.01 42.61 6.4 27.52 3.24c19.77-2 39.72 1.68 56.39 4.62-.57-.23-1.11-.44-1.68-.68 2.1.27 3.16.83 5.05 1.16-.21-.26-.42-.54-.63-.81 15.96 1.41 29.42 4.35 45 4.25-1.61-.23-3.2-.47-4.81-.7 34.15 3.68 63.39 10.11 96.51 9.91-13.74 1.4-28.83-.25-43.29-.74 59.95 9.04 122.57 3.02 179.58-15.08-36.69 18.34-83.31 21.43-125.59 20.57.33.49-.24.78-1.01 1.06 38.65-.04 79.56-.5 116.79-12.38-6.79 3.44-15.3 5.4-22.98 7.61 3.18.18 2.86 1.54.09 2.73 1.14-.06 6.92-1.8 7.66-1.02-16.44 4.72-34.96 6.22-52.16 8.36 27.22 1.57 61.58-11.33 84.66-16.78-7.34 2.42-15.42 5-22.9 6.95 1.4.12-2.05 1.03-1.19.31-14.4 3.83-29.08 6.82-43.82 9.18 12.64-.79 39.42-6.96 44.47-7.72 16.72-.53-22.05 7.44-25.63 8.26 11.93-1.23 23.92-4.6 35.43-6.45-25.56 10.27-54.4 11.26-81.23 17.54 22.68-.43 44.03-6.71 65.92-11.39-17.83 5.47-37.32 8.97-55.62 11.73 19.1-1.32 42.11-6.65 57.71-10.58ZM56.54 15.72c-.16-.06-.29-.1-.4-.15.93.02 2.57.8 3.38 1.28 0 0-1.5-.56-2.98-1.13ZM31.1 18.44h.01c-.67-.3-1.15-.52-1.15-.52.47.21.83.38 1.14.52Zm160.28 3.82c-8.41-.64-16.76-1.58-25.04-2.91 8.41.39 16.65 1.89 25.05 2.91h-.01ZM39.61 11.75c7.62 2.72 15.29 1.62 23.05 2.69-.43-.56 2.01-.16 2.54-.27-8.4-.96-17.24-1.66-25.59-2.42ZM8.59 13.22c-.13-.04-.24-.07-.39-.1l.81-.52s-.2.27-.42.62Zm-1.26.87c.21 0 .41.03.64.04-.22.19-.42.13-.64-.04Zm5.86.39c-.35-.12-.56-.2-.83-.24l.83.24Zm4.54 14.03 2.13-2.44-2.32 2.34.19.09Z" style="fill:#B4C3B2"/>
+                </svg>
                     <h2 class="heading-m">Vår historia</h2>
                     <p class="body-text">Gröna Tryck är en hållbar profilbutik och återförsäljare av ekologiska och miljösmarta produkter och varumärken. Vi är ett team av norrländska problemlösare med en passion för tryck och en stark övertygelse om att detta bör göras på ett så hållbart sätt som möjligt. Tillsammans med förädlare i Sverige och Europa kan vi matcha företag och organisationer med allt från små beställningar av tryck och produkter till customtillverkning direkt från råvara. <br><br> Gröna Tryck grundades 2008 som ett litet norrländskt screentryckeri, men har sedan dess utvecklats till att erbjuda helhetslösningar för ekologisk och miljösmart profilreklam. Idag är vi ledande inom ekologiska profilkläder och kan självklart hjälpa er med material för mässor, merchandise, arbetskläder och medlemsgåvor med mera.</p>
                 </div>
-
                 <div class="owner margin-block-mobile">
-                    <img src="/static/images/infografik_ikoner_v2/ägarna/joel-circle.png" alt="" class="img-c">
-                    <h3 class="heading-s-c">Joel Hellman</h3>
-                    <p class="body-text-s-c">joel.hellman@gronatryck.se</p>
-                    <p class="alt-text-c">Kundansvarig</p>
-                </div>
-                <div class="owner margin-block-mobile">
-                    <img src="/static/images/infografik_ikoner_v2/ägarna/josef-circle.png" alt="" class="img-c">
-                    <h3 class="heading-s-c">Josef Baker</h3>
-                    <p class="body-text-s-c">josef.baker@gronatryck.se</p>
-                    <p class="alt-text-c">Kundansvarig</p>
-                </div>
+                  <img src="/static/images/infographics-folder/owners/joel-circle.png" alt="" class="img-c">
+                  <h3 class="heading-s-c">Joel Hellman</h3>
+                  <p class="body-text-s-c">joel.hellman@gronatryck.se</p>
+                  <p class="alt-text-c">Kundansvarig</p>
+              </div>
+              <div class="owner margin-block-mobile">
+                  <img src="/static/images/infographics-folder/owners/josef-circle.png" alt="" class="img-c">
+                  <h3 class="heading-s-c">Josef Baker</h3>
+                  <p class="body-text-s-c">josef.baker@gronatryck.se</p>
+                  <p class="alt-text-c">Kundansvarig</p>
+              </div>
             </div>
           </section>
 
@@ -99,55 +109,55 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/armbryterskan-fran-ensamheten-1024x717.jpg"
+                    src="/static/images/infographics-folder/collaborations/armbryterskan-fran-ensamheten-1024x717.jpg"
                   />
                 </div>
                 <div class="swiper-slide">
-                  <img src="/static/images/infografik_ikoner_v2/sammarbeten/citronfjarilen.jpg" />
+                  <img src="/static/images/infographics-folder/collaborations/citronfjarilen.jpg" />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/djukskyddet-samarbete-1024x717.jpg"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/dyngbaggegalan-merch-1024x716.jpg"
+                    src="/static/images/infographics-folder/collaborations/djukskyddet-samarbete-1024x717.jpg"
                   />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/fatta-samarbete-1024x717.jpg"
+                    src="/static/images/infographics-folder/collaborations/dyngbaggegalan-merch-1024x716.jpg"
                   />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/hoga-kusten-outdoor-collective-1024x717.jpg"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/static/images/infografik_ikoner_v2/sammarbeten/im-samarbete-1024x717.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/static/images/infografik_ikoner_v2/sammarbeten/movebybike-cyckel-transport-1024x716.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/protect-our-winters-sweden-norway-1024x717.jpg"
+                    src="/static/images/infographics-folder/collaborations/fatta-samarbete-1024x717.jpg"
                   />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/riksgransen-shop-bjorkliden-1024x716.jpg"
+                    src="/static/images/infographics-folder/collaborations/hoga-kusten-outdoor-collective-1024x717.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/static/images/infographics-folder/collaborations/im-samarbete-1024x717.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/static/images/infographics-folder/collaborations/movebybike-cyckel-transport-1024x716.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="/static/images/infographics-folder/collaborations/protect-our-winters-sweden-norway-1024x717.jpg"
                   />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="/static/images/infografik_ikoner_v2/sammarbeten/talita-stockholm-1024x717.jpg"
+                    src="/static/images/infographics-folder/collaborations/riksgransen-shop-bjorkliden-1024x716.jpg"
                   />
                 </div>
                 <div class="swiper-slide">
-                  <img src="/static/images/infografik_ikoner_v2/sammarbeten/urkult-nasaker-festival-1024x716.jpg" />
+                  <img
+                    src="/static/images/infographics-folder/collaborations/talita-stockholm-1024x717.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/static/images/infographics-folder/collaborations/urkult-nasaker-festival-1024x716.jpg" />
                 </div>
               </div>
             </div>

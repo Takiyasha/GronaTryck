@@ -1015,7 +1015,7 @@ section h1 {
   width: 80%;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .hallbarhetGE svg {
     display: none;
   }

@@ -496,6 +496,15 @@ section h1 {
     z-index: 2;
   }
 
+  .heading-s {
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #052900;
+
+}
+
 .heading-s-c {
     font-size: 18px;
     font-family: "Poppins";
@@ -1116,4 +1125,84 @@ section h1 {
     height: 60vh;
   }
   
+}
+
+
+/*  VILKOR/MILJÖ/TRYCK */
+
+.miljoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media screen and (min-width: 1280px) {
+  .miljoContainer {
+    flex-direction: row;
+  }
+}
+
+.hallbarhetAccordions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.hallbarhetAccordion {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.hallbarhetAccordion-header {
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #052900;
+  background-color: #F7F9F7;
+  padding: 20px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.hallbarhetAccordion-header::after {
+  content: '+';
+  font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #052900;
+    margin: 0;
+}
+.hallbarhetAccordion-content {
+  display: none;
+  padding: 15px;
+}
+
+.hallbarhetAccordion-content div {
+  margin-bottom: 80px;
+}
+
+.hallbarhetAccordion-content div:last-child {
+  margin-bottom: 0px;
+}
+
+.hallbarhetAccordion-header[aria-expanded="true"]::after {
+  content: '-';
+}
+.hallbarhetAccordion-header[aria-expanded="true"] + .hallbarhetAccordion-content {
+  display: block;
+}
+
+.licenseLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.licenseLinks div, a {
+  color: #052900;
+  font-size: 18px;
+  font-family: "Nunito sans";
 }

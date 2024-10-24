@@ -222,3 +222,12 @@ var swiper = new Swiper(".colabSwiper", {
   },
   
 });
+
+/* Accordion */
+
+document.querySelectorAll('.hallbarhetAccordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+      const expanded = header.getAttribute('aria-expanded') === 'true' || false;
+      header.setAttribute('aria-expanded', !expanded);
+  });
+});

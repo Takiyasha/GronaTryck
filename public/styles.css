@@ -1147,6 +1147,7 @@ section h1 {
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  max-width: 120ch;
 }
 
 .hallbarhetAccordion {

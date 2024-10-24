@@ -10,12 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // Prevent form submission
 
     // Fetching the values from form fields
-    const emailField = document.querySelector("#email");
-    const confirmEmailField = document.querySelector("#confirmEmail");
-    const passwordField = document.querySelector("#password");
-    const confirmPasswordField = document.querySelector("#confirmPassword");
+    const emailField = document.getElementById("email");
+    const confirmEmailField = document.getElementById("confirmEmail");
+    const passwordField = document.getElementById("password");
+    const confirmPasswordField = document.getElementById("confirmPassword");
 
-    // Make sure all fields are properly fetched
     if (
       !emailField ||
       !confirmEmailField ||
@@ -33,10 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmPassword = confirmPasswordField.value.trim();
 
     // Debugging logs to see if values are being correctly fetched
-    console.log("Email:", email);
-    console.log("Confirm Email:", confirmEmail);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
+    console.log("Email:", email, "Confirm Email:", confirmEmail);
+    console.log("Password:", password, "Confirm Password:", confirmPassword);
 
     // Email and password match validation
     if (email === "" || confirmEmail === "") {

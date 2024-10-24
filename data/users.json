@@ -3,12 +3,18 @@
     "id": 1,
     "username": "user1",
     "email": "user1@example.com",
-    "password": "Dog123"
+    "password": "Dog123",
+    "address": "Falun",
+    "postalCode": "78989",
+    "phoneNumber": "721939121"
   },
   {
     "id": 2,
-    "username": "user2",
+    "username": "user1",
     "email": "user2@example.com",
-    "password": "Cat123"
+    "password": "Cat123",
+    "address": "Stocholm",
+    "postalCode": "71989",
+    "phoneNumber": "721939121"
   }
 ]

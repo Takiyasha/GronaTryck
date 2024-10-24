@@ -92,3 +92,108 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+/* Styling for Create Account Modal */
+#createAccountModal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 3rem;
+  position: relative;
+  width: 80%;
+  max-width: 40rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .create-account-form-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #032b00;
+}
+
+.create-account-form-container h2 {
+  margin-top: 0;
+  padding-bottom: 20px;
+  color: #032b00;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.create-account-form-container input[type="email"],
+.create-account-form-container input[type="password"],
+.create-account-form-container input[type="text"],
+.create-account-form-container input[type="tel"] {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #032b00;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-account-form-container label {
+  font-weight: bold;
+  color: #032b00;
+  margin-bottom: 0.5rem;
+}
+
+.create-account-form-container .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.create-account-form-container button[type="submit"] {
+  background-color: #567c50;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 40%;
+  transition: background-color 0.3s;
+}
+
+.create-account-form-container button[type="submit"]:hover {
+  background-color: #46623e;
+}
+
+.create-account-form-container .register-link {
+  text-align: left;
+}
+
+.create-account-form-container .register-link a {
+  color: #032b00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.create-account-form-container .register-link a:hover {
+  text-decoration: underline;
+}

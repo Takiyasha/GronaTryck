@@ -1,29 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Elements
+  // Elements for Login Modal
   const loginIcon = document.getElementById("loginIcon");
   const loginModal = document.getElementById("loginModal");
-  const closeModalButton = document.querySelector(".close");
+  const closeModalButton = document.querySelector("#loginModal .close");
+
+  // Elements for Create Account Modal
+  const createAccountModal = document.getElementById("createAccountModal");
+  const closeCreateAccountModalButton = document.querySelector(
+    "#createAccountModal .close"
+  );
 
   // Show modal when clicking login icon
   if (loginIcon && loginModal) {
     loginIcon.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent default link action for login icon
-      loginModal.style.display = "flex"; // Show modal
+      event.preventDefault(); // Prevent default link action
+      loginModal.style.display = "flex"; // Show login modal
     });
   }
 
-  // Close modal when clicking close button
   if (closeModalButton && loginModal) {
     closeModalButton.addEventListener("click", function () {
-      loginModal.style.display = "none"; // Hide modal
+      loginModal.style.display = "none"; // Hide login modal
     });
   }
 
-  // Close modal when clicking outside the modal content
+  // Close login modal when clicking outside the modal content
   if (loginModal) {
     window.addEventListener("click", function (event) {
       if (event.target === loginModal) {
-        loginModal.style.display = "none"; // Hide modal
+        loginModal.style.display = "none"; // Hide login modal
       }
     });
   }
@@ -34,11 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
     loginForm.addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent form from submitting normally
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
 
       console.log("Attempting login with email:", email); // Debugging login attempt
 
+      // Send login request to server
       fetch("/user/login", {
         method: "POST",
         headers: {
@@ -63,17 +69,34 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch((error) => {
           console.error("Error:", error);
-          alert("An error occurred during login. Please try again.");
+          alert("Wrong Mail or Passowrd. Please try again.");
         });
     });
   }
 
-  // Prevent the homepage link from opening the login modal
-  const homepageLink = document.querySelector(".navbar-brand");
-  if (homepageLink) {
-    homepageLink.addEventListener("click", function (event) {
-      // Allow default link behavior
-      loginModal.style.display = "none"; // Make sure the modal is hidden
+  // Show Create Account Modal
+  const registerLink = document.getElementById("registerLink");
+  if (registerLink) {
+    registerLink.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      loginModal.style.display = "none"; // Hide login modal
+      createAccountModal.style.display = "flex"; // Show create account modal
+    });
+  }
+
+  // Close create account modal when clicking close button
+  if (closeCreateAccountModalButton && createAccountModal) {
+    closeCreateAccountModalButton.addEventListener("click", function () {
+      createAccountModal.style.display = "none"; // Hide create account modal
+    });
+  }
+
+  // Close create account modal when clicking outside the modal content
+  if (createAccountModal) {
+    window.addEventListener("click", function (event) {
+      if (event.target === createAccountModal) {
+        createAccountModal.style.display = "none"; // Hide create account modal
+      }
     });
   }
 });

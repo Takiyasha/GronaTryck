@@ -3,8 +3,10 @@ const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const cors = require("cors");
+const fs = require("fs");
 
 const app = express();
+const PORT = 3000;
 
 // Enable live reload by injecting the livereload script
 app.use(connectLivereload());
@@ -43,6 +45,81 @@ liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");
   }, 100);
+});
+
+// Handle user registration and save it to users.json
+app.post("/user/register", (req, res) => {
+  const newUser = req.body;
+
+  // Basic validation to check if fields are provided
+  if (
+    !newUser.email ||
+    !newUser.confirmEmail ||
+    newUser.email !== newUser.confirmEmail
+  ) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Emails do not match!" });
+  }
+  if (
+    !newUser.password ||
+    !newUser.confirmPassword ||
+    newUser.password !== newUser.confirmPassword
+  ) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Passwords do not match!" });
+  }
+
+  // Load existing users
+  const usersFilePath = path.join(__dirname, "data", "users.json");
+  fs.readFile(usersFilePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading users file:", err);
+      return res
+        .status(500)
+        .json({ success: false, message: "Internal server error" });
+    }
+
+    let users = [];
+    try {
+      users = JSON.parse(data);
+    } catch (err) {
+      console.error("Error parsing users file:", err);
+      return res
+        .status(500)
+        .json({ success: false, message: "Internal server error" });
+    }
+
+    // Check if user already exists
+    const existingUser = users.find((user) => user.email === newUser.email);
+    if (existingUser) {
+      return res
+        .status(400)
+        .json({ success: false, message: "User already exists!" });
+    }
+
+    // Add new user and save
+    users.push({
+      email: newUser.email,
+      password: newUser.password,
+      name: newUser.name,
+      address: newUser.address,
+      postalCode: newUser.postalCode,
+      phoneNumber: newUser.phoneNumber,
+    });
+
+    fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), (err) => {
+      if (err) {
+        console.error("Error writing users file:", err);
+        return res
+          .status(500)
+          .json({ success: false, message: "Internal server error" });
+      }
+
+      res.json({ success: true, message: "Account created successfully!" });
+    });
+  });
 });
 
 // Routes for other pages
@@ -87,6 +164,6 @@ app.get("/tryck", (req, res) => {
 });
 
 // Start the express server
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });

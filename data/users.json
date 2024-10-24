@@ -16,5 +16,21 @@
     "address": "Stocholm",
     "postalCode": "71989",
     "phoneNumber": "721939121"
+  },
+  {
+    "email": "user100@example.com",
+    "password": "zxc",
+    "name": "zxc",
+    "address": "zxc",
+    "postalCode": "zxc",
+    "phoneNumber": "zxc"
+  },
+  {
+    "email": "user500@example.com",
+    "password": "zxc",
+    "name": "zxc",
+    "address": "zxc",
+    "postalCode": "zxc",
+    "phoneNumber": "zxc"
   }
 ]

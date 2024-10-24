@@ -1,104 +1,235 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const createAccountForm = document.getElementById("createAccountForm");
+  const searchInput = document.getElementById("search-input");
+  const filterSelect = document.getElementById("filter-select");
+  const productList = document.getElementById("product-list");
+  const productItems = productList.getElementsByClassName("product-item");
 
-  if (!createAccountForm) {
-    console.error("Create account form not found in the DOM.");
-    return; // Stop execution if form is not found
+  // Search function
+  searchInput.addEventListener("input", function () {
+    const searchTerm = searchInput.value.toLowerCase();
+    filterProducts(searchTerm, filterSelect.value);
+  });
+
+  // Filter function
+  filterSelect.addEventListener("change", function () {
+    const searchTerm = searchInput.value.toLowerCase();
+    filterProducts(searchTerm, filterSelect.value);
+  });
+
+  function filterProducts(searchTerm, category) {
+    Array.from(productItems).forEach(function (item) {
+      const productName = item.getAttribute("data-name").toLowerCase();
+      const productCategory = item.getAttribute("data-category");
+
+      const matchesSearch = productName.includes(searchTerm);
+      const matchesCategory =
+        category === "all" || productCategory === category;
+
+      if (matchesSearch && matchesCategory) {
+        item.style.display = ""; // Show product
+      } else {
+        item.style.display = "none"; // Hide product
+      }
+    });
+  }
+});
+
+// quantity and total price updates
+document.addEventListener("DOMContentLoaded", function () {
+  const basePrice = parseFloat(
+    document.getElementById("base-price").textContent
+  );
+  const quantityInput = document.getElementById("quantity");
+  const quantityDisplay = document.getElementById("quantity-display");
+  const totalPriceElement = document.getElementById("total-price");
+  const totalPriceFinalElement = document.getElementById("total-price-final"); // For TOTAL row
+  const increaseQuantityButton = document.getElementById("increase-quantity");
+  const decreaseQuantityButton = document.getElementById("decrease-quantity");
+
+  // Function to format price with comma as decimal separator (sv-SE locale)
+  function formatPrice(price) {
+    return price.toLocaleString("sv-SE", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   }
 
-  createAccountForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+  // Function to update total price and quantity display in the table
+  function updateTotalPrice() {
+    const quantity = parseInt(quantityInput.value);
+    const totalPrice = basePrice * quantity;
 
-    // Fetching the values from form fields
-    const emailField = document.querySelector("#email");
-    const confirmEmailField = document.querySelector("#confirmEmail");
-    const passwordField = document.querySelector("#password");
-    const confirmPasswordField = document.querySelector("#confirmPassword");
+    // Update total price in both table cells
+    totalPriceElement.textContent = formatPrice(totalPrice) + " kr";
+    totalPriceFinalElement.textContent = formatPrice(totalPrice) + " kr";
 
-    // Make sure all fields are properly fetched
-    if (
-      !emailField ||
-      !confirmEmailField ||
-      !passwordField ||
-      !confirmPasswordField
-    ) {
-      console.error("One or more input fields are missing in the DOM.");
-      return; // Stop execution if any field is missing
+    // Update quantity display in the table
+    quantityDisplay.textContent = quantity;
+  }
+
+  // Increase quantity
+  increaseQuantityButton.addEventListener("click", function () {
+    let quantity = parseInt(quantityInput.value);
+
+    // Increment quantity by 1
+    quantity += 1;
+    quantityInput.value = quantity;
+
+    // Update displayed values
+    updateTotalPrice();
+  });
+
+  // Decrease quantity (minimum 1)
+  decreaseQuantityButton.addEventListener("click", function () {
+    let quantity = parseInt(quantityInput.value);
+
+    // Decrease quantity by 1 if it's greater than 1
+    if (quantity > 1) {
+      quantity -= 1;
+      quantityInput.value = quantity;
     }
 
-    // Get the trimmed values
-    const email = emailField.value.trim().toLowerCase();
-    const confirmEmail = confirmEmailField.value.trim().toLowerCase();
-    const password = passwordField.value.trim();
-    const confirmPassword = confirmPasswordField.value.trim();
+    // Update displayed values
+    updateTotalPrice();
+  });
 
-    // Debugging logs to see if values are being correctly fetched
-    console.log("Email:", email);
-    console.log("Confirm Email:", confirmEmail);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
+  // Listen for manual changes to quantity input
+  quantityInput.addEventListener("input", function () {
+    let quantity = parseInt(quantityInput.value);
 
-    // Email and password match validation
-    if (email === "" || confirmEmail === "") {
-      alert("Email fields cannot be empty!");
-      return;
+    // Ensure the quantity is at least 1
+    if (isNaN(quantity) || quantity < 1) {
+      quantity = 1;
+      quantityInput.value = quantity;
     }
 
-    if (email !== confirmEmail) {
-      alert("Emails do not match!");
-      return;
-    }
+    // Update displayed values
+    updateTotalPrice();
+  });
 
-    if (password === "" || confirmPassword === "") {
-      alert("Password fields cannot be empty!");
-      return;
-    }
+  // Initialize the total price when the page loads
+  updateTotalPrice();
+});
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
+// login button function
+function toggleLogin() {
+  const loginContainer = document.getElementById("loginContainer");
+  if (
+    loginContainer.style.display === "none" ||
+    loginContainer.style.display === ""
+  ) {
+    loginContainer.style.display = "flex";
+  } else {
+    loginContainer.style.display = "none";
+  }
+}
+//closing buttons
+function closeLogin() {
+  const loginContainer = document.getElementById("loginContainer");
+  const blurredOverlay = document.getElementById("blurredOverlay");
 
-    // Prepare new user data
-    const newUser = {
-      email,
-      confirmEmail,
-      password,
-      confirmPassword,
-      name: document.getElementById("name").value.trim(),
-      address: document.getElementById("address").value.trim(),
-      postalCode: document.getElementById("postalCode").value.trim(),
-      phoneNumber: document.getElementById("phoneNumber").value.trim(),
-    };
+  loginContainer.style.display = "none"; // Hide the login popup
+  blurredOverlay.style.display = "none"; // Hide the blurred overlay
+}
 
-    console.log("New user data:", newUser); // Debugging: New user data before sending
+// login blur effect function
+function showLogin() {
+  const loginContainer = document.getElementById("loginContainer");
+  const blurredOverlay = document.getElementById("blurredOverlay");
 
-    // Send data to the backend
-    fetch("/user/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Response received:", data); // Log server response
-        if (data.success) {
-          alert("Account created successfully!");
-          createAccountForm.reset(); // Reset the form after successful registration
-        } else {
-          alert(data.message);
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred during registration. Please try again.");
-      });
+  loginContainer.style.display = "flex";
+  blurredOverlay.style.display = "block";
+}
+
+var productSwiper = new Swiper(".productSwiper", {
+  slidesPerView: 4, // Standardvärde
+  spaceBetween: 30, // Avstånd mellan slides
+  loop: true, // Loop-funktion
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    // Definiera olika värden beroende på skärmbredd
+    320: {
+      // Vid skärmar ≥ 320px
+      slidesPerView: 1, // Visa 1 slide
+      spaceBetween: 10, // Avstånd mellan slides minskat till 10px
+    },
+    640: {
+      // Vid skärmar ≥ 640px
+      slidesPerView: 2, // Visa 2 slides
+      spaceBetween: 20, // Avstånd mellan slides
+    },
+    1024: {
+      // Vid skärmar ≥ 1024px
+      slidesPerView: 3, // Visa 3 slides
+      spaceBetween: 30, // Avstånd mellan slides
+    },
+    1440: {
+      // Vid skärmar ≥ 1440px
+      slidesPerView: 4, // Visa 4 slides (eller mer beroende på ditt standardvärde)
+      spaceBetween: 30, // Samma avstånd som standard
+    },
+  },
+});
+
+var heroSwiper = new Swiper(".heroSwiper", {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+var swiper = new Swiper(".colabSwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: false,
+  },
+  loop: true,
+  speed: 2000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+/* Accordion */
+
+document.querySelectorAll(".hallbarhetAccordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const expanded = header.getAttribute("aria-expanded") === "true" || false;
+    header.setAttribute("aria-expanded", !expanded);
   });
 });

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/bootstrap.css" />
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/swiper.css" />
+    <link rel="stylesheet" href="/static/popup.css" />
   </head>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,7 +51,7 @@
 
         <!-- Ikoner (alltid i högerkant) -->
         <div class="navbar-icons">
-          <a href="#" class="nav-link">
+          <a id="loginIcon" href="#" class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1080 1080"
@@ -92,6 +93,49 @@
         </div>
       </div>
     </nav>
+
+    <!--/static/images/infographics-folder/graphical-elements/blob-small.svg-->
+    <!-- Modal Structure -->
+    <!-- Modal Structure (login modal hidden by default) -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="login-form-container">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Logga in</h2>
+          <form id="loginForm">
+            <label for="email">E-postadress</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Ange e-postadress..."
+              required
+            />
+            <label for="password">Lösenord</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Ange lösenord..."
+              required
+            />
+            <div class="remember-forgot">
+              <a href="#" class="forgot-password"
+                >Har du glömt ditt lösenord?</a
+              >
+              <label class="remember-me">
+                <input type="checkbox" /> Kom ihåg mig
+              </label>
+            </div>
+            <div class="button-container">
+              <div class="register-link">
+                <a href="#">Har du inte ett konto?</a>
+              </div>
+              <button type="submit">Logga in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="swiper heroSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -1162,5 +1206,6 @@
     <script src="/static/bootstrap.js"></script>
     <script src="/static/swiper.js"></script>
     <script src="/static/script.js"></script>
+    <script src="/static/login.js"></script>
   </body>
 </html>

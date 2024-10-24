@@ -658,7 +658,11 @@ section h1 {
 
 /* Butik */
 
-.store-progress a, span {
+.progressSection {
+  margin-bottom: 44px;
+}
+
+.progressSection a, span {
   color: #052900;
   font-size: 18px;
   font-family: "Nunito sans";
@@ -668,7 +672,6 @@ section h1 {
   display: grid;
   grid-template-columns: auto;
   gap: 16px;
-  margin-top: 16px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -930,10 +933,13 @@ section h1 {
       gap: 40px;
   }
 
-  .hallbarhetItem:nth-child(1) { grid-area: item1; }
-  .hallbarhetItem:nth-child(2) { grid-area: item2; }
-  .hallbarhetItem:nth-child(3) { grid-area: item3; }
-  .hallbarhetItem:nth-child(4) { grid-area: item4; }
+  .hallbarhetContainer a:nth-child(1) { grid-area: item1; }
+  .hallbarhetContainer a:nth-child(2) { grid-area: item2; }
+  .hallbarhetContainer a:nth-child(3) { grid-area: item3; }
+  .hallbarhetContainer a:nth-child(4) { grid-area: item4; }
+}
+.hallbarhetContainer a {
+  text-decoration: none;
 }
 
 .hallbarhetItem {
@@ -1019,4 +1025,95 @@ section h1 {
   .hallbarhetGE svg {
     display: none;
   }
+}
+
+
+/*  GOTS */
+
+.gotsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gotsItem img {
+  width: 200px;
+  margin: auto;
+}
+
+.gotsContainer {
+  display: grid;
+  gap: 80px;
+  grid-template-columns: auto;
+}
+
+
+@media screen and (min-width: 1280px) {
+
+  .gotsItem {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .gotsItem img {
+    width: 150px;
+    margin: 0px;
+  }
+
+  .gotsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "item1 item1 ."
+      ". item2 item2"
+      "item3 item3 ."
+      ". item4 item4"
+  }
+
+  .gotsItem:nth-child(1) { grid-area: item1; }
+  .gotsItem:nth-child(2) { grid-area: item2; }
+  .gotsItem:nth-child(3) { grid-area: item3; }
+  .gotsItem:nth-child(4) { grid-area: item4; }
+}
+
+.heroGots {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.heroGots svg {
+  position: absolute;
+  z-index: 1;
+  bottom: -1%;
+  left: -3%;
+  width: 110%;
+}
+
+.heroGots img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroGots::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(86, 124, 80, 0.3);
+  z-index: 1;
+}
+
+@media screen and (min-width: 1280px) {
+  .heroGots, .heroGots img {
+    height: 60vh;
+  }
+  
 }

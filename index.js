@@ -70,6 +70,10 @@ app.get("/kontakt", (req, res) => {
   res.render("kontakt");
 });
 
+app.get("/gots", (req, res) => {
+  res.render("gots");
+});
+
 // Start the express server
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");

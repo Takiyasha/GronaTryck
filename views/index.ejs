@@ -124,12 +124,17 @@
             <div class="product">
               <div class="product-image">
                 <img
-                  src="<%= product.image %>"
+                  src="<%= product.model_image.image %>"
                   alt="<%= product.name %>"
                   class="product-img"
                 />
               </div>
-              <p class="product-price"><%= product.price %> kr</p>
+              <p class="product-price">
+                <%= product.price_tiers.length > 0 ?
+                `${product.price_tiers[product.price_tiers.length -
+                1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
+                kr` : "Price unavailable" %>
+              </p>
               <p class="product-info"><%= product.name %></p>
             </div>
           </div>
@@ -140,7 +145,6 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-
     <section class="cards">
       <div class="brands">
         <img src="/static/images/bildspråk .webp/gt_gallery_2.webp" alt="" />

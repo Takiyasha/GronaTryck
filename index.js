@@ -78,6 +78,14 @@ app.get("/miljo", (req, res) => {
   res.render("miljo");
 });
 
+app.get("/villkor", (req, res) => {
+  res.render("villkor");
+});
+
+app.get("/tryck", (req, res) => {
+  res.render("tryck");
+});
+
 // Start the express server
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");

@@ -1241,3 +1241,38 @@ a {
   }
 }
 
+/* Kontakta oss */
+
+.kontakt-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontakt-form input {
+  margin-bottom: 16px;
+  padding-block: 1rem;
+  font-family: "Nunito sans";
+  font-size: 18px;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #052900;
+}
+
+textarea{
+  height: 40vh;
+  font-family: "Nunito sans";
+  font-size: 18px;
+  color: #052900;
+  padding-block: 1rem;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.kontakt-form label {
+  font-size: 18px;
+  margin-bottom: 0 !important;
+  font-family: "Poppins";
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #052900;
+}

@@ -1141,14 +1141,14 @@ span {
 
 /*  VILKOR/MILJÖ/TRYCK */
 
-.miljoContainer {
+.miljo-container {
   display: flex;
   flex-direction: column;
   gap: 80px;
 }
 
 @media screen and (min-width: 1280px) {
-  .miljoContainer {
+  .miljo-container {
     flex-direction: row;
   }
 }

@@ -163,6 +163,10 @@ app.get("/tryck", (req, res) => {
   res.render("tryck");
 });
 
+app.get("/faq", (req, res) => {
+  res.render("faq");
+});
+
 // Start the express server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

@@ -679,8 +679,7 @@ span {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "item1 item1 item1 item1 item1"
-      "item2 item2 item2 item2 item2"
+      "item1 item1 item2 item2 item2"
       "item3 item3 item3 item4 item4"
       "item5 item5 item6 item6 item6"
       "item7 item7 item7 item7 item7";
@@ -1221,3 +1220,24 @@ a {
   font-size: 18px;
   font-family: "Nunito sans";
 }
+
+
+/* FaQ */
+
+.faq-container {
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1280px) {
+  .faq-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .faq-ge {
+    width: 40%;
+  }
+}
+

@@ -1,4 +1,4 @@
-var productSwiper = new Swiper(".productSwiper", {
+var productSwiper = new Swiper(".product-swiper", {
   slidesPerView: 4, // Standardvärde
   spaceBetween: 30, // Avstånd mellan slides
   loop: true, // Loop-funktion
@@ -39,7 +39,7 @@ var productSwiper = new Swiper(".productSwiper", {
   },
 });
 
-var heroSwiper = new Swiper(".heroSwiper", {
+var heroSwiper = new Swiper(".hero-swiper", {
   slidesPerView: 1,
   loop: true,
   navigation: {
@@ -48,7 +48,7 @@ var heroSwiper = new Swiper(".heroSwiper", {
   },
 });
 
-var swiper = new Swiper(".colabSwiper", {
+var swiper = new Swiper(".colab-swiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -84,7 +84,7 @@ var swiper = new Swiper(".colabSwiper", {
 
 /* Accordion */
 
-document.querySelectorAll(".hallbarhetAccordion-header").forEach((header) => {
+document.querySelectorAll(".hallbarhet-accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
     const expanded = header.getAttribute("aria-expanded") === "true" || false;
     header.setAttribute("aria-expanded", !expanded);

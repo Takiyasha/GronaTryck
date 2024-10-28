@@ -4,6 +4,7 @@ const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const cors = require("cors");
 const fs = require("fs");
+const session = require("express-session");
 
 const app = express();
 const PORT = 3000;
@@ -122,6 +123,16 @@ app.post("/user/register", (req, res) => {
   });
 });
 
+// Set up sessions
+app.use(
+  session({
+    secret: "yourSecretKey", // You should change this to a secure random value
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 1-day expiry
+  })
+);
+
 // Routes for other pages
 app.get("/index", (req, res) => {
   res.redirect("/"); // Redirect to the root route
@@ -165,6 +176,10 @@ app.get("/tryck", (req, res) => {
 
 app.get("/faq", (req, res) => {
   res.render("faq");
+});
+
+app.get("/mina-sidor", (req, res) => {
+  res.render("mina-sidor");
 });
 
 // Start the express server

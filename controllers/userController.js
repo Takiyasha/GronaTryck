@@ -76,3 +76,32 @@ exports.createUser = (req, res) => {
     });
   });
 };
+
+exports.loginUser = (req, res) => {
+  const { email, password } = req.body;
+
+  // Load existing users
+  const usersFilePath = path.join(__dirname, "../data/users.json");
+  fs.readFile(usersFilePath, "utf8", (err, data) => {
+    if (err) {
+      return res
+        .status(500)
+        .json({ success: false, message: "Internal server error" });
+    }
+
+    const users = JSON.parse(data);
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (user) {
+      // Set session variable
+      req.session.user = { email: user.email, username: user.username };
+      return res.json({ success: true, message: "Login successful!" });
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Wrong email or password" });
+    }
+  });
+};

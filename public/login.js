@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Elements for Login Modal
   const loginIcon = document.getElementById("loginIcon");
+  const loggedInIcon = document.getElementById("loggedInIcon");
   const loginModal = document.getElementById("loginModal");
   const closeModalButton = document.querySelector("#loginModal .close");
 
@@ -63,13 +64,19 @@ document.addEventListener("DOMContentLoaded", function () {
           if (data.success) {
             alert("Login successful!");
             loginModal.style.display = "none"; // Close modal after successful login
+
+            // Set logged-in state in local storage
+            localStorage.setItem("loggedIn", true);
+
+            // Update the icon state
+            updateLoginIcon();
           } else {
             alert(data.message);
           }
         })
         .catch((error) => {
           console.error("Error:", error);
-          alert("Wrong Mail or Passowrd. Please try again.");
+          alert("Wrong Mail or Password. Please try again.");
         });
     });
   }
@@ -99,4 +106,34 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // Function to update login icon visibility based on login state
+  function updateLoginIcon() {
+    const loggedIn = localStorage.getItem("loggedIn");
+    if (loggedIn === "true") {
+      loginIcon.style.display = "none";
+      loggedInIcon.style.display = "block";
+    } else {
+      loginIcon.style.display = "block";
+      loggedInIcon.style.display = "none";
+    }
+  }
+  // Correct URL in Navigation
+  loggedInIcon.addEventListener("click", function () {
+    window.location.href = "/mina-sidor";
+  });
+
+  // Handle logout button click
+  document
+    .getElementById("logoutButton")
+    .addEventListener("click", function () {
+      // Remove logged-in status from local storage
+      localStorage.removeItem("loggedIn");
+
+      // Redirect to the home page
+      window.location.href = "/";
+    });
+
+  // Initial icon update based on login state
+  updateLoginIcon();
 });

@@ -40,24 +40,56 @@
       <div class="swiper product-swiper">
         <div class="swiper-wrapper">
           <% products.slice(0, 8).forEach(function(product) { %>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="product-image">
-                <img
-                  src="<%= product.model_image.image %>"
-                  alt="<%= product.name %>"
-                  class="product-img"
-                />
+            <div class="swiper-slide">
+              <div class="product">
+                <div class="product-image">
+                  <% if (product.model_image && product.model_image.variants && product.model_image.variants.length > 0) { %>
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="<%= product.model_image.variants
+                          .filter(v => v.src.toLowerCase().includes('.webp'))
+                          .map(variant => `${variant.src} ${variant.width}w`)
+                          .join(', ') %>"
+                        sizes="(max-width: 430px) 430px, (max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px"
+                      >
+                      <source
+                        type="image/jpeg"
+                        srcset="<%= product.model_image.variants
+                          .filter(v => v.src.toLowerCase().includes('.jpg'))
+                          .map(variant => `${variant.src} ${variant.width}w`)
+                          .join(', ') %>"
+                        sizes="(max-width: 430px) 430px, (max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px"
+                      >
+                      <img
+                        src="<%= product.model_image.variants.find(v => v.width === 1920 && v.src.toLowerCase().includes('.jpg')).src %>"
+                        alt="<%= product.name || 'Product Image' %>"
+                        class="product-img"
+                        width="1920"
+                        height="auto"
+                        loading="lazy"
+                      >
+                    </picture>
+                  <% } else { %>
+                    <img
+                      src="/path/to/fallback-image.jpg"
+                      alt="<%= product.name || 'Product Image' %>"
+                      class="product-img"
+                      width="1920"
+                      height="auto"
+                      loading="lazy"
+                    >
+                  <% } %>
+                </div>
+                <p class="product-price">
+                  <%= product.price_tiers.length > 0 ?
+                  `${product.price_tiers[product.price_tiers.length -
+                  1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
+                  kr` : "Price unavailable" %>
+                </p>
+                <p class="product-info"><%= product.name %></p>
               </div>
-              <p class="product-price">
-                <%= product.price_tiers.length > 0 ?
-                `${product.price_tiers[product.price_tiers.length -
-                1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
-                kr` : "Price unavailable" %>
-              </p>
-              <p class="product-info"><%= product.name %></p>
             </div>
-          </div>
           <% }); %>
         </div>
         <div class="swiper-button-next"></div>

@@ -27,8 +27,41 @@
       }
     ],
     "model_image": {
-      "image": "/static/images/StSt AW24/Bomber 2.0_Black_Duo_Front_Main_0.jpg",
-      "simplified_color": "Black"
+      "simplified_color": "Black",
+      "variants": [
+          {
+            "src": "/static/images/Products/Mains/100/webp/Bomber 2.0_Black_Duo_Front_Main_0.webp",
+            "width": 1920
+          },
+          {
+            "src": "/static/images/Products/Mains/75/webp/Bomber 2.0_Black_Duo_Front_Main_0_75.webp",
+            "width": 1280
+          },
+          {
+            "src": "/static/images/Products/Mains/50/webp/Bomber 2.0_Black_Duo_Front_Main_0_50.webp",
+            "width": 768
+          },
+          {
+            "src": "/static/images/Products/Mains/25/webp/Bomber 2.0_Black_Duo_Front_Main_0_25.wepb",
+            "width": 430
+          },
+          {
+            "src": "/static/images/Products/Mains/100/jpg/Bomber 2.0_Black_Duo_Front_Main_0.jpg",
+            "width": 1920
+          },
+          {
+            "src": "/static/images/Products/Mains/75/jpg/Bomber 2.0_Black_Duo_Front_Main_0_75.jpg",
+            "width": 1280
+          },
+          {
+            "src": "/static/images/Products/Mains/50/jpg/Bomber 2.0_Black_Duo_Front_Main_0_50.jpg",
+            "width": 768
+          },
+          {
+            "src": "/static/images/Products/Mains/25/jpg/Bomber 2.0_Black_Duo_Front_Main_0_25.jpg",
+            "width": 430
+          }
+        ]
     },
     "products_images": [
       {

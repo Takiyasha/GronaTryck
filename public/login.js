@@ -118,6 +118,21 @@ document.addEventListener("DOMContentLoaded", function () {
       loggedInIcon.style.display = "none";
     }
   }
+  // Correct URL in Navigation
+  loggedInIcon.addEventListener("click", function () {
+    window.location.href = "/mina-sidor";
+  });
+
+  // Handle logout button click
+  document
+    .getElementById("logoutButton")
+    .addEventListener("click", function () {
+      // Remove logged-in status from local storage
+      localStorage.removeItem("loggedIn");
+
+      // Redirect to the home page
+      window.location.href = "/";
+    });
 
   // Initial icon update based on login state
   updateLoginIcon();

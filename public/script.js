@@ -90,3 +90,52 @@ document.querySelectorAll(".hallbarhet-accordion-header").forEach((header) => {
     header.setAttribute("aria-expanded", !expanded);
   });
 });
+
+/* Mina sidor */
+
+function showContent(contentNumber) {
+  // Hide all content and reset buttons
+  var contents = document.getElementsByClassName('ms-content');
+  var buttons = document.getElementsByClassName('ms-accordion-button');
+  var msGe = document.querySelector('.ms-ge');
+  
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].classList.remove('active');
+    buttons[i].classList.remove('active');
+  }
+  
+  // Show the selected content and activate the button
+  document.getElementById('content' + contentNumber).classList.add('active');
+  event.target.classList.add('active');
+  
+  // Hide ms-ge
+  msGe.classList.remove('active');
+}
+
+function checkAllContentsClosed() {
+  var contents = document.getElementsByClassName('ms-content');
+  var msGe = document.querySelector('.ms-ge');
+  var allClosed = true;
+  
+  for (var i = 0; i < contents.length; i++) {
+    if (contents[i].classList.contains('active')) {
+      allClosed = false;
+      break;
+    }
+  }
+  
+  if (allClosed) {
+    msGe.classList.add('active');
+  }
+}
+
+// Add click event listeners to all buttons
+var buttons = document.getElementsByClassName('ms-accordion-button');
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function() {
+    setTimeout(checkAllContentsClosed, 0);
+  });
+}
+
+// Initial check to show ms-ge if no content is active
+checkAllContentsClosed();

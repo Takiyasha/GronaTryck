@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/bootstrap.css" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="stylesheet" href="/static/swiper.css" />
+    <link rel="stylesheet" href="/static/popup.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+    <div class="product-details">
+      <div class="product-image">
+        <img src="<%= product.model_image.image %>" alt="<%= product.name %>" />
+      </div>
+      <div class="product-info">
+        <h1><%= product.name %></h1>
+        <p>Artikelnummer: <%= product.artikelnummer %></p>
+        <p>Material:</p>
+        <ul>
+          <% product.material_info.forEach(function(material) { %>
+          <li><%= material %></li>
+          <% }); %>
+        </ul>
+        <p>Egenskaper:</p>
+        <ul>
+          <% product.egenskaper_info.forEach(function(egenskap) { %>
+          <li><%= egenskap %></li>
+          <% }); %>
+        </ul>
+        <p>Passform: <%= product.fit %></p>
+        <p>Minimum kvantitet: <%= product.minimum %> enheter</p>
+        <p>Pris:</p>
+        <ul>
+          <% product.price_tiers.forEach(function(tier) { %>
+          <li><%= tier.range %>: <%= tier.price_per_unit %> kr/enhet</li>
+          <% }); %>
+        </ul>
+        <p>Färg:</p>
+        <div class="product-colors">
+          <% product.products_images.forEach(function(color) { %>
+          <img
+            src="<%= color.image %>"
+            alt="<%= color.color_name %>"
+            class="product-color-img"
+          />
+          <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+    <script src="/static/bootstrap.js"></script>
+    <script src="/static/script.js"></script>
+    <script src="/static/login.js"></script>
+    <script src="/static/signup.js"></script>
+  </body>
+</html>

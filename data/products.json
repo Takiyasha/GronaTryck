@@ -32,12 +32,12 @@
     },
     "products_images": [
       {
-        "image": "public/images/Products/Mains/25/webp/Bomber 2.0_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/public/images/Products/Mains/25/webp/Bomber 2.0_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "public/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/public/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "French Navy",
         "color_name": "French Navy"
       }
@@ -82,22 +82,22 @@
       }
     ],
     "model_image": {
-      "image": "static/images/Products/Mains/50/webp/Brooker_Khaki_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Brooker_Khaki_Duo_Front_Main_0_50.webp",
       "simplified_color": "Khaki"
     },
     "products_images": [
       {
-        "image": "static/images/Products/Mains/25/webp/Brooker_Khaki_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Brooker_Khaki_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Khaki",
         "color_name": "Khaki"
       },
       {
-        "image": "public/images/Products/Colors/webp/Brooker_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Brooker_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "public/images/Products/Colors/webp/Brooker_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Brooker_Desert Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Desert Dust",
         "color_name": "Desert Dust"
       }

@@ -14,6 +14,7 @@ app.use(connectLivereload());
 
 // Serve static files like CSS, JS, and images from the 'public' directory
 app.use("/static", express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
@@ -132,6 +133,33 @@ app.use(
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 1-day expiry
   })
 );
+
+// Länkar till produkt sidan
+app.get("/produktsidan/:id", (req, res) => {
+  const productId = req.params.id;
+
+  // Läs in produkterna från products.json-fil
+  fs.readFile(
+    path.join(__dirname, "data/products.json"),
+    "utf-8",
+    (err, data) => {
+      if (err) {
+        console.error("Error reading products file:", err);
+        return res.status(500).send("Internal Server Error");
+      }
+
+      const products = JSON.parse(data);
+      const product = products.find((p) => p.id == productId);
+
+      if (!product) {
+        return res.status(404).send("Product not found");
+      }
+
+      // Rendera produktsidan med den specifika produkten
+      res.render("produktsidan", { product });
+    }
+  );
+});
 
 // Routes for other pages
 app.get("/index", (req, res) => {

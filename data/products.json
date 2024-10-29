@@ -457,22 +457,22 @@
         "color_name": "Heather Haze"
       },
       {
-        "image": "/public/images/Products/Colors/webp/Creator 2.0_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator 2.0_Blue Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue Ice",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/public/images/Products/Colors/webp/Creator 2.0_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator 2.0_Heritage Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Heritage Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/public/images/Products/Colors/webp/Creator 2.0_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator 2.0_Mindful Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Mindful Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/public/images/Products/Colors/webp/Creator 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Misty Jade",
         "color_name": "Misty Jade"
       }
@@ -542,7 +542,7 @@
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/public/images/Products/Colors/webp/Cruiser 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Cruiser 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Mindful Jade",
         "color_name": "Misty Jade"
       }

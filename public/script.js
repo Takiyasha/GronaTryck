@@ -139,3 +139,7 @@ for (var i = 0; i < buttons.length; i++) {
 
 // Initial check to show ms-ge if no content is active
 checkAllContentsClosed();
+
+
+/* Produktsida */
+  

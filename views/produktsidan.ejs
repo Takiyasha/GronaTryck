@@ -9,15 +9,39 @@
     <link rel="stylesheet" href="/static/swiper.css" />
     <link rel="stylesheet" href="/static/popup.css" />
   </head>
-  <body>
+  <header>
     <%- include('partials/navbar') %>
-    <div class="product-details">
-      <div class="product-image">
-        <img src="<%= product.model_image.image %>" alt="<%= product.name %>" />
+  </header>
+  <body>
+    <section>
+      <div class="progress-section">
+        <a href="/index">Hem</a> <span>/</span> <a href="/butik">Butik</a> <span>/</span> <a href="/klader">Kläder</a> <span>/</span> <a href="#"><%= product.name %></a>
       </div>
-      <div class="product-info">
-        <h1><%= product.name %></h1>
-        <p>Artikelnummer: <%= product.artikelnummer %></p>
+      
+      <div class="product-page">
+
+        <div class="product-model-image">
+          <img src="<%= product.model_image.image %>" alt="<%= product.name %>" />
+        </div>
+
+        <div class="product-info">
+          <div class="product-info-heading">
+            <h2 class="heading-m"><%= product.name %></h2>
+            <p class="alt-text-s">Artikelnummer: <%= product.artikelnummer %></p>
+          </div>
+          <div class="product-info-color">
+            <p class="heading-s">Färg:</p>
+            <div class="product-colors">
+              <% product.products_images.forEach(function(color) { %>
+              <img
+                src="<%= color.image %>"
+                alt="<%= color.color_name %>"
+                class="product-color-img"
+              />
+              <% }); %>
+            </div>
+          </div>
+          <div class="product-info-text body-text">
         <p>Material:</p>
         <ul>
           <% product.material_info.forEach(function(material) { %>
@@ -31,30 +55,73 @@
           <% }); %>
         </ul>
         <p>Passform: <%= product.fit %></p>
-        <p>Minimum kvantitet: <%= product.minimum %> enheter</p>
         <p>Pris:</p>
         <ul>
           <% product.price_tiers.forEach(function(tier) { %>
           <li><%= tier.range %>: <%= tier.price_per_unit %> kr/enhet</li>
           <% }); %>
         </ul>
-        <p>Färg:</p>
-        <div class="product-colors">
-          <% product.products_images.forEach(function(color) { %>
-          <img
-            src="<%= color.image %>"
-            alt="<%= color.color_name %>"
-            class="product-color-img"
-          />
+          </div>
+        </div>
+
+        <div class="product-input">
+          <h2 class="heading-m">Antal</h2>
+          <input type="text">
+          <p class="body-text"><span class="heading-s">Minimum kvantitet:</span> <%= product.minimum %> enheter</p>
+        </div>
+
+        <div class="product-price">
+          <div class="product-price-ge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 762 461">
+              <path d="M761.75 218.84c0 72.59-58.21 136.9-147.79 176.62-59.3 26.3-117.27 66.94-196.27 66.94s-210.85-47.16-270.15-73.46C57.96 349.23-.25 305.93-.25 233.34S2.34 81.94 91.92 42.22C151.22 15.92 323.6.41 402.61.41s152.05 15.52 211.35 41.81c89.58 39.72 147.79 104.04 147.79 176.62Z" style="fill:#e5eae4"/>
+          </svg>
+          </div>
+          <h2 class="heading-m">Prisestimering: - kr</h2>
+          <p class="alt-text-s">*Observera att priset kan komma att förändras beroende på tryck, vi återkommer med ett exakt pris senare.</p>
+          <button class="primary-btn">Lägg till i offertförfrågan</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h1>Rekommenderat för dig</h1>
+      <div class="swiper product-swiper">
+        <div class="swiper-wrapper">
+          <% products.slice(0, 8).forEach(function(product) { %>
+          <div class="swiper-slide">
+            <div class="product">
+              <div class="product-image">
+                <!-- Lägg till en länk runt varje produktkort -->
+                <a href="/produktsidan/<%= product.id %>">
+                  <img
+                    src="<%= product.model_image.image %>"
+                    alt="<%= product.name %>"
+                    class="product-img"
+                  />
+                </a>
+              </div>
+              <p class="product-price">
+                <%= product.price_tiers.length > 0 ?
+                `${product.price_tiers[product.price_tiers.length -
+                1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
+                kr` : "Price unavailable" %>
+              </p>
+              <p class="product-info"><%= product.name %></p>
+            </div>
+          </div>
           <% }); %>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-    </div>
-
+    </section>
     <%- include('partials/footer') %>
     <script src="/static/bootstrap.js"></script>
     <script src="/static/script.js"></script>
     <script src="/static/login.js"></script>
     <script src="/static/signup.js"></script>
+    <script src="/static/swiper.js"></script>
   </body>
 </html>

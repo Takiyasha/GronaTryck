@@ -10,6 +10,7 @@ section {
     margin-inline: 80px;
   }
 }
+
 .footer {
   background-color: #f7f9f7;
   color: #6c757d;
@@ -545,6 +546,12 @@ section h1 {
   font-size: 15px;
   text-align: center;
   color: #052900;
+}
+
+.alt-text-s {
+  font-family: "Nunito sans";
+  font-size: 15px;
+  color: #747474;
 }
 
 .alt-text-c {
@@ -1221,7 +1228,6 @@ a {
   font-family: "Nunito sans";
 }
 
-
 /* FaQ */
 
 .faq-container {
@@ -1258,7 +1264,7 @@ a {
   color: #052900;
 }
 
-textarea{
+textarea {
   height: 40vh;
   font-family: "Nunito sans";
   font-size: 18px;
@@ -1275,4 +1281,53 @@ textarea{
   font-weight: 700;
   margin-bottom: 16px;
   color: #052900;
+}
+
+/* Mina sidor */
+
+.ms-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.ms-accordion-button {
+  background-color: #f7f9f7;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.ms-accordion-button:hover {
+  background-color: #e5eae4;
+}
+.ms-accordion-button.active {
+  background-color: #b4c3b2;
+  color: white;
+}
+.ms-content-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+}
+.ms-content {
+  display: none;
+}
+.ms-content.active {
+  display: block;
+}
+.ms-ge {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.ms-ge.active {
+  display: flex;
+}
+.ms-ge svg {
+  width: 400px;
 }

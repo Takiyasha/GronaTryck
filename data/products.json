@@ -32,12 +32,12 @@
     },
     "products_images": [
       {
-        "image": "/public/images/Products/Mains/25/webp/Bomber 2.0_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Bomber 2.0_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "/public/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "French Navy",
         "color_name": "French Navy"
       }

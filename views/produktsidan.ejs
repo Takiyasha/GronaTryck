@@ -85,37 +85,7 @@
     </section>
 
     <section>
-      <h1>Rekommenderat för dig</h1>
-      <div class="swiper product-swiper">
-        <div class="swiper-wrapper">
-          <% products.slice(0, 8).forEach(function(product) { %>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="product-image">
-                <!-- Lägg till en länk runt varje produktkort -->
-                <a href="/produktsidan/<%= product.id %>">
-                  <img
-                    src="<%= product.model_image.image %>"
-                    alt="<%= product.name %>"
-                    class="product-img"
-                  />
-                </a>
-              </div>
-              <p class="product-price">
-                <%= product.price_tiers.length > 0 ?
-                `${product.price_tiers[product.price_tiers.length -
-                1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
-                kr` : "Price unavailable" %>
-              </p>
-              <p class="product-info"><%= product.name %></p>
-            </div>
-          </div>
-          <% }); %>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+      
     </section>
     <%- include('partials/footer') %>
     <script src="/static/bootstrap.js"></script>

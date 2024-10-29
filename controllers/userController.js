@@ -4,10 +4,10 @@ const path = require("path");
 // Path to the JSON file where users are stored
 const usersFilePath = path.join(__dirname, "../data/users.json");
 
+// Create user account
 exports.createUser = (req, res) => {
   const newUser = req.body;
 
-  // Basic validation to check if fields are provided
   if (
     !newUser.email ||
     !newUser.confirmEmail ||
@@ -27,61 +27,47 @@ exports.createUser = (req, res) => {
       .json({ success: false, message: "Passwords do not match!" });
   }
 
-  // Load existing users
   fs.readFile(usersFilePath, "utf8", (err, data) => {
     if (err) {
-      console.error("Error reading users file:", err);
       return res
         .status(500)
         .json({ success: false, message: "Internal server error" });
     }
 
-    let users = [];
-    try {
-      users = JSON.parse(data);
-    } catch (err) {
-      console.error("Error parsing users file:", err);
-      return res
-        .status(500)
-        .json({ success: false, message: "Internal server error" });
-    }
+    let users = data ? JSON.parse(data) : [];
 
-    // Check if user already exists
-    const existingUser = users.find((user) => user.email === newUser.email);
-    if (existingUser) {
+    if (users.find((user) => user.email === newUser.email)) {
       return res
         .status(400)
         .json({ success: false, message: "User already exists!" });
     }
 
-    // Add new user and save
     users.push({
       email: newUser.email,
       password: newUser.password,
       name: newUser.name,
-      address: newUser.address,
-      postalCode: newUser.postalCode,
-      phoneNumber: newUser.phoneNumber,
     });
-
     fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), (err) => {
       if (err) {
-        console.error("Error writing users file:", err);
         return res
           .status(500)
           .json({ success: false, message: "Internal server error" });
       }
-
       res.json({ success: true, message: "Account created successfully!" });
     });
   });
 };
 
+// User login
 exports.loginUser = (req, res) => {
   const { email, password } = req.body;
 
-  // Load existing users
-  const usersFilePath = path.join(__dirname, "../data/users.json");
+  if (!email || !password) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Email and password are required!" });
+  }
+
   fs.readFile(usersFilePath, "utf8", (err, data) => {
     if (err) {
       return res
@@ -89,14 +75,13 @@ exports.loginUser = (req, res) => {
         .json({ success: false, message: "Internal server error" });
     }
 
-    const users = JSON.parse(data);
+    const users = data ? JSON.parse(data) : [];
     const user = users.find(
       (u) => u.email === email && u.password === password
     );
 
     if (user) {
-      // Set session variable
-      req.session.user = { email: user.email, username: user.username };
+      req.session.user = { email: user.email, name: user.name };
       return res.json({ success: true, message: "Login successful!" });
     } else {
       return res
@@ -104,4 +89,30 @@ exports.loginUser = (req, res) => {
         .json({ success: false, message: "Wrong email or password" });
     }
   });
+};
+
+// Check user session
+exports.checkSession = (req, res) => {
+  if (req.session && req.session.user) {
+    res.json({ loggedIn: true, user: req.session.user });
+  } else {
+    res.json({ loggedIn: false });
+  }
+};
+
+// User logout
+exports.logoutUser = (req, res) => {
+  if (req.session) {
+    req.session.destroy((err) => {
+      if (err) {
+        return res
+          .status(500)
+          .json({ success: false, message: "Logout failed" });
+      } else {
+        return res.json({ success: true, message: "Logout successful" });
+      }
+    });
+  } else {
+    res.json({ success: true, message: "Logout successful" });
+  }
 };

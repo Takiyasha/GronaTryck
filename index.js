@@ -1,10 +1,10 @@
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const cors = require("cors");
 const fs = require("fs");
-const session = require("express-session");
 
 const app = express();
 const PORT = 3000;
@@ -124,21 +124,11 @@ app.post("/user/register", (req, res) => {
   });
 });
 
-// Set up sessions
-app.use(
-  session({
-    secret: "yourSecretKey", // You should change this to a secure random value
-    resave: false,
-    saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 1-day expiry
-  })
-);
-
 // Länkar till produkt sidan
 app.get("/produktsidan/:id", (req, res) => {
   const productId = req.params.id;
 
-  // Läs in produkterna från products.json-fil
+  // Load products from products.json file
   fs.readFile(
     path.join(__dirname, "data/products.json"),
     "utf-8",
@@ -155,11 +145,21 @@ app.get("/produktsidan/:id", (req, res) => {
         return res.status(404).send("Product not found");
       }
 
-      // Rendera produktsidan med den specifika produkten
-      res.render("produktsidan", { product });
+      // Render the produktsidan view and pass the individual product as well as all products for the slider
+      res.render("produktsidan", { product, products });
     }
   );
 });
+
+// Set up sessions
+app.use(
+  session({
+    secret: "your-secret-key", // Use a secure key
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }, // Set to true if using HTTPS
+  })
+);
 
 // Routes for other pages
 app.get("/index", (req, res) => {
@@ -206,8 +206,8 @@ app.get("/faq", (req, res) => {
   res.render("faq");
 });
 
-app.get("/mina-sidor", (req, res) => {
-  res.render("mina-sidor");
+app.get("/installning-sidan/mina-sidor", (req, res) => {
+  res.render("installning-sidan/mina-sidor");
 });
 
 // Start the express server

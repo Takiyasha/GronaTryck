@@ -137,3 +137,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial icon update based on login state
   updateLoginIcon();
 });
+
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    return next();
+  } else {
+    res.redirect("/"); // Redirect to home or login page if not authenticated
+  }
+}
+
+document.getElementById("logoutButton").addEventListener("click", function () {
+  fetch("/user/logout", {
+    method: "POST",
+  }).then(() => {
+    // Redirect to the home page
+    window.location.href = "/";
+  });
+});
+
+// After login success in login.js
+if (data.success) {
+  // Store logged-in state
+  sessionStorage.setItem("loggedIn", "true");
+  window.location.href = "/installning-sidan/mina-sidor"; // Redirect to user page after login
+}

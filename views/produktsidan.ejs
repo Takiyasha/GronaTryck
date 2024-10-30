@@ -78,10 +78,9 @@
         
         <div class="product-input">
           <h2 class="heading-m">Antal</h2>
-          <input type="text" />
+          <input type="number" id="quantityInput" min="<%= product.minimum %>" />
           <p class="body-text">
-            <span class="heading-s">Minimum kvantitet:</span> <%=
-            product.minimum %> enheter
+            <span class="heading-s">Minimum kvantitet:</span> <%= product.minimum %> enheter
           </p>
         </div>
         

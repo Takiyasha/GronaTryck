@@ -9,6 +9,20 @@ const fs = require("fs");
 const app = express();
 const PORT = 3000;
 
+// Set up sessions before the routes
+app.use(
+  session({
+    secret: "your-secret-key", // Use a long, random string for security
+    resave: false, // Don't save session if it wasn't modified
+    saveUninitialized: false, // Don't create session until something is stored
+    cookie: {
+      secure: false, // Set to `true` if using HTTPS, otherwise `false`
+      httpOnly: true, // Helps prevent cross-site scripting attacks
+      maxAge: 1000 * 60 * 60 * 24, // Cookie expiration (e.g., 1 day)
+    },
+  })
+);
+
 // Enable live reload by injecting the livereload script
 app.use(connectLivereload());
 
@@ -25,11 +39,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-// Routes
+// Import user and product routes
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 
+// Use product routes
 app.use("/", productRoutes);
+
+// Use user routes
 app.use("/user", userRoutes);
 
 // Create the livereload server
@@ -124,7 +141,7 @@ app.post("/user/register", (req, res) => {
   });
 });
 
-// Länkar till produkt sidan
+// Link to the product page
 app.get("/produktsidan/:id", (req, res) => {
   const productId = req.params.id;
 
@@ -154,10 +171,14 @@ app.get("/produktsidan/:id", (req, res) => {
 // Set up sessions
 app.use(
   session({
-    secret: "your-secret-key", // Use a secure key
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: false }, // Set to true if using HTTPS
+    secret: "your-secret-key", // Use a long, random string for security
+    resave: false, // Don't save session if it wasn't modified
+    saveUninitialized: false, // Don't create session until something is stored
+    cookie: {
+      secure: false, // Set this to `true` if using HTTPS, otherwise `false`
+      httpOnly: true, // Helps prevent cross-site scripting attacks
+      maxAge: 1000 * 60 * 60 * 24, // Cookie expiration (e.g., 1 day)
+    },
   })
 );
 

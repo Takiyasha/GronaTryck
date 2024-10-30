@@ -81,8 +81,17 @@ exports.loginUser = (req, res) => {
     );
 
     if (user) {
+      // Save user session
       req.session.user = { email: user.email, name: user.name };
-      return res.json({ success: true, message: "Login successful!" });
+      req.session.save((err) => {
+        if (err) {
+          return res
+            .status(500)
+            .json({ success: false, message: "Session save failed" });
+        }
+        console.log("Session after login:", req.session);
+        return res.json({ success: true, message: "Login successful!" });
+      });
     } else {
       return res
         .status(400)
@@ -93,6 +102,7 @@ exports.loginUser = (req, res) => {
 
 // Check user session
 exports.checkSession = (req, res) => {
+  console.log("Checking session:", req.session);
   if (req.session && req.session.user) {
     res.json({ loggedIn: true, user: req.session.user });
   } else {

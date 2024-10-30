@@ -52,11 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
+        credentials: "include", // Important for including session cookies in the request
       })
         .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
           return response.json();
         })
         .then((data) => {
@@ -65,11 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Login successful!");
             loginModal.style.display = "none"; // Close modal after successful login
 
-            // Set logged-in state in local storage
-            localStorage.setItem("loggedIn", true);
-
-            // Update the icon state
-            updateLoginIcon();
+            // Update the icon state based on session
+            checkLoginStatus();
           } else {
             alert(data.message);
           }
@@ -107,57 +102,52 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Function to update login icon visibility based on login state
-  function updateLoginIcon() {
-    const loggedIn = localStorage.getItem("loggedIn");
-    if (loggedIn === "true") {
-      loginIcon.style.display = "none";
-      loggedInIcon.style.display = "block";
-    } else {
-      loginIcon.style.display = "block";
-      loggedInIcon.style.display = "none";
-    }
+  // Function to update login icon visibility based on server session state
+  function checkLoginStatus() {
+    fetch("/user/session", {
+      method: "GET",
+      credentials: "include", // Important for including session cookies in the request
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.loggedIn) {
+          loginIcon.style.display = "none";
+          loggedInIcon.style.display = "block";
+        } else {
+          loginIcon.style.display = "block";
+          loggedInIcon.style.display = "none";
+        }
+      })
+      .catch((error) => {
+        console.error("Error checking login status:", error);
+      });
   }
-  // Correct URL in Navigation
-  loggedInIcon.addEventListener("click", function () {
-    window.location.href = "/mina-sidor";
-  });
+
+  // Correct URL in Navigation for logged-in icon
+  if (loggedInIcon) {
+    loggedInIcon.addEventListener("click", function () {
+      window.location.href = "/mina-sidor";
+    });
+  }
 
   // Handle logout button click
-  document
-    .getElementById("logoutButton")
-    .addEventListener("click", function () {
-      // Remove logged-in status from local storage
-      localStorage.removeItem("loggedIn");
-
-      // Redirect to the home page
-      window.location.href = "/";
+  const logoutButton = document.getElementById("logoutButton");
+  if (logoutButton) {
+    logoutButton.addEventListener("click", function () {
+      fetch("/user/logout", {
+        method: "POST",
+        credentials: "include", // Important for including session cookies in the request
+      })
+        .then(() => {
+          // Redirect to the home page after logout
+          window.location.href = "/";
+        })
+        .catch((error) => {
+          console.error("Error logging out:", error);
+        });
     });
-
-  // Initial icon update based on login state
-  updateLoginIcon();
-});
-
-function isAuthenticated(req, res, next) {
-  if (req.session && req.session.user) {
-    return next();
-  } else {
-    res.redirect("/"); // Redirect to home or login page if not authenticated
   }
-}
 
-document.getElementById("logoutButton").addEventListener("click", function () {
-  fetch("/user/logout", {
-    method: "POST",
-  }).then(() => {
-    // Redirect to the home page
-    window.location.href = "/";
-  });
+  // Initial icon update based on server-side session state
+  checkLoginStatus();
 });
-
-// After login success in login.js
-if (data.success) {
-  // Store logged-in state
-  sessionStorage.setItem("loggedIn", "true");
-  window.location.href = "/installning-sidan/mina-sidor"; // Redirect to user page after login
-}

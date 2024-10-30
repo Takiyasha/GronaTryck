@@ -28,7 +28,7 @@
 
         <div class="product-info">
           <div class="product-info-heading">
-            <h2 class="heading-m"><%= product.name %></h2>
+            <h2 class="heading-l"><%= product.name %></h2>
             <p class="alt-text-s">
               Artikelnummer: <%= product.artikelnummer %>
             </p>
@@ -46,20 +46,20 @@
             </div>
           </div>
           <div class="product-info-text responsive-body-text">
-            <p>Material:</p>
+            <p class="heading-s">Material:</p>
             <ul>
               <% product.material_info.forEach(function(material) { %>
               <li><%= material %></li>
               <% }); %>
             </ul>
-            <p>Egenskaper:</p>
+            <p class="heading-s">Egenskaper:</p>
             <ul>
               <% product.egenskaper_info.forEach(function(egenskap) { %>
               <li><%= egenskap %></li>
               <% }); %>
             </ul>
-            <p>Passform: <%= product.fit %></p>
-            <p>Pris:</p>
+            <p><span class="heading-s">Passform: </span><%= product.fit %></p>
+            <p class="heading-s">Pris:</p>
             <ul>
               <% product.price_tiers.forEach(function(tier) { %>
               <li><%= tier.range %>: <%= tier.price_per_unit %> kr/enhet</li>

@@ -66,8 +66,8 @@
               <li><%= egenskap %></li>
               <% }); %>
             </ul>
-            <p>Passform: <%= product.fit %></p>
-            <p>Pris:</p>
+            <p><span class="heading-s">Passform: </span><%= product.fit %></p>
+            <p class="heading-s">Pris:</p>
             <ul>
               <% product.price_tiers.forEach(function(tier) { %>
               <li><%= tier.range %>: <%= tier.price_per_unit %> kr/enhet</li>
@@ -78,9 +78,10 @@
         
         <div class="product-input">
           <h2 class="heading-m">Antal</h2>
-          <input type="number" id="quantityInput" min="<%= product.minimum %>" />
+          <input type="text" />
           <p class="body-text">
-            <span class="heading-s">Minimum kvantitet:</span> <%= product.minimum %> enheter
+            <span class="heading-s">Minimum kvantitet:</span> <%=
+            product.minimum %> enheter
           </p>
         </div>
         

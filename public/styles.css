@@ -520,6 +520,19 @@ section h1 {
   margin-bottom: 16px;
 }
 
+.heading-m-responsive {
+  font-size: 28px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #052900;
+  margin-bottom: 16px;
+
+  @media screen and (min-width:1280px) {
+    text-align: center;
+  }
+
+}
+
 .heading-m-c {
   font-size: 28px;
   font-family: "Poppins";
@@ -533,6 +546,16 @@ section h1 {
   font-family: "Nunito sans";
   font-size: 18px;
   color: #052900;
+}
+
+.responsive-body-text {
+  font-family: "Nunito sans";
+  font-size: 18px;
+  color: #052900;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 22px;
+  }
 }
 
 .body-text-s {
@@ -573,6 +596,10 @@ section h1 {
   @media screen and (min-width: 1280px) {
     margin-block: 0;
   }
+}
+
+.margin-bottom {
+  margin-bottom: 80px;
 }
 
 /* About */
@@ -1409,6 +1436,11 @@ textarea {
 
 .product-colors img {
   width: 80px;
+
+  @media screen and (min-width: 1920px) {
+    width: 120px;
+  }
+
 }
 
 .product-input input {
@@ -1443,4 +1475,65 @@ textarea {
     bottom: -50px;
     left: -100px;
   }
+}
+
+.product-page-swiper {
+  position: relative;
+}
+
+.product-page-swiper svg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+}
+
+.product-page-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media screen and (min-width: 1280px) {
+  .product-page-faq {
+    flex-direction: row;
+  }
+}
+
+.product-faq{
+  width: 75%;
+  margin-left: auto;
+  position: relative;
+}
+
+.product-faq svg {
+  position: absolute;
+  width: 64px;
+  z-index: -1;
+  left: -90px;
+}
+
+@media screen and (min-width: 1280px) {
+  .product-faq svg {
+    left: 40%;
+    top: -90px;
+  }
+
+  .product-faq {
+    text-align: center;
+    max-width: 40ch;
+    margin: auto;
+    margin-top: 64px;
+  }
+}
+
+.product-page-faq-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
 }

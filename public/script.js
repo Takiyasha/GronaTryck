@@ -1,3 +1,59 @@
+// Script to handle product color selection on the product page
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to handle color selection
+  function selectColor(selectedElement) {
+    // Remove 'selected' class from all color images
+    const colorImages = document.querySelectorAll(".product-color-img");
+    colorImages.forEach((img) => {
+      img.classList.remove("selected");
+    });
+
+    // Add 'selected' class to the clicked image
+    selectedElement.classList.add("selected");
+
+    // Update the color name in the color label
+    const selectedColorName = selectedElement.getAttribute("data-color-name");
+    const selectedColorElement = document.getElementById("selectedColor");
+    if (selectedColorElement) {
+      selectedColorElement.innerText = selectedColorName;
+    } else {
+      console.error("Element with id 'selectedColor' not found.");
+    }
+  }
+
+  // Attach click event listeners to all color images
+  const colorImages = document.querySelectorAll(".product-color-img");
+  if (colorImages.length > 0) {
+    console.log(`Found ${colorImages.length} color images.`);
+    colorImages.forEach((img) => {
+      img.addEventListener("click", function () {
+        console.log(
+          `Image with color ${img.getAttribute("data-color-name")} clicked.`
+        );
+        selectColor(this);
+      });
+    });
+  } else {
+    console.error("No elements with class 'product-color-img' found.");
+  }
+
+  // Add CSS to highlight the selected color
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .product-color-img {
+      cursor: pointer;
+      border: 2px solid transparent;
+      padding: 5px;
+    }
+    .product-color-img.selected {
+      border: 2px solid green;
+    }
+  `;
+  document.head.appendChild(style);
+});
+
+// Swiper configurations
 var productSwiper = new Swiper(".product-swiper", {
   slidesPerView: 4, // Standardvärde
   spaceBetween: 30, // Avstånd mellan slides
@@ -83,7 +139,6 @@ var swiper = new Swiper(".colab-swiper", {
 });
 
 /* Accordion */
-
 document.querySelectorAll(".hallbarhet-accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
     const expanded = header.getAttribute("aria-expanded") === "true" || false;
@@ -92,7 +147,6 @@ document.querySelectorAll(".hallbarhet-accordion-header").forEach((header) => {
 });
 
 /* Mina sidor */
-
 function showContent(contentNumber) {
   // Hide all content and reset buttons
   var contents = document.getElementsByClassName("ms-content");

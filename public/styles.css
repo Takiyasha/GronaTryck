@@ -535,10 +535,9 @@ section h1 {
   color: #052900;
   margin-bottom: 16px;
 
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     text-align: center;
   }
-
 }
 
 .heading-m-c {
@@ -548,6 +547,18 @@ section h1 {
   color: #052900;
   text-align: center;
   margin-bottom: 16px;
+}
+
+#priceEstimation {
+  font-family: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+
+#priceEstimation {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #052900;
 }
 
 .body-text {
@@ -1448,7 +1459,6 @@ textarea {
   @media screen and (min-width: 1920px) {
     width: 120px;
   }
-
 }
 
 .product-input input {
@@ -1498,7 +1508,6 @@ textarea {
   @media screen and (min-width: 768px) {
     display: block;
   }
-
 }
 
 .product-page-faq {
@@ -1513,7 +1522,7 @@ textarea {
   }
 }
 
-.product-faq{
+.product-faq {
   width: 75%;
   margin-left: auto;
   position: relative;

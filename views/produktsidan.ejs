@@ -75,16 +75,15 @@
             </ul>
           </div>
         </div>
-
+        
         <div class="product-input">
           <h2 class="heading-m">Antal</h2>
-          <input type="text" />
+          <input type="number" id="quantityInput" min="<%= product.minimum %>" />
           <p class="body-text">
-            <span class="heading-s">Minimum kvantitet:</span> <%=
-            product.minimum %> enheter
+            <span class="heading-s">Minimum kvantitet:</span> <%= product.minimum %> enheter
           </p>
         </div>
-
+        
         <div class="product-price">
           <div class="product-price-ge">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 762 461">
@@ -94,14 +93,13 @@
               />
             </svg>
           </div>
-          <h2 class="heading-m">Prisestimering: - kr</h2>
+          <h2 class="heading-m">Prisestimering: <span id="priceEstimation">-kr</span></h2>
           <p class="alt-text-s">
             *Observera att priset kan komma att förändras beroende på tryck, vi
             återkommer med ett exakt pris senare.
           </p>
           <button class="primary-btn">Lägg till i offertförfrågan</button>
         </div>
-      </div>
     </section>
 
     <%-include('partials/slider') %> <%-include('partials/footer') %>

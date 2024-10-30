@@ -12,7 +12,13 @@
   <header>
     <%- include('partials/navbar') %>
       <div class="hero-gots">
-        <img src="/static/images/Egna bilder/gots bild.png" alt="GOTS">
+        <img src="/static/images/Hero/100/webp/gots.webp"
+        srcset="/static/images/Hero/75/webp/gots_75.webp 1279w,
+                /static/images/Hero/100/webp/gots.webp 1280w,
+                /static/images/Hero/75/jpg/gots_75.jpg 1279w,
+                /static/images/Hero/100/jpg/gots.jpg 1280w"
+        sizes="(min-width: 1280px) 1280px, 100vw"
+        alt="GOTS">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40">
           <path d="M1 26.89S196.38 2.09 336 1.58c146.52-.53 239.05 20.15 385 25.31C861.03 31.85 930.91 0 1071.5 0S1441 26.89 1441 26.89V140H1V26.89Z" style="fill:#fff"/>
       </svg>

@@ -1545,3 +1545,13 @@ textarea {
   justify-content: center;
   margin-top: 80px;
 }
+
+.product-page-minimum {
+  position: relative;
+}
+
+.product-page-minimum svg {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+}

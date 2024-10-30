@@ -42,12 +42,16 @@ app.use(cors());
 // Import user and product routes
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 // Use product routes
 app.use("/", productRoutes);
 
 // Use user routes
 app.use("/user", userRoutes);
+
+// Use order routes routes
+app.use("/order", orderRoutes);
 
 // Create the livereload server
 const liveReloadServer = livereload.createServer({

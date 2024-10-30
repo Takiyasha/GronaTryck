@@ -1,4 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const addToOrderBtn = document.getElementById("addToOrderBtn");
+  const quantityInput = document.getElementById("quantityInput");
+
+  if (addToOrderBtn) {
+    addToOrderBtn.addEventListener("click", function () {
+      // Get product details
+      const artikelnummer = document
+        .querySelector(".alt-text-s")
+        .innerText.split(": ")[1]
+        .trim();
+      const selectedColor = document.getElementById("selectedColor").innerText;
+      const quantity = parseInt(quantityInput.value);
+
+      if (isNaN(quantity) || quantity < 10) {
+        alert("Please enter a valid quantity of at least 10.");
+        return;
+      }
+
+      // Construct the order data to send
+      const newOrder = {
+        artikelnummer,
+        quantity,
+        selectedColor,
+      };
+
+      // Send the order to the server
+      fetch("/order/add-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newOrder),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Order added successfully!");
+          } else {
+            alert("Failed to add order. Please try again.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Failed to add order. Please try again.");
+        });
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   // Quantity input and price estimation calculation
   const quantityInput = document.getElementById("quantityInput");
   const priceEstimationElement = document.getElementById("priceEstimation");

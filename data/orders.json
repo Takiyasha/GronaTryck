@@ -14,5 +14,29 @@
     "quantity": 11,
     "price": "3,960 kr",
     "fit": "Unisex"
+  },
+  {
+    "name": "Crafter",
+    "artikelnummer": 7163,
+    "color": "Blue Ice",
+    "quantity": 10,
+    "price": "3,600 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Crafter",
+    "artikelnummer": 7163,
+    "color": "Desert Dust",
+    "quantity": 22,
+    "price": "7,920 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Creator 2.0 Long Sleeve",
+    "artikelnummer": 1414,
+    "color": "Red",
+    "quantity": 50,
+    "price": "16,200 kr",
+    "fit": "Unisex"
   }
 ]

@@ -145,7 +145,7 @@ var productSwiper = new Swiper(".product-swiper", {
   spaceBetween: 30, // Avstånd mellan slides
   loop: true, // Loop-funktion
   autoplay: {
-    delay: 2500,
+    delay: 4000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -163,17 +163,17 @@ var productSwiper = new Swiper(".product-swiper", {
       slidesPerView: 1, // Visa 1 slide
       spaceBetween: 10, // Avstånd mellan slides minskat till 10px
     },
-    640: {
+    768: {
       // Vid skärmar ≥ 640px
       slidesPerView: 2, // Visa 2 slides
       spaceBetween: 20, // Avstånd mellan slides
     },
-    1024: {
+    1280: {
       // Vid skärmar ≥ 1024px
       slidesPerView: 3, // Visa 3 slides
       spaceBetween: 30, // Avstånd mellan slides
     },
-    1440: {
+    1920: {
       // Vid skärmar ≥ 1440px
       slidesPerView: 4, // Visa 4 slides (eller mer beroende på ditt standardvärde)
       spaceBetween: 30, // Samma avstånd som standard
@@ -181,14 +181,6 @@ var productSwiper = new Swiper(".product-swiper", {
   },
 });
 
-var heroSwiper = new Swiper(".hero-swiper", {
-  slidesPerView: 1,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
 
 var swiper = new Swiper(".colab-swiper", {
   effect: "coverflow",

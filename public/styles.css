@@ -15,7 +15,16 @@ section {
   background-color: #f7f9f7;
   color: #6c757d;
   padding: 2rem 0;
+  position: relative;
 }
+
+.footer-ge {
+  position: absolute;
+  top: -70px;
+  z-index: -1;
+  height: 100px;
+}
+
 .footer-container {
   width: 90%;
   max-width: 1200px;
@@ -183,27 +192,6 @@ section {
   }
 }
 
-section h1 {
-  text-align: center;
-  margin-bottom: 44px;
-  font-family: "Poppins";
-  font-size: 44px;
-  font-weight: 700;
-  color: #052900;
-
-  @media screen and (max-width: 892px) {
-    font-size: 22px;
-  }
-}
-
-.hero-swiper {
-  height: 60vh;
-
-  @media screen and (max-width: 892px) {
-    height: 40vh;
-  }
-}
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -211,18 +199,70 @@ section h1 {
   object-fit: cover;
 }
 
-.product {
-  background-color: #f7f9f7;
+.gt-product {
+  background-color: #E5EAE4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
 }
 
-.product-image .product-img {
+.gt-product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gt-product-info {
+  padding: 16px;
+  background-color: #E5EAE4;
+  transition: all 0.3s ease;
+}
+
+.gt-product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.gt-product-name {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.gt-product-extra-info {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background-color: rgba(229, 234, 228, 0.9);
+  color: #052900;
+  padding: 16px;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gt-product:hover .gt-product-image {
+  height: 90%;
+}
+
+.gt-product:hover .gt-product-info {
+  transform: translateY(-10px);
+}
+
+.gt-product:hover .gt-product-extra-info {
+  right: 0;
+}
+
+.gt-product-image .gt-product-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.product-price {
-  font-weight: 700;
 }
 
 .product-swiper .swiper-pagination {
@@ -240,6 +280,23 @@ section h1 {
   font-size: 36px;
 }
 
+.cards-container {
+  position: relative;
+}
+
+.cards-container svg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  display: none;
+  margin: 0px;
+  bottom: -50px;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
 .services {
   position: relative;
   width: 100%;
@@ -247,7 +304,7 @@ section h1 {
   margin-inline: 40px;
   overflow: hidden;
   transition: transform 0.5s;
-  border-radius: 25px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,7 +334,7 @@ section h1 {
   margin-inline: 40px;
   overflow: hidden;
   transition: transform 0.5s;
-  border-radius: 25px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,14 +362,14 @@ section h1 {
   opacity: 1; /* Visa texten vid hover */
 }
 
-@media (max-width: 689px) {
+@media (max-width: 768px) {
   .services,
   .brands {
     height: 40vh;
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1280px) {
   .cards {
     flex-direction: column; /* Ändrar layouten till vertikal när bredden är mindre än 892px */
     align-items: center; /* Centrerar korten */
@@ -528,6 +585,20 @@ section h1 {
   margin-bottom: 16px;
 }
 
+.heading-l-c-responsive {
+  font-size: 22px;
+  font-family: "Poppins";
+  font-weight: 700;
+  text-align: center;
+  color: #052900;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 44px;
+  }
+
+}
+
 .heading-m-responsive {
   font-size: 28px;
   font-family: "Poppins";
@@ -621,6 +692,15 @@ section h1 {
   margin-bottom: 80px;
 }
 
+.gronatryck-ge {
+  position: relative;
+}
+
+.gronatryck-ge svg {
+  position: absolute;
+  z-index: -1;
+}
+
 /* About */
 
 .about-container {
@@ -661,7 +741,7 @@ section h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 24vh;
+  height: 20vh;
   padding: 32px;
 }
 

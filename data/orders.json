@@ -1,18 +1,44 @@
 [
   {
-    "name": "Connector 2.0",
-    "artikelnummer": 2848,
-    "color": "Black",
+    "name": "Bomber 2.0",
+    "artikelnummer": 6518,
     "quantity": 1000,
     "price": "288,000 kr",
     "fit": "Unisex"
   },
   {
+    "name": "Bomber 2.0",
+    "artikelnummer": 6518,
+    "quantity": 1000,
+    "price": "288,000 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Bomber 2.0",
+    "artikelnummer": 6518,
+    "quantity": 123123,
+    "price": "35,459,424 kr",
+    "fit": "Unisex"
+  },
+  {
     "name": "Connector 2.0",
     "artikelnummer": 2848,
-    "color": "Black",
-    "quantity": 11,
-    "price": "3,960 kr",
+    "quantity": 100,
+    "price": "30,600 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Connector 2.0",
+    "artikelnummer": 2848,
+    "quantity": 123123,
+    "price": "35,459,424 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Connector 2.0",
+    "artikelnummer": 2848,
+    "quantity": 100,
+    "price": "30,600 kr",
     "fit": "Unisex"
   },
   {

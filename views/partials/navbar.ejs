@@ -114,7 +114,7 @@
       </a>
 
       <!-- Shopping Cart Icon -->
-      <a href="#" class="nav-link">
+      <a id="cartIcon" href="javascript:void(0);" class="nav-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1080 1080"
@@ -124,122 +124,168 @@
         <path fill="#567c50" d="M74,801c-20.26.43-37.48-18.77-34.78-38.88,0,0,60-538,60-538,1.98-17.74,16.93-31.12,34.78-31.12,0,0,94.11,0,94.11,0C240.27,92.9,285.66-3.26,395.5-1c110.02-2.47,156.6,94.05,169.82,194h99.18c17.85,0,32.81,13.38,34.78,31.12l60,538c1.1,9.88-2.07,19.8-8.7,27.22-6.63,7.41-16.14,11.66-26.08,11.66H74ZM685.38,731l-52.19-468h-59.53c2.03,22.66,3.89,48.74,5.78,80.95,1.25,20-14.95,37.13-34.98,37.06-18.49,0-33.82-14.47-34.9-32.95-1.53-26.12-3.45-56.24-6.18-85.05h-212.73c-2.39,28.98-3.91,58.64-5.18,86.6-.83,19.29-17.29,34.29-36.56,33.37-18.82-.47-34.62-17.78-33.37-36.56,1.16-25.39,2.64-54.7,4.9-83.4h-55.12l-52.19,468h572.26ZM494.25,193c-10.09-60.78-32.71-127.88-98.75-124-65.48-3.97-87.32,63.7-96.57,124h195.33Z"/>
         </svg>
       </a>
+      <!-- Cart Dropdown Container -->
+      <div id="cartDropdown" class="cart-dropdown">
+        <!-- Cart items will be dynamically inserted here -->
+      </div>
+
+      <!-- Cart Modal -->
+      <!-- Shopping Cart Panel -->
+      <div id="cartPanel" class="cart-panel">
+        <div class="cart-panel-header">
+          <span>Offertförfrågan</span>
+          <span id="closeCartPanel" class="close">&times;</span>
+        </div>
+        <div id="cartItemsContainer" class="cart-items-container">
+          <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-summary">
+          <p><strong>Totalt</strong></p>
+          <p id="totalPrice">Varukostnad: 0 kr</p>
+          <p>Frakt från: 1500 kr</p>
+          <p>
+            <strong>Summa: <span id="sumPrice">0 kr</span></strong>
+          </p>
+        </div>
+        <div class="cart-buttons">
+          <button class="secondary-btn">Fortsätt handla</button>
+          <button class="primary-btn" id="checkoutButton">
+            Gå till offertförfrågan
+          </button>
+        </div>
+      </div>
+
+      <!--/static/images/infographics-folder/graphical-elements/blob-small.svg-->
+      <!-- Modal Structure (login modal hidden by default) -->
+      <div id="loginModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <div class="login-form-container">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="heading-m">Logga in</h2>
+            <form id="loginForm">
+              <label for="loginEmail">E-postadress</label>
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="Ange e-postadress..."
+                required
+              />
+              <label for="loginPassword">Lösenord</label>
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="Ange lösenord..."
+                required
+              />
+              <div class="remember-forgot">
+                <a href="#" class="forgot-password"
+                  >Har du glömt ditt lösenord?</a
+                >
+                <label class="remember-me">
+                  <input type="checkbox" /> Kom ihåg mig
+                </label>
+              </div>
+              <div class="button-container">
+                <div class="register-link">
+                  <a href="#" id="registerLink">Har du inte ett konto?</a>
+                </div>
+                <button type="submit">Logga in</button>
+              </div>
+            </form>
+          </div>
+          <img
+            class="blob-image"
+            src="/static/images/infographics-folder/graphical-elements/blob-small.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Create Account Modal Structure -->
+      <div id="createAccountModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <div class="create-account-form-container">
+            <span class="close" onclick="closeCreateAccountModal()"
+              >&times;</span
+            >
+            <h2>Skapa ett konto</h2>
+            <form id="createAccountForm">
+              <label for="email">E-postadress</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Ange e-postadress..."
+                required
+              />
+
+              <label for="confirmEmail">Bekräfta e-postadress</label>
+              <input
+                type="email"
+                id="confirmEmail"
+                placeholder="Ange e-postadress..."
+                required
+              />
+
+              <label for="password">Lösenord</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Ange lösenord..."
+                required
+              />
+
+              <label for="confirmPassword">Bekräfta lösenord</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Ange lösenord..."
+                required
+              />
+
+              <label for="name">Namn</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Ange namn..."
+                required
+              />
+
+              <label for="address">Adress</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="Ange adress..."
+                required
+              />
+
+              <label for="postalCode">Postnummer</label>
+              <input
+                type="text"
+                id="postalCode"
+                placeholder="Ange postnummer..."
+                required
+              />
+
+              <label for="phoneNumber">Telefonnummer</label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                placeholder="Ange telefonnummer..."
+                required
+              />
+
+              <div class="button-container">
+                <div class="register-link">
+                  <a href="#" onclick="openLoginModal()"
+                    >Har du redan ett konto?</a
+                  >
+                </div>
+                <button type="submit">Skapa konto</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
-
-<!--/static/images/infographics-folder/graphical-elements/blob-small.svg-->
-<!-- Modal Structure (login modal hidden by default) -->
-<div id="loginModal" class="modal" style="display: none">
-  <div class="modal-content">
-    <div class="login-form-container">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 class="heading-m">Logga in</h2>
-      <form id="loginForm">
-        <label for="loginEmail">E-postadress</label>
-        <input
-          type="email"
-          id="loginEmail"
-          placeholder="Ange e-postadress..."
-          required
-        />
-        <label for="loginPassword">Lösenord</label>
-        <input
-          type="password"
-          id="loginPassword"
-          placeholder="Ange lösenord..."
-          required
-        />
-        <div class="remember-forgot">
-          <a href="#" class="forgot-password">Har du glömt ditt lösenord?</a>
-          <label class="remember-me">
-            <input type="checkbox" /> Kom ihåg mig
-          </label>
-        </div>
-        <div class="button-container">
-          <div class="register-link">
-            <a href="#" id="registerLink">Har du inte ett konto?</a>
-          </div>
-          <button type="submit">Logga in</button>
-        </div>
-      </form>
-    </div>
-    <img
-      class="blob-image"
-      src="/static/images/infographics-folder/graphical-elements/blob-small.svg"
-      alt=""
-    />
-  </div>
-</div>
-
-<!-- Create Account Modal Structure -->
-<div id="createAccountModal" class="modal" style="display: none">
-  <div class="modal-content">
-    <div class="create-account-form-container">
-      <span class="close" onclick="closeCreateAccountModal()">&times;</span>
-      <h2>Skapa ett konto</h2>
-      <form id="createAccountForm">
-        <label for="email">E-postadress</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Ange e-postadress..."
-          required
-        />
-
-        <label for="confirmEmail">Bekräfta e-postadress</label>
-        <input
-          type="email"
-          id="confirmEmail"
-          placeholder="Ange e-postadress..."
-          required
-        />
-
-        <label for="password">Lösenord</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Ange lösenord..."
-          required
-        />
-
-        <label for="confirmPassword">Bekräfta lösenord</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          placeholder="Ange lösenord..."
-          required
-        />
-
-        <label for="name">Namn</label>
-        <input type="text" id="name" placeholder="Ange namn..." required />
-
-        <label for="address">Adress</label>
-        <input type="text" id="address" placeholder="Ange adress..." required />
-
-        <label for="postalCode">Postnummer</label>
-        <input
-          type="text"
-          id="postalCode"
-          placeholder="Ange postnummer..."
-          required
-        />
-
-        <label for="phoneNumber">Telefonnummer</label>
-        <input
-          type="tel"
-          id="phoneNumber"
-          placeholder="Ange telefonnummer..."
-          required
-        />
-
-        <div class="button-container">
-          <div class="register-link">
-            <a href="#" onclick="openLoginModal()">Har du redan ett konto?</a>
-          </div>
-          <button type="submit">Skapa konto</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>

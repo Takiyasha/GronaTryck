@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+body {
+  margin: 0px;
+}
+
 section {
   margin-inline: 16px;
   margin-block: 80px;
@@ -93,102 +97,146 @@ section {
   }
 }
 
-.navbar-brand {
-  transition: all 0.3s ease-in-out;
-}
-.navbar-nav {
-  margin-left: auto;
-  margin-right: auto;
-}
-.navbar-icons {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-icons .nav-link {
-  padding: 0.5rem;
-  color: #567c50; /* Matcha färgen med dina nav-items */
-}
-
-.navbar-icons svg {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
-}
-
-.navbar-icons svg:hover {
-  transform: scale(1.2);
-}
-
-@media (max-width: 991px) {
-  .navbar-icons {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 30px 10%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: relative;
-  background-color: #ffffff;
-  font-family: "Poppins";
-  font-size: 18px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  z-index: 1000;
 }
 
-.nav-item a {
-  color: #567c50;
-  font-family: "Poppins";
-  font-size: 18px;
+.logo img {
+  height: 40px;
 }
 
-.nav-item a:hover {
-  color: #052900;
-  text-decoration: underline;
-  text-decoration-color: #567c50;
-  transform: scale(1.03);
-  font-weight: 500;
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 991px) {
-  .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icons a {
+  transition: 0.3s ease;
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (min-width: 1280px) {
+  .nav-icons a {
+    width: 32px;
+    height: 32px;
   }
-  .navbar > .container {
-    justify-content: flex-start;
+}
+
+.nav-icons a:hover {
+  transform: scale(1.1);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
   }
-  .navbar-collapse {
-    position: fixed;
-    top: 56px; /* Adjust this value based on your navbar height */
-    left: -75%; /* Start off-screen */
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    width: 75%;
-    height: calc(100% - 56px); /* Subtract the navbar height */
-    background-color: #f8f9fa;
-    transition: left 150ms ease-out;
-    z-index: 1030; /* High z-index to ensure it's on top */
-    overflow-y: auto; /* Allow scrolling if content is too long */
-    padding-top: 80px;
+
+  .logo {
+      grid-column: 1;
   }
-  .navbar-collapse.show {
-    left: 0;
+
+  .menu-container {
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: relative;
   }
-  .navbar-toggler {
-    order: -1;
+
+  .nav-links {
+      display: flex;
+      justify-content: center;
   }
-  .nav-link {
-    font-size: 28px;
-    padding-left: 36px;
+
+  .nav-icons {
+      grid-column: 3;
   }
-  .navbar-icons svg {
-    width: 30px;
-    height: 30px;
+
+  .menu-icon {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap;
+  }
+
+  .menu-container {
+      order: 1;
+      width: 33.33%;
+  }
+
+  .logo {
+      order: 2;
+      width: 33.33%;
+      text-align: center;
+  }
+
+  .nav-icons {
+      order: 3;
+      width: 33.33%;
+      justify-content: flex-end;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 200px;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 20px;
+  }
+
+  .menu-icon {
+      display: block;
   }
 }
 

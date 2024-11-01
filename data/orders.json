@@ -78,5 +78,19 @@
     "quantity": 50,
     "price": "16,200 kr",
     "fit": "Unisex"
+  },
+  {
+    "name": "Brooker",
+    "artikelnummer": 2913,
+    "quantity": 20,
+    "price": "7,200 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Brooker",
+    "artikelnummer": 2913,
+    "quantity": 200,
+    "price": "61,200 kr",
+    "fit": "Unisex"
   }
 ]

@@ -231,6 +231,10 @@ app.get("/faq", (req, res) => {
   res.render("faq");
 });
 
+app.get("/klader", (req, res) => {
+  res.render("klader");
+});
+
 app.get("/installning-sidan/mina-sidor", (req, res) => {
   res.render("installning-sidan/mina-sidor");
 });

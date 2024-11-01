@@ -763,6 +763,10 @@ section {
   top: 25px;
 }
 
+.hallbarhet-accordions .text-block svg {
+  top: 25px;
+}
+
 .brand-colaborations h2 {
   margin-inline: 16px;
 
@@ -1549,6 +1553,16 @@ textarea {
 
 .ms-order-history-imgs img {
   width: 50%;
+}
+
+.ms-order-history-info {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1920px) {
+  .ms-order-history-info {
+    margin-bottom: 0px;
+  }
 }
 
 /* Produktsida */

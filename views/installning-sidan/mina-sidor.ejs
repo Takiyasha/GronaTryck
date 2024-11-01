@@ -3,70 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/bootstrap.css" />
+    <title>Gröna Tryck</title>
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/popup.css" />
   </head>
   <body>
     <%- include('../partials/navbar') %>
     <section>
-      <div class="ms-button-container">
-        <button class="ms-accordion-button heading-s" onclick="showContent(1)">
-          Orderhistorik
-        </button>
-        <button class="ms-accordion-button heading-s" onclick="showContent(2)">
-          Mina uppgifter
-        </button>
-        <button class="ms-accordion-button heading-s" onclick="showContent(3)">
-          Kontaktinställningar
-        </button>
-        <button id="logoutButton" class="ms-accordion-button heading-s">
-          Logga ut
-        </button>
+      <div class="ms-container">
+        <div class="ms-button-container">
+          <button class="ms-accordion-button heading-s" onclick="showContent(1)">
+            Orderhistorik
+          </button>
+          <button class="ms-accordion-button heading-s" onclick="showContent(2)">
+            Mina uppgifter
+          </button>
+          <button class="ms-accordion-button heading-s" onclick="showContent(3)">
+            Kontaktinställningar
+          </button>
+          <button id="logoutButton" class="ms-accordion-button heading-s">
+            Logga ut
+          </button>
+        </div>
+        <div class="ms-content-container">
+          <div class="ms-ge active">
+            <h2 class="heading-m-c">Hej!<br />Namn Namnsson</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.83 221.79">
+              <path
+                d="M51.67 176.27C33.36 151.92.12 115.56 5.94 88.45 10.81 65.8 45.31 19.71 65.61 5.03c20.3-14.67 56.75 8.34 80.26 10.47 28.14 2.56 54.19 15.91 72.51 40.26 18.31 24.34 4.51 68.53-1.32 95.63-4.86 22.65-35.13 25.4-55.43 40.07-20.3 14.68-36.22 26.68-59.73 24.54-28.14-2.56-31.92-15.4-50.23-39.74Z"
+                style="fill: #e5eae4"
+              />
+              <path
+                d="M213.2 98.22c0 28.72 4.63 74.87-16 92.36-17.24 14.62-71.68 30.79-96.35 30.79s-39.73-37.72-56.97-52.34c-20.63-17.5-33.23-42.1-33.23-70.81S47.67 43.36 68.3 25.87c17.24-14.62 42.69 0 67.35 0s44.3-.38 61.54 14.24c20.63 17.5 16 29.4 16 58.11Z"
+                style="fill: #b4c3b2"
+              />
+              <path
+                d="M142.52 118.14H91.49c-12.42 0-22.48 10.07-22.48 22.48v21.39c0 2.07 1.68 3.75 3.75 3.75h88.51c2.07 0 3.75-1.68 3.75-3.75v-21.39c0-12.42-10.07-22.48-22.48-22.48Zm12.65 37.8H78.82v-15.88c0-7.1 5.75-12.85 12.85-12.85h50.65c7.1 0 12.85 5.75 12.85 12.85v15.88Zm-38.48-83.46c4.05 0 7.86 1.58 10.73 4.44 2.87 2.87 4.44 6.67 4.44 10.73s-1.58 7.86-4.44 10.73-6.67 4.44-10.73 4.44-7.86-1.58-10.73-4.44c-2.87-2.87-4.44-6.67-4.44-10.73s1.58-7.86 4.44-10.73 6.67-4.44 10.73-4.44m0-9.63c-13.7 0-24.81 11.11-24.81 24.81s11.11 24.81 24.81 24.81 24.81-11.11 24.81-24.81-11.11-24.81-24.81-24.81Z"
+                style="fill: #fff"
+              />
+            </svg>
+          </div>
+          <div id="content1" class="ms-content">
+            <h2 class="heading-m">Orderhistorik</h2>
+            <div class="ms-order-history">
+              <div>
+                <p class="alt-text-s">Ordernummer: #918192920</p>
+                <div class="ms-order-history-imgs">
+                  <img src="/static/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp" alt="Bomber 2.0">
+                  <img src="/static/images/Products/Colors/webp/Changer 2.0_Blue Ice_Packshot_Front_Main_0_25.webp" alt="Changer 2.0">
+                </div>
+              </div>
+              <div>
+                <p class="body-text"><span class="heading-s">Datum för order:</span> 18 okt. 2024</p>
+                <p class="body-text"><span class="heading-s">Preliminärt pris:</span> 32 212 kr</p>
+                <p class="body-text"><span class="heading-s">Status:</span> Inskickad</p>
+              </div>
+              <button class="primary-btn">Se order</button>
+            </div>
+            <div class="ms-order-history">
+              <div>
+                <p class="alt-text-s">Ordernummer: #918192920</p>
+                <div class="ms-order-history-imgs">
+                  <img src="/static/images/Products/Colors/webp/Connector 2.0_Black_Packshot_Front_Main_0_25.webp" alt="Connector 2.0">
+                  <img src="/static/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp" alt="Bomber 2.0">
+                </div>
+              </div>
+              <div>
+                <p class="body-text"><span class="heading-s">Datum för order:</span> 11 okt. 2024</p>
+                <p class="body-text"><span class="heading-s">Preliminärt pris:</span> 13 327 kr</p>
+                <p class="body-text"><span class="heading-s">Status:</span> Godkänd</p>
+                <a href="#" class="body-text">Repetera order</a>
+              </div>
+              <button class="primary-btn">Se order</button>
+            </div>
+
+          </div>
+          <div id="content2" class="ms-content">
+            <h2>Innehåll 2</h2>
+            <p>
+              Detta är innehållet för knapp 2. Du kan anpassa denna text efter
+              dina behov.
+            </p>
+          </div>
+          <div id="content3" class="ms-content">
+            <h2>Innehåll 3</h2>
+            <p>
+              Detta är innehållet för knapp 3. Lägg till relevant information här.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="ms-content-container">
-        <div class="ms-ge active">
-          <h2 class="heading-m-c">Hej!<br />Namn Namnsson</h2>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.83 221.79">
-            <path
-              d="M51.67 176.27C33.36 151.92.12 115.56 5.94 88.45 10.81 65.8 45.31 19.71 65.61 5.03c20.3-14.67 56.75 8.34 80.26 10.47 28.14 2.56 54.19 15.91 72.51 40.26 18.31 24.34 4.51 68.53-1.32 95.63-4.86 22.65-35.13 25.4-55.43 40.07-20.3 14.68-36.22 26.68-59.73 24.54-28.14-2.56-31.92-15.4-50.23-39.74Z"
-              style="fill: #e5eae4"
-            />
-            <path
-              d="M213.2 98.22c0 28.72 4.63 74.87-16 92.36-17.24 14.62-71.68 30.79-96.35 30.79s-39.73-37.72-56.97-52.34c-20.63-17.5-33.23-42.1-33.23-70.81S47.67 43.36 68.3 25.87c17.24-14.62 42.69 0 67.35 0s44.3-.38 61.54 14.24c20.63 17.5 16 29.4 16 58.11Z"
-              style="fill: #b4c3b2"
-            />
-            <path
-              d="M142.52 118.14H91.49c-12.42 0-22.48 10.07-22.48 22.48v21.39c0 2.07 1.68 3.75 3.75 3.75h88.51c2.07 0 3.75-1.68 3.75-3.75v-21.39c0-12.42-10.07-22.48-22.48-22.48Zm12.65 37.8H78.82v-15.88c0-7.1 5.75-12.85 12.85-12.85h50.65c7.1 0 12.85 5.75 12.85 12.85v15.88Zm-38.48-83.46c4.05 0 7.86 1.58 10.73 4.44 2.87 2.87 4.44 6.67 4.44 10.73s-1.58 7.86-4.44 10.73-6.67 4.44-10.73 4.44-7.86-1.58-10.73-4.44c-2.87-2.87-4.44-6.67-4.44-10.73s1.58-7.86 4.44-10.73 6.67-4.44 10.73-4.44m0-9.63c-13.7 0-24.81 11.11-24.81 24.81s11.11 24.81 24.81 24.81 24.81-11.11 24.81-24.81-11.11-24.81-24.81-24.81Z"
-              style="fill: #fff"
-            />
-          </svg>
-        </div>
-        <div id="content1" class="ms-content">
-          <h2>Innehåll 1</h2>
-          <p>
-            Detta är innehållet för knapp 1. Du kan lägga till vilken
-            information du vill här.
-          </p>
-        </div>
-        <div id="content2" class="ms-content">
-          <h2>Innehåll 2</h2>
-          <p>
-            Detta är innehållet för knapp 2. Du kan anpassa denna text efter
-            dina behov.
-          </p>
-        </div>
-        <div id="content3" class="ms-content">
-          <h2>Innehåll 3</h2>
-          <p>
-            Detta är innehållet för knapp 3. Lägg till relevant information här.
-          </p>
-        </div>
-      </div>
+      
     </section>
     <%- include('../partials/footer') %>
-    <script src="/static/bootstrap.js"></script>
     <script src="/static/script.js"></script>
     <script src="/static/login.js"></script>
     <script src="/static/signup.js"></script>

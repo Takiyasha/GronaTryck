@@ -64,5 +64,19 @@
     "quantity": 50,
     "price": "16,200 kr",
     "fit": "Unisex"
+  },
+  {
+    "name": "Connector 2.0",
+    "artikelnummer": 2848,
+    "quantity": 10,
+    "price": "3,600 kr",
+    "fit": "Unisex"
+  },
+  {
+    "name": "Bomber 2.0",
+    "artikelnummer": 6518,
+    "quantity": 50,
+    "price": "16,200 kr",
+    "fit": "Unisex"
   }
 ]

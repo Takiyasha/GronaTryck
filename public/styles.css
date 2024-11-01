@@ -271,13 +271,13 @@ section {
 .gt-product-price {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #052900;
   margin: 0 0 8px 0;
 }
 
 .gt-product-name {
   font-size: 14px;
-  color: #666;
+  color: #052900;
   margin: 0 0 8px 0;
 }
 
@@ -296,9 +296,7 @@ section {
   justify-content: center;
 }
 
-.gt-product:hover .gt-product-image {
-  height: 90%;
-}
+
 
 .gt-product:hover .gt-product-info {
   transform: translateY(-10px);
@@ -1819,7 +1817,7 @@ textarea {
 .store-products-container {
   display: grid;
   grid-template-columns: auto;
-  gap: 16px;
+  gap: 32px;
 }
 
 @media screen and (min-width: 768px) {

@@ -5,6 +5,10 @@ body {
   margin: 0px;
 }
 
+.hidden {
+  display: none;
+}
+
 section {
   margin-inline: 16px;
   margin-block: 80px;
@@ -102,8 +106,8 @@ section {
   justify-content: space-between;
   align-items: center;
   background-color: #f8f9fa;
-  padding-inline: 10%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 30px 10%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
@@ -131,7 +135,7 @@ section {
 }
 
 .nav-links a:hover {
-  color: #567C50;
+  color: #567c50;
   text-decoration: underline 2px;
 }
 
@@ -164,80 +168,80 @@ section {
 
 @media screen and (min-width: 1281px) {
   .navbar {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
   }
 
   .logo {
-      grid-column: 1;
+    grid-column: 1;
   }
 
   .menu-container {
-      grid-column: 2;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      position: relative;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
   }
 
   .nav-links {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-icons {
-      grid-column: 3;
+    grid-column: 3;
   }
 
   .menu-icon {
-      display: none;
+    display: none;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .navbar {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .menu-container {
-      order: 1;
-      width: 33.33%;
+    order: 1;
+    width: 33.33%;
   }
 
   .logo {
-      order: 2;
-      width: 33.33%;
-      text-align: center;
+    order: 2;
+    width: 33.33%;
+    text-align: center;
   }
 
   .nav-icons {
-      order: 3;
-      width: 33.33%;
-      justify-content: flex-end;
+    order: 3;
+    width: 33.33%;
+    justify-content: flex-end;
   }
 
   .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #f8f9fa;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      width: 200px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
   }
 
   .nav-links.show {
-      display: flex;
+    display: flex;
   }
 
   .nav-links li {
-      margin: 10px 20px;
+    margin: 10px 20px;
   }
 
   .menu-icon {
-      display: block;
+    display: block;
   }
 }
 
@@ -249,7 +253,7 @@ section {
 }
 
 .gt-product {
-  background-color: #E5EAE4;
+  background-color: #e5eae4;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -264,7 +268,7 @@ section {
 
 .gt-product-info {
   padding: 16px;
-  background-color: #E5EAE4;
+  background-color: #e5eae4;
   transition: all 0.3s ease;
 }
 
@@ -643,7 +647,6 @@ section {
   @media screen and (min-width: 1280px) {
     font-size: 44px;
   }
-
 }
 
 .heading-m-responsive {
@@ -1787,11 +1790,10 @@ textarea {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Kläder sidan */
 
 .store-container {
-  background-color: #E5EAE4;
+  background-color: #e5eae4;
   height: 100%;
   padding-inline: 16px;
   padding-block: 80px;
@@ -1843,6 +1845,3 @@ textarea {
   justify-content: center;
   margin-block: 80px;
 }
-
-
-  

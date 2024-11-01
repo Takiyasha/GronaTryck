@@ -1,43 +1,42 @@
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM fully loaded');
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM fully loaded");
 
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
   if (!menuToggle) {
-    console.error('menuToggle element not found');
+    console.error("menuToggle element not found");
     return;
   }
 
   if (!navLinks) {
-    console.error('navLinks element not found');
+    console.error("navLinks element not found");
     return;
   }
 
-  menuToggle.addEventListener('click', function(e) {
-    console.log('Menu toggle clicked');
+  menuToggle.addEventListener("click", function (e) {
+    console.log("Menu toggle clicked");
     e.stopPropagation(); // Prevent the click from bubbling up
-    navLinks.classList.toggle('show');
-    console.log('show class toggled', navLinks.classList.contains('show'));
+    navLinks.classList.toggle("show");
+    console.log("show class toggled", navLinks.classList.contains("show"));
   });
 
   // Close the menu when clicking on a link
-  navLinks.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A') {
-      navLinks.classList.remove('show');
-      console.log('Menu closed by link click');
+  navLinks.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("show");
+      console.log("Menu closed by link click");
     }
   });
 
   // Close the menu when clicking outside
-  document.addEventListener('click', function(e) {
+  document.addEventListener("click", function (e) {
     if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-      navLinks.classList.remove('show');
-      console.log('Menu closed by outside click');
+      navLinks.classList.remove("show");
+      console.log("Menu closed by outside click");
     }
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   // Elements
@@ -227,7 +226,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ////////////////////////////////////////////////////////////////
+
 // Quantity input and price estimation calculation
+document.addEventListener("DOMContentLoaded", function () {
+  const loadMoreButton = document.getElementById("loadMoreButton");
+  const productsContainer = document.getElementById("productsContainer");
+  const productCards = productsContainer.getElementsByClassName("gt-product");
+  const ITEMS_PER_LOAD = 6; // Startar with 8 visible products
+
+  // Initially display only the first 8 items
+  let visibleCount = ITEMS_PER_LOAD;
+  for (let i = 0; i < productCards.length; i++) {
+    if (i >= ITEMS_PER_LOAD) {
+      productCards[i].style.display = "none";
+    }
+  }
+
+  // Event listener for the "Visa mer" button
+  loadMoreButton.addEventListener("click", function () {
+    let count = 0;
+
+    // Reveal the next batch of products
+    for (let i = visibleCount; i < productCards.length; i++) {
+      if (count < ITEMS_PER_LOAD) {
+        productCards[i].style.display = "block";
+        count++;
+      }
+    }
+
+    visibleCount += ITEMS_PER_LOAD;
+
+    // Hide the "Visa mer" button if all items are visible
+    if (visibleCount >= productCards.length) {
+      loadMoreButton.style.display = "none";
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const quantityInput = document.getElementById("quantityInput");
@@ -360,7 +394,6 @@ var productSwiper = new Swiper(".product-swiper", {
     },
   },
 });
-
 
 var swiper = new Swiper(".colab-swiper", {
   effect: "coverflow",

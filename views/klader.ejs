@@ -34,38 +34,37 @@
       </div>
     </div>
     <section>
-      <div class="store-products-container">
-        <% products.forEach(product => { %>
-          <div class="gt-product">
-            <div class="gt-product-image">
-              <!-- Lägg till en länk runt varje produktkort -->
-              <a href="/produktsidan/<%= product.id %>">
-                <img
-                  src="<%= product.model_image.image %>"
-                  alt="<%= product.name %>"
-                  class="gt-product-img"
-                />
-              </a>
-            </div>
-            <div class="gt-product-info">
-              <p class="gt-product-price heading-s">
-                <%= product.price_tiers.length > 0 ?
-                `${product.price_tiers[product.price_tiers.length -
-                1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
-                kr` : "Price unavailable" %>
-              </p>
-              <p class="gt-product-name body-text"><%= product.name %></p>
-            </div>
-            <div class="gt-product-extra-info">
-              <p class="body-text"><%= product.fit %></p>
-              <p class="body-text">Minimum: <%= product.minimum %></p>
-              <p class="body-text"><%= product.egenskaper_info[2] %></p>
-            </div>
+      <div class="store-products-container" id="productsContainer">
+        <% products.forEach((product) => { %>
+        <div class="gt-product">
+          <div class="gt-product-image">
+            <a href="/produktsidan/<%= product.id %>">
+              <img
+                src="<%= product.model_image.image %>"
+                alt="<%= product.name %>"
+                class="gt-product-img"
+              />
+            </a>
           </div>
+          <div class="gt-product-info">
+            <p class="gt-product-price heading-s">
+              <%= product.price_tiers.length > 0 ?
+              `${product.price_tiers[product.price_tiers.length -
+              1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit}
+              kr` : "Price unavailable" %>
+            </p>
+            <p class="gt-product-name body-text"><%= product.name %></p>
+          </div>
+          <div class="gt-product-extra-info">
+            <p class="body-text"><%= product.fit %></p>
+            <p class="body-text">Minimum: <%= product.minimum %></p>
+            <p class="body-text"><%= product.egenskaper_info[2] %></p>
+          </div>
+        </div>
         <% }); %>
       </div>
       <div class="store-expand-btn">
-        <button class="primary-btn">Visa mer</button>
+        <button class="primary-btn" id="loadMoreButton">Visa mer</button>
       </div>
     </section>
 

@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadMoreButton = document.getElementById("loadMoreButton");
   const productsContainer = document.getElementById("productsContainer");
   const productCards = productsContainer.getElementsByClassName("gt-product");
-  const ITEMS_PER_LOAD = 6; // Startar with 8 visible products
+  const ITEMS_PER_LOAD = 8; // Startar with 8 visible products
 
   // Initially display only the first 8 items
   let visibleCount = ITEMS_PER_LOAD;

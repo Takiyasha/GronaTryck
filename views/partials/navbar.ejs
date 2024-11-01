@@ -99,14 +99,14 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 class="heading-m">Logga in</h2>
             <form id="loginForm">
-              <label for="loginEmail">E-postadress</label>
+              <label for="loginEmail" class="body-text">E-postadress</label>
               <input
                 type="email"
                 id="loginEmail"
                 placeholder="Ange e-postadress..."
                 required
               />
-              <label for="loginPassword">Lösenord</label>
+              <label for="loginPassword" class="body-text">Lösenord</label>
               <input
                 type="password"
                 id="loginPassword"
@@ -118,7 +118,7 @@
                   >Har du glömt ditt lösenord?</a
                 >
                 <label class="remember-me">
-                  <input type="checkbox" /> Kom ihåg mig
+                  <input type="checkbox"/> <span class="body-text">Kom ihåg mig</span>
                 </label>
               </div>
               <div class="button-container">
@@ -132,7 +132,7 @@
           <img
             class="blob-image"
             src="/static/images/infographics-folder/graphical-elements/blob-small.svg"
-            alt=""
+            alt="graphic element blob"
           />
         </div>
       </div>
@@ -144,9 +144,9 @@
             <span class="close" onclick="closeCreateAccountModal()"
               >&times;</span
             >
-            <h2>Skapa ett konto</h2>
+            <h2 class="heading-m">Skapa ett konto</h2>
             <form id="createAccountForm">
-              <label for="email">E-postadress</label>
+              <label for="email" class="body-text">E-postadress</label>
               <input
                 type="email"
                 id="email"
@@ -154,7 +154,7 @@
                 required
               />
 
-              <label for="confirmEmail">Bekräfta e-postadress</label>
+              <label for="confirmEmail" class="body-text">Bekräfta e-postadress</label>
               <input
                 type="email"
                 id="confirmEmail"
@@ -162,7 +162,7 @@
                 required
               />
 
-              <label for="password">Lösenord</label>
+              <label for="password" class="body-text">Lösenord</label>
               <input
                 type="password"
                 id="password"
@@ -170,7 +170,7 @@
                 required
               />
 
-              <label for="confirmPassword">Bekräfta lösenord</label>
+              <label for="confirmPassword" class="body-text">Bekräfta lösenord</label>
               <input
                 type="password"
                 id="confirmPassword"
@@ -178,7 +178,7 @@
                 required
               />
 
-              <label for="name">Namn</label>
+              <label for="name" class="body-text">Namn</label>
               <input
                 type="text"
                 id="name"
@@ -186,7 +186,7 @@
                 required
               />
 
-              <label for="address">Adress</label>
+              <label for="address" class="body-text">Adress</label>
               <input
                 type="text"
                 id="address"
@@ -194,7 +194,7 @@
                 required
               />
 
-              <label for="postalCode">Postnummer</label>
+              <label for="postalCode" class="body-text">Postnummer</label>
               <input
                 type="text"
                 id="postalCode"
@@ -202,7 +202,7 @@
                 required
               />
 
-              <label for="phoneNumber">Telefonnummer</label>
+              <label for="phoneNumber" class="body-text">Telefonnummer</label>
               <input
                 type="tel"
                 id="phoneNumber"

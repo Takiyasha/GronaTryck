@@ -171,6 +171,22 @@ app.get("/produktsidan/:id", (req, res) => {
     }
   );
 });
+//Loading products in klader
+app.get("/klader", (req, res) => {
+  fs.readFile(
+    path.join(__dirname, "data/products.json"),
+    "utf-8",
+    (err, data) => {
+      if (err) {
+        console.error("Error reading products file:", err);
+        return res.status(500).send("Internal Server Error");
+      }
+
+      const products = JSON.parse(data);
+      res.render("klader", { products });
+    }
+  );
+});
 
 // Set up sessions
 app.use(

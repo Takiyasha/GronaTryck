@@ -746,6 +746,12 @@ section {
   text-align: center;
 }
 
+.alt-text-warning {
+  font-family: "Nunito sans";
+  font-size: 15px;
+  color: rgb(218, 57, 57);
+}
+
 .img-c {
   display: block;
   margin: auto;
@@ -1585,6 +1591,72 @@ textarea {
     margin-bottom: 0px;
   }
 }
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-form input {
+  margin-bottom: 16px;
+  padding-block: 1rem;
+  font-family: "Nunito sans";
+  font-size: 18px;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #052900;
+}
+
+.info-form label {
+  font-size: 18px;
+  margin-bottom: 0 !important;
+  font-family: "Poppins";
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #052900;
+}
+
+.ms-info-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media screen and (min-width: 1280px) {
+  .ms-info-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .link-container {
+    flex-direction: row;
+  }
+}
+
+.ms-settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ms-settings-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-settings-container span {
+  margin-block: 8px;
+}
+
+
 
 /* Produktsida */
 

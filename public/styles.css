@@ -1887,7 +1887,26 @@ textarea {
 
 .store-container-filtering svg {
   width: 64px;
+  cursor: pointer;
 }
+
+.store-container-filtering span p {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .store-container-filtering span p {
+    display: block;
+  }
+
+  .store-container-filtering span {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+
+
 
 .store-products-container {
   display: grid;
@@ -1946,10 +1965,8 @@ textarea {
   border-bottom: 1px solid #eee;
 }
 
-.filter-header span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #052900;
+.filter-header svg {
+  cursor: pointer;
 }
 
 .filter-header button {

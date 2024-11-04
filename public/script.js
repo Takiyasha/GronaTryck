@@ -182,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initially render cart items on page load
   renderCartItems();
 });
-
 ////////////////////////////////////////////////////////////////
 
 // Quantity input and price estimation calculation

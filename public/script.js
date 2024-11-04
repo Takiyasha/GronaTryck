@@ -432,10 +432,11 @@ var swiper = new Swiper(".colab-swiper", {
 /* Accordion */
 document.querySelectorAll(".hallbarhet-accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
-    const expanded = header.getAttribute("aria-expanded") === "true" || false;
+    const expanded = header.getAttribute("aria-expanded") === "true";
     header.setAttribute("aria-expanded", !expanded);
   });
 });
+
 
 /* Mina sidor */
 function showContent(contentNumber) {

@@ -31,6 +31,7 @@ section {
   top: -70px;
   z-index: -1;
   height: 100px;
+  width: 100%;
 }
 
 .footer-container {
@@ -761,6 +762,10 @@ section {
   top: 25px;
 }
 
+.hallbarhet-accordions .text-block svg {
+  top: 25px;
+}
+
 .brand-colaborations h2 {
   margin-inline: 16px;
 
@@ -1471,10 +1476,21 @@ textarea {
 
 /* Mina sidor */
 
+.ms-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1280px) {
+  .ms-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .ms-button-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 .ms-accordion-button {
@@ -1495,11 +1511,6 @@ textarea {
   background-color: #b4c3b2;
   color: white;
 }
-.ms-content-container {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 4px;
-}
 .ms-content {
   display: none;
 }
@@ -1516,6 +1527,41 @@ textarea {
 }
 .ms-ge svg {
   width: 400px;
+}
+
+.ms-order-history {
+  background-color: #F7F9F7;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 16px;
+  border-radius: 5px;
+  margin-block: 40px;
+
+  @media screen and (min-width: 1920px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+  }
+}
+
+.ms-order-history-imgs {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 50%;
+}
+
+.ms-order-history-imgs img {
+  width: 50%;
+}
+
+.ms-order-history-info {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1920px) {
+  .ms-order-history-info {
+    margin-bottom: 0px;
+  }
 }
 
 /* Produktsida */

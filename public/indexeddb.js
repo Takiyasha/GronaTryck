@@ -123,5 +123,3 @@ async function addUser(user) {
     console.error("Error adding user: ", event.target.error);
   };
 }
-
-// Similarly, implement updateUser, deleteUser, and getUser functions.

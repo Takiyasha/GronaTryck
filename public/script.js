@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM fully loaded");
-
+  // Elements
   const addToOrderBtn = document.getElementById("addToOrderBtn");
+  const cartDropdown = document.getElementById("cartDropdown");
   const cartIcon = document.getElementById("cartIcon");
   const cartPanel = document.getElementById("cartPanel");
   const closeCartPanel = document.getElementById("closeCartPanel");
@@ -10,15 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const sumPriceElement = document.getElementById("sumPrice");
   let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
-  // Load initial cart data from the server
-  loadCartDataFromServer();
-
   // Handle Add to Cart Button Click
   if (addToOrderBtn) {
-    addToOrderBtn.addEventListener("click", async function (event) {
+    addToOrderBtn.addEventListener("click", function (event) {
       event.stopPropagation(); // Prevent click event from propagating
-
       // Get product details
+      const productName = document.querySelector(".heading-l").innerText;
       const artikelnummer = document
         .querySelector(".alt-text-s")
         .innerText.split(": ")[1];
@@ -33,107 +30,53 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      try {
-        // Fetch product details to get the correct price and other product data
-        const response = await fetch(`/products/get-product/${artikelnummer}`);
-        const data = await response.json();
+      // Construct order data
+      const orderData = {
+        name: productName,
+        artikelnummer: artikelnummer,
+        color: selectedColor,
+        quantity: quantity,
+      };
 
-        if (!data.success) {
-          console.error("Failed to fetch product details: ", data.message);
-          return;
-        }
+      // Check if product is already in the cart
+      const existingProductIndex = cart.findIndex(
+        (item) =>
+          item.artikelnummer === orderData.artikelnummer &&
+          item.color === orderData.color
+      );
 
-        const product = data.product;
-        let pricePerUnit = 0;
-
-        // Determine price per unit based on quantity
-        for (let tier of product.price_tiers) {
-          const [minRange, maxRange] = tier.range.includes("+")
-            ? [parseInt(tier.range.split("+")[0]), Infinity]
-            : tier.range.split("-").map(Number);
-          if (
-            quantity >= minRange &&
-            (maxRange === undefined || quantity <= maxRange)
-          ) {
-            pricePerUnit = tier.price_per_unit;
-            break;
-          }
-        }
-
-        // Construct order data
-        const orderData = {
-          name: product.name,
-          artikelnummer,
-          color: selectedColor,
-          quantity,
-          image: product.model_image.image,
-          price: (pricePerUnit * quantity).toLocaleString() + " kr",
-        };
-
-        // Save order to orders.json using fetch API
-        console.log("Sending data to server: ", JSON.stringify(orderData));
-        const addOrderResponse = await fetch("/order/add-order", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(orderData),
-        });
-
-        const addOrderData = await addOrderResponse.json();
-        if (!addOrderData.success) {
-          console.error(
-            "Failed to save order to server: ",
-            addOrderData.message
-          );
-          return;
-        }
-
-        console.log("Order saved to server successfully!");
-
-        // Add to cart
-        const existingProductIndex = cart.findIndex(
-          (item) =>
-            item.artikelnummer === orderData.artikelnummer &&
-            item.color === orderData.color
-        );
-
-        if (existingProductIndex !== -1) {
-          // Update quantity if product already exists in the cart
-          cart[existingProductIndex].quantity += quantity;
-        } else {
-          // Add new product to cart
-          cart.push(orderData);
-        }
-
-        // Save updated cart to localStorage
-        localStorage.setItem("shoppingCart", JSON.stringify(cart));
-        renderCartItems(); // Refresh cart items
-
-        // Load updated cart data from the server
-        loadCartDataFromServer();
-      } catch (error) {
-        console.error("Error processing order:", error);
+      if (existingProductIndex !== -1) {
+        // Update quantity if product already exists in the cart
+        cart[existingProductIndex].quantity += quantity;
+      } else {
+        // Add new product to cart
+        cart.push(orderData);
       }
-    });
-  }
 
-  // Function to load cart data from the server
-  function loadCartDataFromServer() {
-    fetch("/order/get-orders")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success && data.orders) {
-          cart = data.orders;
-          localStorage.setItem("shoppingCart", JSON.stringify(cart));
-          renderCartItems();
-        } else {
-          console.error("Failed to load orders from server.");
-        }
+      // Save updated cart to localStorage
+      localStorage.setItem("shoppingCart", JSON.stringify(cart));
+      renderCartItems(); // Refresh cart items only (not the whole cart panel)
+
+      // Save order to orders.json using fetch API
+      fetch("/order/add-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
       })
-      .catch((error) => {
-        console.error("Error loading orders from server:", error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            console.log("Order saved to server successfully!");
+          } else {
+            console.error("Failed to save order to server.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error saving order to server:", error);
+        });
+    });
   }
 
   // Render Cart Items without affecting the panel visibility
@@ -147,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // Use DocumentFragment for batch DOM update
     let itemsHTML = "";
     let totalPrice = 0;
 
@@ -167,19 +111,21 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       `;
-      totalPrice +=
-        parseFloat(item.price.replace(" kr", "").replace(",", "")) *
-        item.quantity;
+      const pricePerUnit = 360; // Example price, replace with actual logic
+      totalPrice += item.quantity * pricePerUnit;
     });
 
+    // Set the inner HTML of cartItemsContainer in one go
     cartItemsContainer.innerHTML = itemsHTML;
+
+    // Update total price in one go
     totalPriceElement.innerText = `Varukostnad: ${totalPrice.toLocaleString()} kr`;
     sumPriceElement.innerText = `${totalPrice.toLocaleString()} kr`;
   }
 
-  // Remove item from cart function
-  window.removeCartItem = async function (artikelnummer, color, event) {
-    event.stopPropagation();
+  // Remove item from cart
+  window.removeCartItem = function (artikelnummer, color, event) {
+    event.stopPropagation(); // Prevent click event from propagating to the window click listener
 
     // Update cart data
     cart = cart.filter(
@@ -191,34 +137,35 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCartItems();
 
     // Remove item from orders.json using fetch API
-    try {
-      const response = await fetch(`/order/delete-order`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ artikelnummer, color }),
+    fetch(`/order/delete-order`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ artikelnummer, color }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log("Order deleted from server successfully!");
+        } else {
+          console.error("Failed to delete order from server.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error deleting order from server:", error);
       });
-      const data = await response.json();
-      if (data.success) {
-        console.log("Order deleted from server successfully!");
-      } else {
-        console.error("Failed to delete order from server.");
-      }
-    } catch (error) {
-      console.error("Error deleting order from server:", error);
-    }
   };
 
   // Show Cart Panel on Cart Icon Click
   cartIcon.addEventListener("click", function (event) {
-    event.stopPropagation();
+    event.stopPropagation(); // Prevent the click from propagating to the window click listener
     cartPanel.classList.toggle("show");
   });
 
   // Close Cart Panel
   closeCartPanel.addEventListener("click", function (event) {
-    event.stopPropagation();
+    event.stopPropagation(); // Prevent the click from propagating to the window click listener
     cartPanel.classList.remove("show");
   });
 

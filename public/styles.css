@@ -2102,6 +2102,28 @@ textarea {
   color: #052900;
 }
 
+.message-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.message-icon {
+  flex-shrink: 0;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.message-text {
+  flex-grow: 1;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: calc(100% - 34px); /* 24px för ikonen + 10px för margin */
+}
+
 .chat-input {
   display: flex;
   padding: 10px;

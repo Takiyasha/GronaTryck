@@ -171,6 +171,7 @@ app.get("/produktsidan/:id", (req, res) => {
     }
   );
 });
+
 //Loading products in klader
 app.get("/klader", (req, res) => {
   fs.readFile(

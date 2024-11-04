@@ -30,9 +30,102 @@
             style="fill: #052900"
           />
         </svg>
+        <p class="heading-s">Filtera</p>
         <p class="heading-s">Sortera efter</p>
       </div>
     </div>
+    <div class="filter-sidebar" id="filterSidebar">
+      <div class="filter-header">
+        <span>Filtrera</span>
+        <button id="closeFilterSidebar">&times;</button>
+      </div>
+      <div class="filter-content">
+        <!-- Price Filter -->
+        <div class="filter-section">
+          <h3>Pris</h3>
+          <div class="price-inputs">
+            <input type="number" placeholder="Från" min="0" />
+            <input type="number" placeholder="Till" min="0" />
+          </div>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="filter-section-color">
+          <h3>Färg</h3>
+          <div class="color-grid">
+            <button
+              class="color-swatch"
+              style="background-color: #ff4b4b"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #ffd700"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #90ee90"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #87ceeb"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #deb887"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #a0522d"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #000000"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #ffffff; border: 1px solid #ccc"
+            ></button>
+            <button
+              class="color-swatch"
+              style="background-color: #808080"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Size Filter 
+        <div class="filter-section-size">
+          <h3>Storlek</h3>
+          <div class="size-options">
+            <% const sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL", "3XL",
+            "4XL", "5XL"]; %> <% sizes.forEach(size => { %>
+            <label class="size-option">
+              <input type="checkbox" name="size" value="<%= size %>" />
+              <span><%= size %></span>
+            </label>
+            <% }); %>
+          </div>
+        </div>-->
+
+        <!-- Fit Type Filter -->
+        <div class="filter-section">
+          <h3>Passform</h3>
+          <div class="fit-options">
+            <% const fits = ["Dam", "Herr", "Unisex"]; %> <% fits.forEach(fit =>
+            { %>
+            <label class="fit-option">
+              <input
+                type="checkbox"
+                name="fit"
+                value="<%= fit.toLowerCase() %>"
+              />
+              <span><%= fit %></span>
+            </label>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section>
       <div class="store-products-container" id="productsContainer">
         <% products.forEach((product) => { %>
@@ -73,4 +166,21 @@
     <script src="/static/login.js"></script>
     <script src="/static/signup.js"></script>
   </body>
+  <script>
+    // Get the elements
+    const filterIcon = document.querySelector(".store-container-filtering svg");
+    const filterSidebar = document.getElementById("filterSidebar");
+    const closeFilterButton = document.getElementById("closeFilterSidebar");
+    const storeContainer = document.querySelector(".store-container");
+
+    // Function to toggle the filter sidebar
+    function toggleFilterSidebar() {
+      filterSidebar.classList.toggle("show");
+      storeContainer.classList.toggle("push-right");
+    }
+
+    // Add click event listeners
+    filterIcon.addEventListener("click", toggleFilterSidebar);
+    closeFilterButton.addEventListener("click", toggleFilterSidebar);
+  </script>
 </html>

@@ -170,6 +170,7 @@
             <p class="body-text"><%= product.fit %></p>
             <p class="body-text">Minimum: <%= product.minimum %></p>
             <p class="body-text"><%= product.egenskaper_info[2] %></p>
+            <p class="body-text">Färger: <%= product.products_images ? product.products_images.length : 0 %></p>
           </div>
         </div>
         <% }); %>
@@ -292,6 +293,7 @@
                 <p class="body-text">${product.fit}</p>
                 <p class="body-text">Minimum: ${product.minimum}</p>
                 <p class="body-text">${product.egenskaper_info[2]}</p>
+                <p class="body-text">Färger: ${product.products_images ? product.products_images.length : 0}</p>
               </div>
             </div>
           `;

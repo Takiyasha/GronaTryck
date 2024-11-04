@@ -12,6 +12,7 @@
   </header>
   <body>
 
+
     <section>
       <div class="text-block">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 58">
@@ -19,29 +20,112 @@
       </svg>
         <h2 class="heading-m">Kontakta oss här</h2>
       </div>
-    </section>
-
-    <section>
       <div class="kontakt-container">
+
         <div class="kontakt-item">
-          <form class="kontakt-form">
-            <label>E-postadress</label>
-            <input type="text" placeholder="Ange e-postadress...">
-            <label>Namn</label>
-            <input type="text" placeholder="Ange ditt namn...">
-            <label>Telefonnummer</label>
-            <input type="text" placeholder="Ange telefonnummer...">
-            <label>Meddelande</label>
-            <textarea name="textarea" placeholder="Vad behöver du hjälp med?"></textarea>
+          <form class="kontakt-form" id="contactForm">
+            <label for="contactEmail">E-postadress</label>
+            <input type="email" id="contactEmail" placeholder="Ange e-postadress..." required>
+            <label for="contactName">Namn</label>
+            <input type="text" id="contactName" placeholder="Ange ditt namn..." required>
+            <label for="contactPhone">Telefonnummer</label>
+            <input type="tel" id="contactPhone" placeholder="Ange telefonnummer..." required>
+            <label for="contactMessage">Meddelande</label>
+            <textarea name="textarea" id="contactMessage" placeholder="Vad behöver du hjälp med?" required></textarea>
           </form>
+          <div class="kontakt-form-btns">
+            <button class="secondary-btn" id="contactAttachFile">Bifoga fil</button>
+            <button class="primary-btn" id="contactSendForm">Skicka</button>
+          </div>
         </div>
+
+        <div class="kontakt-item">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.0244335738639!2d20.264627901854052!3d63.82367315547428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c5b0eae4f7199%3A0xc0e683bf02021bc!2sV%C3%A4stra%20Kyrkogatan%201b%2C%20903%2029%20Ume%C3%A5!5e0!3m2!1ssv!2sse!4v1730725119846!5m2!1ssv!2sse" width="600" height="450" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="text-block">
+            <h2 class="heading-m">Gröna Tryck</h2>
+            <h2 class="heading-s">Besöksadress</h2>
+            <p class="body-text">Västra Kyrkogatan 1B</p>
+            <p class="body-text">903 29 Umeå</p>
+            <p class="body-text">Sverige</p>
+            <h2 class="heading-s">Öppettider</h2>
+            <p class="body-text">Kontor: Tis-Fre: 09.00 - 16.00</p>
+            <p class="body-text">Telefon: Mån-Fre: 09.00 - 16.30</p>
+            <h2 class="heading-s">Kontaktinfo</h2>
+            <p class="body-text">Telefon: +46 (0)90 13 13 40</p>
+            <p class="body-text">E-post: kontakt@gronatryck.se</p>
+            <h2 class="heading-s">Sociala medier</h2>
+            <p class="body-text">Instagram: gronatryck</p>
+            <p class="body-text">Facebook: Gröna Tryck</p>
+          </div>
+        </div>
+
+        <div class="kontakt-item">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622.160511433344!2d20.24617332799374!3d63.828684763349706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c5b73ccff2251%3A0x9cb1dc3e8c80a2c4!2sKungsgatan%2026%2C%20903%2021%20Ume%C3%A5!5e0!3m2!1ssv!2sse!4v1730725496171!5m2!1ssv!2sse" width="600" height="450" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="text-block">
+            <h2 class="heading-m">Lager</h2>
+            <h2 class="heading-s">Adress</h2>
+            <p class="body-text">Kungsgatan 26</p>
+            <p class="body-text">903 21 Umeå</p>
+            <p class="body-text">Sverige</p>
+            <p class="body-text">(ej post/leveransadress)</p>
+            <h2 class="heading-s">Dir. tel. (produktion)</h2>
+            <p class="body-text">+46 (0)90 34 35 351</p>
+          </div>
+        </div>
+
+        <div class="kontakt-item">
+          <h2 class="heading-m">Vi ser fram emot att höra från dig!</h2>
+          <div class="kontakt-item-owners-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 762 461">
+              <path d="M761.75 218.84c0 72.59-58.21 136.9-147.79 176.62-59.3 26.3-117.27 66.94-196.27 66.94s-210.85-47.16-270.15-73.46C57.96 349.23-.25 305.93-.25 233.34S2.34 81.94 91.92 42.22C151.22 15.92 323.6.41 402.61.41s152.05 15.52 211.35 41.81c89.58 39.72 147.79 104.04 147.79 176.62Z" style="fill:#e5eae4"/>
+          </svg>
+            <img src="/static/images/infographics-folder/owners/owners-img.png" alt="Bild på Joel och Josef">
+            
+          </div>
+        </div>
+
       </div>
     </section>
 
     <%- include('partials/footer') %>
     <%- include('partials/chatbox') %>
       
-      
+      <script>
+        let contactMessages = [];
+
+document.getElementById('contactSendForm').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('contactEmail').value;
+    const name = document.getElementById('contactName').value;
+    const phone = document.getElementById('contactPhone').value;
+    const message = document.getElementById('contactMessage').value;
+
+    const formData = {
+        email: email,
+        name: name,
+        phone: phone,
+        message: message
+    };
+
+    contactMessages.push(formData);
+
+    const jsonData = JSON.stringify(contactMessages, null, 2);
+    
+    // Simulera att data sparas i en fil
+    console.log('Data sparad i contactMessages.json:', jsonData);
+
+    // Återställ formuläret
+    document.getElementById('contactForm').reset();
+
+    alert('Meddelandet har sparats i contactMessages!');
+});
+
+document.getElementById('attachFile').addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('Funktionen för att bifoga fil är inte implementerad i detta exempel.');
+});
+      </script>
       <script src="/static/script.js"></script>
       <script src="/static/login.js"></script>
       <script src="/static/signup.js"></script>

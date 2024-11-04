@@ -441,3 +441,38 @@ for (var i = 0; i < buttons.length; i++) {
 
 // Initial check to show ms-ge if no content is active
 checkAllContentsClosed();
+
+let contactMessages = [];
+
+        document.getElementById('contactSendForm').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('contactEmail').value;
+            const name = document.getElementById('contactName').value;
+            const phone = document.getElementById('contactPhone').value;
+            const message = document.getElementById('contactMessage').value;
+
+            const formData = {
+                email: email,
+                name: name,
+                phone: phone,
+                message: message
+            };
+
+            contactMessages.push(formData);
+
+            const jsonData = JSON.stringify(contactMessages, null, 2);
+            
+            // Simulera att data sparas i en fil
+            console.log('Data sparad i contactMessages.json:', jsonData);
+
+            // Återställ formuläret
+            document.getElementById('contactForm').reset();
+
+            alert('Meddelandet har sparats i contactMessages!');
+        });
+
+        document.getElementById('attachFile').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Funktionen för att bifoga fil är inte implementerad i detta exempel.');
+        });

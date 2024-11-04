@@ -43,6 +43,7 @@ app.use(cors());
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const contactRoutes = require("./routes/contactRoutes");
 
 // Use product routes
 app.use("/", productRoutes);
@@ -52,6 +53,9 @@ app.use("/user", userRoutes);
 
 // Use order routes routes
 app.use("/order", orderRoutes);
+
+// Use contact routes
+app.use("/contact", contactRoutes);
 
 // Create the livereload server
 const liveReloadServer = livereload.createServer({

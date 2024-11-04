@@ -39,17 +39,36 @@
     <div class="filter-sidebar" id="filterSidebar">
       <div class="filter-header">
         <h2 class="heading-m">Filtrera</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="22" height="22" id="closeFilterSidebar">
-          <path d="M453.77 400.01 781.88 80.58c14.84-14.45 15.16-38.19.71-53.03-14.45-14.84-38.19-15.16-53.03-.71L400.02 347.68 70.47 26.84c-14.84-14.45-38.58-14.13-53.03.71-14.45 14.84-14.13 38.58.71 53.03l328.1 319.44-328.1 319.43c-14.84 14.45-15.16 38.19-.71 53.03 7.35 7.55 17.11 11.34 26.87 11.34s18.87-3.53 26.16-10.63l329.54-320.84 329.54 320.84c7.29 7.1 16.73 10.63 26.16 10.63s19.52-3.79 26.87-11.34c14.45-14.84 14.13-38.58-.71-53.03l-328.1-319.44Z" style="fill:#567c50"/>
-      </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 800"
+          width="22"
+          height="22"
+          id="closeFilterSidebar"
+        >
+          <path
+            d="M453.77 400.01 781.88 80.58c14.84-14.45 15.16-38.19.71-53.03-14.45-14.84-38.19-15.16-53.03-.71L400.02 347.68 70.47 26.84c-14.84-14.45-38.58-14.13-53.03.71-14.45 14.84-14.13 38.58.71 53.03l328.1 319.44-328.1 319.43c-14.84 14.45-15.16 38.19-.71 53.03 7.35 7.55 17.11 11.34 26.87 11.34s18.87-3.53 26.16-10.63l329.54-320.84 329.54 320.84c7.29 7.1 16.73 10.63 26.16 10.63s19.52-3.79 26.87-11.34c14.45-14.84 14.13-38.58-.71-53.03l-328.1-319.44Z"
+            style="fill: #567c50"
+          />
+        </svg>
       </div>
       <div class="filter-content">
         <!-- Price Filter -->
         <div class="filter-section">
           <h2 class="heading-s">Pris</h2>
           <div class="price-inputs">
-            <input type="number" placeholder="Från" min="0" />
-            <input type="number" placeholder="Till" min="0" />
+            <input
+              type="number"
+              placeholder="Från"
+              min="0"
+              id="minPriceInput"
+            />
+            <input
+              type="number"
+              placeholder="Till"
+              min="0"
+              id="maxPriceInput"
+            />
           </div>
         </div>
 
@@ -60,42 +79,50 @@
             <button
               class="color-swatch"
               style="background-color: #ff4b4b"
+              data-color="Red"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #ffd700"
+              data-color="Yellow"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #90ee90"
+              data-color="Green"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #87ceeb"
+              data-color="Blue"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #deb887"
+              data-color="Beige"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #a0522d"
+              data-color="Brown"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #000000"
+              data-color="Black"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #ffffff; border: 1px solid #ccc"
+              data-color="White"
             ></button>
             <button
               class="color-swatch"
               style="background-color: #808080"
+              data-color="Gray"
             ></button>
           </div>
         </div>
-
 
         <!-- Fit Type Filter -->
         <div class="filter-section">
@@ -152,27 +179,148 @@
       </div>
     </section>
 
-    <%- include('partials/footer') %>
-    <%- include('partials/chatbox') %>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/script.js"></script>
     <script src="/static/login.js"></script>
     <script src="/static/signup.js"></script>
   </body>
   <script>
-    // Get the elements
-    const filterIcon = document.querySelector(".store-container-filtering svg");
-    const filterSidebar = document.getElementById("filterSidebar");
-    const closeFilterButton = document.getElementById("closeFilterSidebar");
-    const storeContainer = document.querySelector(".store-container");
+        // Get the elements
+        const filterIcon = document.querySelector(".store-container-filtering svg");
+        const filterSidebar = document.getElementById("filterSidebar");
+        const closeFilterButton = document.getElementById("closeFilterSidebar");
+        const storeContainer = document.querySelector(".store-container");
 
-    // Function to toggle the filter sidebar
-    function toggleFilterSidebar() {
-      filterSidebar.classList.toggle("show");
-      storeContainer.classList.toggle("push-right");
-    }
+        // Function to toggle the filter sidebar
+        function toggleFilterSidebar() {
+          filterSidebar.classList.toggle("show");
+          storeContainer.classList.toggle("push-right");
+        }
 
-    // Add click event listeners
-    filterIcon.addEventListener("click", toggleFilterSidebar);
-    closeFilterButton.addEventListener("click", toggleFilterSidebar);
+        // Add click event listeners
+        filterIcon.addEventListener("click", toggleFilterSidebar);
+        closeFilterButton.addEventListener("click", toggleFilterSidebar);
+
+        document.addEventListener("DOMContentLoaded", function () {
+      // Elements for filters
+      const colorButtons = document.querySelectorAll(".color-swatch");
+      const priceInputs = document.querySelectorAll(".price-inputs input");
+      const fitCheckboxes = document.querySelectorAll(".fit-option input");
+      const productsContainer = document.getElementById("productsContainer");
+
+      // Original products data for reference
+      const products = <%- JSON.stringify(products) %>;
+
+      // Apply filters
+      function applyFilters() {
+        let filteredProducts = [...products];
+
+        // Filter by Color
+        const selectedColorButton = document.querySelector(
+          ".color-swatch.selected"
+        );
+        if (selectedColorButton) {
+          const selectedColor = selectedColorButton.getAttribute("data-color");
+          filteredProducts = filteredProducts.filter((product) =>
+            product.products_images.some(
+              (img) => img.simplified_color.toLowerCase() === selectedColor.toLowerCase()
+            )
+          );
+        }
+
+        // Filter by Price
+        const minPrice = parseInt(priceInputs[0].value) || 0;
+        const maxPrice = parseInt(priceInputs[1].value) || Infinity;
+        filteredProducts = filteredProducts.filter((product) => {
+          const lowestPrice = Math.min(
+            ...product.price_tiers.map((tier) => tier.price_per_unit)
+          );
+          const highestPrice = Math.max(
+            ...product.price_tiers.map((tier) => tier.price_per_unit)
+          );
+          return (
+            (lowestPrice >= minPrice && lowestPrice <= maxPrice) ||
+            (highestPrice >= minPrice && highestPrice <= maxPrice)
+          );
+        });
+
+        // Filter by Fit Type
+        const selectedFits = Array.from(fitCheckboxes)
+          .filter((checkbox) => checkbox.checked)
+          .map((checkbox) => checkbox.value);
+        if (selectedFits.length > 0) {
+          filteredProducts = filteredProducts.filter((product) =>
+            selectedFits.includes(product.fit.toLowerCase())
+          );
+        }
+
+        renderProducts(filteredProducts);
+      }
+
+      // Render products
+      function renderProducts(products) {
+        productsContainer.innerHTML = "";
+
+        if (products.length === 0) {
+          productsContainer.innerHTML = "<p>Inga produkter hittades.</p>";
+          return;
+        }
+
+        products.forEach((product) => {
+          const productHTML = `
+            <div class="gt-product">
+              <div class="gt-product-image">
+                <a href="/produktsidan/${product.id}">
+                  <img
+                    src="${product.model_image.image}"
+                    alt="${product.name}"
+                    class="gt-product-img"
+                  />
+                </a>
+              </div>
+              <div class="gt-product-info">
+                <p class="gt-product-price heading-s">
+                  ${
+                    product.price_tiers.length > 0
+                      ? `${product.price_tiers[product.price_tiers.length - 1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit} kr`
+                      : "Price unavailable"
+                  }
+                </p>
+                <p class="gt-product-name body-text">${product.name}</p>
+              </div>
+              <div class="gt-product-extra-info">
+                <p class="body-text">${product.fit}</p>
+                <p class="body-text">Minimum: ${product.minimum}</p>
+                <p class="body-text">${product.egenskaper_info[2]}</p>
+              </div>
+            </div>
+          `;
+          productsContainer.insertAdjacentHTML("beforeend", productHTML);
+        });
+      }
+
+      // Color filter event listener
+      colorButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          colorButtons.forEach((btn) => btn.classList.remove("selected"));
+          button.classList.add("selected");
+          applyFilters();
+        });
+      });
+
+      // Price filter event listener
+      priceInputs.forEach((input) => {
+        input.addEventListener("input", function () {
+          applyFilters();
+        });
+      });
+
+      // Fit type filter event listener
+      fitCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          applyFilters();
+        });
+      });
+    });
   </script>
 </html>

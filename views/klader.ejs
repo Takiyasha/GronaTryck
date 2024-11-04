@@ -36,13 +36,13 @@
     </div>
     <div class="filter-sidebar" id="filterSidebar">
       <div class="filter-header">
-        <span>Filtrera</span>
+        <h2 class="heading-m">Filtrera</h2>
         <button id="closeFilterSidebar">&times;</button>
       </div>
       <div class="filter-content">
         <!-- Price Filter -->
         <div class="filter-section">
-          <h3>Pris</h3>
+          <h2 class="heading-s">Pris</h2>
           <div class="price-inputs">
             <input type="number" placeholder="Från" min="0" />
             <input type="number" placeholder="Till" min="0" />
@@ -51,7 +51,7 @@
 
         <!-- Color Filter -->
         <div class="filter-section-color">
-          <h3>Färg</h3>
+          <h2 class="heading-s">Färg</h2>
           <div class="color-grid">
             <button
               class="color-swatch"
@@ -92,23 +92,10 @@
           </div>
         </div>
 
-        <!-- Size Filter 
-        <div class="filter-section-size">
-          <h3>Storlek</h3>
-          <div class="size-options">
-            <% const sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL", "3XL",
-            "4XL", "5XL"]; %> <% sizes.forEach(size => { %>
-            <label class="size-option">
-              <input type="checkbox" name="size" value="<%= size %>" />
-              <span><%= size %></span>
-            </label>
-            <% }); %>
-          </div>
-        </div>-->
 
         <!-- Fit Type Filter -->
         <div class="filter-section">
-          <h3>Passform</h3>
+          <h2 class="heading-s">Passform</h2>
           <div class="fit-options">
             <% const fits = ["Dam", "Herr", "Unisex"]; %> <% fits.forEach(fit =>
             { %>

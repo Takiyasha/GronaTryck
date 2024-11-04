@@ -2079,7 +2079,7 @@ textarea {
   right: 20px;
   width: 300px;
   height: 400px;
-  background-color: white;
+  background-color: #F7F9F7;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   display: none;
@@ -2088,7 +2088,7 @@ textarea {
 }
 
 .chat-header {
-  background-color: #567c50;
+  background-color: #090;
   color: #F7F9F7;
   padding: 10px;
   border-top-left-radius: 10px;
@@ -2097,7 +2097,7 @@ textarea {
 
 .chat-messages {
   flex-grow: 1;
-  padding: 10px;
+  padding: 5px;
   overflow-y: auto;
   color: #052900;
 }
@@ -2117,8 +2117,8 @@ textarea {
 .chat-input button {
   margin-left: 5px;
   padding: 5px 10px;
-  background-color: #5b7657;
-  color: white;
+  background-color: #090;
+  color: #F7F9F7;
   border: none;
   border-radius: 3px;
   cursor: pointer;

@@ -173,3 +173,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial icon update based on server-side session state
   checkLoginStatus();
 });
+

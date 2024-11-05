@@ -32,5 +32,37 @@
     "address": "Barrskogsgatan 20",
     "postalCode": "784 30",
     "phoneNumber": "0730351042"
+  },
+  {
+    "email": "vas@gmail.com",
+    "password": "1234",
+    "name": "asd",
+    "address": "asd",
+    "postalCode": "asd",
+    "phoneNumber": "asd"
+  },
+  {
+    "email": "asd@asd.se",
+    "password": "123",
+    "name": "asd",
+    "address": "asd",
+    "postalCode": "asd",
+    "phoneNumber": "asd"
+  },
+  {
+    "email": "123@asd.se",
+    "password": "asd",
+    "name": "123",
+    "address": "123",
+    "postalCode": "123",
+    "phoneNumber": "123"
+  },
+  {
+    "email": "vas@gmil.com",
+    "password": "123",
+    "name": "asd",
+    "address": "asd",
+    "postalCode": "asd",
+    "phoneNumber": "asd"
   }
 ]

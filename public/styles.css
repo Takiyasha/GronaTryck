@@ -11,11 +11,17 @@ body {
 
 section {
   margin-inline: 16px;
-  margin-block: 80px;
+  margin-block: 40px;
 
   @media screen and (min-width: 768px) {
-    margin-block: 160px;
+    margin-block: 80px;
     margin-inline: 80px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  section {
+    margin-block: 160px;
   }
 }
 
@@ -107,7 +113,7 @@ section {
   justify-content: space-between;
   align-items: center;
   background-color: #f8f9fa;
-  padding: 30px 10%;
+  padding-inline: 10%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
@@ -2282,4 +2288,49 @@ textarea {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.confirm-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-modal-content {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.confirmation-content {
+  text-align: center;
+  max-width: 300px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error {
+  border: 2px solid red;
 }

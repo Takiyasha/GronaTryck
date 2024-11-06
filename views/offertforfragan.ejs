@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gröna Tryck</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="stylesheet" href="/static/popup.css" />
+  </head>
+  <header>
+    <%- include('partials/navbar') %>
+  </header>
+  <body>
+    <section>
+        <h1 class="heading-l">Offertförfrågan</h1>
+        <div class="checkout-headings">
+            <h3 class="heading-s">Produkt</h3>
+            <h3 class="heading-s">Antal</h3>
+            <h3 class="heading-s">Pris <span class="alt-text-s">(exkl. moms)</span></h3>
+        </div>
+        <div>
+            produkter här
+        </div>
+        <div class="checkout-price-container">
+            <h2 class="heading-m">Totalt</h2>
+            <div>
+                <div class="checkout-price-calc">
+                    <h3 class="heading-s">Varukostnad <span class="alt-text-s">(exkl. moms)</span>:</h3>
+                    <h3 class="heading-s">65 345 kr</h3>
+                </div>
+                <div class="checkout-price-calc">
+                    <h3 class="heading-s">Summa:</h3>
+                    <h3 class="heading-s">68 543 kr</h3>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section>
+        <h2 class="heading-m">Kontaktinformation</h2>
+        <h3 class="heading-s">Är du redan kund? <a href="#">Logga in här</a></h3>
+        <div class="checkout-form-container">
+            <div class="checkout-form">
+                <form class="kontakt-form">
+                    <label for="checkoutEmail">E-postadress</label>
+            <input
+              type="email"
+              id="checkoutEmail"
+              placeholder="Ange e-postadress..."
+              required
+            />
+            <label for="checkoutName">Namn</label>
+            <input
+              type="text"
+              id="checkoutName"
+              placeholder="Ange ditt namn..."
+              required
+            />
+            <label for="checkoutContact">Kontaktperson</label>
+            <input
+              type="tel"
+              id="checkoutContact"
+              placeholder="Ange telefonnummer..."
+              required
+            />
+            <label for="checkoutPhone">Telefonnummer</label>
+            <input
+              type="tel"
+              id="checkoutPhone"
+              placeholder="Ange telefonnummer..."
+              required
+            />
+                </form>
+            </div>
+            <div class="checkout-form">
+                <form class="kontakt-form">
+                    <label for="checkoutMessage">Övrigt</label>
+            <textarea
+              name="textarea"
+              id="checkoutMessage"
+              placeholder="Har du några funderingar?"
+              required
+            ></textarea>
+                </form>
+                <div class="checkout-form-btns">
+                    <button class="secondary-btn">Bifoga filer</button>
+                <button class="primary-btn">Skicka</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+    <%- include('partials/chatbox') %>
+    <script src="/static/script.js"></script>
+    <script src="/static/login.js"></script>
+    <script src="/static/signup.js"></script>
+  </body>
+</html>

@@ -256,6 +256,10 @@ app.get("/klader", (req, res) => {
   res.render("klader");
 });
 
+app.get("/offertforfragan", (req, res) => {
+  res.render("offertforfragan");
+});
+
 app.get("/installning-sidan/mina-sidor", (req, res) => {
   res.render("installning-sidan/mina-sidor");
 });

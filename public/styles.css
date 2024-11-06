@@ -14,14 +14,14 @@ section {
   margin-block: 40px;
 
   @media screen and (min-width: 768px) {
-    margin-block: 80px;
+    margin-block: 70px;
     margin-inline: 80px;
   }
 }
 
 @media screen and (min-width: 1920px) {
   section {
-    margin-block: 160px;
+    margin-block: 100px;
   }
 }
 
@@ -137,7 +137,8 @@ section {
 .nav-links a {
   text-decoration: none;
   color: #052900;
-  font-weight: bold;
+  font-family: "Nunito Sans";
+  font-weight: 700;
   transition: color 0.3s ease;
 }
 
@@ -494,19 +495,6 @@ section {
   }
 }
 
-.brand-colaborations h1 {
-  text-align: center;
-  margin-bottom: 16px;
-  font-family: "Poppins";
-  font-size: 28px;
-  font-weight: 700;
-  color: #052900;
-
-  @media screen and (max-width: 892px) {
-    font-size: 18px;
-  }
-}
-
 .brand-colaborations {
   margin-inline: 0px;
 }
@@ -550,7 +538,7 @@ section {
   height: 50px;
   background-color: #567c50;
   color: #f7f9f7;
-  font-family: "Nunito sans";
+  font-family: "Poppins";
   font-size: 18px;
   font-weight: 700;
   padding-inline: 44px;
@@ -571,7 +559,7 @@ section {
   height: 50px;
   background-color: #f7f9f7;
   color: #567c50;
-  font-family: "Nunito sans";
+  font-family: "Poppins";
   font-size: 18px;
   font-weight: 700;
   padding-inline: 44px;
@@ -651,6 +639,14 @@ section {
 .heading-m {
   font-size: 28px;
   font-family: "Poppins";
+  font-weight: 700;
+  color: #052900;
+  margin-bottom: 16px;
+}
+
+.heading-s-ns {
+  font-size: 18px;
+  font-family: "Nunito Sans";
   font-weight: 700;
   color: #052900;
   margin-bottom: 16px;
@@ -1108,7 +1104,7 @@ span {
   height: 50px;
   background-color: #f7f9f7;
   color: #052900;
-  font-family: "Nunito sans";
+  font-family: "Poppins";
   font-size: 18px;
   padding-inline: 44px;
   font-weight: 700;
@@ -2331,6 +2327,66 @@ textarea {
   cursor: pointer;
 }
 
-.error {
-  border: 2px solid red;
+
+/* Offertförfrågan */
+
+.checkout-headings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkout-price-calc {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.checkout-price-calc h3 {
+  margin-block: 6px;
+}
+
+.checkout-form-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top:16px ;
+}
+
+.checkout-form-btns button {
+  width: 100%;
+}
+
+.checkout-price-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1280px) {
+  .checkout-price-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.checkout-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1280px) {
+  .checkout-form-container {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .checkout-form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .checkout-form-container {
+    gap: 80px;
+  }
 }

@@ -74,6 +74,18 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
+app.post("/user/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res
+        .status(500)
+        .send({ success: false, message: "Failed to log out" });
+    }
+    res.clearCookie("connect.sid"); // Clear session cookie
+    return res.status(200).send({ success: true });
+  });
+});
+
 // Handle user registration and save it to users.json
 app.post("/user/register", (req, res) => {
   const newUser = req.body;

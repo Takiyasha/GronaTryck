@@ -30,5 +30,14 @@
     "price": "25 338 kr",
     "fit": "Unisex",
     "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp"
+  },
+  {
+    "name": "Bomber 2.0",
+    "artikelnummer": 6518,
+    "color": "Black",
+    "quantity": 100,
+    "price": "30 600 kr",
+    "fit": "Unisex",
+    "image": "/static/images/Products/Mains/50/webp/Bomber 2.0_Black_Duo_Front_Main_0_50.webp"
   }
 ]

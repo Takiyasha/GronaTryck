@@ -1,0 +1,18 @@
+[
+  {
+    "email": "user51321@example.com",
+    "password": "user51321@example.com",
+    "name": "user51321@example.com",
+    "address": "user51321@example.com",
+    "postalCode": "user51321@example.com",
+    "phoneNumber": "user51321@example.com"
+  },
+  {
+    "email": "user1@example.com",
+    "password": "user1@example.com",
+    "name": "user1@example.com",
+    "address": "user1@example.com",
+    "postalCode": "user1@example.com",
+    "phoneNumber": "user1@example.com"
+  }
+]

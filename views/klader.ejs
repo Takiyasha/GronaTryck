@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/popup.css" />
   </head>
-  <header><%- include('partials/navbar') %></header>
   <body>
+    <header><%- include('partials/navbar') %></header>
     <div class="store-container">
       <div class="progress-section">
         <a href="/index">Hem</a> <span>/</span> <a href="/butik">Butik</a>
@@ -170,7 +170,10 @@
             <p class="body-text"><%= product.fit %></p>
             <p class="body-text">Minimum: <%= product.minimum %></p>
             <p class="body-text"><%= product.egenskaper_info[2] %></p>
-            <p class="body-text">Färger: <%= product.products_images ? product.products_images.length : 0 %></p>
+            <p class="body-text">
+              Färger: <%= product.products_images ?
+              product.products_images.length : 0 %>
+            </p>
           </div>
         </div>
         <% }); %>
@@ -179,150 +182,12 @@
         <button class="primary-btn" id="loadMoreButton">Visa mer</button>
       </div>
     </section>
+    <script type="application/json" id="productsData">
+      <%- JSON.stringify(products) %>
+    </script>
 
-    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
+    <script src="/static/filter.js"></script>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
   </body>
-  <script>
-        // Get the elements
-        const filterIcon = document.querySelector(".store-container-filtering svg");
-        const filterSidebar = document.getElementById("filterSidebar");
-        const closeFilterButton = document.getElementById("closeFilterSidebar");
-        const storeContainer = document.querySelector(".store-container");
-
-        // Function to toggle the filter sidebar
-        function toggleFilterSidebar() {
-          filterSidebar.classList.toggle("show");
-          storeContainer.classList.toggle("push-right");
-        }
-
-        // Add click event listeners
-        filterIcon.addEventListener("click", toggleFilterSidebar);
-        closeFilterButton.addEventListener("click", toggleFilterSidebar);
-
-        document.addEventListener("DOMContentLoaded", function () {
-      // Elements for filters
-      const colorButtons = document.querySelectorAll(".color-swatch");
-      const priceInputs = document.querySelectorAll(".price-inputs input");
-      const fitCheckboxes = document.querySelectorAll(".fit-option input");
-      const productsContainer = document.getElementById("productsContainer");
-
-      // Original products data for reference
-      const products = <%- JSON.stringify(products) %>;
-
-      // Apply filters
-      function applyFilters() {
-        let filteredProducts = [...products];
-
-        // Filter by Color
-        const selectedColorButton = document.querySelector(
-          ".color-swatch.selected"
-        );
-        if (selectedColorButton) {
-          const selectedColor = selectedColorButton.getAttribute("data-color");
-          filteredProducts = filteredProducts.filter((product) =>
-            product.products_images.some(
-              (img) => img.simplified_color.toLowerCase() === selectedColor.toLowerCase()
-            )
-          );
-        }
-
-        // Filter by Price
-        const minPrice = parseInt(priceInputs[0].value) || 0;
-        const maxPrice = parseInt(priceInputs[1].value) || Infinity;
-        filteredProducts = filteredProducts.filter((product) => {
-          const lowestPrice = Math.min(
-            ...product.price_tiers.map((tier) => tier.price_per_unit)
-          );
-          const highestPrice = Math.max(
-            ...product.price_tiers.map((tier) => tier.price_per_unit)
-          );
-          return (
-            (lowestPrice >= minPrice && lowestPrice <= maxPrice) ||
-            (highestPrice >= minPrice && highestPrice <= maxPrice)
-          );
-        });
-
-        // Filter by Fit Type
-        const selectedFits = Array.from(fitCheckboxes)
-          .filter((checkbox) => checkbox.checked)
-          .map((checkbox) => checkbox.value);
-        if (selectedFits.length > 0) {
-          filteredProducts = filteredProducts.filter((product) =>
-            selectedFits.includes(product.fit.toLowerCase())
-          );
-        }
-
-        renderProducts(filteredProducts);
-      }
-
-      // Render products
-      function renderProducts(products) {
-        productsContainer.innerHTML = "";
-
-        if (products.length === 0) {
-          productsContainer.innerHTML = "<p>Inga produkter hittades.</p>";
-          return;
-        }
-
-        products.forEach((product) => {
-          const productHTML = `
-            <div class="gt-product">
-              <div class="gt-product-image">
-                <a href="/produktsidan/${product.id}">
-                  <img
-                    src="${product.model_image.image}"
-                    alt="${product.name}"
-                    class="gt-product-img"
-                  />
-                </a>
-              </div>
-              <div class="gt-product-info">
-                <p class="gt-product-price heading-s">
-                  ${
-                    product.price_tiers.length > 0
-                      ? `${product.price_tiers[product.price_tiers.length - 1].price_per_unit} kr - ${product.price_tiers[0].price_per_unit} kr`
-                      : "Price unavailable"
-                  }
-                </p>
-                <p class="gt-product-name body-text">${product.name}</p>
-              </div>
-              <div class="gt-product-extra-info">
-                <p class="body-text">${product.fit}</p>
-                <p class="body-text">Minimum: ${product.minimum}</p>
-                <p class="body-text">${product.egenskaper_info[2]}</p>
-                <p class="body-text">Färger: ${product.products_images ? product.products_images.length : 0}</p>
-              </div>
-            </div>
-          `;
-          productsContainer.insertAdjacentHTML("beforeend", productHTML);
-        });
-      }
-
-      // Color filter event listener
-      colorButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-          colorButtons.forEach((btn) => btn.classList.remove("selected"));
-          button.classList.add("selected");
-          applyFilters();
-        });
-      });
-
-      // Price filter event listener
-      priceInputs.forEach((input) => {
-        input.addEventListener("input", function () {
-          applyFilters();
-        });
-      });
-
-      // Fit type filter event listener
-      fitCheckboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", function () {
-          applyFilters();
-        });
-      });
-    });
-  </script>
 </html>

@@ -14,5 +14,13 @@
     "address": "user1@example.com",
     "postalCode": "user1@example.com",
     "phoneNumber": "user1@example.com"
+  },
+  {
+    "email": "va@email.com",
+    "password": "123",
+    "name": "asd",
+    "address": "Barrskogsgatan 20",
+    "postalCode": "784 30",
+    "phoneNumber": "0730351042"
   }
 ]

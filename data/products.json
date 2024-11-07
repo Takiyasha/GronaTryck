@@ -26,8 +26,12 @@
         "price_per_unit": 288
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Bomber 2.0_Black_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Black"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Bomber 2.0_Black_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Black"
     },
     "products_images": [
@@ -81,8 +85,12 @@
         "price_per_unit": 388
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Brooker_Khaki_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Khaki"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Brooker_Khaki_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Khaki"
     },
     "products_images": [
@@ -141,8 +149,12 @@
         "price_per_unit": 188
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Heritage Brown"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heritage Brown"
     },
     "products_images": [
@@ -206,8 +218,12 @@
         "price_per_unit": 251
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Connector 2.0_French Navy_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Black"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Connector 2.0_French Navy_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Black"
     },
     "products_images": [
@@ -281,8 +297,12 @@
         "price_per_unit": 163
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Crafter_Heritage Brown_Studio_Front_Main_0_50.webp",
+      "simplified_color": "Heritage Brown"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Crafter_Heritage Brown_Studio_Front_Main_0_50.jpg",
       "simplified_color": "Heritage Brown"
     },
     "products_images": [
@@ -341,8 +361,12 @@
         "price_per_unit": 298
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Creator 2.0 Long Sleeve_Natural Raw_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Natural Raw"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Creator 2.0 Long Sleeve_Natural Raw_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
@@ -446,8 +470,12 @@
         "price_per_unit": 188
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Creator 2.0_Heather Haze_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Heather Haze"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Creator 2.0_Heather Haze_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heather Haze"
     },
     "products_images": [
@@ -516,8 +544,12 @@
         "price_per_unit": 348
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Cruiser 2.0_Heather Haze_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Heather Haze"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Cruiser 2.0_Heather Haze_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heather Haze"
     },
     "products_images": [
@@ -586,8 +618,12 @@
         "price_per_unit": 248
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Drummer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Heritage Brown"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Drummer 2.0_Heritage Brown_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heritage Brown"
     },
     "products_images": [
@@ -651,9 +687,13 @@
         "price_per_unit": 258
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Freestyler Long Sleeve_Cool Heather Grey_Duo_Front_Main_0_50.webp",
       "simplified_color": "Heather Grey"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Freestyler Long Sleeve_Cool Heather Grey_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -741,9 +781,13 @@
         "price_per_unit": 178
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Freestyler Vintage_G. Dyed Latte_Duo_Front_Main_0_50.webp",
       "simplified_color": "Dyed Latte"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Freestyler Vintage_G. Dyed Latte_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -801,8 +845,12 @@
         "price_per_unit": 256
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Knoxer_Natural Raw_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Natural Raw"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Knoxer_Natural Raw_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
@@ -876,9 +924,13 @@
         "price_per_unit": 456
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Liner_Desert Dust_Duo_Front_Main_0_50.webp",
       "simplified_color": "Desert Dust"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Liner_Desert Dust_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -931,9 +983,13 @@
         "price_per_unit": 426
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Puffer Gilet_French Navy_Duo_Front_Main_0_50.webp",
       "simplified_color": "French Navy"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Puffer Gilet_French Navy_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -991,9 +1047,13 @@
         "price_per_unit": 226
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Stella Clara_Eco-Heather_Duo_Front_Main_0_50.webp",
       "simplified_color": "Eco Heather"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Stella Clara_Eco-Heather_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -1096,9 +1156,13 @@
         "price_per_unit": 437
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Stella Climber_Stargazer_Studio_Front_Main_5_50.webp",
       "simplified_color": "Stargazer"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Stella Climber_Stargazer_Studio_Front_Main_5_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -1166,9 +1230,13 @@
         "price_per_unit": 231
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Stella Serena_Blue Ice_Studio_Front_Main_5_50.webp",
       "simplified_color": "Blue Ice"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Stella Serena_Blue Ice_Studio_Front_Main_5_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -1226,9 +1294,13 @@
         "price_per_unit": 226
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Stanley Guider_Khaki_Studio_Front_Main_1_50.webp",
       "simplified_color": "Khaki"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Stanley Guider_Khaki_Studio_Front_Main_1_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -1311,9 +1383,13 @@
         "price_per_unit": 449
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Stanley Voyager_Desert Dust_Studio_Front_Main_0_50.webp",
       "simplified_color": "Desert Dust"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Stanley Voyager_Desert Dust_Studio_Front_Main_0_50.jpg",
+      "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
@@ -1376,8 +1452,12 @@
         "price_per_unit": 265
       }
     ],
-    "model_image": {
+    "model_image_webp": {
       "image": "/static/images/Products/Mains/50/webp/Roller_Natural Raw_Duo_Front_Main_0_50.webp",
+      "simplified_color": "Natural Raw"
+    },
+    "model_image_jpg": {
+      "image": "/static/images/Products/Mains/50/jpg/Roller_Natural Raw_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [

@@ -48,11 +48,10 @@
               <div class="gt-product-image">
                 <!-- Lägg till en länk runt varje produktkort -->
                 <a href="/produktsidan/<%= product.id %>">
-                  <img
-                    src="<%= product.model_image.image %>"
-                    alt="<%= product.name %>"
-                    class="gt-product-img"
-                  />
+                  <picture class="gt-product-image">
+                    <source srcset="<%= product.model_image_webp.image %>" type="image/webp">
+                    <img src="<%= product.model_image_jpg.image %>" alt="Beskrivning av bilden">
+                  </picture>
                 </a>
               </div>
               <div class="gt-product-info">

@@ -112,14 +112,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const productHTML = `
           <div class="gt-product">
             <div class="gt-product-image">
-              <a href="/produktsidan/${product.id}">
-                <img
-                  src="${product.model_image.image}"
-                  alt="${product.name}"
-                  class="gt-product-img"
-                />
-              </a>
-            </div>
+                        <a href="/produktsidan/${product.id}">
+                            <picture class="gt-product-image">
+                                <source srcset="${
+                                  product.model_image_webp.image
+                                }" type="image/webp">
+                                <img
+                                    src="${product.model_image_jpg.image}"
+                                    alt="${product.name}"
+                                    class="gt-product-img"
+                                />
+                            </picture>
+                        </a>
+                    </div>
             <div class="gt-product-info">
               <p class="gt-product-price heading-s">
                 ${

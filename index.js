@@ -73,19 +73,6 @@ liveReloadServer.server.once("connection", () => {
     liveReloadServer.refresh("/");
   }, 100);
 });
-
-app.post("/user/logout", (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      return res
-        .status(500)
-        .send({ success: false, message: "Failed to log out" });
-    }
-    res.clearCookie("connect.sid"); // Clear session cookie
-    return res.status(200).send({ success: true });
-  });
-});
-
 // Handle user registration and save it to users.json
 app.post("/user/register", (req, res) => {
   const newUser = req.body;
@@ -112,6 +99,13 @@ app.post("/user/register", (req, res) => {
 
   // Load existing users
   const usersFilePath = path.join(__dirname, "data", "users.json");
+
+  // Check if file exists and ensure directory is correct
+  if (!fs.existsSync(usersFilePath)) {
+    console.log("Creating users.json file because it does not exist.");
+    fs.writeFileSync(usersFilePath, JSON.stringify([]));
+  }
+
   fs.readFile(usersFilePath, "utf8", (err, data) => {
     if (err) {
       console.error("Error reading users file:", err);
@@ -122,7 +116,7 @@ app.post("/user/register", (req, res) => {
 
     let users = [];
     try {
-      users = JSON.parse(data);
+      users = data ? JSON.parse(data) : [];
     } catch (err) {
       console.error("Error parsing users file:", err);
       return res
@@ -148,6 +142,8 @@ app.post("/user/register", (req, res) => {
       phoneNumber: newUser.phoneNumber,
     });
 
+    console.log("Attempting to write to users.json...");
+
     fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), (err) => {
       if (err) {
         console.error("Error writing users file:", err);
@@ -156,6 +152,7 @@ app.post("/user/register", (req, res) => {
           .json({ success: false, message: "Internal server error" });
       }
 
+      console.log("User successfully added to users.json");
       res.json({ success: true, message: "Account created successfully!" });
     });
   });

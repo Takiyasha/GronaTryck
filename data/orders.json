@@ -39,5 +39,32 @@
     "price": "35 488 224 kr",
     "fit": "Unisex",
     "image": "/static/images/Products/Mains/50/webp/Bomber 2.0_Black_Duo_Front_Main_0_50.webp"
+  },
+  {
+    "name": "Changer 2.0",
+    "artikelnummer": 7919,
+    "color": "Misty Jade",
+    "quantity": 10,
+    "price": "1 880 kr",
+    "fit": "Unisex",
+    "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp"
+  },
+  {
+    "name": "Connector 2.0",
+    "artikelnummer": 2848,
+    "color": "Black",
+    "quantity": 15,
+    "price": "4 950 kr",
+    "fit": "Unisex",
+    "image": "/static/images/Products/Mains/50/webp/Connector 2.0_French Navy_Duo_Front_Main_0_50.webp"
+  },
+  {
+    "name": "Creator 2.0",
+    "artikelnummer": 9025,
+    "color": "Heather Haze",
+    "quantity": 10,
+    "price": "2 400 kr",
+    "fit": "Unisex",
+    "image": "/static/images/Products/Mains/50/webp/Creator 2.0_Heather Haze_Duo_Front_Main_0_50.webp"
   }
 ]

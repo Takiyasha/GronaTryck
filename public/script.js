@@ -1,3 +1,43 @@
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded');
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (!menuToggle) {
+    console.error('menuToggle element not found');
+    return;
+  }
+
+  if (!navLinks) {
+    console.error('navLinks element not found');
+    return;
+  }
+
+  menuToggle.addEventListener('click', function(e) {
+    console.log('Menu toggle clicked');
+    e.stopPropagation(); // Prevent the click from bubbling up
+    navLinks.classList.toggle('show');
+    console.log('show class toggled', navLinks.classList.contains('show'));
+  });
+
+  // Close the menu when clicking on a link
+  navLinks.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      navLinks.classList.remove('show');
+      console.log('Menu closed by link click');
+    }
+  });
+
+  // Close the menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+      navLinks.classList.remove('show');
+      console.log('Menu closed by outside click');
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Elements
   const addToOrderBtn = document.getElementById("addToOrderBtn");

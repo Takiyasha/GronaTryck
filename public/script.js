@@ -220,43 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const quantityInput = document.getElementById("quantityInput");
-  const priceEstimationElement = document.getElementById("priceEstimation");
-
-  const priceTiers = [
-    { min: 10, max: 49, price: 360 },
-    { min: 50, max: 99, price: 324 },
-    { min: 100, max: 249, price: 306 },
-    { min: 250, max: 499, price: 297 },
-    { min: 500, max: Infinity, price: 288 },
-  ];
-
-  quantityInput.addEventListener("input", function () {
-    const quantity = parseInt(quantityInput.value);
-
-    if (isNaN(quantity) || quantity < 10) {
-      priceEstimationElement.innerText = "-kr";
-      return;
-    }
-
-    // Determine the price per unit based on the quantity
-    let pricePerUnit = 0;
-    for (const tier of priceTiers) {
-      if (quantity >= tier.min && quantity <= tier.max) {
-        pricePerUnit = tier.price;
-        break;
-      }
-    }
-
-    // Calculate and display the estimated price
-    const estimatedPrice = quantity * pricePerUnit;
-    priceEstimationElement.innerText = estimatedPrice.toLocaleString() + " kr";
-  });
-});
-
 // Script to handle product color selection on the product page
-
 document.addEventListener("DOMContentLoaded", function () {
   // Function to handle color selection
   function selectColor(selectedElement) {
@@ -444,35 +408,37 @@ checkAllContentsClosed();
 
 let contactMessages = [];
 
-        document.getElementById('contactSendForm').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('contactEmail').value;
-            const name = document.getElementById('contactName').value;
-            const phone = document.getElementById('contactPhone').value;
-            const message = document.getElementById('contactMessage').value;
+document
+  .getElementById("contactSendForm")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
 
-            const formData = {
-                email: email,
-                name: name,
-                phone: phone,
-                message: message
-            };
+    const email = document.getElementById("contactEmail").value;
+    const name = document.getElementById("contactName").value;
+    const phone = document.getElementById("contactPhone").value;
+    const message = document.getElementById("contactMessage").value;
 
-            contactMessages.push(formData);
+    const formData = {
+      email: email,
+      name: name,
+      phone: phone,
+      message: message,
+    };
 
-            const jsonData = JSON.stringify(contactMessages, null, 2);
-            
-            // Simulera att data sparas i en fil
-            console.log('Data sparad i contactMessages.json:', jsonData);
+    contactMessages.push(formData);
 
-            // Återställ formuläret
-            document.getElementById('contactForm').reset();
+    const jsonData = JSON.stringify(contactMessages, null, 2);
 
-            alert('Meddelandet har sparats i contactMessages!');
-        });
+    // Simulera att data sparas i en fil
+    console.log("Data sparad i contactMessages.json:", jsonData);
 
-        document.getElementById('attachFile').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Funktionen för att bifoga fil är inte implementerad i detta exempel.');
-        });
+    // Återställ formuläret
+    document.getElementById("contactForm").reset();
+
+    alert("Meddelandet har sparats i contactMessages!");
+  });
+
+document.getElementById("attachFile").addEventListener("click", function (e) {
+  e.preventDefault();
+  alert("Funktionen för att bifoga fil är inte implementerad i detta exempel.");
+});

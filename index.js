@@ -264,10 +264,6 @@ app.get("/faq", (req, res) => {
   res.render("faq");
 });
 
-app.get("/klader", (req, res) => {
-  res.render("klader");
-});
-
 app.get("/offertforfragan", (req, res) => {
   res.render("offertforfragan");
 });

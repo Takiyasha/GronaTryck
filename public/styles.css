@@ -1513,7 +1513,6 @@ textarea {
   @media screen and (min-width: 1280px) {
     flex-direction: row;
   }
-
 }
 
 @media screen and (min-width: 1280px) {
@@ -1568,7 +1567,6 @@ textarea {
     grid-area: item4;
   }
 }
-
 
 /* Mina sidor */
 
@@ -1626,7 +1624,7 @@ textarea {
 }
 
 .ms-order-history {
-  background-color: #F7F9F7;
+  background-color: #f7f9f7;
   display: grid;
   grid-template-columns: 1fr;
   padding: 16px;
@@ -1723,8 +1721,6 @@ textarea {
 .ms-settings-container span {
   margin-block: 8px;
 }
-
-
 
 /* Produktsida */
 
@@ -2001,8 +1997,6 @@ textarea {
   margin-bottom: 16px;
 }
 
-
-
 /* Kläder sidan */
 
 .store-container {
@@ -2045,9 +2039,6 @@ textarea {
   }
 }
 
-
-
-
 .store-products-container {
   display: grid;
   grid-template-columns: auto;
@@ -2079,22 +2070,21 @@ textarea {
 }
 /*////////////////////////////////////////*/
 /* Style for the filter sidebar */
-
 .filter-sidebar {
   position: fixed;
-  left: -300px;
+  left: -300px; /* Start off-screen */
   top: 0;
   width: 300px;
   height: 100vh;
   background-color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out; /* Smooth transition for sliding in/out */
   z-index: 1000;
   overflow-y: auto;
 }
 
 .filter-sidebar.show {
-  left: 0;
+  left: 0; /* Bring the sidebar into view */
 }
 
 .filter-header {
@@ -2129,6 +2119,16 @@ textarea {
   font-size: 16px;
   margin-bottom: 12px;
   color: #333;
+}
+
+.color-swatch {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+}
+
+.color-swatch.selected {
+  border: 2px solid #42e21a; /* Highlight color for selected swatches */
 }
 
 .price-inputs {
@@ -2196,7 +2196,6 @@ textarea {
   }
 }
 
-
 /* Chatbox */
 
 .chat-bubble {
@@ -2219,7 +2218,7 @@ textarea {
   right: 20px;
   width: 300px;
   height: 400px;
-  background-color: #F7F9F7;
+  background-color: #f7f9f7;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   display: none;
@@ -2229,7 +2228,7 @@ textarea {
 
 .chat-header {
   background-color: #090;
-  color: #F7F9F7;
+  color: #f7f9f7;
   padding: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -2280,7 +2279,7 @@ textarea {
   margin-left: 5px;
   padding: 5px 10px;
   background-color: #090;
-  color: #F7F9F7;
+  color: #f7f9f7;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -2294,13 +2293,13 @@ textarea {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
 }
 
 .confirm-modal-content {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   max-width: 500px;
@@ -2327,7 +2326,6 @@ textarea {
   cursor: pointer;
 }
 
-
 /* Offertförfrågan */
 
 .checkout-headings {
@@ -2350,7 +2348,7 @@ textarea {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-top:16px ;
+  margin-top: 16px;
 }
 
 .checkout-form-btns button {

@@ -16,5 +16,13 @@
     "address": "Stocholm",
     "postalCode": "71989",
     "phoneNumber": "721939121"
+  },
+  {
+    "email": "va@email.com",
+    "password": "123",
+    "name": "asd",
+    "address": "asd",
+    "postalCode": "asd",
+    "phoneNumber": "asd"
   }
 ]

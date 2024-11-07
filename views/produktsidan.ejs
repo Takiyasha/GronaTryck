@@ -19,10 +19,10 @@
 
       <div class="product-page">
         <div class="product-model-image">
-          <img
-            src="<%= product.model_image.image %>"
-            alt="<%= product.name %>"
-          />
+          <picture>
+            <source srcset="<%= product.model_image_webp.image %>" type="image/webp">
+            <img src="<%= product.model_image_jpg.image %>" alt="Beskrivning av bilden">
+          </picture>
         </div>
 
         <div class="product-info">
@@ -36,7 +36,7 @@
             <p class="heading-s">
               Färg:
               <span id="selectedColor"
-                ><%= product.model_image.simplified_color %></span
+                ><%= product.model_image_webp.simplified_color %></span
               >
             </p>
             <div class="product-colors">

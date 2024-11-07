@@ -27,21 +27,21 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Bomber 2.0_Black_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Bomber%202.0_Black_Duo_Front_Main_0_50.webp",
       "simplified_color": "Black"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Bomber 2.0_Black_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Black"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Bomber 2.0_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Bomber%202.0_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Bomber 2.0_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Bomber%202.0_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       }
@@ -105,7 +105,7 @@
         "color_name": "Black"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Brooker_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Brooker_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       }
@@ -150,31 +150,31 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Changer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.webp",
       "simplified_color": "Heritage Brown"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Changer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heritage Brown"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Changer 2.0_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Changer%202.0_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Changer 2.0_Heather Haze_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Changer%202.0_Heather%20Haze_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Heather Haze"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Changer 2.0_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Changer%202.0_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Changer 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Changer%202.0_Misty%20Jade_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Misty Jade"
       }
@@ -219,41 +219,41 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Connector 2.0_French Navy_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Connector%202.0_French%20Navy_Duo_Front_Main_0_50.webp",
       "simplified_color": "Black"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Connector 2.0_French Navy_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Connector%202.0_French%20Navy_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Black"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Connector 2.0_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Connector%202.0_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Connector 2.0_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Connector%202.0_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Connector 2.0_Bright Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Connector%202.0_Bright%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Bright blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Connector 2.0_Burgundy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Connector%202.0_Burgundy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Red",
         "color_name": "Burgundy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Connector 2.0_Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Connector%202.0_Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Heather Grey"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Connector 2.0_White_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Connector%202.0_White_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "White"
       }
@@ -298,26 +298,26 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Crafter_Heritage Brown_Studio_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Crafter_Heritage%20Brown_Studio_Front_Main_0_50.webp",
       "simplified_color": "Heritage Brown"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Crafter_Heritage Brown_Studio_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Crafter_Heritage%20Brown_Studio_Front_Main_0_50.jpg",
       "simplified_color": "Heritage Brown"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Crafter_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Crafter_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Crafter_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Crafter_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Crafter_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Crafter_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       }
@@ -362,71 +362,71 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Creator 2.0 Long Sleeve_Natural Raw_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Creator%202.0%20Long%20Sleeve_Natural%20Raw_Duo_Front_Main_0_50.webp",
       "simplified_color": "Natural Raw"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Creator 2.0 Long Sleeve_Natural Raw_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Creator%202.0%20Long%20Sleeve_Natural%20Raw_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Creator 2.0 Long Sleeve_Natural Raw_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Creator%202.0%20Long%20Sleeve_Natural%20Raw_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Natural Raw"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Cool%20Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Cool Heather Grey"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Glazed Green_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Glazed%20Green_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Glazed Green"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Heather Grey"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Khaki_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Khaki_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Khaki"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Red Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Red%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Red",
         "color_name": "Red Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Red_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Red_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Red",
         "color_name": "Red"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_White_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_White_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "White"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0 Long Sleeve_Worker Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0%20Long%20Sleeve_Worker%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Worker Blue"
       }
@@ -471,36 +471,36 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Creator 2.0_Heather Haze_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Creator%202.0_Heather%20Haze_Duo_Front_Main_0_50.webp",
       "simplified_color": "Heather Haze"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Creator 2.0_Heather Haze_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Creator%202.0_Heather%20Haze_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heather Haze"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Creator 2.0_Heather Haze_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Creator%202.0_Heather%20Haze_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Heather Haze"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0_Mindful%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Creator 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Creator%202.0_Misty%20Jade_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Misty Jade"
       }
@@ -545,36 +545,36 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Cruiser 2.0_Heather Haze_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Cruiser%202.0_Heather%20Haze_Duo_Front_Main_0_50.webp",
       "simplified_color": "Heather Haze"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Cruiser 2.0_Heather Haze_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Cruiser%202.0_Heather%20Haze_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heather Haze"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Cruiser 2.0_Heather Haze_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Cruiser%202.0_Heather%20Haze_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Heather Haze"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Cruiser 2.0_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Cruiser%202.0_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Cruiser 2.0_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Cruiser%202.0_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Cruiser 2.0_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Cruiser%202.0_Mindful%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Cruiser 2.0_Misty Jade_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Cruiser%202.0_Misty%20Jade_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Misty Jade"
       }
@@ -619,31 +619,31 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Drummer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Drummer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.webp",
       "simplified_color": "Heritage Brown"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Drummer 2.0_Heritage Brown_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Drummer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Heritage Brown"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Drummer 2.0_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Drummer%202.0_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Drummer 2.0_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Drummer%202.0_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Drummer 2.0_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Drummer%202.0_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Drummer 2.0_Natural Raw_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Drummer%202.0_Natural%20Raw_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Natural Raw"
       }
@@ -688,56 +688,56 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Freestyler Long Sleeve_Cool Heather Grey_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Freestyler%20Long%20Sleeve_Cool%20Heather%20Grey_Duo_Front_Main_0_50.webp",
       "simplified_color": "Heather Grey"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Freestyler Long Sleeve_Cool Heather Grey_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Freestyler%20Long%20Sleeve_Cool%20Heather%20Grey_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Freestyler Long Sleeve_Cool Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Freestyler%20Long%20Sleeve_Cool%20Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Cool Heather Grey"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_White_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_White_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "White"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_Heather Haze_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_Heather%20Haze_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Heather Haze"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_Mindful%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_Natural Raw_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_Natural%20Raw_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Natural Raw"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Long Sleeve_Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Long%20Sleeve_Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Heather Grey"
       }
@@ -782,26 +782,26 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Freestyler Vintage_G. Dyed Latte_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Freestyler%20Vintage_G.%20Dyed%20Latte_Duo_Front_Main_0_50.webp",
       "simplified_color": "Dyed Latte"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Freestyler Vintage_G. Dyed Latte_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Freestyler%20Vintage_G.%20Dyed%20Latte_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Freestyler Vintage_G. Dyed Latte_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Freestyler%20Vintage_G.%20Dyed%20Latte_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Dyed Latte"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Vintage_G. Dyed Blue Stone_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Vintage_G.%20Dyed%20Blue%20Stone_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Dyed Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Freestyler Vintage_G. Dyed Black Rock_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Freestyler%20Vintage_G.%20Dyed%20Black%20Rock_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       }
@@ -846,36 +846,36 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Knoxer_Natural Raw_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Knoxer_Natural%20Raw_Duo_Front_Main_0_50.webp",
       "simplified_color": "Natural Raw"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Knoxer_Natural Raw_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Knoxer_Natural%20Raw_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Knoxer_Natural Raw_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Knoxer_Natural%20Raw_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Natural Raw"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Knoxer_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Knoxer_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Knoxer_Cool Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Knoxer_Cool%20Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Cool Heather Grey"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Knoxer_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Knoxer_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Knoxer_Heather Haze_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Knoxer_Heather%20Haze_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Heather Haze"
       },
@@ -925,16 +925,16 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Liner_Desert Dust_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Liner_Desert%20Dust_Duo_Front_Main_0_50.webp",
       "simplified_color": "Desert Dust"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Liner_Desert Dust_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Liner_Desert%20Dust_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Liner_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Liner_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
@@ -984,26 +984,26 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Puffer Gilet_French Navy_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Puffer%20Gilet_French%20Navy_Duo_Front_Main_0_50.webp",
       "simplified_color": "French Navy"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Puffer Gilet_French Navy_Duo_Front_Main_0_50.jpg",
-      "simplified_color": "Natural Raw"
+      "image": "/static/images/Products/Mains/50/jpg/Puffer%20Gilet_French%20Navy_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "French Navy"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Puffer Gilet_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Puffer%20Gilet_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Puffer Gilet_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Puffer%20Gilet_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Puffer Gilet_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Puffer%20Gilet_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       }
@@ -1048,71 +1048,71 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Stella Clara_Eco-Heather_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Stella%20Clara_Eco-Heather_Duo_Front_Main_0_50.webp",
       "simplified_color": "Eco Heather"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Stella Clara_Eco-Heather_Duo_Front_Main_0_50.jpg",
-      "simplified_color": "Natural Raw"
+      "image": "/static/images/Products/Mains/50/jpg/Stella%20Clara_Eco-Heather_Duo_Front_Main_0_50.jpg",
+      "simplified_color": "Eco Heather"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Stella Clara_Eco-Heather_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Stella%20Clara_Eco-Heather_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Eco Heather"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Natural Raw_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Natural%20Raw_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Natural Raw"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Red_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Red_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Red",
         "color_name": "Red"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Stargazer_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Stargazer_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Stargazer"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Lavender_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Lavender_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Lavender"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Blue Soul_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Blue%20Soul_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Soul"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Cool Heather Grey_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Cool%20Heather%20Grey_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Cool Heather Grey"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Cotton Pink_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Cotton%20Pink_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Pink",
         "color_name": "Cotton Pink"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Anthracite_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Anthracite_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Anthracite"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Clara_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Clara_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       }
@@ -1157,36 +1157,36 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Stella Climber_Stargazer_Studio_Front_Main_5_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Stella%20Climber_Stargazer_Studio_Front_Main_5_50.webp",
       "simplified_color": "Stargazer"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Stella Climber_Stargazer_Studio_Front_Main_5_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Stella%20Climber_Stargazer_Studio_Front_Main_5_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Stella Climber_Stargazer_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Stella%20Climber_Stargazer_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Stargazer"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Climber_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Climber_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Climber_Khaki_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Climber_Khaki_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Khaki"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Climber_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Climber_Mindful%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Climber_Anthracite_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Climber_Anthracite_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Anthracite"
       }
@@ -1231,26 +1231,26 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Stella Serena_Blue Ice_Studio_Front_Main_5_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Stella%20Serena_Blue%20Ice_Studio_Front_Main_5_50.webp",
       "simplified_color": "Blue Ice"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Stella Serena_Blue Ice_Studio_Front_Main_5_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Stella%20Serena_Blue%20Ice_Studio_Front_Main_5_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Stella Serena_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Stella%20Serena_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Serena_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Serena_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stella Serena_Anthracite_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stella%20Serena_Anthracite_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Anthracite"
       }
@@ -1295,51 +1295,51 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Stanley Guider_Khaki_Studio_Front_Main_1_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Stanley%20Guider_Khaki_Studio_Front_Main_1_50.webp",
       "simplified_color": "Khaki"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Stanley Guider_Khaki_Studio_Front_Main_1_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Stanley%20Guider_Khaki_Studio_Front_Main_1_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Stanley Guider_Khaki_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Stanley%20Guider_Khaki_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Khaki"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_Stargazer_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_Stargazer_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Stargazer"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_French Navy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_French%20Navy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "French Navy"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_Mindful%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_Anthracite_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_Anthracite_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Grey",
         "color_name": "Anthracite"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_Black_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_Black_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Black",
         "color_name": "Black"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Guider_Burgundy_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Guider_Burgundy_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Red",
         "color_name": "Red"
       }
@@ -1384,31 +1384,31 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Stanley Voyager_Desert Dust_Studio_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Stanley%20Voyager_Desert%20Dust_Studio_Front_Main_0_50.webp",
       "simplified_color": "Desert Dust"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Stanley Voyager_Desert Dust_Studio_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Stanley%20Voyager_Desert%20Dust_Studio_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Stanley Voyager_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Stanley%20Voyager_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Voyager_Khaki_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Voyager_Khaki_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Khaki"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Voyager_Mindful Blue_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Voyager_Mindful%20Blue_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Mindful Blue"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Stanley Voyager_Stargazer_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Stanley%20Voyager_Stargazer_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Green",
         "color_name": "Stargazer"
       }
@@ -1453,31 +1453,31 @@
       }
     ],
     "model_image_webp": {
-      "image": "/static/images/Products/Mains/50/webp/Roller_Natural Raw_Duo_Front_Main_0_50.webp",
+      "image": "/static/images/Products/Mains/50/webp/Roller_Natural%20Raw_Duo_Front_Main_0_50.webp",
       "simplified_color": "Natural Raw"
     },
     "model_image_jpg": {
-      "image": "/static/images/Products/Mains/50/jpg/Roller_Natural Raw_Duo_Front_Main_0_50.jpg",
+      "image": "/static/images/Products/Mains/50/jpg/Roller_Natural%20Raw_Duo_Front_Main_0_50.jpg",
       "simplified_color": "Natural Raw"
     },
     "products_images": [
       {
-        "image": "/static/images/Products/Mains/25/webp/Roller_Natural Raw_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Mains/25/webp/Roller_Natural%20Raw_Packshot_Front_Main_0_25.webp",
         "simplified_color": "White",
         "color_name": "Natural Raw"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Roller_Desert Dust_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Roller_Desert%20Dust_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Beige",
         "color_name": "Desert Dust"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Roller_Heritage Brown_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Roller_Heritage%20Brown_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Brown",
         "color_name": "Heritage Brown"
       },
       {
-        "image": "/static/images/Products/Colors/webp/Roller_Blue Ice_Packshot_Front_Main_0_25.webp",
+        "image": "/static/images/Products/Colors/webp/Roller_Blue%20Ice_Packshot_Front_Main_0_25.webp",
         "simplified_color": "Blue",
         "color_name": "Blue Ice"
       }

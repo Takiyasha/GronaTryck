@@ -73,6 +73,7 @@ liveReloadServer.server.once("connection", () => {
     liveReloadServer.refresh("/");
   }, 100);
 });
+
 // Handle user registration and save it to users.json
 app.post("/user/register", (req, res) => {
   const newUser = req.body;

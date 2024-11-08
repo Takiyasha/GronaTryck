@@ -41,13 +41,16 @@
             </p>
             <div class="product-colors">
               <% product.products_images.forEach(function(color, index) { %>
-              <img
-                src="<%= color.image %>"
+                <picture class="gt-product-image">
+                  <source srcset="<%= color.image_webp %>" type="image/webp">
+                  <img
+                src="<%= color.image_jpg %>"
                 alt="<%= color.color_name %>"
                 class="product-color-img <%= index === 0 ? 'selected' : '' %>"
                 data-color-name="<%= color.color_name %>"
                 onclick="selectColor(this)"
               />
+                </picture>
               <% }); %>
             </div>
           </div>

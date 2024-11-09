@@ -151,8 +151,14 @@
           <div class="gt-product-image">
             <a href="/produktsidan/<%= product.id %>">
               <picture class="gt-product-image">
-                <source srcset="<%= product.model_image_webp.image %>" type="image/webp">
-                <img src="<%= product.model_image_jpg.image %>" alt="Beskrivning av bilden">
+                <source
+                  srcset="<%= product.model_image_webp.image %>"
+                  type="image/webp"
+                />
+                <img
+                  src="<%= product.model_image_jpg.image %>"
+                  alt="Beskrivning av bilden"
+                />
               </picture>
             </a>
           </div>

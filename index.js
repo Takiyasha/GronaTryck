@@ -186,6 +186,20 @@ app.get("/produktsidan/:id", (req, res) => {
   );
 });
 
+// Serve the products.json file at /data/products.json
+app.get("/data/products.json", (req, res) => {
+  const productsFilePath = path.join(__dirname, "data", "products.json");
+  fs.readFile(productsFilePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading products file:", err);
+      res.status(500).send("Internal Server Error");
+      return;
+    }
+    res.setHeader("Content-Type", "application/json");
+    res.send(data);
+  });
+});
+
 //Loading products in klader
 app.get("/klader", (req, res) => {
   fs.readFile(

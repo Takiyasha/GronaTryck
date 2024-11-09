@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Event listeners for filter options
   // Event listeners for color swatches
   colorButtons.forEach((button) => {
     button.addEventListener("click", function () {

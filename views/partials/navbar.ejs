@@ -105,38 +105,9 @@
       </svg>
     </a>
   </div>
+
   <!-- Search Dropdown -->
-  <div class="search-dropdown" id="searchDropdown">
-    <div class="search-container">
-      <div class="search-input-group">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Sök efter produkter..."
-          aria-label="Sök"
-        />
-        <button
-          class="close-search"
-          id="closeSearch"
-          aria-label="Stäng sökning"
-        >
-          ×
-        </button>
-      </div>
-      <div class="popular-searches">
-        <h3>Populära sökningar</h3>
-        <div class="popular-tags">
-          <a href="/search?q=t-shirts">T-shirts</a>
-          <a href="/search?q=hoodies">Hoodies</a>
-          <a href="/search?q=organic">Ekologiskt</a>
-          <a href="/search?q=sustainable">Hållbart</a>
-          <a href="/search?q=accessories">Accessoarer</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Search Dropdown -->
-  <div class="search-dropdown" id="searchDropdown">
+  <div class="search-dropdown hidden" id="searchDropdown">
     <div class="search-container">
       <div class="search-input-group">
         <input
@@ -171,12 +142,6 @@
     </div>
   </div>
 
-  <!-- Cart Dropdown Container -->
-  <div id="cartDropdown" class="cart-dropdown">
-    <!-- Cart items will be dynamically inserted here -->
-  </div>
-
-  <!-- Cart Modal -->
   <!-- Shopping Cart Panel -->
   <div id="cartPanel" class="cart-panel">
     <div class="cart-panel-header">
@@ -213,7 +178,6 @@
     </div>
   </div>
 
-  <!--/static/images/infographics-folder/graphical-elements/blob-small.svg-->
   <!-- Modal Structure (login modal hidden by default) -->
   <div id="loginModal" class="modal" style="display: none">
     <div class="modal-content">

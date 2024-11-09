@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
 }
@@ -2397,11 +2401,9 @@ textarea {
   left: 0;
   width: 100%; /* Make the search bar as wide as the navbar */
   background-color: #f8f9fa;
-  /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);*/
   z-index: 1000;
   border-radius: 0 0 4px 4px; /* Rounded corners only at the bottom */
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .search-dropdown.active {
@@ -2421,12 +2423,11 @@ textarea {
 }
 
 .search-input {
-  width: 100%;
+  flex-grow: 1;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
-  box-sizing: border-box;
 }
 
 .close-search {
@@ -2437,38 +2438,45 @@ textarea {
   cursor: pointer;
 }
 
-.popular-searches {
-  margin-top: 20px;
-}
-
 .popular-tags a {
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   padding: 6px 12px;
   background-color: #f2f2f2;
   color: #333;
   text-decoration: none;
   border-radius: 20px;
   font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .popular-tags a:hover {
-  background-color: #e0e0e0;
+  background-color: #4d8148;
+}
+
+.search-results-container {
+  max-width: 1200px;
+  margin: 20px auto 0;
 }
 
 .search-results {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
-  margin-top: 20px;
-}
-
-.search-results-container {
-  background-color: #ffffff; /* Ensure it has a white background for visibility */
-  padding: 16px; /* Add some spacing for search results */
+  gap: 20px;
 }
 
 .search-results .gt-product {
-  margin-bottom: 20px; /* Add space between the products in search results */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Similar to your current product card style */
+  flex: 1 1 calc(25% - 20px); /* Each card takes up approximately 25% of the container width minus gap */
+  max-width: calc(25% - 20px);
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.search-results .gt-product:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }

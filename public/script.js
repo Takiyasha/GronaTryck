@@ -283,21 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Attach click event listeners to all color images
-  const colorImages = document.querySelectorAll(".product-color-img");
-  if (colorImages.length > 0) {
-    console.log(`Found ${colorImages.length} color images.`);
-    colorImages.forEach((img) => {
-      img.addEventListener("click", function () {
-        console.log(
-          `Image with color ${img.getAttribute("data-color-name")} clicked.`
-        );
-        selectColor(this);
-      });
-    });
-  } else {
-    console.error("No elements with class 'product-color-img' found.");
-  }
 
   // Add CSS to highlight the selected color
   const style = document.createElement("style");

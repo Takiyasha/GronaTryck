@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     searchResults.innerHTML = "";
 
     if (products.length === 0) {
-      searchResults.innerHTML = "<p>Inga produkter hittades.</p>";
+      searchResults.innerHTML = "<p class='body-text'>Inga produkter hittades.</p>";
       return;
     }
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="gt-product">
             <div class="gt-product-image">
               <a href="/produktsidan/${product.id}">
-                <picture>
+                <picture class="gt-product-image">
                   <source srcset="${
                     product.model_image_webp.image
                   }" type="image/webp">

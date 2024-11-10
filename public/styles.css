@@ -2410,7 +2410,7 @@ textarea {
 
 .search-dropdown.active {
   display: block;
-  background-color: rgba(247, 249, 247, 0.99);
+  background-color: rgba(247, 249, 247, 0.97);
 }
 
 .search-container {

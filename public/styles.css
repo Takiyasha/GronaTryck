@@ -2209,7 +2209,7 @@ textarea {
   width: 60px;
   height: 60px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .chat-bubble svg {
@@ -2231,7 +2231,7 @@ textarea {
 }
 
 .chat-header {
-  background-color: #090;
+  background-color: #567c50;
   color: #f7f9f7;
   padding: 10px;
   border-top-left-radius: 10px;
@@ -2282,7 +2282,7 @@ textarea {
 .chat-input button {
   margin-left: 5px;
   padding: 5px 10px;
-  background-color: #090;
+  background-color: #567c50;
   color: #f7f9f7;
   border: none;
   border-radius: 3px;

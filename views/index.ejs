@@ -12,17 +12,31 @@
     <%- include('partials/navbar') %>
 
     <div class="heroStSt">
-      <img
-        src="/static/images/Hero/50/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_50.webp"
-        srcset="
-          /static/images/Hero/25/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_25.webp 1279w,
-          /static/images/Hero/50/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_50.webp 1280w,
-          /static/images/Hero/25/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_25.jpg   1279w,
-          /static/images/Hero/50/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_50.jpg   1280w
-        "
-        sizes="(min-width: 1280px) 1280px, 100vw"
-        alt="Stanley Stella AW24 Nature Outerwear"
-      />
+      <picture>
+
+        <source
+          media="(max-width: 1279px)"
+          srcset="
+            /static/images/Hero/50/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_50.webp,
+            /static/images/Hero/50/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_50.jpg"
+          sizes="100vw">
+
+        <source
+          media="(max-width: 1919px)"
+          srcset="
+            /static/images/Hero/75/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_75.webp,
+            /static/images/Hero/75/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association_75.jpg"
+          sizes="100vw">
+
+        <source
+          media="(min-width: 1920px)"
+          srcset="
+            /static/images/Hero/100/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association.webp,
+            /static/images/Hero/100/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association.jpg"
+          sizes="100vw">
+
+        <img src="/static/images/Hero/100/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_Association.jpg" alt="Stanley Stella">
+      </picture>
       <img
         src="/static/images/infographics-folder/stanleystella/StanleyStella_OfficialDealer-Logo-1500px_Light.png"
         alt=""

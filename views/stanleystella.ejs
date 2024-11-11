@@ -11,29 +11,37 @@
     <%- include('partials/navbar') %>
     <div class="heroStSt">
       <picture>
-
         <source
           media="(max-width: 1279px)"
           srcset="
             /static/images/Hero/50/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03_50.webp,
-            /static/images/Hero/50/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03_50.jpg"
-          sizes="100vw">
-          
+            /static/images/Hero/50/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03_50.jpg
+          "
+          sizes="100vw"
+        />
+
         <source
           media="(max-width: 1919px)"
           srcset="
             /static/images/Hero/75/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03_75.webp,
-            /static/images/Hero/75/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03_75.jpg"
-          sizes="100vw">
+            /static/images/Hero/75/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03_75.jpg
+          "
+          sizes="100vw"
+        />
 
         <source
           media="(min-width: 1920px)"
           srcset="
             /static/images/Hero/100/webp/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03.webp,
-            /static/images/Hero/100/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03.jpg"
-          sizes="100vw">
+            /static/images/Hero/100/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03.jpg
+          "
+          sizes="100vw"
+        />
 
-        <img src="/static/images/Hero/100/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03.jpg" alt="Stanley Stella">
+        <img
+          src="/static/images/Hero/100/jpg/StanleyStella_AW24_Nature_Outerwear_Brooker_Trekker_03.jpg"
+          alt="Stanley Stella"
+        />
       </picture>
       <img
         src="/static/images/infographics-folder/stanleystella/StanleyStella_OfficialDealer-Logo-1500px_Light.png"
@@ -113,10 +121,7 @@
       </div>
     </section>
 
-    <%- include('partials/footer') %>
-    <%- include('partials/chatbox') %>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
   </body>
 </html>

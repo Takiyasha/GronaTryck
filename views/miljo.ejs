@@ -11,13 +11,15 @@
     <%- include('partials/navbar') %>
     <div class="hero">
       <img
-      src="/static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp"
-      srcset="/static/images/Hero/75/webp/DJI_20241010094358_0007_D_75.webp 1279w,
-              /static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp 1280w,
-              /static/images/Hero/75/jpg/DJI_20241010094358_0007_D_75.jpg 1279w,
-              /static/images/Hero/100/jpg/DJI_20241010094358_0007_D.jpg 1280w"
-      sizes="(min-width: 1280px) 1280px, 100vw"
-      alt="Miljöbild"
+        src="/static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp"
+        srcset="
+          /static/images/Hero/75/webp/DJI_20241010094358_0007_D_75.webp 1279w,
+          /static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp   1280w,
+          /static/images/Hero/75/jpg/DJI_20241010094358_0007_D_75.jpg   1279w,
+          /static/images/Hero/100/jpg/DJI_20241010094358_0007_D.jpg     1280w
+        "
+        sizes="(min-width: 1280px) 1280px, 100vw"
+        alt="Miljöbild"
       />
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40">
         <path
@@ -261,11 +263,9 @@
       </div>
     </section>
 
-    <%- include('partials/footer') %>
-    <%- include('partials/chatbox') %>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/swiper.js"></script>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
+    >
   </body>
 </html>

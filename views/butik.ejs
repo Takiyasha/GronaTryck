@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/popup.css" />
   </head>
-  <header>
-    <%- include('partials/navbar') %>
-  </header>
+  <header><%- include('partials/navbar') %></header>
   <body>
     <div class="hallbarhet-ge">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1551 1112">
@@ -24,7 +22,6 @@
         <a href="/index">Hem</a> <span>/</span> <a href="/butik">Butik</a>
       </div>
       <div class="store-categories">
-        
         <a href="#">
           <div class="categorie-item">
             <img
@@ -41,8 +38,10 @@
           <div class="categorie-item">
             <img
               src="/static/images/Cards/50/webp/Stanley_Stella_AW24_Timeless_Outerwear_Mix_01_50.webp"
-              srcset="/static/images/Cards/50/webp/Stanley_Stella_AW24_Timeless_Outerwear_Mix_01_50.webp,
-                      /static/images/Cards/50/jpg/Stanley_Stella_AW24_Timeless_Outerwear_Mix_01_50.jpg"
+              srcset="
+                /static/images/Cards/50/webp/Stanley_Stella_AW24_Timeless_Outerwear_Mix_01_50.webp,
+                /static/images/Cards/50/jpg/Stanley_Stella_AW24_Timeless_Outerwear_Mix_01_50.jpg
+              "
               alt="Bästsäljare"
             />
             <h2>Bästsäljare</h2>
@@ -54,7 +53,7 @@
             <img
               src="/static/images/Cards/50/webp/Striker_Heather Haze_Duo_Front_Main_0_50.webp"
               srcset="/static/images/Cards/50/webp/Striker_Heather Haze_Duo_Front_Main_0_50.webp,
-                      /static/images/Cards/50/jpg/Striker_Heather Haze_Duo_Front_Main_0_50.jpg" 
+                      /static/images/Cards/50/jpg/Striker_Heather Haze_Duo_Front_Main_0_50.jpg"
               alt="Kläder"
             />
             <h2>Kläder</h2>
@@ -77,8 +76,10 @@
           <div class="categorie-item">
             <img
               src="/static/images/Cards/50/webp/DJI_20241010095449_0036_D_50.webp"
-              srcset="/static/images/Cards/50/webp/DJI_20241010095449_0036_D_50.webp,
-                      /static/images/Cards/50/jpg/DJI_20241010095449_0036_D_50.jpg"
+              srcset="
+                /static/images/Cards/50/webp/DJI_20241010095449_0036_D_50.webp,
+                /static/images/Cards/50/jpg/DJI_20241010095449_0036_D_50.jpg
+              "
               alt="Tillfälle"
             />
             <h2>Tillfälle</h2>
@@ -89,35 +90,33 @@
           <div class="categorie-item">
             <img
               src="/static/images/Cards/50/webp/web-ekologiska-gavor-till-anstallda-grona-tryck_50.webp"
-              srcset="/static/images/Cards/50/webp/web-ekologiska-gavor-till-anstallda-grona-tryck_50.webp,
-                      /static/images/Cards/50/jpg/web-ekologiska-gavor-till-anstallda-grona-tryck_50.jpg"
+              srcset="
+                /static/images/Cards/50/webp/web-ekologiska-gavor-till-anstallda-grona-tryck_50.webp,
+                /static/images/Cards/50/jpg/web-ekologiska-gavor-till-anstallda-grona-tryck_50.jpg
+              "
               alt="Övrigt"
             />
             <h2>Övrigt</h2>
           </div>
         </a>
 
-        
         <a href="#">
           <div class="categorie-item">
             <img
               src="/static/images/Cards/25/webp/StanleyStella_AW24_City_Outerwear_Brooker_Puffer_Gilet_Decoration_25.webp"
-              srcset="/static/images/Cards/25/webp/StanleyStella_AW24_City_Outerwear_Brooker_Puffer_Gilet_Decoration_25.webp,
-                      /static/images/Cards/25/jpg/StanleyStella_AW24_City_Outerwear_Brooker_Puffer_Gilet_Decoration_25.jpg"
+              srcset="
+                /static/images/Cards/25/webp/StanleyStella_AW24_City_Outerwear_Brooker_Puffer_Gilet_Decoration_25.webp,
+                /static/images/Cards/25/jpg/StanleyStella_AW24_City_Outerwear_Brooker_Puffer_Gilet_Decoration_25.jpg
+              "
               alt="Varumärken"
             />
             <h2>Varumärken</h2>
           </div>
         </a>
-
       </div>
     </section>
 
-    <%- include('partials/footer') %>
-    <%- include('partials/chatbox') %>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
-      
   </body>
 </html>

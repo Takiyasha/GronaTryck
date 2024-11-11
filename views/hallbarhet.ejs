@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/popup.css" />
   </head>
-  <header>
-    <%- include('partials/navbar') %>
-  </header>
+  <header><%- include('partials/navbar') %></header>
   <body>
     <div class="hallbarhet-ge">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1551 1112">
@@ -57,12 +55,16 @@
       <div class="hallbarhet-container">
         <a href="/gots">
           <div class="hallbarhet-item">
-            <img src="/static/images/Hero/100/webp/gots.webp"
-            srcset="/static/images/Hero/75/webp/gots_75.webp 1279w,
-                    /static/images/Hero/100/webp/gots.webp 1280w,
-                    /static/images/Hero/75/jpg/gots_75.jpg 1279w,
-                    /static/images/Hero/100/jpg/gots.jpg 1280w"
-            alt="GOTS"/>
+            <img
+              src="/static/images/Hero/100/webp/gots.webp"
+              srcset="
+                /static/images/Hero/75/webp/gots_75.webp 1279w,
+                /static/images/Hero/100/webp/gots.webp   1280w,
+                /static/images/Hero/75/jpg/gots_75.jpg   1279w,
+                /static/images/Hero/100/jpg/gots.jpg     1280w
+              "
+              alt="GOTS"
+            />
             <h2>GOTS</h2>
           </div>
         </a>
@@ -70,12 +72,14 @@
         <a href="/miljo">
           <div class="hallbarhet-item">
             <img
-            src="/static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp"
-            srcset="/static/images/Hero/75/webp/DJI_20241010094358_0007_D_75.webp 1279w,
-                    /static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp 1280w,
-                    /static/images/Hero/75/jpg/DJI_20241010094358_0007_D_75.jpg 1279w,
-                    /static/images/Hero/100/jpg/DJI_20241010094358_0007_D.jpg 1280w"
-            alt="Miljöbild"
+              src="/static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp"
+              srcset="
+                /static/images/Hero/75/webp/DJI_20241010094358_0007_D_75.webp 1279w,
+                /static/images/Hero/100/webp/DJI_20241010094358_0007_D.webp   1280w,
+                /static/images/Hero/75/jpg/DJI_20241010094358_0007_D_75.jpg   1279w,
+                /static/images/Hero/100/jpg/DJI_20241010094358_0007_D.jpg     1280w
+              "
+              alt="Miljöbild"
             />
             <h2>Miljö</h2>
           </div>
@@ -84,12 +88,14 @@
         <a href="/villkor">
           <div class="hallbarhet-item">
             <img
-            src="/static/images/Hero/100/webp/villkor.webp"
-            srcset="/static/images/Hero/75/webp/villkor_75.webp 1279w,
-                    /static/images/Hero/100/webp/villkor.webp 1280w,
-                    /static/images/Hero/75/jpg/villkor_75.jpg 1279w,
-                    /static/images/Hero/100/jpg/villkor.jpg 1280w"
-            alt="Arbetsvillkor"
+              src="/static/images/Hero/100/webp/villkor.webp"
+              srcset="
+                /static/images/Hero/75/webp/villkor_75.webp 1279w,
+                /static/images/Hero/100/webp/villkor.webp   1280w,
+                /static/images/Hero/75/jpg/villkor_75.jpg   1279w,
+                /static/images/Hero/100/jpg/villkor.jpg     1280w
+              "
+              alt="Arbetsvillkor"
             />
             <h2>Arbetsvilkor</h2>
           </div>
@@ -97,22 +103,23 @@
 
         <a href="/tryck">
           <div class="hallbarhet-item">
-            <img src="/static/images/Hero/100/webp/tryck.webp"
-            srcset="/static/images/Hero/75/webp/tryck_75.webp 1279w,
-                    /static/images/Hero/100/webp/tryck.webp 1280w,
-                    /static/images/Hero/75/jpg/tryck_75.jpg 1279w,
-                    /static/images/Hero/100/jpg/tryck.jpg 1280w"
-            alt="Tryck"/>
+            <img
+              src="/static/images/Hero/100/webp/tryck.webp"
+              srcset="
+                /static/images/Hero/75/webp/tryck_75.webp 1279w,
+                /static/images/Hero/100/webp/tryck.webp   1280w,
+                /static/images/Hero/75/jpg/tryck_75.jpg   1279w,
+                /static/images/Hero/100/jpg/tryck.jpg     1280w
+              "
+              alt="Tryck"
+            />
             <h2>Tryck</h2>
           </div>
         </a>
       </div>
     </section>
 
-    <%- include('partials/footer') %>
-    <%- include('partials/chatbox') %>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
   </body>
 </html>

@@ -7,43 +7,42 @@
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/popup.css" />
   </head>
-  <header>
-    <%- include('partials/navbar') %>
-  </header>
+  <header><%- include('partials/navbar') %></header>
   <body>
     <section>
-        <h1 class="heading-l">Offertförfrågan</h1>
-        <div class="checkout-headings">
-            <h3 class="heading-s">Produkt</h3>
-            <h3 class="heading-s">Antal</h3>
-            <h3 class="heading-s">Pris <span class="alt-text-s">(exkl. moms)</span></h3>
-        </div>
+      <h1 class="heading-l">Offertförfrågan</h1>
+      <div class="checkout-headings">
+        <h3 class="heading-s">Produkt</h3>
+        <h3 class="heading-s">Antal</h3>
+        <h3 class="heading-s">
+          Pris <span class="alt-text-s">(exkl. moms)</span>
+        </h3>
+      </div>
+      <div>produkter här</div>
+      <div class="checkout-price-container">
+        <h2 class="heading-m">Totalt</h2>
         <div>
-            produkter här
+          <div class="checkout-price-calc">
+            <h3 class="heading-s">
+              Varukostnad <span class="alt-text-s">(exkl. moms)</span>:
+            </h3>
+            <h3 class="heading-s">65 345 kr</h3>
+          </div>
+          <div class="checkout-price-calc">
+            <h3 class="heading-s">Summa:</h3>
+            <h3 class="heading-s">68 543 kr</h3>
+          </div>
         </div>
-        <div class="checkout-price-container">
-            <h2 class="heading-m">Totalt</h2>
-            <div>
-                <div class="checkout-price-calc">
-                    <h3 class="heading-s">Varukostnad <span class="alt-text-s">(exkl. moms)</span>:</h3>
-                    <h3 class="heading-s">65 345 kr</h3>
-                </div>
-                <div class="checkout-price-calc">
-                    <h3 class="heading-s">Summa:</h3>
-                    <h3 class="heading-s">68 543 kr</h3>
-                </div>
-            </div>
-            
-        </div>
+      </div>
     </section>
-    
+
     <section>
-        <h2 class="heading-m">Kontaktinformation</h2>
-        <h3 class="heading-s">Är du redan kund? <a href="#">Logga in här</a></h3>
-        <div class="checkout-form-container">
-            <div class="checkout-form">
-                <form class="kontakt-form">
-                    <label for="checkoutEmail">E-postadress</label>
+      <h2 class="heading-m">Kontaktinformation</h2>
+      <h3 class="heading-s">Är du redan kund? <a href="#">Logga in här</a></h3>
+      <div class="checkout-form-container">
+        <div class="checkout-form">
+          <form class="kontakt-form">
+            <label for="checkoutEmail">E-postadress</label>
             <input
               type="email"
               id="checkoutEmail"
@@ -71,30 +70,27 @@
               placeholder="Ange telefonnummer..."
               required
             />
-                </form>
-            </div>
-            <div class="checkout-form">
-                <form class="kontakt-form">
-                    <label for="checkoutMessage">Övrigt</label>
+          </form>
+        </div>
+        <div class="checkout-form">
+          <form class="kontakt-form">
+            <label for="checkoutMessage">Övrigt</label>
             <textarea
               name="textarea"
               id="checkoutMessage"
               placeholder="Har du några funderingar?"
               required
             ></textarea>
-                </form>
-                <div class="checkout-form-btns">
-                    <button class="secondary-btn">Bifoga filer</button>
-                <button class="primary-btn">Skicka</button>
-                </div>
-            </div>
+          </form>
+          <div class="checkout-form-btns">
+            <button class="secondary-btn">Bifoga filer</button>
+            <button class="primary-btn">Skicka</button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <%- include('partials/footer') %>
-    <%- include('partials/chatbox') %>
+    <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
   </body>
 </html>

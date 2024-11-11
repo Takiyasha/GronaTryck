@@ -32,6 +32,7 @@
               Artikelnummer: <%= product.artikelnummer %>
             </p>
           </div>
+          
           <div class="product-info-color">
             <p class="heading-s">
               Färg:
@@ -78,6 +79,7 @@
               <li><%= tier.range %>: <%= tier.price_per_unit %> kr/enhet</li>
               <% }); %>
             </ul>
+            <input type="hidden" id="productId" value="<%= product.id %>" />
           </div>
         </div>
         
@@ -148,8 +150,6 @@
     <%-include('partials/footer') %>
     <%- include('partials/chatbox') %>
     <script src="/static/script.js"></script>
-    <script src="/static/login.js"></script>
-    <script src="/static/signup.js"></script>
     <script src="/static/swiper.js"></script>
     <script src="/static/price_calculator.js"></script>
   </body>

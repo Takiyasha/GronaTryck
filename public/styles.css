@@ -371,10 +371,12 @@ section {
   align-items: center;
 }
 
-.services img {
+.services picture img {
   position: absolute;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   object-fit: cover;
 }
 
@@ -402,10 +404,12 @@ section {
   align-items: center;
 }
 
-.brands img {
+.brands picture img {
   position: absolute;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   object-fit: cover;
 }
 

@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="logo">
-    <a href="/index">
+    <a href="/index" aria-label="Startsidan">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 2020 2048"
@@ -57,15 +57,15 @@
       </svg>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/butik">Butik</a></li>
-      <li><a href="/stanleystella">Stanley Stella</a></li>
-      <li><a href="/hallbarhet">Hållbarhet</a></li>
-      <li><a href="/about">Om oss</a></li>
-      <li><a href="/kontakt">Kontakta oss</a></li>
+      <li><a href="/butik" aria-label="Butik">Butik</a></li>
+      <li><a href="/stanleystella" aria-label="Stanley Stella">Stanley Stella</a></li>
+      <li><a href="/hallbarhet" aria-label="Hållbarhet">Hållbarhet</a></li>
+      <li><a href="/about" aria-label="Om oss">Om oss</a></li>
+      <li><a href="/kontakt" aria-label="Kontakt oss">Kontakta oss</a></li>
     </ul>
   </div>
   <div class="nav-icons">
-    <a id="loginIcon" href="#" style="display: block">
+    <a id="loginIcon" href="#" style="display: block" aria-label="Logga in">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
         <path
           d="M597.55 427.07h-395.1c-96.64 0-174.99 78.34-174.99 174.98v169.01c0 16.1 13.06 29.16 29.17 29.16h686.74c16.11 0 29.17-13.06 29.17-29.16V602.05c0-96.64-78.35-174.98-174.99-174.98Zm99.99 298.15H102.46V602.05c0-55.13 44.86-99.98 99.99-99.98h395.1c55.13 0 99.99 44.85 99.99 99.98v123.17ZM400 74.78c31.53 0 61.18 12.28 83.47 34.58 22.3 22.3 34.58 51.94 34.58 83.48s-12.28 61.18-34.58 83.48c-22.3 22.3-51.94 34.58-83.47 34.58s-61.18-12.28-83.48-34.58c-22.3-22.3-34.58-51.94-34.58-83.48s12.28-61.18 34.58-83.48S368.46 74.78 400 74.78m0-75c-106.62 0-193.05 86.43-193.05 193.05S293.38 385.88 400 385.88s193.05-86.43 193.05-193.05S506.62-.22 400-.22Z"
@@ -78,6 +78,7 @@
       id="loggedInIcon"
       href="/installning-sidan/mina-sidor"
       class="nav-link"
+      aria-label="Mina sidor"
       style="display: none"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
@@ -88,7 +89,7 @@
       </svg>
     </a>
 
-    <a id="searchToggle" href="#">
+    <a id="searchToggle" aria-label="Sök produkt" href="#">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
         <path
           d="M786.08 734.89 565.9 514.71c43.62-55.3 67.29-123.17 67.29-194.69 0-84.17-32.78-163.31-92.3-222.83S402.24 4.9 318.07 4.9 154.76 37.68 95.24 97.2 2.94 235.85 2.94 320.02s32.78 163.31 92.3 222.83 138.66 92.3 222.83 92.3c71.57 0 139.49-23.71 194.81-67.39l220.17 220.17c7.32 7.32 16.92 10.98 26.52 10.98s19.19-3.66 26.52-10.98c14.64-14.64 14.64-38.39 0-53.03ZM77.94 320.02c0-132.41 107.72-240.13 240.13-240.13S558.2 187.61 558.2 320.02 450.48 560.15 318.07 560.15 77.94 452.43 77.94 320.02Z"
@@ -96,7 +97,7 @@
         />
       </svg>
     </a>
-    <a id="cartIcon" href="javascript:void(0);">
+    <a id="cartIcon" aria-label="Varukorg" href="#">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
         <path
           fill="#567c50"
@@ -128,11 +129,11 @@
       <div class="popular-searches">
         <h3 class="heading-s">Populära sökningar</h3>
         <div class="popular-tags body-text">
-          <a href="/search?q=t-shirts">T-shirts</a>
-          <a href="/search?q=hoodies">Hoodies</a>
-          <a href="/search?q=organic">Ekologiskt</a>
-          <a href="/search?q=sustainable">Hållbart</a>
-          <a href="/search?q=accessories">Accessoarer</a>
+          <a href="/search?q=t-shirts" aria-label="Sök t-shirts">T-shirts</a>
+          <a href="/search?q=hoodies" aria-label="Sök hoodies">Hoodies</a>
+          <a href="/search?q=organic" aria-label="Sök ekologiskt">Ekologiskt</a>
+          <a href="/search?q=sustainable" aria-label="Sök hållbarhet">Hållbart</a>
+          <a href="/search?q=accessories" aria-label="Sök accesoarer">Accessoarer</a>
         </div>
       </div>
       <!-- Search Results Container -->
@@ -170,7 +171,7 @@
     </div>
     <div class="cart-buttons">
       <button class="secondary-btn">Fortsätt handla</button>
-      <a href="/offertforfragan">
+      <a href="/offertforfragan" aria-label="Gå till offertförfrågan">
         <button class="primary-btn" id="checkoutButton">
           Gå till offertförfrågan
         </button>
@@ -200,7 +201,7 @@
             required
           />
           <div class="remember-forgot">
-            <a href="#" class="forgot-password">Har du glömt ditt lösenord?</a>
+            <a href="#" class="forgot-password" aria-label="Glömt lösenord">Har du glömt ditt lösenord?</a>
             <label class="remember-me">
               <input type="checkbox" />
               <span class="body-text">Kom ihåg mig</span>
@@ -208,7 +209,7 @@
           </div>
           <div class="button-container">
             <div class="register-link">
-              <a href="#" id="registerLink">Har du inte ett konto?</a>
+              <a href="#" id="registerLink" aria-label="Registrera konto">Har du inte ett konto?</a>
             </div>
             <button type="submit" class="primary-btn">Logga in</button>
           </div>
@@ -228,7 +229,7 @@
       <span class="close" onclick="closeConfirmationModal()">&times;</span>
       <h2 class="heading-m">Inloggning lyckades</h2>
       <p class="body-text">Du är nu inloggad</p>
-      <a href="/installning-sidan/mina-sidor">
+      <a href="/installning-sidan/mina-sidor" aria-label="Mina sidor">
         <button class="primary-btn">Mina sidor</button>
       </a>
     </div>
@@ -306,7 +307,7 @@
 
           <div class="button-container">
             <div class="register-link">
-              <a href="#" onclick="openLoginModal()">Har du redan ett konto?</a>
+              <a href="#" onclick="openLoginModal()" aria-label="Logga in">Har du redan ett konto?</a>
             </div>
             <button type="submit" class="primary-btn">Skapa konto</button>
           </div>
@@ -321,7 +322,7 @@
       <span class="close" onclick="closeConfirmationModal()">&times;</span>
       <h2 class="heading-m">Registrering lyckad</h2>
       <p class="body-text">Du är nu registrerad</p>
-      <a href="/installning-sidan/mina-sidor">
+      <a href="/installning-sidan/mina-sidor" aria-label="Logga in">
         <button class="primary-btn">Logga in</button>
       </a>
     </div>

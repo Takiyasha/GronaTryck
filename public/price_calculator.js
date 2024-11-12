@@ -1,3 +1,28 @@
+// Price calculation function that can be reused in different scripts
+function calculatePrice(quantity, priceTiers, minimumQuantity) {
+  if (isNaN(quantity) || quantity < minimumQuantity) {
+    return null;
+  }
+
+  let pricePerUnit = 0;
+  for (const tier of priceTiers) {
+    const [min, max] = tier.range.includes("+")
+      ? [parseInt(tier.range.split("+")[0]), Infinity]
+      : tier.range.split("-").map((v) => parseInt(v));
+
+    if (quantity >= min && quantity <= (max || Infinity)) {
+      pricePerUnit = tier.price_per_unit;
+      break;
+    }
+  }
+
+  if (pricePerUnit > 0) {
+    return quantity * pricePerUnit;
+  } else {
+    return null;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const quantityInput = document.getElementById("quantityInput");
   const priceEstimationElement = document.getElementById("priceEstimation");
@@ -30,46 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Selected Product:", product); // Debugging log
 
         // Function to calculate and display the price based on the quantity
-        const calculatePrice = () => {
+        const calculateAndDisplayPrice = () => {
           const quantity = parseInt(quantityInput.value);
           console.log("Quantity input value:", quantity); // Debugging log
 
-          if (isNaN(quantity) || quantity < product.minimum) {
-            priceEstimationElement.innerText = "-kr";
-            console.log("Invalid quantity or less than minimum required."); // Debugging log
-            return;
-          }
+          const estimatedPrice = calculatePrice(
+            quantity,
+            product.price_tiers,
+            product.minimum
+          );
 
-          // Determine the price per unit based on the quantity
-          let pricePerUnit = 0;
-          for (const tier of product.price_tiers) {
-            const [min, max] = tier.range.split("-").map((v) => {
-              return v === "+" ? Infinity : parseInt(v);
-            });
-
-            if (quantity >= min && quantity <= (max || Infinity)) {
-              pricePerUnit = tier.price_per_unit;
-              break;
-            }
-          }
-
-          console.log("Price per unit:", pricePerUnit); // Debugging log
-
-          // Calculate and display the estimated price
-          if (pricePerUnit > 0) {
-            const estimatedPrice = quantity * pricePerUnit;
+          if (estimatedPrice !== null) {
             priceEstimationElement.innerText =
               estimatedPrice.toLocaleString() + " kr";
           } else {
             priceEstimationElement.innerText = "-kr";
+            console.log("Invalid quantity or less than minimum required."); // Debugging log
           }
         };
 
         // Add event listener to the quantity input field to update price on change
-        quantityInput.addEventListener("input", calculatePrice);
+        quantityInput.addEventListener("input", calculateAndDisplayPrice);
 
         // Initial calculation to set default value
-        calculatePrice();
+        calculateAndDisplayPrice();
       })
       .catch((error) => console.error("Error fetching products:", error));
   }

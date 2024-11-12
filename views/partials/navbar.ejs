@@ -58,7 +58,9 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/butik" aria-label="Butik">Butik</a></li>
-      <li><a href="/stanleystella" aria-label="Stanley Stella">Stanley Stella</a></li>
+      <li>
+        <a href="/stanleystella" aria-label="Stanley Stella">Stanley Stella</a>
+      </li>
       <li><a href="/hallbarhet" aria-label="Hållbarhet">Hållbarhet</a></li>
       <li><a href="/about" aria-label="Om oss">Om oss</a></li>
       <li><a href="/kontakt" aria-label="Kontakt oss">Kontakta oss</a></li>
@@ -132,8 +134,12 @@
           <a href="/search?q=t-shirts" aria-label="Sök t-shirts">T-shirts</a>
           <a href="/search?q=hoodies" aria-label="Sök hoodies">Hoodies</a>
           <a href="/search?q=organic" aria-label="Sök ekologiskt">Ekologiskt</a>
-          <a href="/search?q=sustainable" aria-label="Sök hållbarhet">Hållbart</a>
-          <a href="/search?q=accessories" aria-label="Sök accesoarer">Accessoarer</a>
+          <a href="/search?q=sustainable" aria-label="Sök hållbarhet"
+            >Hållbart</a
+          >
+          <a href="/search?q=accessories" aria-label="Sök accesoarer"
+            >Accessoarer</a
+          >
         </div>
       </div>
       <!-- Search Results Container -->
@@ -160,17 +166,24 @@
         />
       </svg>
     </div>
+    <!-- Cart Items Container -->
     <div id="cartItemsContainer" class="cart-items-container body-text">
-      <!-- Cart items will be dynamically inserted here -->
+      <!-- Dynamic cart items will be inserted here by JavaScript -->
     </div>
+
+    <!-- Cart Summary Section -->
     <div class="cart-summary">
       <h2 class="heading-s">Totalt</h2>
       <p id="totalPrice" class="body-text">Varukostnad: 0 kr</p>
       <p class="body-text">Frakt från: 1500 kr</p>
       <p class="body-text">Summa: <span id="sumPrice">0 kr</span></p>
     </div>
+
+    <!-- Cart Buttons Section -->
     <div class="cart-buttons">
-      <button class="secondary-btn">Fortsätt handla</button>
+      <button class="secondary-btn" id="continueShoppingButton">
+        Fortsätt handla
+      </button>
       <a href="/offertforfragan" aria-label="Gå till offertförfrågan">
         <button class="primary-btn" id="checkoutButton">
           Gå till offertförfrågan
@@ -201,7 +214,9 @@
             required
           />
           <div class="remember-forgot">
-            <a href="#" class="forgot-password" aria-label="Glömt lösenord">Har du glömt ditt lösenord?</a>
+            <a href="#" class="forgot-password" aria-label="Glömt lösenord"
+              >Har du glömt ditt lösenord?</a
+            >
             <label class="remember-me">
               <input type="checkbox" />
               <span class="body-text">Kom ihåg mig</span>
@@ -209,7 +224,9 @@
           </div>
           <div class="button-container">
             <div class="register-link">
-              <a href="#" id="registerLink" aria-label="Registrera konto">Har du inte ett konto?</a>
+              <a href="#" id="registerLink" aria-label="Registrera konto"
+                >Har du inte ett konto?</a
+              >
             </div>
             <button type="submit" class="primary-btn">Logga in</button>
           </div>
@@ -307,7 +324,9 @@
 
           <div class="button-container">
             <div class="register-link">
-              <a href="#" onclick="openLoginModal()" aria-label="Logga in">Har du redan ett konto?</a>
+              <a href="#" onclick="openLoginModal()" aria-label="Logga in"
+                >Har du redan ett konto?</a
+              >
             </div>
             <button type="submit" class="primary-btn">Skapa konto</button>
           </div>
@@ -332,4 +351,5 @@
   <script src="/static/signup.js"></script>
   <script src="/static/registration.js"></script>
   <script src="/static/search_bar.js"></script>
+  <script src="/static/cart.js"></script>
 </nav>

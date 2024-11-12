@@ -1,70 +1,10 @@
 [
   {
+    "artikelnummer": "6518",
+    "quantity": 13,
+    "color": "French Navy",
     "name": "Bomber 2.0",
-    "artikelnummer": 6518,
-    "quantity": 1000,
-    "price": "288,000 kr",
-    "fit": "Unisex"
-  },
-  {
-    "name": "Bomber 2.0",
-    "artikelnummer": 6518,
-    "quantity": 1000,
-    "price": "288,000 kr",
-    "fit": "Unisex"
-  },
-  {
-    "name": "Changer 2.0",
-    "artikelnummer": 7919,
-    "color": "Heritage Brown",
-    "quantity": 12,
-    "price": "2 256 kr",
-    "fit": "Unisex",
-    "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp"
-  },
-  {
-    "name": "Changer 2.0",
-    "artikelnummer": 7919,
-    "color": "Blue Ice",
-    "quantity": 123,
-    "price": "25 338 kr",
-    "fit": "Unisex",
-    "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp"
-  },
-  {
-    "name": "Bomber 2.0",
-    "artikelnummer": 6518,
-    "color": "Black",
-    "quantity": 123223,
-    "price": "35 488 224 kr",
-    "fit": "Unisex",
-    "image": "/static/images/Products/Mains/50/webp/Bomber 2.0_Black_Duo_Front_Main_0_50.webp"
-  },
-  {
-    "name": "Changer 2.0",
-    "artikelnummer": 7919,
-    "color": "Misty Jade",
-    "quantity": 10,
-    "price": "1 880 kr",
-    "fit": "Unisex",
-    "image": "/static/images/Products/Mains/50/webp/Changer 2.0_Heritage Brown_Duo_Front_Main_0_50.webp"
-  },
-  {
-    "name": "Connector 2.0",
-    "artikelnummer": 2848,
-    "color": "Black",
-    "quantity": 15,
-    "price": "4 950 kr",
-    "fit": "Unisex",
-    "image": "/static/images/Products/Mains/50/webp/Connector 2.0_French Navy_Duo_Front_Main_0_50.webp"
-  },
-  {
-    "name": "Creator 2.0",
-    "artikelnummer": 9025,
-    "color": "Heather Haze",
-    "quantity": 10,
-    "price": "2 400 kr",
-    "fit": "Unisex",
-    "image": "/static/images/Products/Mains/50/webp/Creator 2.0_Heather Haze_Duo_Front_Main_0_50.webp"
+    "price": 4680,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg"
   }
 ]

@@ -5,98 +5,57 @@ const router = express.Router();
 
 // Paths to JSON files
 const ordersFilePath = path.join(__dirname, "../data/orders.json");
-const productsFilePath = path.join(__dirname, "../data/products.json");
 
 // Route to handle new orders
 router.post("/add-order", (req, res) => {
-  console.log("Received order data: ", req.body); // Log incoming data
-  const { artikelnummer, quantity, color } = req.body;
+  const { artikelnummer, quantity, color, name, price, image } = req.body;
 
-  // Read products from products.json to find the product
-  fs.readFile(productsFilePath, "utf8", (err, productsData) => {
+  // Check for missing fields
+  if (!artikelnummer || !quantity || !color || !name || !price || !image) {
+    console.error("Missing input data:", req.body);
+    return res
+      .status(400)
+      .json({ success: false, message: "Missing input data for order." });
+  }
+
+  // Proceed with adding the order if all required fields are present
+  fs.readFile(ordersFilePath, "utf8", (err, ordersData) => {
     if (err) {
-      console.error("Error reading products file:", err);
+      console.error("Error reading orders file:", err);
       return res
         .status(500)
         .json({ success: false, message: "Internal server error" });
     }
 
-    let products = [];
-    if (productsData) {
-      products = JSON.parse(productsData);
+    let orders = [];
+    if (ordersData) {
+      orders = JSON.parse(ordersData);
     }
 
-    // Find the product by artikelnummer
-    const product = products.find((p) => p.artikelnummer == artikelnummer);
-
-    if (!product) {
-      return res
-        .status(404)
-        .json({ success: false, message: "Product not found!" });
-    }
-
-    // Calculate the price based on quantity and price tiers
-    const price = calculatePrice(quantity, product.price_tiers);
-
-    // Construct order object
+    // Construct new order
     const newOrder = {
-      name: product.name,
-      artikelnummer: product.artikelnummer,
-      color: color,
-      quantity: quantity,
-      price: price.toLocaleString() + " kr", // Formatted price
-      fit: product.fit,
-      image: product.model_image.image,
+      artikelnummer,
+      quantity,
+      color,
+      name,
+      price,
+      image,
     };
 
-    console.log("New order data to be saved: ", newOrder); // Log order to be saved
+    // Add new order to the orders array
+    orders.push(newOrder);
 
-    // Read existing orders
-    fs.readFile(ordersFilePath, "utf8", (err, ordersData) => {
+    // Write the updated orders to orders.json
+    fs.writeFile(ordersFilePath, JSON.stringify(orders, null, 2), (err) => {
       if (err) {
-        console.error("Error reading orders file:", err);
+        console.error("Error writing to orders file:", err);
         return res
           .status(500)
           .json({ success: false, message: "Internal server error" });
       }
 
-      let orders = [];
-      if (ordersData) {
-        orders = JSON.parse(ordersData);
-      }
-
-      // Check if order already exists to update it
-      const existingOrderIndex = orders.findIndex(
-        (order) =>
-          order.artikelnummer === newOrder.artikelnummer &&
-          order.color === newOrder.color
-      );
-
-      if (existingOrderIndex !== -1) {
-        // If order exists, update the quantity
-        orders[existingOrderIndex].quantity += quantity;
-        orders[existingOrderIndex].price =
-          calculatePrice(
-            orders[existingOrderIndex].quantity,
-            product.price_tiers
-          ).toLocaleString() + " kr";
-      } else {
-        // Add the new order to orders
-        orders.push(newOrder);
-      }
-
-      // Write the updated orders to orders.json
-      fs.writeFile(ordersFilePath, JSON.stringify(orders, null, 2), (err) => {
-        if (err) {
-          console.error("Error writing to orders file:", err);
-          return res
-            .status(500)
-            .json({ success: false, message: "Internal server error" });
-        }
-
-        console.log("Order added successfully to orders.json"); // Log successful write
-        res.json({ success: true, message: "Order added successfully!" });
-      });
+      console.log("Order added successfully to orders.json");
+      res.json({ success: true, message: "Order added successfully!" });
     });
   });
 });
@@ -113,7 +72,14 @@ router.get("/get-orders", (req, res) => {
 
     let orders = [];
     if (ordersData) {
-      orders = JSON.parse(ordersData);
+      try {
+        orders = JSON.parse(ordersData);
+      } catch (parseError) {
+        console.error("Error parsing orders file:", parseError);
+        return res
+          .status(500)
+          .json({ success: false, message: "Invalid orders data" });
+      }
     }
 
     res.json({ success: true, orders: orders });
@@ -122,70 +88,65 @@ router.get("/get-orders", (req, res) => {
 
 // Route to handle deleting an order
 router.delete("/delete-order", (req, res) => {
-  const { artikelnummer, color } = req.body;
+  let body = "";
 
-  fs.readFile(ordersFilePath, "utf8", (err, ordersData) => {
-    if (err) {
-      console.error("Error reading orders file:", err);
-      return res
-        .status(500)
-        .json({ success: false, message: "Internal server error" });
-    }
+  req.on("data", (chunk) => {
+    body += chunk.toString();
+  });
 
-    let orders = [];
-    if (ordersData) {
-      orders = JSON.parse(ordersData);
-    }
+  req.on("end", () => {
+    try {
+      const { artikelnummer, color } = JSON.parse(body);
 
-    // Filter out the order to be deleted
-    const updatedOrders = orders.filter(
-      (order) =>
-        !(order.artikelnummer === artikelnummer && order.color === color)
-    );
+      if (!artikelnummer || !color) {
+        return res
+          .status(400)
+          .json({ success: false, message: "Invalid input data." });
+      }
 
-    // Write updated orders to orders.json
-    fs.writeFile(
-      ordersFilePath,
-      JSON.stringify(updatedOrders, null, 2),
-      (err) => {
+      fs.readFile(ordersFilePath, "utf8", (err, ordersData) => {
         if (err) {
-          console.error("Error writing to orders file:", err);
+          console.error("Error reading orders file:", err);
           return res
             .status(500)
             .json({ success: false, message: "Internal server error" });
         }
 
-        console.log("Order deleted successfully from orders.json"); // Log successful delete
-        res.json({ success: true, message: "Order deleted successfully!" });
-      }
-    );
+        let orders = [];
+        if (ordersData) {
+          orders = JSON.parse(ordersData);
+        }
+
+        // Filter out the order to be deleted
+        const updatedOrders = orders.filter(
+          (order) =>
+            !(order.artikelnummer === artikelnummer && order.color === color)
+        );
+
+        // Write updated orders to orders.json
+        fs.writeFile(
+          ordersFilePath,
+          JSON.stringify(updatedOrders, null, 2),
+          (err) => {
+            if (err) {
+              console.error("Error writing to orders file:", err);
+              return res
+                .status(500)
+                .json({ success: false, message: "Internal server error" });
+            }
+
+            console.log("Order deleted successfully from orders.json");
+            res.json({ success: true, message: "Order deleted successfully!" });
+          }
+        );
+      });
+    } catch (error) {
+      console.error("Error parsing request body:", error);
+      res
+        .status(400)
+        .json({ success: false, message: "Invalid JSON in request body." });
+    }
   });
 });
-
-// Function to calculate price based on quantity
-function calculatePrice(quantity, priceTiers) {
-  let pricePerUnit = 0;
-
-  // Iterate through price tiers to determine the correct price per unit
-  for (let tier of priceTiers) {
-    const [minRange, maxRange] = tier.range.includes("+")
-      ? [parseInt(tier.range.split("+")[0]), Infinity]
-      : tier.range.split("-").map(Number);
-
-    if (
-      quantity >= minRange &&
-      (maxRange === undefined || quantity <= maxRange)
-    ) {
-      pricePerUnit = tier.price_per_unit;
-      break;
-    }
-  }
-
-  if (pricePerUnit === 0) {
-    pricePerUnit = priceTiers[priceTiers.length - 1].price_per_unit;
-  }
-
-  return pricePerUnit * quantity;
-}
 
 module.exports = router;

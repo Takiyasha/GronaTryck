@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("An error occurred during registration. Please try again.");
+        alert("E-postadress already exist.");
       });
   });
 });

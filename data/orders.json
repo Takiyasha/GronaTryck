@@ -1,10 +1,34 @@
 [
   {
     "artikelnummer": "6518",
-    "quantity": 13,
+    "quantity": 15,
+    "color": "Black",
+    "name": "Bomber 2.0",
+    "price": 5400,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg"
+  },
+  {
+    "artikelnummer": "6518",
+    "quantity": 15,
+    "color": "Black",
+    "name": "Bomber 2.0",
+    "price": 5400,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg"
+  },
+  {
+    "artikelnummer": "6518",
+    "quantity": 18,
     "color": "French Navy",
     "name": "Bomber 2.0",
-    "price": 4680,
+    "price": 6480,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg"
+  },
+  {
+    "artikelnummer": "6518",
+    "quantity": 14,
+    "color": "Black",
+    "name": "Bomber 2.0",
+    "price": 5040,
     "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg"
   }
 ]

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const quantityInput = document.getElementById("quantityInput");
         const quantity = parseInt(quantityInput.value, 10);
         const selectedColor =
-          document.getElementById("selectedColor").innerText;
+          document.getElementById("selectedColor").innerText || "Ej vald";
         const productImage = document.querySelector(
           ".product-model-image img"
         ).src;
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
             pricePerUnit = parseInt(priceMatch.join(""), 10) / quantity;
           }
         }
-
         const price = quantity * pricePerUnit;
 
         // Construct Order Data
@@ -62,35 +61,18 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Order Data Constructed: ", orderData);
 
         // Add Order to Backend (orders.json)
-        fetch("/order/add-order", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(orderData),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(
-                "Failed to save order to server. Status: " + response.status
-              );
-            }
-            return response.json();
-          })
-          .then((data) => {
-            if (!data.success) {
-              console.error(
-                "Failed to save order to server. Server response:",
-                data
-              );
-            } else {
+        addOrderToBackend(orderData)
+          .then((success) => {
+            if (success) {
               console.log("Order added to server successfully.");
-              // Refresh the Cart UI after order is added to the backend
-              initializeCart();
+              // Add to LocalStorage to manage the UI without reloading
+              addProductToLocalStorage(orderData);
+              // Refresh the cart UI after adding product
+              renderCartItems(getCartItemsFromLocalStorage());
             }
           })
           .catch((error) => {
-            console.error("Error saving order to server:", error);
+            console.error("Error while adding product to backend: ", error);
           });
       } catch (error) {
         console.error("Error while adding product to cart: ", error);
@@ -99,7 +81,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Reinitialize the cart after adding or removing an item
+async function addOrderToBackend(orderData) {
+  try {
+    const response = await fetch("/order/add-order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderData),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        "Failed to save order to server. Status: " + response.status
+      );
+    }
+
+    const data = await response.json();
+    return data.success;
+  } catch (error) {
+    console.error("Error saving order to server:", error);
+    return false;
+  }
+}
+
 function initializeCart() {
   const cartIcon = document.getElementById("cartIcon");
   const cartPanel = document.getElementById("cartPanel");
@@ -113,6 +118,9 @@ function initializeCart() {
     cartIcon.addEventListener("click", (e) => {
       e.stopPropagation();
       cartPanel.classList.toggle("show");
+      if (cartPanel.classList.contains("show")) {
+        renderCartItems(getCartItemsFromLocalStorage());
+      }
     });
 
     closeCartPanel.addEventListener("click", (e) => {
@@ -126,99 +134,74 @@ function initializeCart() {
       }
     });
   }
+}
 
-  // Fetch and Render Cart Items
-  fetchCartItems();
+function addProductToLocalStorage(product) {
+  let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+  cart.push(product);
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
+}
 
-  function fetchCartItems() {
-    fetch("/order/get-orders")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          renderCartItems(data.orders);
-        } else {
-          console.error("Failed to fetch orders from server.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching orders from server:", error);
-      });
+function getCartItemsFromLocalStorage() {
+  return JSON.parse(localStorage.getItem("shoppingCart")) || [];
+}
+
+function renderCartItems(orders) {
+  const cartItemsContainer = document.getElementById("cartItemsContainer");
+  const totalPriceElement = document.getElementById("totalPrice");
+  const sumPriceElement = document.getElementById("sumPrice");
+
+  if (orders.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Din offertförfrågan är tom.</p>";
+    totalPriceElement.innerText = "Varukostnad: 0 kr";
+    sumPriceElement.innerText = "0 kr";
+    return;
   }
 
-  function renderCartItems(orders) {
-    if (orders.length === 0) {
-      cartItemsContainer.innerHTML = "<p>Din offertförfrågan är tom.</p>";
-      totalPriceElement.innerText = "Varukostnad: 0 kr";
-      sumPriceElement.innerText = "0 kr";
-      return;
-    }
+  let itemsHTML = "";
+  let totalPrice = 0;
 
-    let itemsHTML = "";
-    let totalPrice = 0;
+  orders.forEach((item, index) => {
+    const itemTotalPrice = item.price;
 
-    orders.forEach((item) => {
-      // Here, we assume item.price is already the price for the quantity selected
-      const itemTotalPrice = item.price;
-
-      itemsHTML += `
-        <div class="cart-item" data-artikelnummer="${
-          item.artikelnummer
-        }" data-color="${item.color}">
-          <div class="cart-item-image">
-            <img src="${item.image}" alt="${item.name}" />
-          </div>
-          <div class="cart-item-details">
-            <p><strong>${item.name}</strong></p>
-            <p>Art.nr: ${item.artikelnummer}</p>
-            <p>Färg: ${item.color}</p>
-            <p>Antal: <span class="item-quantity">${item.quantity}</span></p>
-            <p>Pris: ${itemTotalPrice.toLocaleString()} kr</p> <!-- Fixed price display for individual product -->
-          </div>
-          <div class="cart-item-actions">
-            <button class="delete-btn">&times;</button>
-          </div>
+    itemsHTML += `
+      <div class="cart-item" data-index="${index}">
+        <div class="cart-item-image">
+          <img src="${item.image}" alt="${item.name}" />
         </div>
-      `;
+        <div class="cart-item-details">
+          <p><strong>${item.name}</strong></p>
+          <p>Art.nr: ${item.artikelnummer}</p>
+          <p>Färg: ${item.color}</p>
+          <p>Antal: <span class="item-quantity">${item.quantity}</span></p>
+          <p>Pris: ${itemTotalPrice.toLocaleString()} kr</p>
+        </div>
+        <div class="cart-item-actions">
+          <button class="delete-btn" data-index="${index}">&times;</button>
+        </div>
+      </div>
+    `;
 
-      totalPrice += itemTotalPrice;
+    totalPrice += itemTotalPrice;
+  });
+
+  cartItemsContainer.innerHTML = itemsHTML;
+  totalPriceElement.innerText = `Varukostnad: ${totalPrice.toLocaleString()} kr`;
+  const totalSum = totalPrice + 1500; // Add shipping cost
+  sumPriceElement.innerText = `${totalSum.toLocaleString()} kr`;
+
+  // Attach delete event listeners after rendering
+  document.querySelectorAll(".delete-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const index = e.target.dataset.index;
+      removeCartItemFromLocalStorage(index);
+      renderCartItems(getCartItemsFromLocalStorage()); // Refresh cart UI after removing an item
     });
+  });
+}
 
-    cartItemsContainer.innerHTML = itemsHTML;
-    totalPriceElement.innerText = `Varukostnad: ${totalPrice.toLocaleString()} kr`;
-    const totalSum = totalPrice + 1500; // Add shipping cost
-    sumPriceElement.innerText = `${totalSum.toLocaleString()} kr`;
-
-    // Attach delete event listeners after rendering
-    document.querySelectorAll(".delete-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        const cartItemElement = e.target.closest(".cart-item");
-        const artikelnummer = cartItemElement.dataset.artikelnummer;
-        const color = cartItemElement.dataset.color;
-        removeCartItem(artikelnummer, color);
-      });
-    });
-  }
-
-  function removeCartItem(artikelnummer, color) {
-    fetch(`/order/delete-order`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ artikelnummer, color }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (!data.success) {
-          console.error("Failed to delete order from server.");
-        } else {
-          console.log("Order deleted from server successfully!");
-          // Refresh the cart UI after order is deleted
-          initializeCart();
-        }
-      })
-      .catch((error) => {
-        console.error("Error deleting order from server:", error);
-      });
-  }
+function removeCartItemFromLocalStorage(index) {
+  let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+  cart.splice(index, 1); // Remove item from the cart array
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
 }

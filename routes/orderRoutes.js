@@ -90,10 +90,12 @@ router.get("/get-orders", (req, res) => {
 router.delete("/delete-order", (req, res) => {
   let body = "";
 
+  // Collect data from the request
   req.on("data", (chunk) => {
     body += chunk.toString();
   });
 
+  // Once all data is received
   req.on("end", () => {
     try {
       const { artikelnummer, color } = JSON.parse(body);
@@ -123,7 +125,7 @@ router.delete("/delete-order", (req, res) => {
             !(order.artikelnummer === artikelnummer && order.color === color)
         );
 
-        // Write updated orders to orders.json
+        // Write the updated orders to orders.json
         fs.writeFile(
           ordersFilePath,
           JSON.stringify(updatedOrders, null, 2),

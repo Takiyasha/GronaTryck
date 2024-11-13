@@ -1,4 +1,34 @@
 // indexeddb.js
+
+// Function to open or create IndexedDB with product store
+function openDatabase() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open("ProductDB", 1);
+
+    request.onerror = function (event) {
+      console.error("Database error: ", event.target.errorCode);
+      reject("Error opening product database");
+    };
+
+    request.onsuccess = function (event) {
+      console.log("Product database opened successfully");
+      resolve(event.target.result);
+    };
+
+    request.onupgradeneeded = function (event) {
+      const db = event.target.result;
+
+      if (!db.objectStoreNames.contains("products")) {
+        const objectStore = db.createObjectStore("products", {
+          keyPath: "id",
+          autoIncrement: true,
+        });
+        objectStore.createIndex("name", "name", { unique: false });
+      }
+    };
+  });
+}
+
 // Function to sync product with server
 async function syncProductWithServer(product, method) {
   try {
@@ -27,7 +57,7 @@ async function syncProductWithServer(product, method) {
   }
 }
 
-// Add product and sync with server
+// Add product to IndexedDB and sync with server
 async function addProduct(product) {
   const db = await openDatabase();
   const transaction = db.transaction(["products"], "readwrite");
@@ -45,25 +75,7 @@ async function addProduct(product) {
   };
 }
 
-// Update product and sync with server
-async function updateProduct(product) {
-  const db = await openDatabase();
-  const transaction = db.transaction(["products"], "readwrite");
-  const objectStore = transaction.objectStore("products");
-
-  const request = objectStore.put(product);
-
-  request.onsuccess = function () {
-    console.log("Product updated successfully:", product);
-    syncProductWithServer(product, "PUT");
-  };
-
-  request.onerror = function (event) {
-    console.error("Error updating product: ", event.target.error);
-  };
-}
-
-// Delete product and sync with server
+// Delete product from IndexedDB and sync with server
 async function deleteProduct(productId) {
   const db = await openDatabase();
   const transaction = db.transaction(["products"], "readwrite");
@@ -78,48 +90,5 @@ async function deleteProduct(productId) {
 
   request.onerror = function (event) {
     console.error("Error deleting product: ", event.target.error);
-  };
-}
-
-// Function to open or create IndexedDB with user store
-function openUserDatabase() {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open("UserDB", 1);
-
-    request.onerror = function (event) {
-      console.error("Database error: ", event.target.errorCode);
-      reject("Error opening user database");
-    };
-
-    request.onsuccess = function (event) {
-      console.log("User database opened successfully");
-      resolve(event.target.result);
-    };
-
-    request.onupgradeneeded = function (event) {
-      const db = event.target.result;
-
-      if (!db.objectStoreNames.contains("users")) {
-        const objectStore = db.createObjectStore("users", { keyPath: "id" });
-        objectStore.createIndex("email", "email", { unique: true });
-      }
-    };
-  });
-}
-
-// CRUD functions similar to products
-async function addUser(user) {
-  const db = await openUserDatabase();
-  const transaction = db.transaction(["users"], "readwrite");
-  const objectStore = transaction.objectStore("users");
-
-  const request = objectStore.add(user);
-
-  request.onsuccess = function () {
-    console.log("User added successfully:", user);
-  };
-
-  request.onerror = function (event) {
-    console.error("Error adding user: ", event.target.error);
   };
 }

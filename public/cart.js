@@ -139,7 +139,23 @@ function initializeCart() {
 
 function addProductToLocalStorage(product) {
   let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
-  cart.push(product);
+
+  // Check if product already exists
+  const existingProductIndex = cart.findIndex(
+    (item) =>
+      item.artikelnummer === product.artikelnummer &&
+      item.color === product.color
+  );
+
+  if (existingProductIndex > -1) {
+    // Update the existing product quantity and price
+    cart[existingProductIndex].quantity += product.quantity;
+    cart[existingProductIndex].price += product.price;
+  } else {
+    // Add new product
+    cart.push(product);
+  }
+
   localStorage.setItem("shoppingCart", JSON.stringify(cart));
 }
 

@@ -109,9 +109,6 @@ function initializeCart() {
   const cartIcon = document.getElementById("cartIcon");
   const cartPanel = document.getElementById("cartPanel");
   const closeCartPanel = document.getElementById("closeCartPanel");
-  const cartItemsContainer = document.getElementById("cartItemsContainer");
-  const totalPriceElement = document.getElementById("totalPrice");
-  const sumPriceElement = document.getElementById("sumPrice");
 
   if (cartIcon && cartPanel && closeCartPanel) {
     // Add Event Listeners for Opening/Closing Cart
@@ -129,7 +126,11 @@ function initializeCart() {
     });
 
     window.addEventListener("click", (e) => {
-      if (!e.target.closest("#cartIcon") && !e.target.closest("#cartPanel")) {
+      if (
+        !e.target.closest("#cartIcon") &&
+        !e.target.closest("#cartPanel") &&
+        !e.target.closest(".delete-btn")
+      ) {
         cartPanel.classList.remove("show");
       }
     });
@@ -193,15 +194,38 @@ function renderCartItems(orders) {
   // Attach delete event listeners after rendering
   document.querySelectorAll(".delete-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent cart from auto-closing when clicking delete
       const index = e.target.dataset.index;
-      removeCartItemFromLocalStorage(index);
+      const item = orders[index];
+      removeCartItem(index, item.artikelnummer, item.color);
       renderCartItems(getCartItemsFromLocalStorage()); // Refresh cart UI after removing an item
     });
   });
 }
 
-function removeCartItemFromLocalStorage(index) {
+function removeCartItem(index, artikelnummer, color) {
+  // Remove from local storage
   let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
   cart.splice(index, 1); // Remove item from the cart array
   localStorage.setItem("shoppingCart", JSON.stringify(cart));
+
+  // Remove from backend
+  fetch(`/order/delete-order`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ artikelnummer, color }), // Send product details to delete from backend
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (!data.success) {
+        console.error("Failed to delete order from server.");
+      } else {
+        console.log("Order deleted from server successfully.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error deleting order from server:", error);
+    });
 }

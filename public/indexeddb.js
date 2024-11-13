@@ -33,7 +33,7 @@ function openDatabase() {
 async function syncProductWithServer(product, method) {
   try {
     const response = await fetch(
-      `/products/${method === "POST" ? "" : product.id}`,
+      `/order/${method === "POST" ? "add-order" : "delete-order"}`,
       {
         method: method,
         headers: {
@@ -49,7 +49,7 @@ async function syncProductWithServer(product, method) {
 
     const data = await response.json();
     console.log(
-      `Product ${method === "POST" ? "added" : "updated"} on server:`,
+      `Product ${method === "POST" ? "added" : "deleted"} on server:`,
       data
     );
   } catch (error) {
@@ -58,37 +58,54 @@ async function syncProductWithServer(product, method) {
 }
 
 // Add product to IndexedDB and sync with server
+// Add product to IndexedDB and sync with server
 async function addProduct(product) {
-  const db = await openDatabase();
-  const transaction = db.transaction(["products"], "readwrite");
-  const objectStore = transaction.objectStore("products");
+  try {
+    const db = await openDatabase();
+    const transaction = db.transaction(["products"], "readwrite");
+    const objectStore = transaction.objectStore("products");
 
-  const request = objectStore.add(product);
+    // Ensure the product does not contain an `id` field
+    const productWithoutId = { ...product };
+    delete productWithoutId.id;
 
-  request.onsuccess = function () {
-    console.log("Product added successfully:", product);
-    syncProductWithServer(product, "POST");
-  };
+    // Add product to IndexedDB
+    const request = objectStore.add(productWithoutId);
 
-  request.onerror = function (event) {
-    console.error("Error adding product: ", event.target.error);
-  };
+    request.onsuccess = function () {
+      console.log("Product added successfully:", productWithoutId);
+      syncProductWithServer(
+        { ...productWithoutId, id: request.result },
+        "POST"
+      );
+    };
+
+    request.onerror = function (event) {
+      console.error("Error adding product to IndexedDB: ", event.target.error);
+    };
+  } catch (error) {
+    console.error("Error accessing IndexedDB: ", error);
+  }
 }
 
 // Delete product from IndexedDB and sync with server
 async function deleteProduct(productId) {
-  const db = await openDatabase();
-  const transaction = db.transaction(["products"], "readwrite");
-  const objectStore = transaction.objectStore("products");
+  try {
+    const db = await openDatabase();
+    const transaction = db.transaction(["products"], "readwrite");
+    const objectStore = transaction.objectStore("products");
 
-  const request = objectStore.delete(productId);
+    const request = objectStore.delete(productId);
 
-  request.onsuccess = function () {
-    console.log("Product deleted successfully with ID:", productId);
-    syncProductWithServer({ id: productId }, "DELETE");
-  };
+    request.onsuccess = function () {
+      console.log("Product deleted successfully with ID:", productId);
+      syncProductWithServer({ id: productId }, "DELETE");
+    };
 
-  request.onerror = function (event) {
-    console.error("Error deleting product: ", event.target.error);
-  };
+    request.onerror = function (event) {
+      console.error("Error deleting product: ", event.target.error);
+    };
+  } catch (error) {
+    console.error("Error accessing IndexedDB: ", error);
+  }
 }

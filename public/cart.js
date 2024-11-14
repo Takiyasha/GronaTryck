@@ -194,7 +194,8 @@ function renderCartItems(orders) {
           <p>Pris: ${itemTotalPrice.toLocaleString()} kr</p>
         </div>
         <div class="cart-item-actions">
-          <button class="delete-btn" data-index="${index}">&times;</button>
+          <button class="delete-btn" data-index="${index}">&times;
+          </button>
         </div>
       </div>
     `;

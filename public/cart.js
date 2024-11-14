@@ -166,11 +166,13 @@ function getCartItemsFromLocalStorage() {
 function renderCartItems(orders) {
   const cartItemsContainer = document.getElementById("cartItemsContainer");
   const totalPriceElement = document.getElementById("totalPrice");
+  const vatAmountElement = document.getElementById("vatAmount");
   const sumPriceElement = document.getElementById("sumPrice");
 
   if (orders.length === 0) {
     cartItemsContainer.innerHTML = "<p>Din offertförfrågan är tom.</p>";
     totalPriceElement.innerText = "Varukostnad: 0 kr";
+    vatAmountElement.innerText = "Moms från: 0 kr";
     sumPriceElement.innerText = "0 kr";
     return;
   }
@@ -203,8 +205,12 @@ function renderCartItems(orders) {
   });
 
   cartItemsContainer.innerHTML = itemsHTML;
+
+  const vatAmount = Math.round(totalPrice * 0.25); // Calculate VAT (25%)
+  const totalSum = totalPrice + vatAmount;
+
   totalPriceElement.innerText = `Varukostnad: ${totalPrice.toLocaleString()} kr`;
-  const totalSum = totalPrice + 1500; // Add shipping cost
+  vatAmountElement.innerText = `Moms från: ${vatAmount.toLocaleString()} kr`;
   sumPriceElement.innerText = `${totalSum.toLocaleString()} kr`;
 
   // Attach delete event listeners after rendering

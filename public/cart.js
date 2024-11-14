@@ -79,6 +79,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Event listener for "Gå till offertförfrågan" button
+  const checkoutButton = document.getElementById("checkoutButton");
+
+  if (checkoutButton) {
+    checkoutButton.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Get the current cart items from local storage
+      const cartItems = getCartItemsFromLocalStorage();
+
+      if (cartItems.length === 0) {
+        alert("Din offertförfrågan är tom.");
+        return;
+      }
+
+      // Save cart items to session storage to use on the "Offertförfrågan" page
+      sessionStorage.setItem("checkoutItems", JSON.stringify(cartItems));
+
+      // Redirect to the "Offertförfrågan" page
+      window.location.href = "/offertforfragan";
+    });
+  }
 });
 
 async function addOrderToBackend(orderData) {
@@ -196,8 +219,7 @@ function renderCartItems(orders) {
           <p>Pris: ${itemTotalPrice.toLocaleString()} kr</p>
         </div>
         <div class="cart-item-actions">
-          <button class="delete-btn" data-index="${index}">&times;
-          </button>
+          <button class="delete-btn" data-index="${index}">&times;</button>
         </div>
       </div>
     `;

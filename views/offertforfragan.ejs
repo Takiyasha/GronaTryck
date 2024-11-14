@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Skicka in din offertförfrågan så tar vi kontakt med dig så fort vi kan!"/>
+    <meta
+      name="description"
+      content="Skicka in din offertförfrågan så tar vi kontakt med dig så fort vi kan!"
+    />
     <title>Gröna Tryck - Offertförfrågan</title>
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="stylesheet" href="/static/popup.css" />
@@ -19,7 +22,12 @@
           Pris <span class="alt-text-s">(exkl. moms)</span>
         </h3>
       </div>
-      <div>produkter här</div>
+
+      <!-- Container for dynamic product list -->
+      <div id="product-list" class="checkout-items-container">
+        <!-- JavaScript will render the product list here -->
+      </div>
+
       <div class="checkout-price-container">
         <h2 class="heading-m">Totalt</h2>
         <div>
@@ -27,11 +35,15 @@
             <h3 class="heading-s">
               Varukostnad <span class="alt-text-s">(exkl. moms)</span>:
             </h3>
-            <h3 class="heading-s">65 345 kr</h3>
+            <h3 id="totalPrice" class="heading-s">0 kr</h3>
+          </div>
+          <div class="checkout-price-calc">
+            <h3 class="heading-s">Moms från:</h3>
+            <h3 id="momsPrice" class="heading-s">0 kr</h3>
           </div>
           <div class="checkout-price-calc">
             <h3 class="heading-s">Summa:</h3>
-            <h3 class="heading-s">68 543 kr</h3>
+            <h3 id="sumPrice" class="heading-s">0 kr</h3>
           </div>
         </div>
       </div>
@@ -92,6 +104,7 @@
     </section>
 
     <%- include('partials/footer') %> <%- include('partials/chatbox') %>
+    <script src="/static/offertforfragan.js"></script>
     <script src="/static/script.js"></script>
   </body>
 </html>

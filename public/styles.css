@@ -1064,8 +1064,6 @@ span {
   }
 }
 
-
-
 .heroStSt picture img {
   position: absolute;
   top: 0;
@@ -2320,17 +2318,19 @@ textarea {
 }
 
 /* Offertförfrågan */
-
 .checkout-headings {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 10px;
 }
 
 .checkout-price-calc {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between; /* Keep consistent for price calculations */
   gap: 16px;
+  margin-bottom: 10px;
 }
 
 .checkout-price-calc h3 {
@@ -2339,7 +2339,6 @@ textarea {
 
 .checkout-form-btns {
   display: flex;
-  flex-direction: row;
   gap: 16px;
   margin-top: 16px;
 }
@@ -2351,6 +2350,20 @@ textarea {
 .checkout-price-container {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+}
+
+.checkout-items-container {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.checkout-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2394,8 +2407,6 @@ textarea {
   border-radius: 0 0 4px 4px; /* Rounded corners only at the bottom */
   padding-block: 20px;
 }
-
-
 
 .search-dropdown.active {
   display: block;
@@ -2445,8 +2456,6 @@ textarea {
 .popular-tags a:hover {
   background-color: #4d8148;
 }
-
-
 
 .search-results {
   display: flex;

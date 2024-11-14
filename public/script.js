@@ -1,5 +1,16 @@
 ////////////////////////////////////////////////////////////////
 
+document.getElementById("goToOffertButton").addEventListener("click", () => {
+  // Get the current cart items from local storage
+  const cartItems = getCartItemsFromLocalStorage();
+
+  // Save cart items to session storage to use on the "Offertförfrågan" page
+  sessionStorage.setItem("checkoutItems", JSON.stringify(cartItems));
+
+  // Redirect to the "Offertförfrågan" page
+  window.location.href = "/offertforfragan"; // Update this path as necessary
+});
+
 // Quantity input and price estimation calculation
 document.addEventListener("DOMContentLoaded", function () {
   const loadMoreButton = document.getElementById("loadMoreButton");

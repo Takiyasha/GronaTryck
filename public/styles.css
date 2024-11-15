@@ -660,6 +660,18 @@ section {
   margin-bottom: 16px;
 }
 
+.heading-l-responsive {
+  font-size: 22px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #052900;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 44px;
+  }
+}
+
 .heading-l-c-responsive {
   font-size: 22px;
   font-family: "Poppins";

@@ -188,9 +188,9 @@ function getCartItemsFromLocalStorage() {
 
 function renderCartItems(orders) {
   const cartItemsContainer = document.getElementById("cartItemsContainer");
-  const totalPriceElement = document.getElementById("totalPrice");
-  const vatAmountElement = document.getElementById("vatAmount");
-  const sumPriceElement = document.getElementById("sumPrice");
+  const totalPriceElement = document.getElementById("cartTotalPrice");
+  const vatAmountElement = document.getElementById("cartVatAmount");
+  const sumPriceElement = document.getElementById("cartSumPrice");
 
   if (orders.length === 0) {
     cartItemsContainer.innerHTML = "<p>Din offertförfrågan är tom.</p>";

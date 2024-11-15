@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("offertforfragan.js loaded"); // Check if script is loaded
+  console.log("offertforfragan.js loaded");
 
   // Retrieve checkout items from session storage
   const checkoutItems =
     JSON.parse(sessionStorage.getItem("checkoutItems")) || [];
-  console.log("Checkout Items:", checkoutItems); // Debugging output
+  console.log("Checkout Items:", checkoutItems);
 
-  // Get references to the HTML elements
+  // Get references to the HTML elements (use distinct IDs for "Offertförfrågan" page)
   const productList = document.getElementById("product-list");
-  const totalPriceElement = document.getElementById("totalPrice");
-  const momsPriceElement = document.getElementById("momsPrice");
-  const sumPriceElement = document.getElementById("sumPrice");
+  const totalPriceElement = document.getElementById("offertTotalPrice");
+  const momsPriceElement = document.getElementById("offertVatAmount");
+  const sumPriceElement = document.getElementById("offertSumPrice");
 
   // Check if elements exist
   if (
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Check if there are any items to display
   if (checkoutItems.length === 0) {
     productList.innerHTML = "<p>Din offertförfrågan är tom.</p>";
-    totalPriceElement.innerText = "0 kr";
-    momsPriceElement.innerText = "0 kr";
+    totalPriceElement.innerText = "Varukostnad: 0 kr";
+    momsPriceElement.innerText = "Moms från: 0 kr";
     sumPriceElement.innerText = "0 kr";
     return;
   }
@@ -40,17 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemTotalPrice = item.price;
 
     itemsHTML += `
-            <div class="checkout-item">
-              <p>${item.name} (Art.nr: ${item.artikelnummer})</p>
-              <p>${item.quantity}</p>
-              <p>${itemTotalPrice.toLocaleString()} kr</p>
-            </div>
-          `;
+        <div class="checkout-item">
+          <p>${item.name} (Art.nr: ${item.artikelnummer})</p>
+          <p>Antal: ${item.quantity}</p>
+          <p>Pris: ${itemTotalPrice.toLocaleString()} kr</p>
+        </div>
+      `;
 
     totalPrice += itemTotalPrice;
   });
 
-  // Render the product list
   productList.innerHTML = itemsHTML;
 
   // Calculate moms (VAT) and sum price
@@ -58,11 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const sumPrice = totalPrice + momsPrice;
 
   // Update the values in the HTML
-  totalPriceElement.innerText = `${totalPrice.toLocaleString()} kr`;
-  momsPriceElement.innerText = `${momsPrice.toLocaleString()} kr`;
-  sumPriceElement.innerText = `${sumPrice.toLocaleString()} kr`;
+  totalPriceElement.innerText = `Varukostnad: ${totalPrice.toLocaleString()} kr`;
+  momsPriceElement.innerText = `Moms från: ${momsPrice.toLocaleString()} kr`;
+  sumPriceElement.innerText = `Summa: ${sumPrice.toLocaleString()} kr`;
 
-  console.log("Total Price:", totalPrice);
-  console.log("Moms Price:", momsPrice);
-  console.log("Sum Price:", sumPrice);
+  console.log("Total Price Calculated:", totalPrice);
+  console.log("Moms Price Calculated:", momsPrice);
+  console.log("Sum Price Calculated:", sumPrice);
+  console.log("Updated HTML with calculated values.");
 });

@@ -2484,3 +2484,13 @@ textarea {
     max-width: calc(25% - 20px);
   }
 }
+
+#totalPrice,
+#momsPrice,
+#sumPrice {
+  background-color: yellow; /* Debug background color */
+  color: black; /* Ensure text color contrasts */
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid black; /* Highlight the borders for visibility */
+}

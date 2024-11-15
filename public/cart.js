@@ -132,11 +132,13 @@ function initializeCart() {
   const cartIcon = document.getElementById("cartIcon");
   const cartPanel = document.getElementById("cartPanel");
   const closeCartPanel = document.getElementById("closeCartPanel");
+  const loginModal = document.getElementById("loginModal");
 
   if (cartIcon && cartPanel && closeCartPanel) {
     // Add Event Listeners for Opening/Closing Cart
     cartIcon.addEventListener("click", (e) => {
       e.stopPropagation();
+      if (loginModal) loginModal.style.display = "none"; // Close login modal if open
       cartPanel.classList.toggle("show");
       if (cartPanel.classList.contains("show")) {
         renderCartItems(getCartItemsFromLocalStorage());

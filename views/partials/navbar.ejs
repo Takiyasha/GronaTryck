@@ -108,7 +108,65 @@
       </svg>
     </a>
   </div>
+  <!-- Modal Structure (login modal hidden by default) -->
+  <div id="loginModal" class="modal" style="display: none">
+    <div class="modal-content">
+      <div class="login-form-container">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="heading-m">Logga in</h2>
+        <form id="loginForm">
+          <label for="loginEmail" class="body-text">E-postadress</label>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Ange e-postadress..."
+            required
+          />
+          <label for="loginPassword" class="body-text">Lösenord</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Ange lösenord..."
+            required
+          />
+          <div class="remember-forgot">
+            <a href="#" class="forgot-password" aria-label="Glömt lösenord"
+              >Har du glömt ditt lösenord?</a
+            >
+            <label class="remember-me">
+              <input type="checkbox" />
+              <span class="body-text">Kom ihåg mig</span>
+            </label>
+          </div>
+          <div class="button-container">
+            <div class="register-link">
+              <a href="#" id="registerLink" aria-label="Registrera konto"
+                >Har du inte ett konto?</a
+              >
+            </div>
+            <button type="submit" class="primary-btn">Logga in</button>
+          </div>
+        </form>
+      </div>
+      <img
+        class="blob-image"
+        src="/static/images/infographics-folder/graphical-elements/blob-small.svg"
+        alt="graphic element blob"
+      />
+    </div>
+  </div>
 
+  <!-- Bekfräftelse modal-->
+  <div id="confirmationModal" class="confirm-modal">
+    <div class="confirm-modal-content confirmation-content">
+      <span class="close" onclick="closeConfirmationModal()">&times;</span>
+      <h2 class="heading-m">Inloggning lyckades</h2>
+      <p class="body-text">Du är nu inloggad</p>
+      <a href="/installning-sidan/mina-sidor" aria-label="Mina sidor">
+        <button class="primary-btn">Mina sidor</button>
+      </a>
+    </div>
+  </div>
   <!-- Search Dropdown -->
   <div class="search-dropdown hidden" id="searchDropdown">
     <div class="search-container">
@@ -189,55 +247,7 @@
       </button>
     </div>
     
-    
-
-  <!-- Modal Structure (login modal hidden by default) -->
-  <div id="loginModal" class="modal" style="display: none">
-    <div class="modal-content">
-      <div class="login-form-container">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 class="heading-m">Logga in</h2>
-        <form id="loginForm">
-          <label for="loginEmail" class="body-text">E-postadress</label>
-          <input
-            type="email"
-            id="loginEmail"
-            placeholder="Ange e-postadress..."
-            required
-          />
-          <label for="loginPassword" class="body-text">Lösenord</label>
-          <input
-            type="password"
-            id="loginPassword"
-            placeholder="Ange lösenord..."
-            required
-          />
-          <div class="remember-forgot">
-            <a href="#" class="forgot-password" aria-label="Glömt lösenord"
-              >Har du glömt ditt lösenord?</a
-            >
-            <label class="remember-me">
-              <input type="checkbox" />
-              <span class="body-text">Kom ihåg mig</span>
-            </label>
-          </div>
-          <div class="button-container">
-            <div class="register-link">
-              <a href="#" id="registerLink" aria-label="Registrera konto"
-                >Har du inte ett konto?</a
-              >
-            </div>
-            <button type="submit" class="primary-btn">Logga in</button>
-          </div>
-        </form>
-      </div>
-      <img
-        class="blob-image"
-        src="/static/images/infographics-folder/graphical-elements/blob-small.svg"
-        alt="graphic element blob"
-      />
-    </div>
-  </div>
+  
 
   <!-- Bekfräftelse modal-->
   <div id="confirmationModal" class="confirm-modal">

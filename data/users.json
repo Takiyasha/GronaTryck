@@ -22,5 +22,13 @@
     "address": "Barrskogsgatan 20",
     "postalCode": "784 30",
     "phoneNumber": "0730351042"
+  },
+  {
+    "email": "va@gmail.com",
+    "password": "123",
+    "name": "asd",
+    "address": "ASD",
+    "postalCode": "asd",
+    "phoneNumber": "asd"
   }
 ]

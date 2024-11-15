@@ -2336,11 +2336,12 @@ textarea {
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 10px;
+  padding-right: 20px;
 }
 
 .checkout-price-calc {
   display: flex;
-  justify-content: space-between; /* Keep consistent for price calculations */
+  justify-content: space-between;
   gap: 16px;
   margin-bottom: 10px;
 }
@@ -2363,6 +2364,7 @@ textarea {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  border-top: 4px solid #052900;
 }
 
 .checkout-items-container {
@@ -2376,6 +2378,8 @@ textarea {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 20px;
   align-items: center;
+  padding-right: 20px;
+  border-top: 2px solid #052900;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2404,6 +2408,24 @@ textarea {
 @media screen and (min-width: 1920px) {
   .checkout-form-container {
     gap: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .checkout-item, .checkout-headings {
+    padding-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .checkout-item, .checkout-headings {
+    padding-right: 260px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .checkout-item, .checkout-headings {
+    padding-right: 500px;
   }
 }
 

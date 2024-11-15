@@ -123,7 +123,6 @@ if (loggedInIcon) {
 }
 
 // Handle logout button click
-// Handle logout button click
 document.addEventListener("DOMContentLoaded", function () {
   const logoutButton = document.getElementById("logoutButton");
   if (logoutButton) {

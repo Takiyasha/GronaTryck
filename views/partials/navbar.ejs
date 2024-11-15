@@ -167,6 +167,89 @@
       </a>
     </div>
   </div>
+
+    <!-- Create Account Modal Structure -->
+    <div id="createAccountModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="create-account-form-container">
+          <span class="close" onclick="closeCreateAccountModal()">&times;</span>
+          <h2 class="heading-m">Skapa ett konto</h2>
+          <form id="createAccountForm">
+            <label for="email" class="body-text">E-postadress</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Ange e-postadress..."
+              required
+            />
+  
+            <label for="confirmEmail" class="body-text"
+              >Bekräfta e-postadress</label
+            >
+            <input
+              type="email"
+              id="confirmEmail"
+              placeholder="Ange e-postadress..."
+              required
+            />
+  
+            <label for="password" class="body-text">Lösenord</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Ange lösenord..."
+              required
+            />
+  
+            <label for="confirmPassword" class="body-text"
+              >Bekräfta lösenord</label
+            >
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Ange lösenord..."
+              required
+            />
+  
+            <label for="name" class="body-text">Namn</label>
+            <input type="text" id="name" placeholder="Ange namn..." required />
+  
+            <label for="address" class="body-text">Adress</label>
+            <input
+              type="text"
+              id="address"
+              placeholder="Ange adress..."
+              required
+            />
+  
+            <label for="postalCode" class="body-text">Postnummer</label>
+            <input
+              type="text"
+              id="postalCode"
+              placeholder="Ange postnummer..."
+              required
+            />
+  
+            <label for="phoneNumber" class="body-text">Telefonnummer</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              placeholder="Ange telefonnummer..."
+              required
+            />
+  
+            <div class="button-container">
+              <div class="register-link">
+                <a href="#" onclick="openLoginModal()" aria-label="Logga in"
+                  >Har du redan ett konto?</a
+                >
+              </div>
+              <button type="submit" class="primary-btn">Skapa konto</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   <!-- Search Dropdown -->
   <div class="search-dropdown hidden" id="searchDropdown">
     <div class="search-container">
@@ -247,8 +330,6 @@
       </button>
     </div>
     
-  
-
   <!-- Bekfräftelse modal-->
   <div id="confirmationModal" class="confirm-modal">
     <div class="confirm-modal-content confirmation-content">
@@ -261,100 +342,7 @@
     </div>
   </div>
 
-  <!-- Create Account Modal Structure -->
-  <div id="createAccountModal" class="modal" style="display: none">
-    <div class="modal-content">
-      <div class="create-account-form-container">
-        <span class="close" onclick="closeCreateAccountModal()">&times;</span>
-        <h2 class="heading-m">Skapa ett konto</h2>
-        <form id="createAccountForm">
-          <label for="email" class="body-text">E-postadress</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Ange e-postadress..."
-            required
-          />
 
-          <label for="confirmEmail" class="body-text"
-            >Bekräfta e-postadress</label
-          >
-          <input
-            type="email"
-            id="confirmEmail"
-            placeholder="Ange e-postadress..."
-            required
-          />
-
-          <label for="password" class="body-text">Lösenord</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Ange lösenord..."
-            required
-          />
-
-          <label for="confirmPassword" class="body-text"
-            >Bekräfta lösenord</label
-          >
-          <input
-            type="password"
-            id="confirmPassword"
-            placeholder="Ange lösenord..."
-            required
-          />
-
-          <label for="name" class="body-text">Namn</label>
-          <input type="text" id="name" placeholder="Ange namn..." required />
-
-          <label for="address" class="body-text">Adress</label>
-          <input
-            type="text"
-            id="address"
-            placeholder="Ange adress..."
-            required
-          />
-
-          <label for="postalCode" class="body-text">Postnummer</label>
-          <input
-            type="text"
-            id="postalCode"
-            placeholder="Ange postnummer..."
-            required
-          />
-
-          <label for="phoneNumber" class="body-text">Telefonnummer</label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            placeholder="Ange telefonnummer..."
-            required
-          />
-
-          <div class="button-container">
-            <div class="register-link">
-              <a href="#" onclick="openLoginModal()" aria-label="Logga in"
-                >Har du redan ett konto?</a
-              >
-            </div>
-            <button type="submit" class="primary-btn">Skapa konto</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bekfräftelse modal-->
-  <div id="regConfirmationModal" class="confirm-modal">
-    <div class="confirm-modal-content confirmation-content">
-      <span class="close" onclick="closeConfirmationModal()">&times;</span>
-      <h2 class="heading-m">Registrering lyckad</h2>
-      <p class="body-text">Du är nu registrerad</p>
-      <a href="/installning-sidan/mina-sidor" aria-label="Logga in">
-        <button class="primary-btn">Logga in</button>
-      </a>
-    </div>
-  </div>
 
   <script src="/static/login.js"></script>
   <script src="/static/signup.js"></script>

@@ -54,59 +54,65 @@
       </div>
     </section>
 
-    <section>
-      <h2 class="heading-m">Kontaktinformation</h2>
-      <h3 class="heading-s">Är du redan kund? <a href="#">Logga in här</a></h3>
-      <div class="checkout-form-container">
-        <div class="checkout-form">
-          <form class="kontakt-form">
-            <label for="checkoutEmail">E-postadress</label>
-            <input
-              type="email"
-              id="checkoutEmail"
-              placeholder="Ange e-postadress..."
-              required
-            />
-            <label for="checkoutName">Namn</label>
-            <input
-              type="text"
-              id="checkoutName"
-              placeholder="Ange ditt namn..."
-              required
-            />
-            <label for="checkoutContact">Kontaktperson</label>
-            <input
-              type="tel"
-              id="checkoutContact"
-              placeholder="Ange telefonnummer..."
-              required
-            />
-            <label for="checkoutPhone">Telefonnummer</label>
-            <input
-              type="tel"
-              id="checkoutPhone"
-              placeholder="Ange telefonnummer..."
-              required
-            />
-          </form>
-        </div>
-        <div class="checkout-form">
-          <form class="kontakt-form">
-            <label for="checkoutMessage">Övrigt</label>
-            <textarea
-              name="textarea"
-              id="checkoutMessage"
-              placeholder="Har du några funderingar?"
-              required
-            ></textarea>
-          </form>
-          <div class="checkout-form-btns">
-            <button class="secondary-btn">Bifoga filer</button>
-            <button class="primary-btn">Skicka</button>
+    <div class="checkout-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140">
+        <path d="M1 26.89S196.38 2.09 336 1.58c146.52-.53 239.05 20.15 385 25.31C861.03 31.85 930.91 0 1071.5 0S1441 26.89 1441 26.89V140H1V26.89Z" style="fill: #f7f9f7"/>
+    </svg>
+      <section>
+        <h2 class="heading-m">Kontaktinformation</h2>
+        <h3 class="heading-s">Är du redan kund? <a href="#">Logga in här</a></h3>
+        <div class="checkout-form-container">
+          <div class="checkout-form">
+            <form class="kontakt-form">
+              <label for="checkoutEmail">E-postadress</label>
+              <input
+                type="email"
+                id="checkoutEmail"
+                placeholder="Ange e-postadress..."
+                required
+              />
+              <label for="checkoutName">Namn</label>
+              <input
+                type="text"
+                id="checkoutName"
+                placeholder="Ange ditt namn..."
+                required
+              />
+              <label for="checkoutContact">Kontaktperson</label>
+              <input
+                type="tel"
+                id="checkoutContact"
+                placeholder="Ange telefonnummer..."
+                required
+              />
+              <label for="checkoutPhone">Telefonnummer</label>
+              <input
+                type="tel"
+                id="checkoutPhone"
+                placeholder="Ange telefonnummer..."
+                required
+              />
+            </form>
+          </div>
+          <div class="checkout-form">
+            <form class="kontakt-form">
+              <label for="checkoutMessage">Övrigt</label>
+              <textarea
+                name="textarea"
+                id="checkoutMessage"
+                placeholder="Har du några funderingar?"
+                required
+              ></textarea>
+            </form>
+            <div class="checkout-form-btns">
+              <button class="secondary-btn">Bifoga filer</button>
+              <button class="primary-btn">Skicka</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+    
 
     <%- include('partials/footer') %> <%- include('partials/chatbox') %>
     <script src="/static/offertforfragan.js"></script>

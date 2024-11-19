@@ -562,8 +562,8 @@ section {
   border-radius: 100px;
   border-width: 0;
   height: 60px;
-  background-color: #f7f9f7;
-  color: #567c50;
+  background-color: #B4C3B2;
+  color: #f7f9f7;
   font-family: "Poppins";
   font-size: 18px;
   font-weight: 700;
@@ -2025,10 +2025,10 @@ textarea {
 
 .store-container-svg {
   position: absolute;
-  transform: translate(-50%, -50%) rotate(90deg); /* Centrera och rotera */
-  top: 50%; /* Placera i mitten vertikalt */
-  left: 50%; /* Placera i mitten horisontellt */
-  height: 110px; /* Behåll höjden */
+  transform: translate(-50%, -50%) rotate(90deg);
+  top: 50%;
+  left: 50%;
+  height: 110px;
   display: none;
 
   @media screen and (min-width: 1280px) {
@@ -2038,12 +2038,8 @@ textarea {
 
 .store-container-img {
   display: none;
-}
-
-.store-container-img {
   position: relative;
 }
-
 .store-container-img::before {
   content: "";
   position: absolute;
@@ -2459,6 +2455,24 @@ textarea {
 
 /* Offertförfrågan */
 
+.checkout-container {
+  background: linear-gradient(to bottom, #f7f9f7, white);
+  position: relative;
+}
+
+.checkout-container svg {
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  left: 0;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: -70px;
+  }
+
+}
+
 .offert-heading {
   position: relative;
 }
@@ -2501,7 +2515,7 @@ textarea {
 }
 
 .checkout-form-btns button {
-  width: 100%;
+  width: 20%;
 }
 
 .checkout-price-container {

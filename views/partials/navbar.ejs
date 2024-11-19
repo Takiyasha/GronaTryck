@@ -350,4 +350,13 @@
   <script src="/static/search_bar.js"></script>
   <script src="/static/cart.js"></script>
   <script src="/static/indexeddb.js"></script>
+  <script>
+    //Toggle för menyn
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 </nav>

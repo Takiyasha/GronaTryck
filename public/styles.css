@@ -2003,10 +2003,14 @@ textarea {
 /* Kläder sidan */
 
 .store-container {
+  display: flex;
+  flex-direction: row;
   background-color: #e5eae4;
   height: 100%;
   padding-inline: 16px;
   padding-block: 80px;
+  position: relative;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     padding-block: 160px;
@@ -2014,11 +2018,61 @@ textarea {
   }
 }
 
+
+
+.store-container-svg {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(90deg); /* Centrera och rotera */
+  top: 50%; /* Placera i mitten vertikalt */
+  left: 50%; /* Placera i mitten horisontellt */
+  height: 110px; /* Behåll höjden */
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.store-container-img {
+  display: none;
+}
+
+.store-container-img {
+  position: relative;
+}
+
+.store-container-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e5eae4;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1280px) {
+  .store-container-img {
+    width: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -500px;
+    right: 0;
+    display: block;
+  }
+
+  .store-container-info {
+    width: 50%;
+    padding-right: 80px;
+  }
+}
+
 .store-container-filtering {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 100px;
   padding-top: 80px;
 }
 

@@ -550,6 +550,7 @@ section {
   font-size: 18px;
   font-weight: 700;
   padding-inline: 44px;
+  transition: background-color 0.3s ease;
 }
 
 .primary-btn:hover {
@@ -567,6 +568,7 @@ section {
   font-size: 18px;
   font-weight: 700;
   padding-inline: 44px;
+  transition: background-color 0.3s ease;
 }
 
 .secondary-btn:hover {
@@ -1112,6 +1114,7 @@ span {
   padding-inline: 44px;
   font-weight: 700;
   white-space: nowrap;
+  transition: background-color 0.3s ease;
 
   @media screen and (min-width: 1280px) {
     height: 55px;
@@ -2195,6 +2198,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   min-width: 160px;
+  transition: background-color 0.3s ease;
 }
 
 .sort-content {
@@ -2228,6 +2232,7 @@ textarea {
 
 .sort-button:hover #sortButton {
   color: #f7f9f7;
+  transition: color 0.3s ease;
 }
 
 .sort-button:hover .sort-icon {
@@ -2242,6 +2247,7 @@ textarea {
   margin-left: 5px;
   transform: rotate(90deg);
   fill: #052900;
+  transition: fill 0.3s ease;
 }
 
 
@@ -2629,7 +2635,7 @@ textarea {
   background-color: #f7f7f7;
   color: #052900;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 14px;
   transition: background-color 0.3s ease;
 }

@@ -2330,6 +2330,22 @@ textarea {
 }
 
 /* Offertförfrågan */
+
+.offert-heading {
+  position: relative;
+}
+
+.offert-heading svg {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  top: 0px;
+
+  @media screen and (min-width: 1280px) {
+    width: 400px;
+  }
+}
+
 .checkout-headings {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -2386,6 +2402,15 @@ textarea {
   .checkout-price-container {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.checkout-item img {
+  width: 80px;
+  padding-top: 20px;
+
+  @media screen and (min-width:1280px) {
+    width: 160px;
   }
 }
 

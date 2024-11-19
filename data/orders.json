@@ -6,5 +6,13 @@
     "name": "Creator 2.0 Long Sleeve",
     "price": 3550,
     "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Creator%202.0%20Long%20Sleeve_Natural%20Raw_Duo_Front_Main_0_50.jpg"
+  },
+  {
+    "artikelnummer": "7919",
+    "quantity": 25,
+    "color": "Heather Haze",
+    "name": "Changer 2.0",
+    "price": 6500,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Changer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.jpg"
   }
 ]

@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     itemsHTML += `
         <div class="checkout-item">
-          <p class="body-text">${item.name}</p>
-          <p class="body-text">Antal: ${item.quantity}</p>
-          <p class="body-text">Pris: ${itemTotalPrice.toLocaleString()} kr</p>
+          <img src="${item.image}" alt="${item.name}">
+          <p class="body-text"><strong>${item.quantity}</strong></p>
+          <p class="body-text"><strong>${itemTotalPrice.toLocaleString()} kr</strong></p>
         </div>
       `;
 

@@ -184,3 +184,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial render to show all products
   renderProducts(products);
 });
+
+
+//Sort button
+
+const sortButton = document.getElementById('sortButton');
+        const clearSortLink = document.getElementById('clearSort');
+
+        function sortProducts(order) {
+            if (order === 'cheapest') {
+                sortButton.textContent = 'Billigast';
+            } else if (order === 'expensive') {
+                sortButton.textContent = 'Dyrast';
+            }
+            
+            clearSortLink.style.display = 'block';
+            
+        }
+
+        function clearSort() {
+          sortButton.textContent = 'Sortera efter';
+          clearSortLink.style.display = 'none';
+        
+          // Återställ original ordning
+          renderProducts(products);
+        }

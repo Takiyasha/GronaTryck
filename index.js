@@ -44,18 +44,14 @@ const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const contactRoutes = require("./routes/contactRoutes");
+const offertRoutes = require("./routes/offertRoutes");
 
-// Use product routes
+// Use routes
 app.use("/", productRoutes);
-
-// Use user routes
 app.use("/user", userRoutes);
-
-// Use order routes routes
 app.use("/order", orderRoutes);
-
-// Use contact routes
 app.use("/contact", contactRoutes);
+app.use("/api", offertRoutes);
 
 // Create the livereload server
 const liveReloadServer = livereload.createServer({
@@ -217,19 +213,10 @@ app.get("/klader", (req, res) => {
   );
 });
 
-// Set up sessions
-app.use(
-  session({
-    secret: "your-secret-key", // Use a long, random string for security
-    resave: false, // Don't save session if it wasn't modified
-    saveUninitialized: false, // Don't create session until something is stored
-    cookie: {
-      secure: false, // Set this to `true` if using HTTPS, otherwise `false`
-      httpOnly: true, // Helps prevent cross-site scripting attacks
-      maxAge: 1000 * 60 * 60 * 24, // Cookie expiration (e.g., 1 day)
-    },
-  })
-);
+app.post("/api/submit-offert", (req, res) => {
+  console.log("Received POST request:", req.body);
+  res.json({ success: true, message: "Offert received!" });
+});
 
 // Routes for other pages
 app.get("/index", (req, res) => {

@@ -113,14 +113,39 @@ section {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #f8f9fa;
   padding-inline: 10%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
   z-index: 1000;
+}
+
+#cartIcon {
+  position: relative;
+  display: inline-block;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: #f7f9f7;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .logo img {
@@ -2596,16 +2621,16 @@ textarea {
   }
 }
 
-/* Styles for the search dropdown */
+
 .search-dropdown {
   display: none;
   position: absolute;
-  top: 100%; /* Place it directly below the navbar */
+  top: 100%; 
   left: 0;
-  width: 100%; /* Make the search bar as wide as the navbar */
+  width: 100%; 
   background-color: #f7f7f7;
   z-index: 1000;
-  border-radius: 0 0 4px 4px; /* Rounded corners only at the bottom */
+  border-radius: 0 0 4px 4px;
   padding-block: 20px;
 }
 
@@ -2615,8 +2640,8 @@ textarea {
 }
 
 .search-container {
-  max-width: 1200px; /* Optional max width to prevent the search from looking too wide */
-  margin: 0 auto; /* Center the search container within the navbar */
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .search-input-group {

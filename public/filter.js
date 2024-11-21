@@ -21,11 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
     closeFilterButton.addEventListener("click", toggleFilterSidebar);
   }
 
-  // Elements for filters
+  // Elements for filters and sorting
   const colorButtons = document.querySelectorAll(".color-swatch");
   const priceInputs = document.querySelectorAll(".price-inputs input");
   const fitCheckboxes = document.querySelectorAll(".fit-option input");
   const productsContainer = document.getElementById("productsContainer");
+  const sortLinks = document.querySelectorAll(".sort-content a");
+  const clearSortLink = document.getElementById("clearSort");
+  const sortButtonText = document.getElementById("sortButton");
+
+  let currentSort = null; // Track the current sorting state
 
   // Original products data for reference
   const productsDataElement = document.getElementById("productsData");
@@ -43,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Apply filters function
-  function applyFilters() {
-    console.log("Applying filters...");
+  // Apply filters and sorting together
+  function applyFiltersAndSorting() {
+    console.log("Applying filters and sorting...");
 
     let filteredProducts = [...products];
 
@@ -94,7 +99,32 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("No fits selected.");
     }
 
-    console.log("Filtered products count:", filteredProducts.length);
+    // Apply sorting if any
+    if (currentSort) {
+      if (currentSort === "cheapest") {
+        filteredProducts.sort((a, b) => {
+          const priceA = Math.min(
+            ...a.price_tiers.map((tier) => tier.price_per_unit)
+          );
+          const priceB = Math.min(
+            ...b.price_tiers.map((tier) => tier.price_per_unit)
+          );
+          return priceA - priceB;
+        });
+      } else if (currentSort === "expensive") {
+        filteredProducts.sort((a, b) => {
+          const priceA = Math.max(
+            ...a.price_tiers.map((tier) => tier.price_per_unit)
+          );
+          const priceB = Math.max(
+            ...b.price_tiers.map((tier) => tier.price_per_unit)
+          );
+          return priceB - priceA;
+        });
+      }
+    }
+
+    console.log("Filtered and sorted products count:", filteredProducts.length);
     renderProducts(filteredProducts);
   }
 
@@ -112,19 +142,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const productHTML = `
           <div class="gt-product">
             <div class="gt-product-image">
-                        <a href="/produktsidan/${product.id}">
-                            <picture class="gt-product-image">
-                                <source srcset="${
-                                  product.model_image_webp.image
-                                }" type="image/webp">
-                                <img
-                                    src="${product.model_image_jpg.image}"
-                                    alt="${product.name}"
-                                    class="gt-product-img"
-                                />
-                            </picture>
-                        </a>
-                    </div>
+              <a href="/produktsidan/${product.id}">
+                <picture class="gt-product-image">
+                  <source srcset="${
+                    product.model_image_webp.image
+                  }" type="image/webp">
+                  <img
+                    src="${product.model_image_jpg.image}"
+                    alt="${product.name}"
+                    class="gt-product-img"
+                  />
+                </picture>
+              </a>
+            </div>
             <div class="gt-product-info">
               <p class="gt-product-price heading-s">
                 ${
@@ -151,6 +181,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Sort event listeners
+  sortLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const sortType = e.target.textContent.trim();
+      currentSort =
+        sortType.toLowerCase() === "billigast" ? "cheapest" : "expensive";
+      sortButtonText.textContent = sortType; // Update button text
+      clearSortLink.style.display = "block"; // Show the "Rensa sortering" button
+      applyFiltersAndSorting();
+    });
+  });
+
+  // Clear sorting
+  clearSortLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("Clearing sorting...");
+    currentSort = null;
+    sortButtonText.textContent = "Sortera efter"; // Reset button text
+    clearSortLink.style.display = "none"; // Hide the "Rensa sortering" button
+    applyFiltersAndSorting();
+  });
+
   // Event listeners for color swatches
   colorButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -161,14 +214,14 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.add("selected");
       }
       console.log(`Color button clicked: ${button.getAttribute("data-color")}`);
-      applyFilters();
+      applyFiltersAndSorting();
     });
   });
 
   priceInputs.forEach((input) => {
     input.addEventListener("input", function () {
       console.log("Price input changed:", input.value);
-      applyFilters();
+      applyFiltersAndSorting();
     });
   });
 
@@ -177,35 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(
         `Fit checkbox changed: ${checkbox.value}, Checked: ${checkbox.checked}`
       );
-      applyFilters();
+      applyFiltersAndSorting();
     });
   });
 
   // Initial render to show all products
   renderProducts(products);
 });
-
-
-//Sort button
-
-const sortButton = document.getElementById('sortButton');
-        const clearSortLink = document.getElementById('clearSort');
-
-        function sortProducts(order) {
-            if (order === 'cheapest') {
-                sortButton.textContent = 'Billigast';
-            } else if (order === 'expensive') {
-                sortButton.textContent = 'Dyrast';
-            }
-            
-            clearSortLink.style.display = 'block';
-            
-        }
-
-        function clearSort() {
-          sortButton.textContent = 'Sortera efter';
-          clearSortLink.style.display = 'none';
-        
-          // Återställ original ordning
-          renderProducts(products);
-        }

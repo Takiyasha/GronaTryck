@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Function to clear cart data
+// Function to clear cart data // not working :((( T-T why indexedb
 async function clearAllCartData() {
   try {
     // Clear localStorage cart data

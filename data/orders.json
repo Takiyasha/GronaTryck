@@ -1,10 +1,10 @@
 [
   {
-    "artikelnummer": "7919",
-    "quantity": 213213,
-    "color": "Blue Ice",
-    "name": "Changer 2.0",
-    "price": 40084044,
-    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Changer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.jpg"
+    "artikelnummer": "6518",
+    "quantity": 10000,
+    "color": "Black",
+    "name": "Bomber 2.0",
+    "price": 2880000,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg"
   }
 ]

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("offert_submit.js loaded");
 
-  // Target the "Skicka" button by its unique ID
   const submitButton = document.getElementById("submit-offert-btn");
 
   if (!submitButton) {
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!email || !name || !contact || !phone || cartItems.length === 0) {
       console.error("Validation failed. Missing fields or empty cart.");
-      alert("Please fill in all fields before sumbitting.");
+      alert("Please fill in all fields before submitting.");
       return;
     }
 
@@ -64,7 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (result.success) {
         alert("Offert successfully submitted! Tack😁");
+
+        // Clear the cart data
+        await clearAllCartData();
+
+        // Clear sessionStorage
         sessionStorage.removeItem("checkoutItems");
+
+        // Redirect to homepage or success page
         window.location.href = "/";
       } else {
         console.error("Submission failed:", result.message);
@@ -76,3 +82,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Function to clear cart data
+async function clearAllCartData() {
+  try {
+    // Clear localStorage cart data
+    localStorage.removeItem("shoppingCart");
+
+    // Clear backend orders.json data
+    const response = await fetch("/api/clear-cart", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (!response.ok) {
+      console.error("Failed to clear cart from backend:", response.statusText);
+      return;
+    }
+
+    const result = await response.json();
+    if (result.success) {
+      console.log("Cart cleared successfully from backend.");
+    } else {
+      console.error("Failed to clear backend cart:", result.message);
+    }
+  } catch (error) {
+    console.error("Error clearing cart data:", error);
+  }
+
+  // Update the cart badge
+  document.dispatchEvent(new Event("cartUpdated"));
+}

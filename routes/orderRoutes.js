@@ -14,6 +14,35 @@ const ordersFilePath = path.join(__dirname, "../data/orders.json");
 // Middleware to parse JSON request bodies
 router.use(express.json());
 
+router.delete("/clear-cart", (req, res) => {
+  fs.writeFile(ordersFilePath, "[]", (err) => {
+    if (err) {
+      console.error("Error clearing orders:", err);
+      return res
+        .status(500)
+        .json({ success: false, message: "Failed to clear orders." });
+    }
+
+    console.log("Orders cleared successfully.");
+    res.json({ success: true, message: "Orders cleared successfully." });
+  });
+});
+
+// Route to clear the cart
+router.delete("/clear-cart", (req, res) => {
+  fs.writeFile(cartFilePath, "[]", (err) => {
+    if (err) {
+      console.error("Error clearing cart:", err);
+      return res
+        .status(500)
+        .json({ success: false, message: "Failed to clear cart." });
+    }
+
+    console.log("Cart cleared successfully.");
+    res.json({ success: true, message: "Cart cleared successfully." });
+  });
+});
+
 // Route to handle new orders
 router.post("/add-order", async (req, res) => {
   const { artikelnummer, quantity, color, name, price, image } = req.body;

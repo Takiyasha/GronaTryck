@@ -1,10 +1,18 @@
 [
   {
-    "artikelnummer": "1414",
-    "quantity": 1000,
-    "color": "Heather Grey",
-    "name": "Creator 2.0 Long Sleeve",
-    "price": 298000,
-    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Creator%202.0%20Long%20Sleeve_Natural%20Raw_Duo_Front_Main_0_50.jpg"
+    "artikelnummer": "2913",
+    "quantity": 20,
+    "color": "Khaki",
+    "name": "Brooker",
+    "price": 9200,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Brooker_Khaki_Duo_Front_Main_0_50.jpg"
+  },
+  {
+    "artikelnummer": "2913",
+    "quantity": 25,
+    "color": "Desert Dust",
+    "name": "Brooker",
+    "price": 11500,
+    "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Brooker_Khaki_Duo_Front_Main_0_50.jpg"
   }
 ]

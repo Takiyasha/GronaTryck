@@ -587,7 +587,7 @@ section {
   border-radius: 100px;
   border-width: 0;
   height: 60px;
-  background-color: #B4C3B2;
+  background-color: #b4c3b2;
   color: #f7f9f7;
   font-family: "Poppins";
   font-size: 18px;
@@ -2008,8 +2008,6 @@ textarea {
   }
 }
 
-
-
 .store-container-svg {
   position: absolute;
   transform: translate(-50%, -50%) rotate(90deg);
@@ -2170,7 +2168,7 @@ textarea {
 }
 
 .sort-button {
-  background-color: #B4C3B2;
+  background-color: #b4c3b2;
   color: #052900;
   padding: 12px;
   font-size: 16px;
@@ -2189,7 +2187,7 @@ textarea {
   position: absolute;
   background-color: #f7f9f7;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 4px;
 }
@@ -2202,7 +2200,7 @@ textarea {
 }
 
 .sort-content a:hover {
-  background-color: #E5EAE4;
+  background-color: #e5eae4;
 }
 
 .sort-container:hover .sort-content {
@@ -2210,7 +2208,7 @@ textarea {
 }
 
 .sort-button:hover {
-  background-color: #567C50;
+  background-color: #567c50;
 }
 
 .sort-button:hover #sortButton {
@@ -2232,8 +2230,6 @@ textarea {
   fill: #052900;
   transition: fill 0.3s ease;
 }
-
-
 
 .color-swatch {
   border: 2px solid transparent;
@@ -2457,7 +2453,6 @@ textarea {
   @media screen and (min-width: 768px) {
     top: -70px;
   }
-
 }
 
 .offert-heading {
@@ -2538,7 +2533,7 @@ textarea {
   width: 80px;
   padding-top: 20px;
 
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     width: 160px;
   }
 }
@@ -2566,30 +2561,32 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .checkout-item, .checkout-headings {
+  .checkout-item,
+  .checkout-headings {
     padding-right: 80px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .checkout-item, .checkout-headings {
+  .checkout-item,
+  .checkout-headings {
     padding-right: 260px;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .checkout-item, .checkout-headings {
+  .checkout-item,
+  .checkout-headings {
     padding-right: 500px;
   }
 }
 
-
 .search-dropdown {
   display: none;
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
-  width: 100%; 
+  width: 100%;
   background-color: #f7f7f7;
   z-index: 1000;
   border-radius: 0 0 4px 4px;
@@ -2602,8 +2599,8 @@ textarea {
 }
 
 .search-container {
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .search-input-group {

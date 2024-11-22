@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "email": "213",
+    "name": "21312",
+    "contact": "213",
+    "phone": "12312",
+    "message": "123",
+    "cartItems": [
+      {
+        "name": "Bomber 2.0",
+        "artikelnummer": "6518",
+        "color": "French Navy",
+        "quantity": 10,
+        "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg",
+        "price": 3600
+      }
+    ],
+    "submittedAt": "2024-11-22T15:11:19.218Z"
+  }
+]

@@ -276,3 +276,85 @@ function removeCartItem(index, artikelnummer, color) {
       console.error("Error deleting order from server:", error);
     });
 }
+
+function addProductToLocalStorage(product) {
+  let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+  // Check if product already exists
+  const existingProductIndex = cart.findIndex(
+    (item) =>
+      item.artikelnummer === product.artikelnummer &&
+      item.color === product.color
+  );
+
+  if (existingProductIndex > -1) {
+    // Update the existing product quantity and price
+    cart[existingProductIndex].quantity += product.quantity;
+    cart[existingProductIndex].price += product.price;
+  } else {
+    // Add new product
+    cart.push(product);
+  }
+
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
+
+  // Dispatch event to update cart badge
+  document.dispatchEvent(new Event("cartUpdated"));
+}
+
+function removeCartItem(index, artikelnummer, color) {
+  let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+  cart.splice(index, 1); // Remove item from the cart array
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
+
+  // Dispatch event to update cart badge
+  document.dispatchEvent(new Event("cartUpdated"));
+
+  // Remove from backend
+  fetch(`/order/delete-order`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ artikelnummer, color }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (!data.success) {
+        console.error("Failed to delete order from server.");
+      } else {
+        console.log("Order deleted from server successfully.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error deleting order from server:", error);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Update badge on page load
+  updateCartBadge();
+
+  // Listen for custom events to update the badge
+  document.addEventListener("cartUpdated", updateCartBadge);
+});
+
+// Function to update the cart badge
+function updateCartBadge() {
+  const cartBadge = document.getElementById("cartBadge");
+  const cartItems = getCartItemsFromLocalStorage();
+
+  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+  if (totalQuantity > 0) {
+    cartBadge.textContent = totalQuantity; // Set total quantity
+    cartBadge.style.display = "flex"; // Show badge
+  } else {
+    cartBadge.style.display = "none"; // Hide badge if no items
+  }
+}
+
+// Utility function to fetch cart items from localStorage
+function getCartItemsFromLocalStorage() {
+  return JSON.parse(localStorage.getItem("shoppingCart")) || [];
+}

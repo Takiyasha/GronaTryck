@@ -70,5 +70,23 @@
       }
     ],
     "submittedAt": "2024-11-22T15:26:44.388Z"
+  },
+  {
+    "email": "3123",
+    "name": "31212",
+    "contact": "12",
+    "phone": "12321",
+    "message": "21321",
+    "cartItems": [
+      {
+        "name": "Changer 2.0",
+        "artikelnummer": "7919",
+        "color": "Blue Ice",
+        "quantity": 213213,
+        "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Changer%202.0_Heritage%20Brown_Duo_Front_Main_0_50.jpg",
+        "price": 40084044
+      }
+    ],
+    "submittedAt": "2024-11-22T15:31:11.098Z"
   }
 ]

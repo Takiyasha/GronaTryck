@@ -2679,3 +2679,10 @@ textarea {
   padding: 5px;
   border: 1px solid black; /* Highlight the borders for visibility */
 }
+
+.trashcan-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: #052900;
+}

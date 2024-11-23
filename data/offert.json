@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "email": "1231",
+    "name": "1322",
+    "contact": "123321",
+    "phone": "12312",
+    "message": "",
+    "cartItems": [
+      {
+        "name": "Bomber 2.0",
+        "artikelnummer": "6518",
+        "color": "Black",
+        "quantity": 1000,
+        "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg",
+        "price": 288000
+      }
+    ],
+    "submittedAt": "2024-11-22T15:56:00.044Z"
+  },
+  {
+    "email": "21312",
+    "name": "12312",
+    "contact": "123",
+    "phone": "12312",
+    "message": "12312312",
+    "cartItems": [
+      {
+        "name": "Bomber 2.0",
+        "artikelnummer": "6518",
+        "color": "French Navy",
+        "quantity": 100,
+        "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Bomber%202.0_Black_Duo_Front_Main_0_50.jpg",
+        "price": 30600
+      }
+    ],
+    "submittedAt": "2024-11-23T13:47:58.666Z"
+  }
+]

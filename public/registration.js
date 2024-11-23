@@ -104,3 +104,27 @@ if (createAccountModal) {
     }
   });
 }
+
+function closeCreateAccountModal() {
+  const createAccountModal = document.getElementById("createAccountModal");
+  if (createAccountModal) {
+    createAccountModal.style.display = "none";
+  }
+}
+
+function openLoginModal() {
+  const loginModal = document.getElementById("loginModal");
+  if (loginModal) {
+    loginModal.style.display = "flex";
+  }
+}
+
+function switchToLoginModal() {
+  // Close the "Skapa ett konto" modal
+  closeCreateAccountModal();
+
+  // Delay before opening the login modal for smoother transition
+  setTimeout(() => {
+    openLoginModal();
+  }, 100); // delay for smooth transition
+}

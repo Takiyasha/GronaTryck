@@ -1,2 +1,20 @@
 [
+  {
+    "email": "va@gmail.com",
+    "name": "Victor",
+    "contact": "Victor Sjögren",
+    "phone": "0730351042",
+    "message": "ahsdahsdhasdalöjäsdaslöädalöädalösd",
+    "cartItems": [
+      {
+        "name": "Stella Serena",
+        "artikelnummer": "4572",
+        "color": "Anthracite",
+        "quantity": 20,
+        "image": "http://localhost:3000/static/images/Products/Mains/50/jpg/Stella%20Serena_Blue%20Ice_Studio_Front_Main_5_50.jpg",
+        "price": 6280
+      }
+    ],
+    "submittedAt": "2024-11-24T08:32:04.459Z"
+  }
 ]

@@ -1,14 +1,15 @@
 Step: 1(must do first)
 
 Download EJS extention in vscode to support ejs syntax:
-EJS language supporter (.ejs)
+"EJS language support" (.ejs)
+"nodejs"
 
 step: 2
 In terminal use the following command to create express ejs:
 npm install express
 npm init -y
 npm install express ejs fs
-npm install cors(for login request to work hehe..)
+npm install cors
 
 
 step: 3

@@ -1,4 +1,3 @@
 // api/index.js
-const app = require("../index");
-// Express apps are request handlers (req, res), so just export it.
-module.exports = app;
+const app = require("../index"); // your Express app
+module.exports = app; // Express is a (req, res) handler

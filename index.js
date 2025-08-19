@@ -28,6 +28,24 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+if (!process.env.VERCEL) {
+  const session = require("express-session");
+  app.use(
+    session({
+      secret: "your-secret-key",
+      resave: false,
+      saveUninitialized: false,
+      cookie: { secure: false, httpOnly: true, maxAge: 24 * 60 * 60 * 1000 },
+    })
+  );
+}
+
+app.use((req, _res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+});
+app.get("/api/health", (_req, res) => res.json({ ok: true }));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
@@ -223,11 +241,5 @@ if (require.main === module) {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }
-
-// Basic error handler so requests don't hang silently
-app.use((err, req, res, next) => {
-  console.error("Unhandled error:", err);
-  res.status(500).send("Internal Server Error");
-});
 
 module.exports = app;

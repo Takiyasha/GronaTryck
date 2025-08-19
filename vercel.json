@@ -11,6 +11,7 @@
     }
   ],
   "routes": [
+    { "src": "/static/(.*)", "dest": "/public/$1" },
     { "src": "/public/(.*)", "dest": "/public/$1" },
     {
       "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|eot))",

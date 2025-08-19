@@ -40,17 +40,14 @@ app.use((req, _res, next) => {
 // quick healthcheck
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
-// --- TEMP: prove serverless is OK ---
-app.get("/", (req, res) => {
-  res.type("text/plain").send("Home route OK");
-});
-
 // --- Routes ---
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const offertRoutes = require("./routes/offertRoutes");
+
+app.get("/", (_req, res) => res.type("text/plain").send("Home route OK"));
 
 app.use("/", productRoutes);
 app.use("/user", userRoutes);

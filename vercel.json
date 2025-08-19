@@ -5,7 +5,8 @@
       "src": "api/index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": "{views,controllers,routes,data}/**"
+        "includeFiles": "{views,controllers,routes,data}/**",
+        "excludeFiles": "public/**"
       }
     }
   ],

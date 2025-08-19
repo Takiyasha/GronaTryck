@@ -211,4 +211,12 @@ if (require.main === module) {
   });
 }
 
+// Basic error handler so requests don't hang silently
+app.use((err, req, res, next) => {
+  console.error("Unhandled error:", err);
+  res.status(500).send("Internal Server Error");
+});
+
+app.get("/api/health", (req, res) => res.json({ ok: true }));
+
 module.exports = app;

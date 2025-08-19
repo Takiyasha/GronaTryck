@@ -1133,6 +1133,11 @@
     <script src="/static/swiper.js"></script>
     <script src="/static/script.js"></script>
    
+// add near the bottom, before module.exports = app;
+app.use((err, req, res, next) => {
+  console.error("Unhandled error:", err);
+  res.status(500).send("Internal Server Error");
+});
 
 
   </body>

@@ -1,21 +1,24 @@
-// productRoutes.js
+// routes/productRoutes.js
 const express = require("express");
+const path = require("path");
+const fs = require("fs");
+
 const router = express.Router();
-const productController = require("../controllers/productController");
 
-// Route to display the list of products
-router.get("/", productController.getAllProducts);
+// Resolve once at boot (works on Vercel: /var/task is CWD)
+const productsPath = path.join(process.cwd(), "data", "products.json");
 
-// Route to display a single product by ID
-router.get("/product/:id", productController.getProductById);
-
-// Route to create a new product
-router.post("/products", productController.createProduct);
-
-// Route to update an existing product by ID
-router.put("/products/:id", productController.updateProduct);
-
-// Route to delete a product by ID
-router.delete("/products/:id", productController.deleteProduct);
+router.get("/", (req, res, next) => {
+  try {
+    console.time("load-products");
+    const raw = fs.readFileSync(productsPath, "utf8"); // sync read is fine for small JSON
+    const products = JSON.parse(raw);
+    console.timeEnd("load-products");
+    return res.render("index", { products });
+  } catch (err) {
+    console.error("Failed to load products:", err);
+    return next(err); // triggers express error handler below
+  }
+});
 
 module.exports = router;

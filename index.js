@@ -27,18 +27,6 @@ app.use((req, _res, next) => {
 // Healthcheck (once)
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
-// ---------- Sessions (DISABLED on Vercel for now) ----------
-if (!process.env.VERCEL) {
-  app.use(
-    session({
-      secret: "your-secret-key",
-      resave: false,
-      saveUninitialized: false,
-      cookie: { secure: false, httpOnly: true, maxAge: 24 * 60 * 60 * 1000 },
-    })
-  );
-}
-
 // ---------- TEMP: prove "/" responds (remove after debugging) ----------
 app.get("/", (req, res) => {
   res.type("text/plain").send("Home route OK");

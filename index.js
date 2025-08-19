@@ -7,32 +7,32 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ---------- Core middleware ----------
+// --- Sessions (MemoryStore is fine locally; use a shared store in production) ---
+app.use(
+  session({
+    secret: "your-secret-key",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: false,
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24,
+    },
+  })
+);
+
+// --- Static files & views ---
+app.use("/static", express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-// Static + views
-app.use("/static", express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "public")));
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-
-// Tiny request logger (once)
-app.use((req, _res, next) => {
-  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-  next();
-});
-
-// Healthcheck (once)
-app.get("/api/health", (_req, res) => res.json({ ok: true }));
-
-// ---------- TEMP: prove "/" responds (remove after debugging) ----------
-app.get("/", (req, res) => {
-  res.type("text/plain").send("Home route OK");
-});
-
-// ---------- Routes ----------
+// --- Routes ---
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
@@ -45,7 +45,8 @@ app.use("/order", orderRoutes);
 app.use("/contact", contactRoutes);
 app.use("/api", offertRoutes);
 
-// ---------- Custom endpoints (yours, untouched) ----------
+// --- Custom endpoints (unchanged) ---
+// Handle user registration and save it to users.json
 app.post("/user/register", (req, res) => {
   const newUser = req.body;
 
@@ -125,7 +126,7 @@ app.post("/user/register", (req, res) => {
   });
 });
 
-// Product detail (kept)
+// Link to the product page
 app.get("/produktsidan/:id", (req, res) => {
   const productId = req.params.id;
 
@@ -150,7 +151,7 @@ app.get("/produktsidan/:id", (req, res) => {
   );
 });
 
-// JSON endpoint
+// Serve the products.json file at /data/products.json
 app.get("/data/products.json", (req, res) => {
   const productsFilePath = path.join(__dirname, "data", "products.json");
   fs.readFile(productsFilePath, "utf8", (err, data) => {
@@ -164,7 +165,7 @@ app.get("/data/products.json", (req, res) => {
   });
 });
 
-// “Klader” page
+// Loading products in klader
 app.get("/klader", (req, res) => {
   fs.readFile(
     path.join(__dirname, "data/products.json"),
@@ -186,7 +187,7 @@ app.post("/api/submit-offert", (req, res) => {
   res.json({ success: true, message: "Offert received!" });
 });
 
-// Other pages
+// Routes for other pages
 app.get("/index", (req, res) => res.redirect("/"));
 app.get("/butik", (req, res) => res.render("butik"));
 app.get("/stanleyStella", (req, res) => res.render("stanleyStella"));
@@ -203,17 +204,19 @@ app.get("/installning-sidan/mina-sidor", (req, res) =>
   res.render("installning-sidan/mina-sidor")
 );
 
-// ---------- Error handler (last) ----------
-app.use((err, _req, res, _next) => {
-  console.error("Unhandled error:", err);
-  res.status(500).send("Internal Server Error");
-});
-
-// ---------- Local dev only ----------
+// --- Start server ONLY when running locally ---
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }
+
+// Basic error handler so requests don't hang silently
+app.use((err, req, res, next) => {
+  console.error("Unhandled error:", err);
+  res.status(500).send("Internal Server Error");
+});
+
+app.get("/api/health", (req, res) => res.json({ ok: true }));
 
 module.exports = app;

@@ -32,6 +32,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
+app.use((req, _res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+});
+
+// quick healthcheck
+app.get("/api/health", (_req, res) => res.json({ ok: true }));
+
 // --- Routes ---
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
@@ -216,7 +224,5 @@ app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).send("Internal Server Error");
 });
-
-app.get("/api/health", (req, res) => res.json({ ok: true }));
 
 module.exports = app;

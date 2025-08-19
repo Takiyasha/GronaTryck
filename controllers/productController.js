@@ -1,23 +1,17 @@
-// controllers/productController.js
 const fs = require("fs");
 const path = require("path");
-
-// Works on Vercel and locally
 const productsPath = path.join(process.cwd(), "data", "products.json");
-
-function readProducts() {
-  const raw = fs.readFileSync(productsPath, "utf8"); // small file => OK to sync
-  return JSON.parse(raw);
-}
 
 exports.getAllProducts = (req, res, next) => {
   try {
-    console.log("Loading products from:", productsPath);
-    const products = readProducts();
-    return res.render("index", { products }); // make sure views/index.ejs exists
+    console.time("load-products");
+    const raw = fs.readFileSync(productsPath, "utf8"); // small file => OK
+    console.timeEnd("load-products");
+    const products = JSON.parse(raw);
+    return res.render("index", { products }); // ensure views/index.ejs exists
   } catch (err) {
     console.error("getAllProducts failed:", err);
-    return next(err);
+    return next(err); // will send 500 via error handler
   }
 };
 

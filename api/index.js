@@ -1,5 +1,6 @@
 // api/index.js
 const serverless = require("serverless-http");
-const app = require("../index"); // Import the Express app you already wrote
+const app = require("../index");
 
-module.exports = (req, res) => serverless(app)(req, res);
+// Export the wrapped handler directly (more reliable)
+module.exports = serverless(app);

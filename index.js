@@ -47,7 +47,10 @@ const orderRoutes = require("./routes/orderRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const offertRoutes = require("./routes/offertRoutes");
 
-app.get("/", (_req, res) => res.type("text/plain").send("Home route OK"));
+// --- TEMP: prove "/" responds (must be BEFORE app.use("/", productRoutes)) ---
+app.get("/", (req, res) => {
+  res.type("text/plain").send("Home route OK");
+});
 
 app.use("/", productRoutes);
 app.use("/user", userRoutes);

@@ -4,9 +4,7 @@
     {
       "src": "api/index.js",
       "use": "@vercel/node",
-      "config": {
-        "excludeFiles": "public/**"
-      }
+      "config": { "excludeFiles": "public/**" }
     }
   ],
   "routes": [
